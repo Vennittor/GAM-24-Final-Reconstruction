@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 9418ba55b41bc3444817548f50a8e2b2
+timeCreated: 1449183397
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: C_TRAP_MAIN
+    100002: C_TRAP_MAIN02
+    100004: C_TRAP_MAIN02_Position
+    100006: C_TRAP_MAIN_Position
+    100008: C_TRAP_MOVE_01_Position
+    100010: C_TRAP_MOVE_01_PositionDown
+    100012: C_TRAP_MOVE_01_PositionUp
+    100014: C_TRAP_MOVE_02_01_Position
+    100016: C_TRAP_MOVE_02_01_PositionRight
+    100018: C_TRAP_MOVE_02_02_Position
+    100020: C_TRAP_MOVE_02_02_PositionLeft
+    100022: //RootNode
+    100024: NShadow1_a1
+    100026: NShadow1_a2
+    100028: NShadow1_b
+    100030: NShadow1_b1
+    100032: polygon0
+    100034: polygon1
+    100036: polygon10
+    100038: polygon11
+    100040: polygon12
+    100042: polygon13
+    100044: polygon14
+    100046: polygon16
+    100048: polygon17
+    100050: polygon18
+    100052: polygon19
+    100054: polygon2
+    100056: polygon20
+    100058: polygon21
+    100060: polygon22
+    100062: polygon23
+    100064: polygon24
+    100066: polygon25
+    100068: polygon26
+    100070: polygon27
+    100072: polygon3
+    100074: polygon4
+    100076: polygon5
+    100078: polygon7
+    100080: polygon8
+    100082: polygon9
+    100084: PT_Ashiba01
+    100086: PT_Ashiba02
+    100088: StgOrpheon00Base
+    400000: C_TRAP_MAIN
+    400002: C_TRAP_MAIN02
+    400004: C_TRAP_MAIN02_Position
+    400006: C_TRAP_MAIN_Position
+    400008: C_TRAP_MOVE_01_Position
+    400010: C_TRAP_MOVE_01_PositionDown
+    400012: C_TRAP_MOVE_01_PositionUp
+    400014: C_TRAP_MOVE_02_01_Position
+    400016: C_TRAP_MOVE_02_01_PositionRight
+    400018: C_TRAP_MOVE_02_02_Position
+    400020: C_TRAP_MOVE_02_02_PositionLeft
+    400022: //RootNode
+    400024: NShadow1_a1
+    400026: NShadow1_a2
+    400028: NShadow1_b
+    400030: NShadow1_b1
+    400032: polygon0
+    400034: polygon1
+    400036: polygon10
+    400038: polygon11
+    400040: polygon12
+    400042: polygon13
+    400044: polygon14
+    400046: polygon16
+    400048: polygon17
+    400050: polygon18
+    400052: polygon19
+    400054: polygon2
+    400056: polygon20
+    400058: polygon21
+    400060: polygon22
+    400062: polygon23
+    400064: polygon24
+    400066: polygon25
+    400068: polygon26
+    400070: polygon27
+    400072: polygon3
+    400074: polygon4
+    400076: polygon5
+    400078: polygon7
+    400080: polygon8
+    400082: polygon9
+    400084: PT_Ashiba01
+    400086: PT_Ashiba02
+    400088: StgOrpheon00Base
+    4300000: polygon0
+    4300002: polygon1
+    4300004: polygon2
+    4300006: polygon3
+    4300008: polygon4
+    4300010: polygon5
+    4300012: polygon7
+    4300014: polygon8
+    4300016: polygon9
+    4300018: polygon10
+    4300020: polygon11
+    4300022: polygon12
+    4300024: polygon13
+    4300026: polygon14
+    4300028: polygon16
+    4300030: polygon17
+    4300032: polygon18
+    4300034: polygon19
+    4300036: polygon20
+    4300038: polygon21
+    4300040: polygon22
+    4300042: polygon23
+    4300044: polygon24
+    4300046: polygon25
+    4300048: polygon26
+    4300050: polygon27
+    9500000: //RootNode
+    13700000: polygon0
+    13700002: polygon1
+    13700004: polygon10
+    13700006: polygon11
+    13700008: polygon12
+    13700010: polygon13
+    13700012: polygon14
+    13700014: polygon16
+    13700016: polygon17
+    13700018: polygon18
+    13700020: polygon19
+    13700022: polygon2
+    13700024: polygon20
+    13700026: polygon21
+    13700028: polygon22
+    13700030: polygon23
+    13700032: polygon24
+    13700034: polygon25
+    13700036: polygon26
+    13700038: polygon27
+    13700040: polygon3
+    13700042: polygon4
+    13700044: polygon5
+    13700046: polygon7
+    13700048: polygon8
+    13700050: polygon9
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
