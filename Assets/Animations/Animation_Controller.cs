@@ -5,7 +5,8 @@ public class Animation_Controller : MonoBehaviour {
 
 	public Animation anim;
 
-	void Awake() {
+	void Awake() 
+	{
 		anim = gameObject.transform.GetComponent<Animation>();
 	}
 
@@ -38,4 +39,44 @@ public class Animation_Controller : MonoBehaviour {
 		if(!anim.IsPlaying("Idle"))
 			anim.Play ("Idle");
 	}
+	
+
+	#region ApplyForce example
+	//These are placeholder variables and need to be properly referenced in the script.
+	Collider hitCollider;
+	GameObject other;
+
+	public void ApplyForce(float force)
+	{
+
+		Vector3 forceDir = hitCollider.transform.position - this.gameObject.transform.position;
+		forceDir *= force;
+
+		_ApplyForce(forceDir, ForceMode.Force);
+	}
+	
+	public void ApplyForce(float force, ForceMode forcemode)
+	{
+		Vector3 forceDir = hitCollider.transform.position - this.gameObject.transform.position;
+		forceDir *= force;
+		
+		_ApplyForce(forceDir, forcemode);
+	}
+
+	public void ApplyForce(Vector3 forceDir)
+	{
+		_ApplyForce(forceDir, ForceMode.Force);
+	}
+
+	public void ApplyForce(Vector3 forceDir, ForceMode forcemode)
+	{
+		_ApplyForce(forceDir, forcemode);
+	}
+
+	public void _ApplyForce(Vector3 force, ForceMode forcemode)
+	{
+		//Establish proper reference to the other characters rigidbody. 
+		other.gameObject.GetComponent<Rigidbody>().AddForce (force, forcemode);
+	}
+	#endregion
 }
