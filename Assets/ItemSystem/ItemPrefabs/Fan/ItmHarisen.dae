@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlBox</authoring_tool>
+		</contributor>
+		<created>2015-06-24T03:37:47Z</created>
+		<modified>2015-06-24T03:37:47Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_images>
+		<image id="ItmCmnHrsn_auto1-image" name="ItmCmnHrsn_auto1">
+			<init_from>
+				<ref>ItmCmnHrsn_auto1.png</ref>
+			</init_from>
+		</image>
+	</library_images>
+	<library_materials>
+		<material id="ItmHarisen_lambert4">
+			<instance_effect url="#ItmHarisen_lambert4-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="ItmHarisen_lambert4-fx" name="ItmHarisen_lambert4">
+			<profile_COMMON>
+				<newparam sid="ItmCmnHrsn_auto1-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>ItmCmnHrsn_auto1-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="ItmCmnHrsn_auto1-sampler">
+					<sampler2D>
+						<source>ItmCmnHrsn_auto1-surface</source>
+						<instance_image url="#ItmCmnHrsn_auto1-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="ItmCmnHrsn_auto1-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon0" name="polygon0">
+			<mesh>
+				<source id="polygon0_Positions">
+					<float_array id="polygon0_PosArr" count="54">-0.5 4.619461 -1.913362 -0.25 0 0.0002441406 0.5 4.903929 -0.9753663 0.25 0 0 -0.5 5.000167 -7.592706E-07 -0.25 0 0 0.25 0 0.0002441406 0.5 4.157259 -2.777854 -0.25 0 0.0004882813 -0.5 3.535534 -3.535534 0.5 4.904015 0.9753819 0.25 0 0 -0.5 4.619617 1.913425 -0.25 0 -0.0002441406 -0.25 0 -0.0004882813 -0.5 3.535487 3.535521 0.25 0 -0.0002441406 0.5 4.157472 2.777994</float_array>
+					<technique_common>
+						<accessor source="#polygon0_PosArr" count="18" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Normals">
+					<float_array id="polygon0_NormArr" count="192">0.699585 -0.2408487 -0.6728016 0.37854 -0.2359619 -0.8950195 0.37854 -0.2359678 -0.8950415 -0.0001831055 -0.1951294 -0.9807739 -0.699585 0.2408487 0.6728016 -0.37854 0.2359678 0.8950415 -0.37854 0.2359619 0.8950195 0.0001831055 0.1951294 0.9807739 0.699585 0.1049221 0.7068655 0.37854 0.05682373 0.9238281 0.37854 0.05682577 0.9238589 -0.0001831055 0 1 -0.699585 -0.1049221 -0.7068655 -0.37854 -0.05682577 -0.9238589 -0.37854 -0.05682373 -0.9238281 0.0001831055 0 -1 -0.0001831055 0.3826904 0.9238892 0.37854 0.4060736 0.8318008 0.37854 0.4060669 0.8317871 0.699585 0.3674955 0.6128587 0.0001831055 -0.3826904 -0.9238892 -0.37854 -0.4060669 -0.8317871 -0.37854 -0.4060736 -0.8318008 -0.699585 -0.3674955 -0.6128587 -0.0001831055 -0.555603 -0.8314209 0.37854 -0.5604902 -0.7365779 0.37854 -0.5604858 -0.7365723 0.699585 -0.4800074 -0.5293806 0.0001831055 0.555603 0.8314209 -0.37854 0.5604858 0.7365723 -0.37854 0.5604902 0.7365779 -0.699585 0.4800074 0.5293806 0.699585 0.03491317 -0.713769 0.37854 0.1245728 -0.9171753 0.37854 0.1245778 -0.9172139 -0.0001831055 0.1951294 -0.9807739 -0.699585 -0.03491317 0.713769 -0.37854 -0.1245778 0.9172139 -0.37854 -0.1245728 0.9171753 0.0001831055 -0.1951294 0.9807739 0.699585 -0.1735912 0.6932055 0.37854 -0.3010864 0.8752441 0.37854 -0.3011013 0.8752881 -0.0001831055 -0.3827515 0.9238892 -0.699585 0.1735912 -0.6932055 -0.37854 0.3011013 -0.8752881 -0.37854 0.3010864 -0.8752441 0.0001831055 0.3827515 -0.9238892 -0.0001220703 -0.7071533 0.7070923 0.37854 -0.6131291 0.6933666 0.37854 -0.6130981 0.6933594 0.699585 -0.4256841 0.5740085 0.0001220703 0.7071533 -0.7070923 -0.37854 0.6130981 -0.6933594 -0.37854 0.6131291 -0.6933666 -0.699585 0.4256841 -0.5740085 -0.0001831055 0.555603 -0.8314209 0.37854 0.4660917 -0.7997298 0.37854 0.4660645 -0.7996826 0.699585 0.3054961 -0.6460286 0.0001831055 -0.555603 0.8314209 -0.37854 -0.4660645 0.7996826 -0.37854 -0.4660917 0.7997298 -0.699585 -0.3054961 0.6460286</float_array>
+					<technique_common>
+						<accessor source="#polygon0_NormArr" count="64" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_UVs0">
+					<float_array id="polygon0_UVArr0" count="8">0.5053101 0.9867554 0.5053101 0.01239014 0.9946899 0.9867554 0.9946899 0.01239014</float_array>
+					<technique_common>
+						<accessor source="#polygon0_UVArr0" count="4" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon0_Vertices">
+					<input semantic="POSITION" source="#polygon0_Positions" />
+				</vertices>
+				<triangles material="ItmHarisen_lambert4" count="32">
+					<input semantic="VERTEX" source="#polygon0_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon0_Normals" offset="1" />
+					<input semantic="TEXCOORD" source="#polygon0_UVs0" set="0" offset="2" />
+					<p>2 2 2 1 1 1 0 0 0 3 3 3 1 1 1 2 2 2 1 6 1 2 5 2 0 4 0 3 7 3 2 5 2 1 6 1 4 10 0 3 9 3 2 8 2 5 11 1 3 9 3 4 10 0 3 14 3 4 13 0 2 12 2 5 15 1 4 13 0 3 14 3 6 18 3 0 17 0 1 16 1 7 19 2 0 17 0 6 18 3 0 22 0 6 21 3 1 20 1 7 23 2 6 21 3 0 22 0 8 26 1 7 25 2 6 24 3 9 27 0 7 25 2 8 26 1 7 30 2 8 29 1 6 28 3 9 31 0 8 29 1 7 30 2 10 34 2 5 33 1 4 32 0 11 35 3 5 33 1 10 34 2 5 38 1 10 37 2 4 36 0 11 39 3 10 37 2 5 38 1 12 42 0 11 41 3 10 40 2 13 43 1 11 41 3 12 42 0 11 46 3 12 45 0 10 44 2 13 47 1 12 45 0 11 46 3 16 50 3 15 49 0 14 48 1 17 51 2 15 49 0 16 50 3 15 54 0 16 53 3 14 52 1 17 55 2 16 53 3 15 54 0 13 58 1 17 57 2 16 56 3 12 59 0 17 57 2 13 58 1 17 62 2 13 61 1 16 60 3 12 63 0 13 61 1 17 62 2</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon1" name="polygon1">
+			<mesh>
+				<source id="polygon1_Positions">
+					<float_array id="polygon1_PosArr" count="24">-0.2974854 0 -0.1875 -0.2249756 -2 -0.09997559 0.2974854 0 -0.1875 0.2249756 -2 -0.09997559 0.2974854 0 0.1875 0.2249756 -2 0.09997559 -0.2974854 0 0.1875 -0.2249756 -2 0.09997559</float_array>
+					<technique_common>
+						<accessor source="#polygon1_PosArr" count="8" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1_Normals">
+					<float_array id="polygon1_NormArr" count="24">-0.59375 0.546875 -0.59375 -0.5625 -0.609375 -0.5625 0.59375 0.546875 -0.59375 0.5625 -0.609375 -0.5625 0.59375 0.546875 0.59375 0.5625 -0.609375 0.5625 -0.59375 0.546875 0.59375 -0.5625 -0.609375 0.5625</float_array>
+					<technique_common>
+						<accessor source="#polygon1_NormArr" count="8" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1_UVs0">
+					<float_array id="polygon1_UVArr0" count="12">0.008850098 0.9867249 0.1166687 0.01327515 0.495575 0.9867249 0.3833313 0.01327515 0.008850098 0.01327515 0.4933777 0.01327515</float_array>
+					<technique_common>
+						<accessor source="#polygon1_UVArr0" count="6" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon1_Vertices">
+					<input semantic="POSITION" source="#polygon1_Positions" />
+				</vertices>
+				<triangles material="ItmHarisen_lambert4" count="12">
+					<input semantic="VERTEX" source="#polygon1_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon1_Normals" offset="1" />
+					<input semantic="TEXCOORD" source="#polygon1_UVs0" set="0" offset="2" />
+					<p>2 2 0 1 1 1 0 0 0 3 3 1 1 1 1 2 2 0 4 4 2 3 3 1 2 2 0 5 5 3 3 3 1 4 4 2 6 6 2 5 5 3 4 4 2 7 7 3 5 5 3 6 6 2 0 0 0 7 7 3 6 6 2 1 1 1 7 7 3 0 0 0 6 6 5 2 2 4 0 0 4 4 4 5 2 2 4 6 6 5 5 5 3 1 1 1 3 3 1 7 7 3 1 1 1 5 5 3</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon0_Controller">
+			<skin source="#polygon0">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon0_Joints">
+					<Name_array id="polygon0_JointArr" count="9">TopN BellowM_dummy_node HaveN AllN BellowN CenterEN FrontEN RearEN GripM</Name_array>
+					<technique_common>
+						<accessor source="#polygon0_JointArr" count="9">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Matrices">
+					<float_array id="polygon0_MatArr" count="144">1 0 0 0 0 1 0 -1.5 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0.9659905 0.2588367 0 0 -0.2588367 0.9659905 0 0 0 0 1 1 0 0 0 0 0.7071065 -0.7071065 0 0 0.7071065 0.7071065 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0_MatArr" count="9" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Weights">
+					<float_array id="polygon0_WeightArr" count="8">0.75 0.25 1 0.63 0.37 0.5 0.88 0.12</float_array>
+					<technique_common>
+						<accessor source="#polygon0_WeightArr" count="8">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon0_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon0_Matrices" />
+				</joints>
+				<vertex_weights count="18">
+					<input semantic="JOINT" offset="0" source="#polygon0_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon0_Weights" />
+					<vcount>2 1 2 1 2 1 1 2 1 1 2 1 2 1 1 1 1 2</vcount>
+					<v>7 0 6 1 5 2 7 3 6 4 5 2 6 5 7 5 5 2 5 2 7 6 6 7 5 2 7 2 6 3 7 4 5 2 6 0 7 1 5 2 5 2 6 2 5 2 6 6 7 7</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon1_Controller">
+			<skin source="#polygon1">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon1_Joints">
+					<Name_array id="polygon1_JointArr" count="9">TopN BellowM_dummy_node HaveN AllN BellowN CenterEN FrontEN RearEN GripM</Name_array>
+					<technique_common>
+						<accessor source="#polygon1_JointArr" count="9">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1_Matrices">
+					<float_array id="polygon1_MatArr" count="144">1 0 0 0 0 1 0 -1.5 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 1 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 0.9659905 0.2588367 0 0 -0.2588367 0.9659905 0 0 0 0 1 1 0 0 0 0 0.7071065 -0.7071065 0 0 0.7071065 0.7071065 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon1_MatArr" count="9" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1_Weights">
+					<float_array id="polygon1_WeightArr" count="8">0.75 0.25 1 0.63 0.37 0.5 0.88 0.12</float_array>
+					<technique_common>
+						<accessor source="#polygon1_WeightArr" count="8">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon1_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon1_Matrices" />
+				</joints>
+				<vertex_weights count="8">
+					<input semantic="JOINT" offset="0" source="#polygon1_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon1_Weights" />
+					<vcount>1 1 1 1 1 1 1 1</vcount>
+					<v>8 2 8 2 8 2 8 2 8 2 8 2 8 2 8 2</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNode" name="RootNode">
+			<node id="TopN" name="TopN" sid="TopN" type="JOINT">
+				<translate>0 1.5 0</translate>
+				<node id="BellowM_dummy_node" name="BellowM_dummy_node" sid="BellowM_dummy_node" type="JOINT">
+					<translate>0 -1.5 0</translate>
+				</node>
+				<node id="HaveN" name="HaveN" sid="HaveN" type="JOINT">
+					<translate>0 -2.5 0</translate>
+					<node id="AllN" name="AllN" sid="AllN" type="JOINT">
+						<translate>0 1 0</translate>
+						<node id="BellowN" name="BellowN" sid="BellowN" type="JOINT">
+							<node id="CenterEN" name="CenterEN" sid="CenterEN" type="JOINT" />
+							<node id="FrontEN" name="FrontEN" sid="FrontEN" type="JOINT">
+								<rotate>1 0 0 15</rotate>
+							</node>
+							<node id="RearEN" name="RearEN" sid="RearEN" type="JOINT">
+								<rotate>1 0 0 -45</rotate>
+							</node>
+						</node>
+						<node id="GripM" name="GripM" sid="GripM" type="JOINT" />
+					</node>
+				</node>
+			</node>
+			<node id="polygon0" name="polygon0" type="NODE">
+				<instance_controller url="#polygon0_Controller">
+					<skeleton>#TopN</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="ItmHarisen_lambert4" target="#ItmHarisen_lambert4">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon1" name="polygon1" type="NODE">
+				<instance_controller url="#polygon1_Controller">
+					<skeleton>#TopN</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="ItmHarisen_lambert4" target="#ItmHarisen_lambert4">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNode" />
+	</scene>
+</COLLADA>

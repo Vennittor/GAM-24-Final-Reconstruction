@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 08ff86661f8b91d47a0e21a09026b477
+timeCreated: 1448071948
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: EffectN
+    100002: FaceN
+    100004: FlowerM
+    100006: FlowerN
+    100008: HaveN
+    100010: //RootNode
+    100012: LeafAN
+    100014: LeafBN
+    100016: LeafLM
+    100018: LeafRM
+    100020: PetalLN
+    100022: PetalN
+    100024: PetalON
+    100026: PetalRN
+    100028: PetalUN
+    100030: polygon0
+    100032: polygon1
+    100034: polygon10
+    100036: polygon2
+    100038: polygon3
+    100040: polygon4
+    100042: polygon5
+    100044: polygon6
+    100046: polygon7
+    100048: polygon8
+    100050: polygon9
+    100052: TopN
+    100054: TrunkM
+    400000: EffectN
+    400002: FaceN
+    400004: FlowerM
+    400006: FlowerN
+    400008: HaveN
+    400010: //RootNode
+    400012: LeafAN
+    400014: LeafBN
+    400016: LeafLM
+    400018: LeafRM
+    400020: PetalLN
+    400022: PetalN
+    400024: PetalON
+    400026: PetalRN
+    400028: PetalUN
+    400030: polygon0
+    400032: polygon1
+    400034: polygon10
+    400036: polygon2
+    400038: polygon3
+    400040: polygon4
+    400042: polygon5
+    400044: polygon6
+    400046: polygon7
+    400048: polygon8
+    400050: polygon9
+    400052: TopN
+    400054: TrunkM
+    4300000: polygon0
+    4300002: polygon1
+    4300004: polygon2
+    4300006: polygon3
+    4300008: polygon4
+    4300010: polygon5
+    4300012: polygon6
+    4300014: polygon7
+    4300016: polygon8
+    4300018: polygon9
+    4300020: polygon10
+    9500000: //RootNode
+    13700000: polygon0
+    13700002: polygon1
+    13700004: polygon10
+    13700006: polygon2
+    13700008: polygon3
+    13700010: polygon4
+    13700012: polygon5
+    13700014: polygon6
+    13700016: polygon7
+    13700018: polygon8
+    13700020: polygon9
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

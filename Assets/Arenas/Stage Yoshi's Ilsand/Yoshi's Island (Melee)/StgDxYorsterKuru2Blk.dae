@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlBox</authoring_tool>
+		</contributor>
+		<created>2013-11-30T17:32:42Z</created>
+		<modified>2013-11-30T17:32:42Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_images>
+		<image id="GrdYorsterKuruBlk-image" name="GrdYorsterKuruBlk">
+			<init_from>
+				<ref>GrdYorsterKuruBlk.png</ref>
+			</init_from>
+		</image>
+	</library_images>
+	<library_materials>
+		<material id="shadowmat11">
+			<instance_effect url="#shadowmat11-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="shadowmat11-fx" name="shadowmat11">
+			<profile_COMMON>
+				<newparam sid="GrdYorsterKuruBlk-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>GrdYorsterKuruBlk-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="GrdYorsterKuruBlk-sampler">
+					<sampler2D>
+						<source>GrdYorsterKuruBlk-surface</source>
+						<instance_image url="#GrdYorsterKuruBlk-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="GrdYorsterKuruBlk-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon0-ID" name="polygon0">
+			<mesh>
+				<source id="polygon0-ID_Positions">
+					<float_array id="polygon0-ID_PosArr" count="72">3.825 -4.018515 1.386578 3.825 -3.62324 1.230095 -3.825 -4.018515 1.386578 -3.825 -3.62324 1.230095 -3.825 3.956215 -1.555454 -3.825 3.554018 -1.417735 3.825 3.956215 -1.555454 3.825 3.554018 -1.417735 4.25 -3.619779 1.239477 4.25 3.557479 -1.408353 3.825 -3.956214 1.555453 4.25 -3.557478 1.408351 3.825 4.018517 -1.38658 4.25 3.61978 -1.239478 3.825 -3.554017 1.417733 3.825 3.623241 -1.230096 -3.825 -3.956214 1.555453 -3.825 -3.554017 1.417733 -3.825 4.018517 -1.38658 -3.825 3.623241 -1.230096 -4.25 -3.557478 1.408351 -4.25 3.61978 -1.239478 -4.25 -3.619779 1.239477 -4.25 3.557479 -1.408353</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_PosArr" count="24" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Normals">
+					<float_array id="polygon0-ID_NormArr" count="78">0 -0.5687937 0.1947652 0 0.5590039 -0.2213012 0.601041 -0.004894835 -0.01326803 0.601041 -0.5638988 0.2080332 0.601041 0.5638988 -0.2080332 0.601041 0.004894835 0.01326803 0 -0.5590039 0.2213012 0 0.5687937 -0.1947652 -0.601041 0.004894835 0.01326803 -0.601041 -0.5638988 0.2080332 -0.601041 -0.004894835 -0.01326803 -0.601041 0.5638988 -0.2080332 0 0.7974731 -0.2942033 0 -0.7974731 0.2942033 0 -0.00692234 -0.01876383 0.85 0 0 0 0.00692234 0.01876383 -0.85 0 0 0.4907475 0.4644177 -0.159025 0.4907475 0.4564245 -0.1806916 0.4907475 -0.4564245 0.1806916 0.4907475 -0.4644177 0.159025 -0.4907475 0.4644177 -0.159025 -0.4907475 0.4564245 -0.1806916 -0.4907475 -0.4564245 0.1806916 -0.4907475 -0.4644177 0.159025</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_NormArr" count="26" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_UVs0">
+					<float_array id="polygon0-ID_UVArr0" count="40">0.149219 0.460938 0.149219 0.510938 0.139844 0.460938 0.139844 0.510938 0.139844 0.757813 0.139844 0.707812 0.149219 0.757813 0.149219 0.707812 0.160156 0.503125 0.160156 0.7 0.125 0.510938 0.125 0.707812 0.5 0 1 0 0.5 1 1 1 0 1 0 0 0.496094 1 0.496094 0</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_UVArr0" count="20" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon0-ID_Vertices">
+					<input semantic="POSITION" source="#polygon0-ID_Positions" />
+				</vertices>
+				<triangles material="shadowmat11-ID" count="44">
+					<input semantic="VERTEX" source="#polygon0-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon0-ID_Normals" offset="1" />
+					<input semantic="TEXCOORD" source="#polygon0-ID_UVs0" set="0" offset="2" />
+					<p>2 0 2 1 0 1 0 0 0 3 0 3 1 0 1 2 0 2 6 1 6 5 1 5 4 1 4 7 1 7 5 1 5 6 1 6 7 2 7 8 2 8 1 2 1 9 2 9 8 2 8 7 2 7 0 3 0 11 3 8 10 3 0 8 3 8 11 3 8 0 3 0 12 4 6 9 4 9 6 4 6 13 4 9 9 4 9 12 4 6 13 5 9 14 5 1 11 5 8 15 5 7 14 5 1 13 5 9 10 6 0 17 6 3 16 6 2 14 6 1 17 6 3 10 6 0 18 7 4 15 7 7 12 7 6 19 7 5 15 7 7 18 7 4 19 8 5 20 8 10 17 8 3 21 8 11 20 8 10 19 8 5 16 9 2 22 9 10 2 9 2 20 9 10 22 9 10 16 9 2 3 10 3 23 10 11 5 10 5 22 10 10 23 10 11 3 10 3 4 11 4 21 11 11 18 11 4 23 11 11 21 11 11 4 11 4 18 12 14 6 12 13 4 12 12 12 12 15 6 12 13 18 12 14 10 13 15 2 13 12 0 13 13 16 13 14 2 13 12 10 13 15 3 14 18 7 14 17 1 14 16 5 14 19 7 14 17 3 14 18 8 15 19 13 15 15 11 15 13 9 15 18 13 15 15 8 15 19 14 16 12 19 16 16 17 16 17 15 16 14 19 16 16 14 16 12 20 17 13 23 17 18 22 17 19 21 17 15 23 17 18 20 17 13 15 18 7 13 18 9 12 18 6 9 19 9 7 19 7 6 19 6 11 20 8 14 20 1 10 20 0 1 21 1 8 21 8 0 21 0 21 22 11 19 22 5 18 22 4 5 23 5 23 23 11 4 23 4 17 24 3 20 24 10 16 24 2 22 25 10 3 25 3 2 25 2</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon0-ID_Controller">
+			<skin source="#polygon0-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon0-ID_Joints">
+					<Name_array id="polygon0-ID_JointArr" count="3">StgDxYorsterKuru2Blk-ID Kuru2Blk-ID StgDxYorsterBlock_KurukuruBlock-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_JointArr" count="3">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Matrices">
+					<float_array id="polygon0-ID_MatArr" count="48">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1.176471 0 0 0 0 1.103834 -0.4072259 0 0 17.3071 46.91296 0 0 0 0 1 1.176471 0 0 0 0 1.10382 -0.4072206 -9.99987E-07 0 17.3071 46.91296 2.4E-05 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_MatArr" count="3" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Weights">
+					<float_array id="polygon0-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon0-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon0-ID_Matrices" />
+				</joints>
+				<vertex_weights count="24">
+					<input semantic="JOINT" offset="0" source="#polygon0-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon0-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNodeID" name="RootNode">
+			<node id="StgDxYorsterKuru2Blk-ID" name="StgDxYorsterKuru2Blk" sid="StgDxYorsterKuru2Blk-ID" type="JOINT">
+				<node id="Kuru2Blk-ID" name="Kuru2Blk" sid="Kuru2Blk-ID" type="JOINT">
+					<rotate>1 0 0 -20.25</rotate>
+					<scale>0.85 0.85 0.02</scale>
+					<node id="StgDxYorsterBlock_KurukuruBlock-ID" name="StgDxYorsterBlock_KurukuruBlock" sid="StgDxYorsterBlock_KurukuruBlock-ID" type="JOINT">
+						<translate>0 1E-06 -2.4E-05</translate>
+						<scale>1 1.000013 1</scale>
+					</node>
+				</node>
+			</node>
+			<node id="polygon0-ID" name="polygon0" type="NODE">
+				<instance_controller url="#polygon0-ID_Controller">
+					<skeleton>#StgDxYorsterKuru2Blk</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="shadowmat11-ID" target="#shadowmat11">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNodeID" />
+	</scene>
+</COLLADA>

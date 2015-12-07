@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 912e65609d7384b4aafa8b092b84b06e
+timeCreated: 1448262859
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: asi_bld
+    100002: asi_blm
+    100004: asi_blu
+    100006: asi_brd
+    100008: asi_brm
+    100010: asi_bru
+    100012: asi_fld
+    100014: asi_flm
+    100016: asi_flu
+    100018: asi_frd
+    100020: asi_frm
+    100022: asi_fru
+    100024: atama
+    100026: BodyM_dummy_node
+    100028: //RootNode
+    100030: happa_a
+    100032: happa_b
+    100034: happa_c
+    100036: happa_d
+    100038: happa_e
+    100040: happa_f
+    100042: happa_g
+    100044: happa_h
+    100046: hara
+    100048: kosi
+    100050: kubi
+    100052: mune
+    100054: polygon0
+    100056: polygon1
+    100058: polygon2
+    100060: polygon3
+    100062: polygon4
+    100064: RotN
+    100066: sippo
+    100068: tama
+    100070: TopN
+    100072: TransN
+    400000: asi_bld
+    400002: asi_blm
+    400004: asi_blu
+    400006: asi_brd
+    400008: asi_brm
+    400010: asi_bru
+    400012: asi_fld
+    400014: asi_flm
+    400016: asi_flu
+    400018: asi_frd
+    400020: asi_frm
+    400022: asi_fru
+    400024: atama
+    400026: BodyM_dummy_node
+    400028: //RootNode
+    400030: happa_a
+    400032: happa_b
+    400034: happa_c
+    400036: happa_d
+    400038: happa_e
+    400040: happa_f
+    400042: happa_g
+    400044: happa_h
+    400046: hara
+    400048: kosi
+    400050: kubi
+    400052: mune
+    400054: polygon0
+    400056: polygon1
+    400058: polygon2
+    400060: polygon3
+    400062: polygon4
+    400064: RotN
+    400066: sippo
+    400068: tama
+    400070: TopN
+    400072: TransN
+    4300000: polygon0
+    4300002: polygon1
+    4300004: polygon2
+    4300006: polygon3
+    4300008: polygon4
+    9500000: //RootNode
+    13700000: polygon0
+    13700002: polygon1
+    13700004: polygon2
+    13700006: polygon3
+    13700008: polygon4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

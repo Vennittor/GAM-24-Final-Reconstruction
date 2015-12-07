@@ -1,0 +1,140 @@
+fileFormatVersion: 2
+guid: 6c5d0ac72678637438f2c8325b1118b9
+timeCreated: 1448262847
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: _01_-_TopN
+    100002: _02_-_TransN
+    100004: _03_-_RotN
+    100006: _04_-_HipN
+    100008: _05_-_bmerge40_1_8_4
+    100010: _06_-_bmerge40_1_8_9
+    100012: _07_-_LLegJ
+    100014: _08_-_LKneeJ
+    100016: _09_-_LFootJ
+    100018: _10_-_RLegJ
+    100020: _11_-_RKneeJ
+    100022: _12_-_RFootJ
+    100024: _13_-_WaistN
+    100026: _14_-_Bust1N
+    100028: _15_-_bmerge40_1_8_2
+    100030: _16_-_Bust2N
+    100032: _17_-_bmerge40_1_8_1_8
+    100034: _18_-_HeadN
+    100036: _19_-_null19
+    100038: _20_-_null20
+    100040: _21_-_LShoulderN
+    100042: _22_-_LShoulderJ
+    100044: _23_-_LArmJ
+    100046: _24_-_LHandN
+    100048: _25_-_RShoulderN
+    100050: _26_-_RShoulderJ
+    100052: _27_-_RArmJ
+    100054: _28_-_RHandN
+    100056: _29_-_bmerge40_1_8_10
+    100058: _30_-_bmerge40_1_8_3
+    100060: _31_-_ThrowN
+    100062: EnvironmentAmbientLight
+    100064: Kabigon_model_
+    100066: //RootNode
+    400000: _01_-_TopN
+    400002: _02_-_TransN
+    400004: _03_-_RotN
+    400006: _04_-_HipN
+    400008: _05_-_bmerge40_1_8_4
+    400010: _06_-_bmerge40_1_8_9
+    400012: _07_-_LLegJ
+    400014: _08_-_LKneeJ
+    400016: _09_-_LFootJ
+    400018: _10_-_RLegJ
+    400020: _11_-_RKneeJ
+    400022: _12_-_RFootJ
+    400024: _13_-_WaistN
+    400026: _14_-_Bust1N
+    400028: _15_-_bmerge40_1_8_2
+    400030: _16_-_Bust2N
+    400032: _17_-_bmerge40_1_8_1_8
+    400034: _18_-_HeadN
+    400036: _19_-_null19
+    400038: _20_-_null20
+    400040: _21_-_LShoulderN
+    400042: _22_-_LShoulderJ
+    400044: _23_-_LArmJ
+    400046: _24_-_LHandN
+    400048: _25_-_RShoulderN
+    400050: _26_-_RShoulderJ
+    400052: _27_-_RArmJ
+    400054: _28_-_RHandN
+    400056: _29_-_bmerge40_1_8_10
+    400058: _30_-_bmerge40_1_8_3
+    400060: _31_-_ThrowN
+    400062: EnvironmentAmbientLight
+    400064: Kabigon_model_
+    400066: //RootNode
+    4300000: Kabigon_model_
+    9500000: //RootNode
+    13700000: Kabigon_model_
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

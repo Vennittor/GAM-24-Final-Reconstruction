@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Shadowth</author>
+      <authoring_tool>3dsMax 10 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=0;ExportTangents=1;ExportAnimations=0;SampleAnim=0;ExportAnimClip=0;BakeMatrices=0;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+    </contributor>
+    <created>2009-06-21T04:10:34Z</created>
+    <modified>2009-06-21T04:10:35Z</modified>
+    <unit meter="0.0254" name="inch"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="EffCommonPKLeafCore.png" name="EffCommonPKLeafCore_png">
+      <init_from>./EffCommonPKLeafCore.png</init_from>
+    </image>
+    <image id="EffCommonPKLeaf.png" name="EffCommonPKLeaf_png">
+      <init_from>./EffCommonPKLeaf.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material__26" name="Material__26">
+      <instance_effect url="#Material__26-fx"/>
+    </material>
+    <material id="Material__25" name="Material__25">
+      <instance_effect url="#Material__25-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Material__26-fx" name="Material__26">
+      <profile_COMMON>
+        <newparam sid="EffCommonPKLeafCore_png-surface">
+          <surface type="2D">
+            <init_from>EffCommonPKLeafCore.png</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="EffCommonPKLeafCore_png-sampler">
+          <sampler2D>
+            <source>EffCommonPKLeafCore_png-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="EffCommonPKLeafCore_png-surface">
+          <surface type="2D">
+            <init_from>EffCommonPKLeafCore.png</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="EffCommonPKLeafCore_png-sampler">
+          <sampler2D>
+            <source>EffCommonPKLeafCore_png-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="EffCommonPKLeafCore_png-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <texture texture="EffCommonPKLeafCore_png-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__25-fx" name="Material__25">
+      <profile_COMMON>
+        <newparam sid="EffCommonPKLeaf_png-surface">
+          <surface type="2D">
+            <init_from>EffCommonPKLeaf.png</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="EffCommonPKLeaf_png-sampler">
+          <sampler2D>
+            <source>EffCommonPKLeaf_png-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="EffCommonPKLeaf_png-surface">
+          <surface type="2D">
+            <init_from>EffCommonPKLeaf.png</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="EffCommonPKLeaf_png-sampler">
+          <sampler2D>
+            <source>EffCommonPKLeaf_png-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="EffCommonPKLeaf_png-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <texture texture="EffCommonPKLeaf_png-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="objpolygon1-mesh" name="objpolygon1">
+      <mesh>
+        <source id="objpolygon1-mesh-positions">
+          <float_array id="objpolygon1-mesh-positions-array" count="87">-1.07843 2.16539 -1.28522 -1.32312 2.37455 -1.50446 -1.17702 1.91951 -1.40271 -0.711614 1.81211 -0.848071 -0.859693 1.94465 -1.02454 -1.01772 1.48957 -1.21287 -0.840244 1.11061 -1.00136 -1.25127 1.63713 -1.4912 -1.15628 1.06905 -1.378 0.049612 1.7283 0.059126 -0.167872 1.63261 -0.200061 -0.077635 0.798063 -0.092521 0.172169 1.04382 0.205183 0.531091 2.08989 0.632929 0.273186 1.87833 0.32557 0.395752 1.41815 0.471638 0.595339 1.83733 0.709496 -0.519441 1.68364 -0.619043 -0.622433 0.848575 -0.741787 -0.349024 0.758665 -0.415949 -0.352793 1.6126 -0.420441 -0.948394 0.514142 -1.13025 -0.697583 0.201546 -0.831346 -0.349024 -0.013487 -0.415949 -0.00181 0.105544 -0.002156 0.298788 0.455772 0.356082 0.524346 0.981268 0.624894 0.659547 1.52518 0.78602 0.742323 2.21855 0.884665</float_array>
+          <technique_common>
+            <accessor source="#objpolygon1-mesh-positions-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon1-mesh-normals">
+          <float_array id="objpolygon1-mesh-normals-array" count="87">0.766045 0.000000 -0.642787 0.766045 0.000001 -0.642787 0.766044 0.000000 -0.642788 0.766045 0.000001 -0.642787 0.766046 -0.000001 -0.642786 0.766045 0.000000 -0.642787 0.766043 -0.000000 -0.642789 0.766044 -0.000000 -0.642789 0.766044 0 -0.642788 0.766043 0.000000 -0.642789 0.766045 -0.000001 -0.642787 0.766045 -0.000000 -0.642788 0.766044 -0.000000 -0.642788 0.766044 -0.000000 -0.642789 0.766044 0.000000 -0.642789 0.752782 0.00832 -0.658217 0.689412 0.059943 -0.721885 0.723051 0.029352 -0.690171 0.766044 -0.000000 -0.642789 0.766042 -0.000001 -0.64279 0.766045 -0.000003 -0.642787 0.766045 -0.000000 -0.642787 0.766045 -0.000001 -0.642787 0.766043 0.000001 -0.642789 0.766049 -0.000002 -0.642782 0.766047 -0.000001 -0.642785 0.766046 -0.000000 -0.642786 0.731684 0.031985 -0.680893 0.766051 -0.000004 -0.64278</float_array>
+          <technique_common>
+            <accessor source="#objpolygon1-mesh-normals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon1-mesh-map-channel1">
+          <float_array id="objpolygon1-mesh-map-channel1-array" count="87">0.182943 0.296875 0 0.218099 0.195312 0 0.499349 0.296875 0 0.499349 0.398437 0 0.921224 0.398437 0 0.499349 0.5 0 0.921224 0.5 0 0.499349 0.601563 0 0.921224 0.601563 0 0.850911 0.703125 0 0.147786 0.398437 0 0.077474 0.5 0 0.147786 0.601563 0 0.499349 0.703125 0 0.780599 0.804687 0 0.358724 0.09375 0 0.5 0 0 0.499349 0.09375 0 0.499349 0.195312 0 0.780599 0.195312 0 0.850911 0.296875 0 0.182943 0.703125 0 0.499349 0.804687 0 0.639974 0.90625 0 0.218099 0.804687 0 0.499349 0.90625 0 0.5 1 0 0.639974 0.09375 0 0.358724 0.90625 0</float_array>
+          <technique_common>
+            <accessor source="#objpolygon1-mesh-map-channel1-array" count="29" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon1-mesh-map-channel1-tangents">
+          <float_array id="objpolygon1-mesh-map-channel1-tangents-array" count="87">-0.154438 -0.969649 -0.184053 -0.253648 -0.914076 -0.302289 -0.186003 -0.953357 -0.221671 -0.107558 -0.982457 -0.128184 -0.103542 -0.981446 -0.123395 -0.000726 -0.99464 -0.000866 0.038485 -0.995366 0.045865 0.101005 -0.984532 0.120373 0.106629 -0.986145 0.127076 0.150532 -0.970932 0.179396 -0.114295 -0.984065 -0.13621 -0.038098 -0.994688 -0.045403 0.105011 -0.979954 0.125148 0.18455 -0.955452 0.219938 0.221532 -0.936997 0.26401 -0.260461 -0.913671 -0.30943 -0.289525 -0.886864 -0.350143 -0.296927 -0.885683 -0.348741 -0.269531 -0.904436 -0.321213 -0.317083 -0.869367 -0.37788 -0.219395 -0.934366 -0.261459 0.225321 -0.935211 0.268529 0.244676 -0.924021 0.291596 0.239711 -0.927832 0.285674 0.243715 -0.923611 0.290457 0.226503 -0.934742 0.26994 0.216225 -0.941126 0.257689 -0.340201 -0.848461 -0.405435 0.195909 -0.95242 0.233487</float_array>
+          <technique_common>
+            <accessor source="#objpolygon1-mesh-map-channel1-tangents-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon1-mesh-map-channel1-binormals">
+          <float_array id="objpolygon1-mesh-map-channel1-binormals-array" count="87">-0.623919 0.24051 -0.743559 -0.590144 0.396346 -0.703307 -0.615079 0.290443 -0.733022 -0.633662 0.167901 -0.75517 -0.634299 0.16196 -0.755932 -0.642787 0.001136 -0.766044 -0.64163 -0.060043 -0.764661 -0.634755 -0.157609 -0.756469 -0.633882 -0.165886 -0.755431 -0.62487 -0.234472 -0.744688 -0.632544 0.177811 -0.753838 -0.641649 0.059481 -0.764688 -0.634038 -0.164441 -0.755616 -0.615596 -0.287783 -0.733637 -0.603275 -0.345205 -0.718953 -0.604458 0.4047 -0.686184 -0.663545 0.451992 -0.596164 -0.623313 0.458415 -0.633512 -0.583163 0.420614 -0.694985 -0.559062 0.493504 -0.666261 -0.603765 0.343113 -0.719542 -0.601896 -0.350978 -0.717312 -0.594332 -0.380896 -0.708299 -0.596417 -0.372933 -0.71078 -0.594628 -0.379764 -0.708659 -0.601466 -0.352747 -0.716804 -0.605283 -0.336577 -0.721351 -0.59068 0.52829 -0.609924 -0.612197 -0.304789 -0.729601</float_array>
+          <technique_common>
+            <accessor source="#objpolygon1-mesh-map-channel1-binormals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="objpolygon1-mesh-vertices">
+          <input semantic="POSITION" source="#objpolygon1-mesh-positions"/>
+        </vertices>
+        <triangles material="Material__25" count="36">
+          <input semantic="VERTEX" source="#objpolygon1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#objpolygon1-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#objpolygon1-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXTANGENT" source="#objpolygon1-mesh-map-channel1-tangents" offset="3" set="1"/>
+          <input semantic="TEXBINORMAL" source="#objpolygon1-mesh-map-channel1-binormals" offset="4" set="1"/>
+          <p>21 0 0 0 0 8 1 1 1 1 6 2 2 2 2 18 3 3 3 3 21 0 0 0 0 6 2 2 2 2 18 3 3 3 3 6 2 2 2 2 17 4 4 4 4 19 5 5 5 5 18 3 3 3 3 17 4 4 4 4 19 5 5 5 5 17 4 4 4 4 20 6 6 6 6 11 7 7 7 7 19 5 5 5 5 20 6 6 6 6 11 7 7 7 7 20 6 6 6 6 10 8 8 8 8 9 9 9 9 9 11 7 7 7 7 10 8 8 8 8 22 10 10 10 10 21 0 0 0 0 18 3 3 3 3 23 11 11 11 11 22 10 10 10 10 18 3 3 3 3 23 11 11 11 11 18 3 3 3 3 19 5 5 5 5 24 12 12 12 12 23 11 11 11 11 19 5 5 5 5 24 12 12 12 12 19 5 5 5 5 11 7 7 7 7 12 13 13 13 13 24 12 12 12 12 11 7 7 7 7 12 13 13 13 13 11 7 7 7 7 9 9 9 9 9 14 14 14 14 14 12 13 13 13 13 9 9 9 9 9 7 15 15 15 15 1 16 16 16 16 2 17 17 17 17 5 18 18 18 18 7 15 15 15 15 2 17 17 17 17 5 18 18 18 18 2 17 17 17 17 4 19 19 19 19 3 20 20 20 20 5 18 18 18 18 4 19 19 19 19 8 1 1 1 1 7 15 15 15 15 5 18 18 18 18 6 2 2 2 2 8 1 1 1 1 5 18 18 18 18 6 2 2 2 2 5 18 18 18 18 3 20 20 20 20 17 4 4 4 4 6 2 2 2 2 3 20 20 20 20 25 21 21 21 21 24 12 12 12 12 12 13 13 13 13 15 22 22 22 22 25 21 21 21 21 12 13 13 13 13 15 22 22 22 22 12 13 13 13 13 14 14 14 14 14 13 23 23 23 23 15 22 22 22 22 14 14 14 14 14 26 24 24 24 24 25 21 21 21 21 15 22 22 22 22 16 25 25 25 25 26 24 24 24 24 15 22 22 22 22 16 25 25 25 25 15 22 22 22 22 13 23 23 23 23 28 26 26 26 26 16 25 25 25 25 13 23 23 23 23 2 17 17 17 17 1 16 16 16 16 0 27 27 27 27 4 19 19 19 19 2 17 17 17 17 0 27 27 27 27 16 25 25 25 25 28 26 26 26 26 27 28 28 28 28 26 24 24 24 24 16 25 25 25 25 27 28 28 28 28</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="objpolygon2-mesh" name="objpolygon2">
+      <mesh>
+        <source id="objpolygon2-mesh-positions">
+          <float_array id="objpolygon2-mesh-positions-array" count="87">-1.07843 2.16539 -1.28522 -1.32312 2.37455 -1.50446 -1.17702 1.91951 -1.40271 -0.711614 1.81211 -0.848071 -0.859693 1.94465 -1.02454 -1.01772 1.48957 -1.21287 -0.840244 1.11061 -1.00136 -1.25127 1.63713 -1.4912 -1.15628 1.06905 -1.378 0.049612 1.7283 0.059126 -0.167872 1.63261 -0.200061 -0.077635 0.798063 -0.092521 0.172169 1.04382 0.205183 0.531091 2.08989 0.632929 0.273186 1.87833 0.32557 0.395752 1.41815 0.471638 0.595339 1.83733 0.709496 -0.519441 1.68364 -0.619043 -0.622433 0.848575 -0.741787 -0.349024 0.758665 -0.415949 -0.352793 1.6126 -0.420441 -0.948394 0.514142 -1.13025 -0.697583 0.201546 -0.831346 -0.349024 -0.013487 -0.415949 -0.00181 0.105544 -0.002156 0.298788 0.455772 0.356082 0.524346 0.981268 0.624894 0.659547 1.52518 0.78602 0.742323 2.21855 0.884665</float_array>
+          <technique_common>
+            <accessor source="#objpolygon2-mesh-positions-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon2-mesh-normals">
+          <float_array id="objpolygon2-mesh-normals-array" count="87">0.766045 0.000000 -0.642787 0.766045 0.000001 -0.642787 0.766044 0.000000 -0.642788 0.766045 0.000001 -0.642787 0.766046 -0.000001 -0.642786 0.766045 0.000000 -0.642787 0.766043 -0.000000 -0.642789 0.766044 -0.000000 -0.642789 0.766044 0 -0.642788 0.766043 0.000000 -0.642789 0.766045 -0.000001 -0.642787 0.766045 -0.000000 -0.642788 0.766044 -0.000000 -0.642788 0.766044 -0.000000 -0.642789 0.766044 0.000000 -0.642789 0.752782 0.00832 -0.658217 0.689412 0.059943 -0.721885 0.723051 0.029352 -0.690171 0.766044 -0.000000 -0.642789 0.766042 -0.000001 -0.64279 0.766045 -0.000003 -0.642787 0.766045 -0.000000 -0.642787 0.766045 -0.000001 -0.642787 0.766043 0.000001 -0.642789 0.766049 -0.000002 -0.642782 0.766047 -0.000001 -0.642785 0.766046 -0.000000 -0.642786 0.731684 0.031985 -0.680893 0.766051 -0.000004 -0.64278</float_array>
+          <technique_common>
+            <accessor source="#objpolygon2-mesh-normals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon2-mesh-map-channel1">
+          <float_array id="objpolygon2-mesh-map-channel1-array" count="87">0.182943 0.296875 0 0.218099 0.195312 0 0.499349 0.296875 0 0.499349 0.398437 0 0.921224 0.398437 0 0.499349 0.5 0 0.921224 0.5 0 0.499349 0.601563 0 0.921224 0.601563 0 0.850911 0.703125 0 0.147786 0.398437 0 0.077474 0.5 0 0.147786 0.601563 0 0.499349 0.703125 0 0.780599 0.804687 0 0.358724 0.09375 0 0.5 0 0 0.499349 0.09375 0 0.499349 0.195312 0 0.780599 0.195312 0 0.850911 0.296875 0 0.182943 0.703125 0 0.499349 0.804687 0 0.639974 0.90625 0 0.218099 0.804687 0 0.499349 0.90625 0 0.5 1 0 0.639974 0.09375 0 0.358724 0.90625 0</float_array>
+          <technique_common>
+            <accessor source="#objpolygon2-mesh-map-channel1-array" count="29" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon2-mesh-map-channel1-tangents">
+          <float_array id="objpolygon2-mesh-map-channel1-tangents-array" count="87">-0.154438 -0.969649 -0.184053 -0.253648 -0.914076 -0.302289 -0.186003 -0.953357 -0.221671 -0.107558 -0.982457 -0.128184 -0.103542 -0.981446 -0.123395 -0.000726 -0.99464 -0.000866 0.038485 -0.995366 0.045865 0.101005 -0.984532 0.120373 0.106629 -0.986145 0.127076 0.150532 -0.970932 0.179396 -0.114295 -0.984065 -0.13621 -0.038098 -0.994688 -0.045403 0.105011 -0.979954 0.125148 0.18455 -0.955452 0.219938 0.221532 -0.936997 0.26401 -0.260461 -0.913671 -0.30943 -0.289525 -0.886864 -0.350143 -0.296927 -0.885683 -0.348741 -0.269531 -0.904436 -0.321213 -0.317083 -0.869367 -0.37788 -0.219395 -0.934366 -0.261459 0.225321 -0.935211 0.268529 0.244676 -0.924021 0.291596 0.239711 -0.927832 0.285674 0.243715 -0.923611 0.290457 0.226503 -0.934742 0.26994 0.216225 -0.941126 0.257689 -0.340201 -0.848461 -0.405435 0.195909 -0.95242 0.233487</float_array>
+          <technique_common>
+            <accessor source="#objpolygon2-mesh-map-channel1-tangents-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon2-mesh-map-channel1-binormals">
+          <float_array id="objpolygon2-mesh-map-channel1-binormals-array" count="87">-0.623919 0.24051 -0.743559 -0.590144 0.396346 -0.703307 -0.615079 0.290443 -0.733022 -0.633662 0.167901 -0.75517 -0.634299 0.16196 -0.755932 -0.642787 0.001136 -0.766044 -0.64163 -0.060043 -0.764661 -0.634755 -0.157609 -0.756469 -0.633882 -0.165886 -0.755431 -0.62487 -0.234472 -0.744688 -0.632544 0.177811 -0.753838 -0.641649 0.059481 -0.764688 -0.634038 -0.164441 -0.755616 -0.615596 -0.287783 -0.733637 -0.603275 -0.345205 -0.718953 -0.604458 0.4047 -0.686184 -0.663545 0.451992 -0.596164 -0.623313 0.458415 -0.633512 -0.583163 0.420614 -0.694985 -0.559062 0.493504 -0.666261 -0.603765 0.343113 -0.719542 -0.601896 -0.350978 -0.717312 -0.594332 -0.380896 -0.708299 -0.596417 -0.372933 -0.71078 -0.594628 -0.379764 -0.708659 -0.601466 -0.352747 -0.716804 -0.605283 -0.336577 -0.721351 -0.59068 0.52829 -0.609924 -0.612197 -0.304789 -0.729601</float_array>
+          <technique_common>
+            <accessor source="#objpolygon2-mesh-map-channel1-binormals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="objpolygon2-mesh-vertices">
+          <input semantic="POSITION" source="#objpolygon2-mesh-positions"/>
+        </vertices>
+        <triangles material="Material__25" count="36">
+          <input semantic="VERTEX" source="#objpolygon2-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#objpolygon2-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#objpolygon2-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXTANGENT" source="#objpolygon2-mesh-map-channel1-tangents" offset="3" set="1"/>
+          <input semantic="TEXBINORMAL" source="#objpolygon2-mesh-map-channel1-binormals" offset="4" set="1"/>
+          <p>21 0 0 0 0 8 1 1 1 1 6 2 2 2 2 18 3 3 3 3 21 0 0 0 0 6 2 2 2 2 18 3 3 3 3 6 2 2 2 2 17 4 4 4 4 19 5 5 5 5 18 3 3 3 3 17 4 4 4 4 19 5 5 5 5 17 4 4 4 4 20 6 6 6 6 11 7 7 7 7 19 5 5 5 5 20 6 6 6 6 11 7 7 7 7 20 6 6 6 6 10 8 8 8 8 9 9 9 9 9 11 7 7 7 7 10 8 8 8 8 22 10 10 10 10 21 0 0 0 0 18 3 3 3 3 23 11 11 11 11 22 10 10 10 10 18 3 3 3 3 23 11 11 11 11 18 3 3 3 3 19 5 5 5 5 24 12 12 12 12 23 11 11 11 11 19 5 5 5 5 24 12 12 12 12 19 5 5 5 5 11 7 7 7 7 12 13 13 13 13 24 12 12 12 12 11 7 7 7 7 12 13 13 13 13 11 7 7 7 7 9 9 9 9 9 14 14 14 14 14 12 13 13 13 13 9 9 9 9 9 7 15 15 15 15 1 16 16 16 16 2 17 17 17 17 5 18 18 18 18 7 15 15 15 15 2 17 17 17 17 5 18 18 18 18 2 17 17 17 17 4 19 19 19 19 3 20 20 20 20 5 18 18 18 18 4 19 19 19 19 8 1 1 1 1 7 15 15 15 15 5 18 18 18 18 6 2 2 2 2 8 1 1 1 1 5 18 18 18 18 6 2 2 2 2 5 18 18 18 18 3 20 20 20 20 17 4 4 4 4 6 2 2 2 2 3 20 20 20 20 25 21 21 21 21 24 12 12 12 12 12 13 13 13 13 15 22 22 22 22 25 21 21 21 21 12 13 13 13 13 15 22 22 22 22 12 13 13 13 13 14 14 14 14 14 13 23 23 23 23 15 22 22 22 22 14 14 14 14 14 26 24 24 24 24 25 21 21 21 21 15 22 22 22 22 16 25 25 25 25 26 24 24 24 24 15 22 22 22 22 16 25 25 25 25 15 22 22 22 22 13 23 23 23 23 28 26 26 26 26 16 25 25 25 25 13 23 23 23 23 2 17 17 17 17 1 16 16 16 16 0 27 27 27 27 4 19 19 19 19 2 17 17 17 17 0 27 27 27 27 16 25 25 25 25 28 26 26 26 26 27 28 28 28 28 26 24 24 24 24 16 25 25 25 25 27 28 28 28 28</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="objpolygon0-mesh" name="objpolygon0">
+      <mesh>
+        <source id="objpolygon0-mesh-positions">
+          <float_array id="objpolygon0-mesh-positions-array" count="87">-1.22431 0.016493 -1.45907 -1.51795 0.257365 -1.72216 -1.34261 -0.266676 -1.60007 -0.784134 -0.390363 -0.934492 -0.961827 -0.237717 -1.14626 -1.15146 -0.761803 -1.37226 -0.938488 -1.19823 -1.11845 -1.43171 -0.59187 -1.70625 -1.31774 -1.24608 -1.57042 0.129339 -0.486874 0.154141 -0.131641 -0.597083 -0.156883 -0.023357 -1.55817 -0.027836 0.276407 -1.27515 0.329409 0.707114 -0.070463 0.842705 0.39763 -0.314092 0.473874 0.544705 -0.844055 0.649154 0.784213 -0.361321 0.934587 -0.553524 -0.538307 -0.659665 -0.677114 -1.5 -0.806953 -0.349024 -1.60354 -0.415949 -0.353546 -0.620122 -0.421339 -1.06827 -1.88514 -1.27311 -0.767295 -2.24514 -0.914425 -0.349024 -2.49277 -0.415949 0.067633 -2.3557 0.080602 0.42835 -1.95236 0.510488 0.69902 -1.34719 0.833059 0.861264 -0.720799 1.02641 0.96059 0.077716 1.14479</float_array>
+          <technique_common>
+            <accessor source="#objpolygon0-mesh-positions-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon0-mesh-normals">
+          <float_array id="objpolygon0-mesh-normals-array" count="87">0.766044 -0.000000 -0.642788 0.766045 -0.000001 -0.642787 0.766045 -0.000000 -0.642787 0.766044 -0.000000 -0.642788 0.766044 0.000000 -0.642788 0.766044 -0.000000 -0.642788 0.766045 -0.000000 -0.642787 0.766044 -0.000000 -0.642788 0.766044 0.000000 -0.642788 0.766043 -0.000000 -0.64279 0.766044 -0.000001 -0.642788 0.766044 -0.000000 -0.642788 0.766044 -0.000000 -0.642788 0.766044 -0.000000 -0.642788 0.766045 -0.000001 -0.642787 0.752228 0.009022 -0.658841 0.689182 0.062386 -0.721897 0.723064 0.030677 -0.690099 0.766045 -0.000000 -0.642787 0.766047 0.000002 -0.642785 0.766045 0.000001 -0.642787 0.766044 -0.000000 -0.642788 0.766045 -0.000001 -0.642787 0.766045 0.000001 -0.642787 0.766043 -0.000000 -0.642789 0.766044 0.000000 -0.642788 0.766045 0.000001 -0.642786 0.732495 0.032549 -0.679994 0.766044 -0.000000 -0.642788</float_array>
+          <technique_common>
+            <accessor source="#objpolygon0-mesh-normals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon0-mesh-map-channel1">
+          <float_array id="objpolygon0-mesh-map-channel1-array" count="87">0.09375 0.292411 0 0.174107 0.194196 0 0.499349 0.296875 0 0.499349 0.398438 0 0.955357 0.399554 0 0.499349 0.5 0 0.950893 0.508929 0 0.499349 0.601563 0 0.955357 0.607143 0 0.901786 0.707589 0 0.03125 0.401786 0 0.004464 0.495536 0 0.022321 0.602679 0 0.499349 0.703125 0 0.8125 0.810268 0 0.299107 0.095982 0 0.5 0 0 0.499349 0.09375 0 0.499349 0.195313 0 0.825893 0.196429 0 0.915179 0.301339 0 0.066964 0.707589 0 0.499349 0.804687 0 0.6875 0.915179 0 0.151786 0.810268 0 0.499349 0.90625 0 0.5 1 0 0.71875 0.100446 0 0.272321 0.90625 0</float_array>
+          <technique_common>
+            <accessor source="#objpolygon0-mesh-map-channel1-array" count="29" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon0-mesh-map-channel1-tangents">
+          <float_array id="objpolygon0-mesh-map-channel1-tangents-array" count="87">-0.152031 -0.971374 -0.181182 -0.251616 -0.913878 -0.299862 -0.180508 -0.955481 -0.21512 -0.110709 -0.980814 -0.131937 -0.098597 -0.981758 -0.117505 0.012709 -0.994135 0.015146 0.059484 -0.993139 0.070891 0.116013 -0.980695 0.138259 0.124841 -0.980956 0.148779 0.172184 -0.962028 0.2052 -0.135928 -0.97737 -0.16199 -0.034534 -0.99181 -0.041155 0.105925 -0.981834 0.126236 0.194146 -0.949536 0.231374 0.254617 -0.915366 0.303443 -0.279146 -0.901074 -0.331054 -0.278838 -0.896345 -0.343663 -0.289506 -0.893119 -0.343038 -0.275938 -0.899304 -0.32885 -0.305856 -0.879435 -0.36451 -0.217207 -0.934389 -0.258859 0.207201 -0.945775 0.246933 0.264384 -0.908237 0.315082 0.315215 -0.870575 0.375658 0.230299 -0.933072 0.274459 0.262936 -0.907107 0.313353 0.264276 -0.905607 0.31495 -0.293358 -0.886258 -0.35843 0.203334 -0.948648 0.242325</float_array>
+          <technique_common>
+            <accessor source="#objpolygon0-mesh-map-channel1-tangents-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="objpolygon0-mesh-map-channel1-binormals">
+          <float_array id="objpolygon0-mesh-map-channel1-binormals-array" count="87">-0.624541 0.236575 -0.744299 -0.590865 0.393734 -0.704167 -0.616704 0.281977 -0.734959 -0.633101 0.172954 -0.7545 -0.635084 0.154369 -0.756861 -0.642661 -0.019885 -0.765893 -0.640014 -0.092779 -0.762741 -0.632172 -0.180998 -0.753392 -0.630548 -0.194218 -0.751458 -0.619233 -0.268239 -0.737969 -0.628251 0.211468 -0.74872 -0.641847 0.054089 -0.764923 -0.633922 -0.165523 -0.755477 -0.612545 -0.303124 -0.730003 -0.589921 -0.397149 -0.70304 -0.596814 0.433059 -0.67548 -0.668747 0.438294 -0.600563 -0.627131 0.448017 -0.637172 -0.580085 0.430787 -0.69132 -0.565339 0.475874 -0.673748 -0.604473 0.340087 -0.720384 -0.60842 -0.322607 -0.725086 -0.585543 -0.412534 -0.697822 -0.560048 -0.490785 -0.66744 -0.600072 -0.358463 -0.715135 -0.585964 -0.41108 -0.698326 -0.585292 -0.413386 -0.697528 -0.614322 0.462033 -0.639636 -0.60978 -0.316333 -0.726707</float_array>
+          <technique_common>
+            <accessor source="#objpolygon0-mesh-map-channel1-binormals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="objpolygon0-mesh-vertices">
+          <input semantic="POSITION" source="#objpolygon0-mesh-positions"/>
+        </vertices>
+        <triangles material="Material__26" count="36">
+          <input semantic="VERTEX" source="#objpolygon0-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#objpolygon0-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#objpolygon0-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXTANGENT" source="#objpolygon0-mesh-map-channel1-tangents" offset="3" set="1"/>
+          <input semantic="TEXBINORMAL" source="#objpolygon0-mesh-map-channel1-binormals" offset="4" set="1"/>
+          <p>21 0 0 0 0 8 1 1 1 1 6 2 2 2 2 18 3 3 3 3 21 0 0 0 0 6 2 2 2 2 18 3 3 3 3 6 2 2 2 2 17 4 4 4 4 19 5 5 5 5 18 3 3 3 3 17 4 4 4 4 19 5 5 5 5 17 4 4 4 4 20 6 6 6 6 11 7 7 7 7 19 5 5 5 5 20 6 6 6 6 11 7 7 7 7 20 6 6 6 6 10 8 8 8 8 9 9 9 9 9 11 7 7 7 7 10 8 8 8 8 22 10 10 10 10 21 0 0 0 0 18 3 3 3 3 23 11 11 11 11 22 10 10 10 10 18 3 3 3 3 23 11 11 11 11 18 3 3 3 3 19 5 5 5 5 24 12 12 12 12 23 11 11 11 11 19 5 5 5 5 24 12 12 12 12 19 5 5 5 5 11 7 7 7 7 12 13 13 13 13 24 12 12 12 12 11 7 7 7 7 12 13 13 13 13 11 7 7 7 7 9 9 9 9 9 14 14 14 14 14 12 13 13 13 13 9 9 9 9 9 7 15 15 15 15 1 16 16 16 16 2 17 17 17 17 5 18 18 18 18 7 15 15 15 15 2 17 17 17 17 5 18 18 18 18 2 17 17 17 17 4 19 19 19 19 3 20 20 20 20 5 18 18 18 18 4 19 19 19 19 8 1 1 1 1 7 15 15 15 15 5 18 18 18 18 6 2 2 2 2 8 1 1 1 1 5 18 18 18 18 6 2 2 2 2 5 18 18 18 18 3 20 20 20 20 17 4 4 4 4 6 2 2 2 2 3 20 20 20 20 25 21 21 21 21 24 12 12 12 12 12 13 13 13 13 15 22 22 22 22 25 21 21 21 21 12 13 13 13 13 15 22 22 22 22 12 13 13 13 13 14 14 14 14 14 13 23 23 23 23 15 22 22 22 22 14 14 14 14 14 26 24 24 24 24 25 21 21 21 21 15 22 22 22 22 16 25 25 25 25 26 24 24 24 24 15 22 22 22 22 16 25 25 25 25 15 22 22 22 22 13 23 23 23 23 28 26 26 26 26 16 25 25 25 25 13 23 23 23 23 2 17 17 17 17 1 16 16 16 16 0 27 27 27 27 4 19 19 19 19 2 17 17 17 17 0 27 27 27 27 16 25 25 25 25 28 26 26 26 26 27 28 28 28 28 26 24 24 24 24 16 25 25 25 25 27 28 28 28 28</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="unnamed_scene" name="unnamed_scene">
+      <node id="objpolygon1-node" name="objpolygon1" type="NODE">
+        <translate>0 0 0</translate>
+        <instance_geometry url="#objpolygon1-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__25" target="#Material__25">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="objpolygon2-node" name="objpolygon2" type="NODE">
+        <translate>0 0 0</translate>
+        <instance_geometry url="#objpolygon2-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__25" target="#Material__25">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="objpolygon0-node" name="objpolygon0" type="NODE">
+        <translate>0 0 0</translate>
+        <instance_geometry url="#objpolygon0-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__26" target="#Material__26">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#unnamed_scene"/>
+  </scene>
+</COLLADA>

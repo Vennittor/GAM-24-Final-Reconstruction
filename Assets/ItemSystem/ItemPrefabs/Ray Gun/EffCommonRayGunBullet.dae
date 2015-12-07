@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlBox</authoring_tool>
+		</contributor>
+		<created>2015-06-24T00:23:07Z</created>
+		<modified>2015-06-24T00:23:07Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_materials>
+		<material id="flare">
+			<instance_effect url="#flare-fx" />
+		</material>
+		<material id="main">
+			<instance_effect url="#main-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="flare-fx" name="flare">
+			<profile_COMMON>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse />
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="main-fx" name="main">
+			<profile_COMMON>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse />
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon0" name="polygon0">
+			<mesh>
+				<source id="polygon0_Positions">
+					<float_array id="polygon0_PosArr" count="48">-0.4 0.85 0.45 -0.4 -0.85 -0.04999995 -0.4 0.85 -1.55 -0.4 -0.85 -2.05 -0.4 0.85 -4.05 -0.4 -0.85 -4.55 -0.4 0.85 -6.950001 -0.4 -0.85 -7.45 0.4 -0.85 -0.04999995 0.4 0.85 0.45 0.4 -0.85 -2.05 0.4 0.85 -1.55 0.4 -0.85 -4.55 0.4 0.85 -4.05 0.4 -0.85 -7.45 0.4 0.85 -6.950001</float_array>
+					<technique_common>
+						<accessor source="#polygon0_PosArr" count="16" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Normals">
+					<float_array id="polygon0_NormArr" count="15">-1 0 0 1 0 0 0 -1 0 0 1 0 0 -0.282166 0.959366</float_array>
+					<technique_common>
+						<accessor source="#polygon0_NormArr" count="5" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Colors0">
+					<float_array id="polygon0_ColorArr0" count="16">1 1 1 1 0.5019608 1 0.7529413 1 0 1 0 1 0 1 0 0</float_array>
+					<technique_common>
+						<accessor source="#polygon0_ColorArr0" count="4" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon0_Vertices">
+					<input semantic="POSITION" source="#polygon0_Positions" />
+				</vertices>
+				<triangles material="main" count="26">
+					<input semantic="VERTEX" source="#polygon0_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon0_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon0_Colors0" set="0" offset="2" />
+					<p>2 0 1 1 0 0 0 0 0 3 0 1 1 0 0 2 0 1 4 0 2 3 0 1 2 0 1 5 0 2 3 0 1 4 0 2 6 0 3 5 0 2 4 0 2 7 0 3 5 0 2 6 0 3 10 1 1 9 1 0 8 1 0 11 1 1 9 1 0 10 1 1 12 1 2 11 1 1 10 1 1 13 1 2 11 1 1 12 1 2 14 1 3 13 1 2 12 1 2 15 1 3 13 1 2 14 1 3 1 2 0 10 2 1 8 2 0 3 2 1 10 2 1 1 2 0 3 2 1 12 2 2 10 2 1 5 2 2 12 2 2 3 2 1 14 2 3 5 2 2 7 2 3 12 2 2 5 2 2 14 2 3 6 3 3 13 3 2 15 3 3 4 3 2 13 3 2 6 3 3 4 3 2 11 3 1 13 3 2 2 3 1 11 3 1 4 3 2 9 3 0 2 3 1 0 3 0 11 3 1 2 3 1 9 3 0 8 4 0 0 4 0 1 4 0 9 4 0 0 4 0 8 4 0</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon1" name="polygon1">
+			<mesh>
+				<source id="polygon1_Positions">
+					<float_array id="polygon1_PosArr" count="72">-4.84485E-08 1.603439 2.085083 -2.262052E-08 2.617049 0.9760718 -3.741648E-08 1 0.5749989 6.388194E-09 3 -1.025001 -1.186375E-08 1 -1.525001 3.589552E-08 3 -3.450002 1.764356E-08 1 -3.950001 7.331201E-08 3 -6.525002 5.506005E-08 1 -7.025001 8.74203E-08 2.439642 -8.244822 1.147552E-07 1 -11.93093 -7.543088E-08 -0.550534 2.148603 -5.506002E-08 -1 0.0249989 -2.950731E-08 -1 -2.075 0 -1 -4.5 3.741649E-08 -1 -7.575 9.711169E-08 -1 -12.48093 -6.571751E-08 0.550534 2.451397 -7.893306E-08 -1.931334 1.055623 -6.985601E-08 -2.617049 -0.376071 -4.775927E-08 -3 -2.574999 -1.825196E-08 -3 -4.999999 1.916452E-08 -3 -8.074998 4.536003E-08 -2.516054 -9.743877</float_array>
+					<technique_common>
+						<accessor source="#polygon1_PosArr" count="24" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1_Normals">
+					<float_array id="polygon1_NormArr" count="3">1 -1.216796E-08 1.216796E-08</float_array>
+					<technique_common>
+						<accessor source="#polygon1_NormArr" count="1" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1_Colors0">
+					<float_array id="polygon1_ColorArr0" count="28">1 1 1 0 1 1 1 1 0.5019608 1 0.7529413 0 0.5019608 1 0.7529413 1 0 1 0 0 0 1 0 1 0 1 0 0.2509804</float_array>
+					<technique_common>
+						<accessor source="#polygon1_ColorArr0" count="7" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon1_Vertices">
+					<input semantic="POSITION" source="#polygon1_Positions" />
+				</vertices>
+				<triangles material="flare" count="30">
+					<input semantic="VERTEX" source="#polygon1_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon1_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon1_Colors0" set="0" offset="2" />
+					<p>2 0 1 1 0 0 0 0 0 3 0 2 1 0 0 2 0 1 4 0 3 3 0 2 2 0 1 5 0 4 3 0 2 4 0 3 6 0 5 5 0 4 4 0 3 7 0 4 5 0 4 6 0 5 8 0 6 7 0 4 6 0 5 9 0 4 7 0 4 8 0 6 10 0 4 9 0 4 8 0 6 12 0 1 2 0 1 11 0 0 4 0 3 2 0 1 12 0 1 13 0 3 4 0 3 12 0 1 6 0 5 4 0 3 13 0 3 14 0 5 6 0 5 13 0 3 8 0 6 6 0 5 14 0 5 15 0 6 8 0 6 14 0 5 10 0 4 8 0 6 15 0 6 16 0 4 10 0 4 15 0 6 17 0 0 2 0 1 0 0 0 11 0 0 2 0 1 17 0 0 18 0 0 12 0 1 11 0 0 19 0 0 12 0 1 18 0 0 19 0 0 13 0 3 12 0 1 20 0 2 13 0 3 19 0 0 20 0 2 14 0 5 13 0 3 21 0 4 14 0 5 20 0 2 21 0 4 15 0 6 14 0 5 22 0 4 15 0 6 21 0 4 15 0 6 23 0 4 16 0 4 22 0 4 23 0 4 15 0 6</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon0_Controller">
+			<skin source="#polygon0">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon0_Joints">
+					<Name_array id="polygon0_JointArr" count="3">TopN Tama TamaFlare</Name_array>
+					<technique_common>
+						<accessor source="#polygon0_JointArr" count="3">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Matrices">
+					<float_array id="polygon0_MatArr" count="48">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 3.5 0 0 0 1 0 1 0 0 0 0 1 3.5 1 0 0 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0_MatArr" count="3" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Weights">
+					<float_array id="polygon0_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon0_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon0_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon0_Matrices" />
+				</joints>
+				<vertex_weights count="16">
+					<input semantic="JOINT" offset="0" source="#polygon0_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon0_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon1_Controller">
+			<skin source="#polygon1">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon1_Joints">
+					<Name_array id="polygon1_JointArr" count="3">TopN Tama TamaFlare</Name_array>
+					<technique_common>
+						<accessor source="#polygon1_JointArr" count="3">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1_Matrices">
+					<float_array id="polygon1_MatArr" count="48">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 3.5 0 0 0 1 0 1 0 0 0 0 1 3.5 1 0 0 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon1_MatArr" count="3" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1_Weights">
+					<float_array id="polygon1_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon1_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon1_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon1_Matrices" />
+				</joints>
+				<vertex_weights count="24">
+					<input semantic="JOINT" offset="0" source="#polygon1_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon1_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNode" name="RootNode">
+			<node id="TopN" name="TopN" sid="TopN" type="JOINT">
+				<node id="Tama" name="Tama" sid="Tama" type="JOINT">
+					<translate>0 0 -3.5</translate>
+				</node>
+				<node id="TamaFlare" name="TamaFlare" sid="TamaFlare" type="JOINT">
+					<translate>0 0 -3.5</translate>
+					<rotate>0 0 1 90</rotate>
+					<rotate>1 0 0 90</rotate>
+				</node>
+			</node>
+			<node id="polygon0" name="polygon0" type="NODE">
+				<instance_controller url="#polygon0_Controller">
+					<skeleton>#TopN</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="main" target="#main" />
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon1" name="polygon1" type="NODE">
+				<instance_controller url="#polygon1_Controller">
+					<skeleton>#TopN</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="flare" target="#flare" />
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNode" />
+	</scene>
+</COLLADA>

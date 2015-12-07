@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlBox</authoring_tool>
+		</contributor>
+		<created>2013-11-26T23:46:54Z</created>
+		<modified>2013-11-26T23:46:54Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_images>
+		<image id="GrdPSWaterWaterA-image" name="GrdPSWaterWaterA">
+			<init_from>
+				<ref>GrdPSWaterWaterA.png</ref>
+			</init_from>
+		</image>
+		<image id="GrdPSWaterWaterB-image" name="GrdPSWaterWaterB">
+			<init_from>
+				<ref>GrdPSWaterWaterB.png</ref>
+			</init_from>
+		</image>
+	</library_images>
+	<library_materials>
+		<material id="mat1349">
+			<instance_effect url="#mat1349-fx" />
+		</material>
+		<material id="mat871">
+			<instance_effect url="#mat871-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="mat1349-fx" name="mat1349">
+			<profile_COMMON>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse />
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="mat871-fx" name="mat871">
+			<profile_COMMON>
+				<newparam sid="GrdPSWaterWaterA-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>GrdPSWaterWaterA-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="GrdPSWaterWaterA-sampler">
+					<sampler2D>
+						<source>GrdPSWaterWaterA-surface</source>
+						<instance_image url="#GrdPSWaterWaterA-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="GrdPSWaterWaterA-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon0-ID" name="polygon0">
+			<mesh>
+				<source id="polygon0-ID_Positions">
+					<float_array id="polygon0-ID_PosArr" count="72">30 -2.5 -15 40 -2.5 -15 20 -2.5 -10 -40 -2.5 15 10 -2.5 -10 -40 -2.5 5 -35 -2.5 -5 -30 -2.5 -10 -20 -2.5 -15 5 -2.5 -15 -5 -2.5 -20 54.99999 -2.5 51.5 -55.00001 -2.5 51.5 -55 -2.5 20 -70 -2.5 35 -65 -2.5 15 -70 -2.5 10 50 -2.5 -10 70 -2.5 35 55 -2.5 -10 65 -2.5 -15 70 -2.5 -20 -45 -2.5 20 -15 -2.5 -20</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_PosArr" count="24" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Normals">
+					<float_array id="polygon0-ID_NormArr" count="3">0 1 0</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_NormArr" count="1" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon0-ID_Vertices">
+					<input semantic="POSITION" source="#polygon0-ID_Positions" />
+				</vertices>
+				<triangles material="mat1349-ID" count="22">
+					<input semantic="VERTEX" source="#polygon0-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon0-ID_Normals" offset="1" />
+					<p>2 0 1 0 0 0 3 0 1 0 2 0 4 0 3 0 2 0 5 0 3 0 4 0 6 0 5 0 4 0 4 0 7 0 6 0 8 0 7 0 4 0 9 0 8 0 4 0 10 0 8 0 9 0 13 0 12 0 11 0 14 0 12 0 13 0 15 0 14 0 13 0 16 0 14 0 15 0 3 0 17 0 1 0 18 0 17 0 3 0 11 0 18 0 3 0 18 0 19 0 17 0 20 0 19 0 18 0 21 0 20 0 18 0 22 0 11 0 3 0 13 0 11 0 22 0 23 0 8 0 10 0</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon1-ID" name="polygon1">
+			<mesh>
+				<source id="polygon1-ID_Positions">
+					<float_array id="polygon1-ID_PosArr" count="93">-15 -2.25 -20 -5 -2.25 -20 -20 -2.25 -15 5 -2.25 -15 -10 -2.25 -5 10 -2.25 -10 -10 -2.25 7.5 54.99999 -2.25 51.5 -55.00001 -2.25 51.5 -40 -2.25 7.5 -22.5 -2.25 7.5 -40 -2.25 15 -45 -2.25 20 -47.5 -2.25 20 -55 -2.25 20 -60 -2.25 17.5 -70 -2.25 35 -65 -2.25 15 -70 -2.25 10 -30 -2.25 -10 -22.5 -2.25 -5 -35 -2.25 -5 30 -2.25 -15 40 -2.25 -15 20 -2.25 -10 50 -2.25 -10 -40 -2.25 5 70 -2.25 -20 70 -2.25 35 65 -2.25 -15 55 -2.25 -10</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_PosArr" count="31" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Normals">
+					<float_array id="polygon1-ID_NormArr" count="3">0 1 0</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_NormArr" count="1" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Colors0">
+					<float_array id="polygon1-ID_ColorArr0" count="8">1 1 1 1 0.8000001 0.8000001 0.8000001 1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_ColorArr0" count="2" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_UVs0">
+					<float_array id="polygon1-ID_UVArr0" count="62">0.428571 0 0.47619 0 0.404762 0.06993002 0.523809 0.06993002 0.452381 0.20979 0.547619 0.13986 0.452381 0.384615 0.761905 1 0.238095 1 0.309524 0.384615 0.392857 0.384615 0.309524 0.48951 0.285714 0.559441 0.27381 0.559441 0.238095 0.559441 0.214286 0.524476 0.166667 0.769231 0.190476 0.48951 0.166667 0.41958 0.357143 0.13986 0.392857 0.20979 0.333333 0.20979 0.642857 0.06993002 0.690476 0.06993002 0.595238 0.13986 0.738095 0.13986 0.309524 0.34965 0.833333 0 0.833333 0.769231 0.809524 0.06993002 0.761905 0.13986</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_UVArr0" count="31" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_UVs1">
+					<float_array id="polygon1-ID_UVArr1" count="62">0.428571 1 0.47619 1 0.404762 0.93007 0.523809 0.93007 0.452381 0.79021 0.547619 0.86014 0.452381 0.615385 0.761905 0 0.238095 0 0.309524 0.615385 0.392857 0.615385 0.309524 0.51049 0.285714 0.440559 0.27381 0.440559 0.238095 0.440559 0.214286 0.475524 0.166667 0.230769 0.190476 0.51049 0.166667 0.58042 0.357143 0.86014 0.392857 0.79021 0.333333 0.79021 0.642857 0.93007 0.690476 0.93007 0.595238 0.86014 0.738095 0.86014 0.309524 0.65035 0.833333 1 0.833333 0.230769 0.809524 0.93007 0.761905 0.86014</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_UVArr1" count="31" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon1-ID_Vertices">
+					<input semantic="POSITION" source="#polygon1-ID_Positions" />
+				</vertices>
+				<triangles material="mat871-ID" count="33">
+					<input semantic="VERTEX" source="#polygon1-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon1-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon1-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon1-ID_UVs0" set="0" offset="3" />
+					<input semantic="TEXCOORD" source="#polygon1-ID_UVs1" set="1" offset="4" />
+					<p>2 0 0 2 2 1 0 0 1 1 0 0 0 0 0 3 0 0 3 3 1 0 0 1 1 2 0 0 2 2 4 0 0 4 4 3 0 0 3 3 2 0 0 2 2 5 0 0 5 5 3 0 0 3 3 4 0 0 4 4 6 0 0 6 6 5 0 0 5 5 4 0 0 4 4 7 0 0 7 7 5 0 0 5 5 6 0 0 6 6 8 0 0 8 8 7 0 0 7 7 6 0 0 6 6 11 0 0 11 11 10 0 0 10 10 9 0 0 9 9 6 0 0 6 6 10 0 0 10 10 11 0 0 11 11 12 0 0 12 12 6 0 0 6 6 11 0 0 11 11 8 0 0 8 8 6 0 0 6 6 12 0 0 12 12 13 0 0 13 13 8 0 0 8 8 12 0 0 12 12 14 0 0 14 14 8 0 0 8 8 13 0 0 13 13 15 0 0 15 15 8 0 0 8 8 14 0 0 14 14 16 0 0 16 16 8 0 0 8 8 15 0 0 15 15 17 0 0 17 17 16 0 0 16 16 15 0 0 15 15 18 0 0 18 18 16 0 0 16 16 17 0 0 17 17 19 0 0 19 19 4 0 0 4 4 2 0 0 2 2 20 0 0 20 20 4 0 0 4 4 19 0 0 19 19 21 0 0 21 21 20 0 0 20 20 19 0 0 19 19 24 0 0 24 24 23 0 0 23 23 22 0 0 22 22 25 0 0 25 25 23 0 0 23 23 24 0 0 24 24 7 0 0 7 7 25 0 0 25 25 24 0 0 24 24 10 0 1 10 10 26 0 1 26 26 9 0 1 9 9 21 0 1 21 21 26 0 1 26 26 10 0 1 10 10 20 0 1 20 20 21 0 1 21 21 10 0 1 10 10 29 0 0 29 29 28 0 0 28 28 27 0 0 27 27 30 0 0 30 30 28 0 0 28 28 29 0 0 29 29 30 0 0 30 30 7 0 0 7 7 28 0 0 28 28 25 0 0 25 25 7 0 0 7 7 30 0 0 30 30 10 0 1 10 10 4 0 1 4 4 20 0 1 20 20 6 0 1 6 6 4 0 1 4 4 10 0 1 10 10 24 0 0 24 24 5 0 0 5 5 7 0 0 7 7</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon0-ID_Controller">
+			<skin source="#polygon0-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon0-ID_Joints">
+					<Name_array id="polygon0-ID_JointArr" count="3">gr2_StgDxPStadiumW_pool-ID XWaterA-ID XWaterB-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_JointArr" count="3">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Matrices">
+					<float_array id="polygon0-ID_MatArr" count="48">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.6666667 0 0 0 0 1 0 2.5 0 0 1 0 0 0 0 1 0.6666667 0 0 0 0 1 0 2.25 0 0 1 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_MatArr" count="3" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Weights">
+					<float_array id="polygon0-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon0-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon0-ID_Matrices" />
+				</joints>
+				<vertex_weights count="24">
+					<input semantic="JOINT" offset="0" source="#polygon0-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon0-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon1-ID_Controller">
+			<skin source="#polygon1-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon1-ID_Joints">
+					<Name_array id="polygon1-ID_JointArr" count="3">gr2_StgDxPStadiumW_pool-ID XWaterA-ID XWaterB-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_JointArr" count="3">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Matrices">
+					<float_array id="polygon1-ID_MatArr" count="48">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.6666667 0 0 0 0 1 0 2.5 0 0 1 0 0 0 0 1 0.6666667 0 0 0 0 1 0 2.25 0 0 1 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_MatArr" count="3" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Weights">
+					<float_array id="polygon1-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon1-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon1-ID_Matrices" />
+				</joints>
+				<vertex_weights count="31">
+					<input semantic="JOINT" offset="0" source="#polygon1-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon1-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNodeID" name="RootNode">
+			<node id="gr2_StgDxPStadiumW_pool-ID" name="gr2_StgDxPStadiumW_pool" sid="gr2_StgDxPStadiumW_pool-ID" type="JOINT">
+				<node id="XWaterA-ID" name="XWaterA" sid="XWaterA-ID" type="JOINT">
+					<translate>0 -2.5 0</translate>
+					<scale>1.5 1 1</scale>
+				</node>
+				<node id="XWaterB-ID" name="XWaterB" sid="XWaterB-ID" type="JOINT">
+					<translate>0 -2.25 0</translate>
+					<scale>1.5 1 1</scale>
+				</node>
+			</node>
+			<node id="polygon0-ID" name="polygon0" type="NODE">
+				<instance_controller url="#polygon0-ID_Controller">
+					<skeleton>#gr2_StgDxPStadiumW_pool</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="mat1349-ID" target="#mat1349" />
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon1-ID" name="polygon1" type="NODE">
+				<instance_controller url="#polygon1-ID_Controller">
+					<skeleton>#gr2_StgDxPStadiumW_pool</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="mat871-ID" target="#mat871">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+								<bind_vertex_input semantic="TEXCOORD1" input_semantic="TEXCOORD" input_set="1" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNodeID" />
+	</scene>
+</COLLADA>
