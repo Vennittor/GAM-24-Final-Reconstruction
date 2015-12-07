@@ -43,13 +43,13 @@ public class Animation_Controller : MonoBehaviour {
 
 	#region ApplyForce example
 	//These are placeholder variables and need to be properly referenced in the script.
-	Collider hitCollider;
+	Vector3 position;	//of the hitCollider
 	GameObject other;
 
 	public void ApplyForce(float force)
 	{
 
-		Vector3 forceDir = hitCollider.transform.position - this.gameObject.transform.position;
+		Vector3 forceDir = position - this.gameObject.transform.position;
 		forceDir *= force;
 
 		_ApplyForce(forceDir, ForceMode.Force);
@@ -57,7 +57,7 @@ public class Animation_Controller : MonoBehaviour {
 	
 	public void ApplyForce(float force, ForceMode forcemode)
 	{
-		Vector3 forceDir = hitCollider.transform.position - this.gameObject.transform.position;
+		Vector3 forceDir = position - this.gameObject.transform.position;
 		forceDir *= force;
 		
 		_ApplyForce(forceDir, forcemode);
