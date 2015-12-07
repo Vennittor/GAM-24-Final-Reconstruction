@@ -16,12 +16,12 @@ public class Banana : ItemBaseScript
 		
 		base.Update();
 	}
-	public override void FunctionAlpha ()
-	{
-		thrown = true;
-		base.FunctionAlpha ();
-	}
-	public override void FunctionBeta ()
+    public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
+    {
+        Released(throwDirection);
+        base.FunctionAlpha(throwDirection);
+    }
+    public override void FunctionBeta ()
 	{
 		//make them prone
 		durability--;
@@ -37,7 +37,7 @@ public class Banana : ItemBaseScript
 			}
 			if (canSlip)
 			{
-				//if (other is player)
+				if (other.gameObject.GetComponent<BaseCharacter>())
 				FunctionBeta();
 			}
 

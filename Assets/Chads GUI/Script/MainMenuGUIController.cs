@@ -16,8 +16,6 @@ public class MainMenuGUIController : MonoBehaviour
 	public Vector3 newGroupSoloPosition;
 	public Vector3 newBottomFourPosition;
 
-	public AudioSource buttonPushAudio;
-
 	public Image background;
 
 	// Use this for initialization
@@ -66,21 +64,7 @@ public class MainMenuGUIController : MonoBehaviour
 	{
 		fadeIn = false;
 		moveButtonsIn = false;
-//		buttonPushAudio.Play ();
 		Invoke ("LoadMenuTwo", 0.75f);
-	}
-
-	public void OptionsButton ()
-	{
-		fadeIn = false;
-		moveButtonsIn = false;
-//		buttonPushAudio.Play ();
-		Invoke ("LoadOptionsMenu", 0.75f);
-	}
-
-	void LoadOptionsMenu ()
-	{
-		Application.LoadLevel (6);
 	}
 
 	void LoadMenuTwo ()

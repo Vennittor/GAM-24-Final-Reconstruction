@@ -11,20 +11,12 @@ public class FireFlower :ItemBaseScript
     }
     public override void Update()
     {
-        if (Input.GetKey(KeyCode.E))
-        {
-            durability -= 1 * (int)Time.deltaTime;
-            hitBox.SetActive(true);
-        }
-        if(Input.GetKeyUp(KeyCode.E))
-            hitBox.SetActive(false);
         base.Update();
     }
-    public override void FunctionAlpha()
+    public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
     {
-        if(Input.GetKey(KeyCode.E))
-            hitBox.SetActive(true);
-
+        durability -= 1 * (int)Time.deltaTime;
+        hitBox.GetComponent<ParticleSystem>().Play();
         base.FunctionAlpha();
     }
 

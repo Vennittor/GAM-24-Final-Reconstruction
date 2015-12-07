@@ -14,8 +14,6 @@ public class TitleScreenGUI : MonoBehaviour
 	public bool backgroundFade;
 
 	public Vector3 newTitlePosition = new Vector3 (0,0,0);
-	public AudioSource buttonPushAudio;
-	public AudioSource crowdSound;
 
 	public Text pressAnyButton;
 
@@ -43,8 +41,6 @@ public class TitleScreenGUI : MonoBehaviour
 		if (Input.anyKey)
 		{
 			newTitlePosition = new Vector3 (-1000,title.transform.localPosition.y,title.transform.localPosition.z);
-//			buttonPushAudio.Play ();
-//			crowdSound.Play ();
 			backgroundFade = false;
 			Invoke ("LoadLevel",0.75f);
 			return;

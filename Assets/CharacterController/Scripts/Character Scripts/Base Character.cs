@@ -25,6 +25,8 @@ public class BaseCharacter : MonoBehaviour
 
 	public GameObject hitCollider;
 
+    public bool hasItem;
+
 	public virtual void Awake()
 	{
 

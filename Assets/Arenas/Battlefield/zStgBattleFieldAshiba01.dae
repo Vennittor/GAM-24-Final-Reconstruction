@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlBox</authoring_tool>
+		</contributor>
+		<created>2013-11-26T00:40:37Z</created>
+		<modified>2013-11-26T00:40:37Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_images>
+		<image id="blueLine-image" name="blueLine">
+			<init_from>
+				<ref>blueLine.png</ref>
+			</init_from>
+		</image>
+		<image id="isi_yukaMizo-image" name="isi_yukaMizo">
+			<init_from>
+				<ref>isi_yukaMizo.png</ref>
+			</init_from>
+		</image>
+		<image id="stageAshiba01-image" name="stageAshiba01">
+			<init_from>
+				<ref>stageAshiba01.png</ref>
+			</init_from>
+		</image>
+		<image id="stageAshiba02-image" name="stageAshiba02">
+			<init_from>
+				<ref>stageAshiba02.png</ref>
+			</init_from>
+		</image>
+		<image id="stageAshiba02b-image" name="stageAshiba02b">
+			<init_from>
+				<ref>stageAshiba02b.png</ref>
+			</init_from>
+		</image>
+		<image id="stageAshiba03-image" name="stageAshiba03">
+			<init_from>
+				<ref>stageAshiba03.png</ref>
+			</init_from>
+		</image>
+		<image id="stageLineHikari-image" name="stageLineHikari">
+			<init_from>
+				<ref>stageLineHikari.png</ref>
+			</init_from>
+		</image>
+		<image id="TShadow1-image" name="TShadow1">
+			<init_from>
+				<ref>TShadow1.png</ref>
+			</init_from>
+		</image>
+		<image id="yellowLine-image" name="yellowLine">
+			<init_from>
+				<ref>yellowLine.png</ref>
+			</init_from>
+		</image>
+	</library_images>
+	<library_materials>
+		<material id="MShadow1">
+			<instance_effect url="#MShadow1-fx" />
+		</material>
+		<material id="stageAshiba">
+			<instance_effect url="#stageAshiba-fx" />
+		</material>
+		<material id="stageAshibaMonyou">
+			<instance_effect url="#stageAshibaMonyou-fx" />
+		</material>
+		<material id="stageAshibaWaku">
+			<instance_effect url="#stageAshibaWaku-fx" />
+		</material>
+		<material id="stageLineBlue">
+			<instance_effect url="#stageLineBlue-fx" />
+		</material>
+		<material id="stageLineRed">
+			<instance_effect url="#stageLineRed-fx" />
+		</material>
+		<material id="stageLineYellow">
+			<instance_effect url="#stageLineYellow-fx" />
+		</material>
+		<material id="stageMonyou">
+			<instance_effect url="#stageMonyou-fx" />
+		</material>
+		<material id="yukaMizo">
+			<instance_effect url="#yukaMizo-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="MShadow1-fx" name="MShadow1">
+			<profile_COMMON>
+				<newparam sid="TShadow1-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>TShadow1-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="TShadow1-sampler">
+					<sampler2D>
+						<source>TShadow1-surface</source>
+						<instance_image url="#TShadow1-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="TShadow1-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="stageAshiba-fx" name="stageAshiba">
+			<profile_COMMON>
+				<newparam sid="stageAshiba01-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>stageAshiba01-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="stageAshiba01-sampler">
+					<sampler2D>
+						<source>stageAshiba01-surface</source>
+						<instance_image url="#stageAshiba01-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="stageAshiba01-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="stageAshibaMonyou-fx" name="stageAshibaMonyou">
+			<profile_COMMON>
+				<newparam sid="stageAshiba02b-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>stageAshiba02b-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="stageAshiba02b-sampler">
+					<sampler2D>
+						<source>stageAshiba02b-surface</source>
+						<instance_image url="#stageAshiba02b-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="stageAshiba02b-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="stageAshibaWaku-fx" name="stageAshibaWaku">
+			<profile_COMMON>
+				<newparam sid="stageAshiba03-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>stageAshiba03-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="stageAshiba03-sampler">
+					<sampler2D>
+						<source>stageAshiba03-surface</source>
+						<instance_image url="#stageAshiba03-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="stageAshiba03-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="stageLineBlue-fx" name="stageLineBlue">
+			<profile_COMMON>
+				<newparam sid="blueLine-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>blueLine-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="blueLine-sampler">
+					<sampler2D>
+						<source>blueLine-surface</source>
+						<instance_image url="#blueLine-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="blueLine-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="stageLineRed-fx" name="stageLineRed">
+			<profile_COMMON>
+				<newparam sid="stageLineHikari-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>stageLineHikari-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="stageLineHikari-sampler">
+					<sampler2D>
+						<source>stageLineHikari-surface</source>
+						<instance_image url="#stageLineHikari-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="stageLineHikari-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="stageLineYellow-fx" name="stageLineYellow">
+			<profile_COMMON>
+				<newparam sid="yellowLine-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>yellowLine-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="yellowLine-sampler">
+					<sampler2D>
+						<source>yellowLine-surface</source>
+						<instance_image url="#yellowLine-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="yellowLine-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="stageMonyou-fx" name="stageMonyou">
+			<profile_COMMON>
+				<newparam sid="stageAshiba02-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>stageAshiba02-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="stageAshiba02-sampler">
+					<sampler2D>
+						<source>stageAshiba02-surface</source>
+						<instance_image url="#stageAshiba02-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="stageAshiba02-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="yukaMizo-fx" name="yukaMizo">
+			<profile_COMMON>
+				<newparam sid="isi_yukaMizo-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>isi_yukaMizo-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="isi_yukaMizo-sampler">
+					<sampler2D>
+						<source>isi_yukaMizo-surface</source>
+						<instance_image url="#isi_yukaMizo-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR_MIPMAP_LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="isi_yukaMizo-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon0-ID" name="polygon0">
+			<mesh>
+				<source id="polygon0-ID_Positions">
+					<float_array id="polygon0-ID_PosArr" count="72">-25.05404 22.68652 8.875 -25.05404 23.26563 8.890625 -25.05404 22.68555 0.140625 -25.05404 23.26563 0.140625 -25.05404 22.68555 -8.609375 -25.05404 23.2666 -8.609375 -58.93748 23.26465 8.890625 -58.93748 22.68555 8.875 -58.93748 23.26465 0.140625 -58.93748 22.68555 0.140625 -58.93747 22.68555 -8.609375 -58.64772 23.26367 9.171875 -58.64771 22.68555 9.171875 -25.34404 23.26465 9.171875 -25.34404 22.68652 9.171875 -58.64771 23.26563 -8.890625 -58.93747 23.2666 -8.609375 -58.64771 22.68555 -8.890625 -25.34403 22.68555 -8.890625 -25.34403 23.26563 -8.890625 -41.99565 23.26367 9.171875 -41.99564 22.68555 9.171875 -41.99564 22.68555 -8.890625 -41.99564 23.2666 -8.890625</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_PosArr" count="24" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Normals">
+					<float_array id="polygon0-ID_NormArr" count="24">1 0 0 -1 -2E-06 0 -0.702173 -0.000501 0.712007 0.701899 -0.000725 0.712277 -0.692934 -0.008554 -0.72095 0.692654 -0.008557 -0.721219 0 0.011783 0.999931 1E-06 -0.011843 -0.99993</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_NormArr" count="8" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Colors0">
+					<float_array id="polygon0-ID_ColorArr0" count="4">0.4 0.4 0.4 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_ColorArr0" count="1" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_UVs0">
+					<float_array id="polygon0-ID_UVArr0" count="64">-2.060062 1.557788 -2.060062 2.445781 7.707846 1.557788 7.707847 2.445776 17.47575 1.557788 17.47575 2.445775 17.15943 1.241595 17.15943 0.353609 7.391513 1.241598 7.391513 0.353609 -2.376393 0.353619 17.47575 1.241598 17.47575 0.353609 -2.376392 2.445782 -2.376392 1.557788 -20.01458 -2.06402 -20.33819 -2.06402 -20.01457 -1.17603 -20.33819 -1.17603 17.47576 -1.176029 17.47576 -2.064019 17.15215 -1.17603 17.15215 -2.06402 -19.69098 0.03741199 -1.107603 0.03741199 -19.69098 -0.8505729 -1.107603 -0.8505729 17.47575 0.03742498 17.47575 -0.850566 -1.431208 -1.176029 -1.431208 -2.064021 -2.376393 1.241607</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_UVArr0" count="32" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon0-ID_Vertices">
+					<input semantic="POSITION" source="#polygon0-ID_Positions" />
+				</vertices>
+				<triangles material="stageMonyou-ID" count="24">
+					<input semantic="VERTEX" source="#polygon0-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon0-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon0-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon0-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 0 0 1 0 0 0 0 3 0 0 3 1 0 0 1 2 0 0 2 4 0 0 4 3 0 0 3 2 0 0 2 5 0 0 5 3 0 0 3 4 0 0 4 8 1 0 8 7 1 0 7 6 1 0 6 9 1 0 9 7 1 0 7 8 1 0 8 10 1 0 10 9 1 0 9 8 1 0 8 6 2 0 6 12 2 0 12 11 2 0 11 7 2 0 7 12 2 0 12 6 2 0 6 13 3 0 13 0 3 0 0 1 3 0 1 14 3 0 14 0 3 0 0 13 3 0 13 17 4 0 17 16 4 0 16 15 4 0 15 10 4 0 18 16 4 0 16 17 4 0 17 18 5 0 21 5 5 0 20 4 5 0 19 19 5 0 22 5 5 0 20 18 5 0 21 12 6 0 25 20 6 0 24 11 6 0 23 21 6 0 26 20 6 0 24 12 6 0 25 20 6 0 24 14 6 0 28 13 6 0 27 21 6 0 26 14 6 0 28 20 6 0 24 15 7 0 15 22 7 0 29 17 7 0 17 23 7 0 30 22 7 0 29 15 7 0 15 18 7 0 21 23 7 0 30 19 7 0 22 22 7 0 29 23 7 0 30 18 7 0 21 16 1 0 31 10 1 0 10 8 1 0 8</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon1-ID" name="polygon1">
+			<mesh>
+				<source id="polygon1-ID_Positions">
+					<float_array id="polygon1-ID_PosArr" count="126">-24.46993 23.27637 0.140625 -24.46993 23.27539 -9.109375 -25.05404 23.2666 -8.609375 -24.76977 23.27539 -9.421875 -25.34403 23.26563 -8.890625 -41.99564 23.27539 -9.421875 -41.99564 23.2666 -8.890625 -58.64771 23.26563 -8.890625 -59.22174 21.77637 -9.125 -59.22175 21.77539 0.125 -41.99564 21.77637 -9.125 -41.99564 21.77539 0.125 -24.76977 21.77539 0.125 -24.76977 21.77637 9.390625 -24.76976 24.17578 -9.125 -24.76977 24.1748 0.125 -41.99564 24.17578 -9.125 -41.99564 24.1748 0.125 -59.22175 24.1748 0.125 -59.22175 24.17578 9.390625 -58.93748 23.26465 8.890625 -59.22175 23.27539 9.6875 -58.64772 23.26367 9.171875 -41.99565 23.27539 9.6875 -41.99565 23.26367 9.171875 -25.34404 23.26465 9.171875 -58.93748 23.26465 0.140625 -59.52204 23.27637 0.140625 -58.93747 23.2666 -8.609375 -59.52203 23.27539 -9.109375 -59.22174 23.27539 -9.421875 -24.76977 23.27539 9.6875 -24.46994 23.27539 9.390625 -25.05404 23.26563 8.890625 -25.05404 23.26563 0.140625 -41.99564 21.77637 9.390625 -59.22175 21.77637 9.390625 -41.99564 24.17578 9.390625 -24.76977 24.17578 9.390625 -59.52205 23.27539 9.390625 -24.76977 21.77637 -9.125 -59.22174 24.17578 -9.125</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_PosArr" count="42" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Normals">
+					<float_array id="polygon1-ID_NormArr" count="21">0.013472 -0.999903 -0.003589 0 -0.999846 -0.017539 0 -1 -0.00013 0 1 0.00013 -0.018423 -0.99983 -6.8E-05 -0.006699 -0.999885 0.013613 0.003475 -0.999857 0.016546</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_NormArr" count="7" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Colors0">
+					<float_array id="polygon1-ID_ColorArr0" count="8">0.4 0.4 0.4 1 0.2 0.2 0.2 1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_ColorArr0" count="2" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_UVs0">
+					<float_array id="polygon1-ID_UVArr0" count="78">1 0.5 1 0.76426 0.983333 0.749705 0.991442 0.772817 0.975061 0.757791 0.5 0.772817 0.5 0.757791 0.024939 0.757791 0.902715 0.994657 0.902715 0.512979 0.497932 0.98503 0.503708 0.512979 0.087186 0.503351 0.085823 0.03130001 0.908677 0.98503 0.908677 0.503351 0.497932 0.503351 0.087186 0.02167302 0.016667 0.250295 0.008558 0.227182 0.024939 0.242209 0.5 0.227182 0.5 0.242209 0.975061 0.242209 0.016667 0.5 0 0.5 0.016666 0.749705 0 0.76426 0.008558 0.772817 0.991442 0.227182 1 0.23574 0.983333 0.250295 0.983333 0.5 0.503708 0.03130001 0.902715 0.03130001 0.497932 0.02167302 0.908677 0.02167302 0 0.23574 0.087186 0.98503</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_UVArr0" count="39" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon1-ID_Vertices">
+					<input semantic="POSITION" source="#polygon1-ID_Positions" />
+				</vertices>
+				<triangles material="stageAshiba-ID" count="40">
+					<input semantic="VERTEX" source="#polygon1-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon1-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon1-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon1-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 0 0 1 0 0 0 0 3 1 0 3 1 0 0 1 2 0 0 2 4 1 0 4 3 1 0 3 2 0 0 2 5 1 0 5 3 1 0 3 4 1 0 4 6 1 0 6 5 1 0 5 4 1 0 4 7 1 0 7 5 1 0 5 6 1 0 6 10 2 0 10 9 2 1 9 8 2 1 8 11 2 1 11 9 2 1 9 10 2 0 10 12 2 1 12 11 2 1 11 10 2 0 10 13 2 1 13 11 2 1 11 12 2 1 12 16 3 0 10 15 3 0 15 14 3 0 14 17 3 0 16 15 3 0 15 16 3 0 10 18 3 0 12 17 3 0 16 16 3 0 10 19 3 0 17 17 3 0 16 18 3 0 12 22 6 0 20 21 5 0 19 20 4 0 18 23 6 0 21 21 5 0 19 22 6 0 20 24 6 0 22 23 6 0 21 22 6 0 20 25 6 0 23 23 6 0 21 24 6 0 22 27 4 0 25 26 4 0 24 20 4 0 18 28 4 0 26 26 4 0 24 27 4 0 25 29 4 0 27 28 4 0 26 27 4 0 25 30 1 0 28 28 4 0 26 29 4 0 27 33 0 0 31 32 0 0 30 31 6 0 29 0 0 0 0 32 0 0 30 33 0 0 31 34 0 0 32 0 0 0 0 33 0 0 31 2 0 0 2 0 0 0 0 34 0 0 32 35 2 1 33 11 2 1 11 13 2 1 13 36 2 1 34 11 2 1 11 35 2 1 33 37 3 0 35 17 3 0 16 19 3 0 17 38 3 0 36 17 3 0 16 37 3 0 35 39 4 0 37 20 4 0 18 21 5 0 19 27 4 0 25 20 4 0 18 39 4 0 37 30 1 0 28 7 1 0 7 28 4 0 26 5 1 0 5 7 1 0 7 30 1 0 28 25 6 0 23 31 6 0 29 23 6 0 21 33 0 0 31 31 6 0 29 25 6 0 23 36 2 1 34 9 2 1 9 11 2 1 11 40 2 1 38 12 2 1 12 10 2 0 10 38 3 0 36 15 3 0 15 17 3 0 16 41 3 0 38 18 3 0 12 16 3 0 10</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon2-ID" name="polygon2">
+			<mesh>
+				<source id="polygon2-ID_Positions">
+					<float_array id="polygon2-ID_PosArr" count="144">-24.76977 21.77637 9.390625 -24.46994 22.25684 9.390625 -24.76977 21.77539 0.125 -24.46993 22.25586 0.125 -24.76977 21.77637 -9.125 -24.46993 22.25684 -9.125 -24.46994 23.69629 9.390625 -24.76977 24.17578 9.390625 -24.46993 23.69531 0.140625 -24.76977 24.1748 0.125 -24.46993 23.69629 -9.109375 -24.76976 24.17578 -9.125 -59.22174 22.25488 9.703125 -41.99564 22.25488 9.703125 -59.22174 21.77637 9.390625 -41.99564 21.77637 9.390625 -24.76977 21.77637 9.390625 -24.76977 22.25488 9.703125 -59.22175 21.77637 9.390625 -59.22175 21.77539 0.125 -59.52204 22.25684 9.390625 -59.52204 22.25586 0.125 -59.22174 21.77637 -9.125 -59.52204 22.25684 -9.125 -41.99564 21.77637 -9.125 -59.22174 22.25586 -9.421875 -41.99564 22.25586 -9.421875 -24.76977 22.25586 -9.421875 -24.76977 23.69629 9.6875 -41.99564 23.69629 9.6875 -24.76977 24.17578 9.390625 -41.99564 24.17578 9.390625 -59.22176 24.17578 9.390625 -59.22176 23.69629 9.6875 -59.52205 23.69629 9.390625 -59.52204 23.69531 0.140625 -59.22175 24.17578 9.390625 -59.22175 24.1748 0.125 -59.52203 23.69629 -9.109375 -59.22174 24.17578 -9.125 -41.99564 24.17578 -9.125 -24.76977 23.69531 -9.421875 -41.99564 23.69531 -9.421875 -59.22174 23.69531 -9.421875 -24.76977 22.25488 9.703125 -59.22175 22.25488 9.703125 -59.22175 23.69629 9.6875 -24.76977 23.69629 9.6875</float_array>
+					<technique_common>
+						<accessor source="#polygon2-ID_PosArr" count="48" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon2-ID_Normals">
+					<float_array id="polygon2-ID_NormArr" count="48">0.848104 -0.529829 -6.9E-05 0.848105 0.529829 6.9E-05 0 -0.537091 0.843524 -0.847741 -0.53041 -2.4E-05 0 -0.544068 -0.839041 0 0.525226 0.850963 -0.847741 0.53041 2.3E-05 0 0.535546 -0.844506 0.655765 -0.405484 0.636832 -0.655191 -0.405751 0.637253 0.652941 -0.412081 -0.635497 -0.652369 -0.412349 -0.635911 -0.638901 0.404052 0.654635 0.63948 0.403798 0.654227 -0.654135 0.405075 -0.638765 0.654701 0.404811 -0.638354</float_array>
+					<technique_common>
+						<accessor source="#polygon2-ID_NormArr" count="16" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon2-ID_Colors0">
+					<float_array id="polygon2-ID_ColorArr0" count="4">0.4 0.4 0.4 1</float_array>
+					<technique_common>
+						<accessor source="#polygon2-ID_ColorArr0" count="1" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon2-ID_UVs0">
+					<float_array id="polygon2-ID_UVArr0" count="90">-10.98725 6.025857 -10.98725 6.987359 -19.88272 6.025858 -19.88272 6.98736 -28.7782 6.025866 -28.7782 6.987377 -10.94463 5.0016 -10.94464 5.995903 -19.84956 5.001616 -19.84956 5.99592 -28.75449 5.001617 -28.75449 5.995919 19.80709 4.003032 0.462758 4.003032 19.80709 3.010546 0.462758 3.010546 -18.88158 3.010546 -18.88158 4.003032 -10.94232 5.001478 -19.84662 5.001464 -10.94231 5.99774 -19.84662 5.997726 -28.75092 5.001464 -28.75092 5.997725 19.97585 6.986622 2.256934 6.986622 19.97585 6.000581 2.256934 6.000581 -15.46199 6.000581 -15.46199 6.986622 19.88741 3.011639 0.487644 3.011639 19.88741 3.996624 0.487644 3.996624 -18.91213 3.996624 -18.91213 3.011639 -10.98137 4.000512 -19.88567 4.000511 -10.98137 4.98691 -19.88567 4.986909 -28.78997 4.000494 -28.78997 4.986901 -27.88076 6.00969 -28.28229 6.987084 -27.47926 6.987084</float_array>
+					<technique_common>
+						<accessor source="#polygon2-ID_UVArr0" count="45" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon2-ID_Vertices">
+					<input semantic="POSITION" source="#polygon2-ID_Positions" />
+				</vertices>
+				<triangles material="stageAshibaMonyou-ID" count="40">
+					<input semantic="VERTEX" source="#polygon2-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon2-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon2-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon2-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 0 0 1 0 0 0 0 3 0 0 3 1 0 0 1 2 0 0 2 4 0 0 4 3 0 0 3 2 0 0 2 5 0 0 5 3 0 0 3 4 0 0 4 8 1 0 8 7 1 0 7 6 1 0 6 9 1 0 9 7 1 0 7 8 1 0 8 10 1 0 10 9 1 0 9 8 1 0 8 11 1 0 11 9 1 0 9 10 1 0 10 14 2 0 14 13 2 0 13 12 2 0 12 15 2 0 15 13 2 0 13 14 2 0 14 17 2 0 17 15 2 0 15 16 2 0 16 13 2 0 13 15 2 0 15 17 2 0 17 20 3 0 20 19 3 0 19 18 3 0 18 21 3 0 21 19 3 0 19 20 3 0 20 21 3 0 21 22 3 0 22 19 3 0 19 23 3 0 23 22 3 0 22 21 3 0 21 25 4 0 26 24 4 0 25 22 4 0 24 26 4 0 27 24 4 0 25 25 4 0 26 4 4 0 29 26 4 0 27 27 4 0 28 24 4 0 25 26 4 0 27 4 4 0 29 30 5 0 32 29 5 0 31 28 5 0 30 31 5 0 33 29 5 0 31 30 5 0 32 33 5 0 35 31 5 0 33 32 5 0 34 29 5 0 31 31 5 0 33 33 5 0 35 36 6 0 38 35 6 0 37 34 6 0 36 37 6 0 39 35 6 0 37 36 6 0 38 37 6 0 39 38 6 0 40 35 6 0 37 39 6 0 41 38 6 0 40 37 6 0 39 41 7 0 26 40 7 0 25 11 7 0 24 42 7 0 27 40 7 0 25 41 7 0 26 39 7 0 29 42 7 0 27 43 7 0 28 40 7 0 25 42 7 0 27 39 7 0 29 1 8 0 44 44 8 0 43 0 8 0 42 45 9 0 44 20 9 0 43 18 9 0 42 5 10 0 43 4 10 0 42 27 10 0 44 22 11 0 42 23 11 0 44 25 11 0 43 34 12 0 44 46 12 0 43 36 12 0 42 47 13 0 44 6 13 0 43 7 13 0 42 38 14 0 43 39 14 0 42 43 14 0 44 11 15 0 42 10 15 0 44 41 15 0 43</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon3-ID" name="polygon3">
+			<mesh>
+				<source id="polygon3-ID_Positions">
+					<float_array id="polygon3-ID_PosArr" count="186">-59.52205 22.6748 9.390625 -59.52204 22.25684 9.390625 -59.52204 22.67676 0.140625 -59.52204 22.25586 0.125 -59.52203 22.6748 -9.125 -59.52204 22.25684 -9.125 -24.46994 22.6748 9.390625 -25.05404 22.68652 8.875 -24.46993 22.67676 0.140625 -25.05404 22.68555 0.140625 -25.05404 22.68555 -8.609375 -24.76977 22.6748 -9.4375 -25.34403 22.68555 -8.890625 -41.99564 22.6748 -9.4375 -41.99564 22.68555 -8.890625 -58.64771 22.68555 -8.890625 -59.22175 22.25488 9.703125 -59.22175 22.67578 9.703125 -41.99564 22.25488 9.703125 -41.99565 22.67578 9.703125 -24.76977 22.67578 9.703125 -24.76977 23.69629 9.6875 -24.76977 23.27539 9.6875 -41.99564 23.69629 9.6875 -41.99565 23.27539 9.6875 -59.22176 23.27539 9.6875 -59.52205 23.69629 9.390625 -59.52205 23.27539 9.390625 -59.52204 23.69531 0.140625 -59.52204 23.27637 0.140625 -59.52203 23.27539 -9.109375 -25.34404 22.68652 9.171875 -58.64771 22.68555 9.171875 -58.93748 22.68555 8.875 -24.46993 22.6748 -9.125 -58.93747 22.68555 -8.609375 -59.22174 22.6748 -9.4375 -41.99564 22.68555 9.171875 -58.93748 22.68555 0.140625 -24.46994 22.25684 9.390625 -24.76977 22.25488 9.703125 -24.46993 22.25684 -9.125 -24.76977 22.25586 -9.421875 -59.22174 22.25586 -9.421875 -24.46993 22.25586 0.125 -41.99564 22.25586 -9.421875 -59.22175 23.69629 9.6875 -59.22175 23.27539 9.6875 -24.46994 23.69629 9.390625 -24.46994 23.27539 9.390625 -59.22174 23.69531 -9.421875 -59.52203 23.69629 -9.109375 -59.22174 23.27539 -9.421875 -24.76977 23.69531 -9.421875 -24.76977 23.27539 -9.421875 -24.46993 23.69629 -9.109375 -24.46993 23.27539 -9.109375 -24.46993 23.69531 0.140625 -24.46993 23.27637 0.140625 -41.99564 23.27539 -9.421875 -41.99564 23.69531 -9.421875 -59.22176 23.69629 9.6875</float_array>
+					<technique_common>
+						<accessor source="#polygon3-ID_PosArr" count="62" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon3-ID_Normals">
+					<float_array id="polygon3-ID_NormArr" count="51">-1 -1E-06 0 0.016779 0.999859 -3.6E-05 0 0.999796 -0.020205 0 0.002253 0.999997 -0.002896 0.999879 0.015261 -0.012899 0.999906 -0.004657 0.716299 0.001572 0.697792 -0.715802 0.001516 0.698302 0.716298 -0.001572 -0.697793 -0.715771 -0.001573 -0.698333 1 0 0 0 -0.002252 -0.999997 -0.698538 0.00161 0.715571 -0.707154 -0.01055 0.706981 -0.715561 -0.022707 0.698181 0.698902 -0.023252 0.714839 0.707708 -0.010842 0.706422</float_array>
+					<technique_common>
+						<accessor source="#polygon3-ID_NormArr" count="17" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon3-ID_Colors0">
+					<float_array id="polygon3-ID_ColorArr0" count="8">0.2 0.2 0.2 1 0.4 0.4 0.4 1</float_array>
+					<technique_common>
+						<accessor source="#polygon3-ID_ColorArr0" count="2" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon3-ID_UVs0">
+					<float_array id="polygon3-ID_UVArr0" count="240">-0.974141 0.04184699 -0.974141 0.372013 0.030252 0.04184699 0.030252 0.372013 1.034644 0.04184502 1.034644 0.372013 -1.099078 1.971671 -1.050139 1.60702 -0.210557 1.971681 -0.210557 1.607027 0.629025 1.607039 -0.921116 1.401721 -0.872284 1.018048 0.543846 1.401721 0.543846 1.018048 1.959974 1.018048 2.048031 0.322991 2.048031 -0.03772199 0.598297 0.322992 0.598298 -0.03771698 -0.851436 -0.03771698 2.048031 0.939421 2.048031 0.578708 0.598297 0.939422 0.598298 0.578712 -0.851436 0.578712 1.034643 0.92248 1.034643 0.59231 0.030251 0.92248 0.030251 0.592312 -0.974142 0.59231 -0.303924 -1.400772 -0.318686 -1.345834 -0.333157 -1.502857 -0.348429 -1.444717 1.391614 -1.400771 1.420847 -1.502857 1.406376 -1.345834 1.436119 -1.444717 -0.303924 2.101974 -0.333157 2.20406 -0.318686 2.047036 -0.348429 2.14592 1.391614 2.101974 1.406376 2.047036 1.420847 2.20406 1.436119 2.14592 -1.114189 -1.385342 0.543846 -1.385342 -1.058921 -0.993322 0.543846 -0.993319 2.146611 -0.993319 2.201879 -1.385342 2.414425 -0.02120304 1.431763 -0.02120996 2.360301 -0.494523 1.431763 -0.494524 0.503225 -0.494522 0.449101 -0.02120304 1.150841 0.422227 1.150701 0.05149102 1.101706 0.422467 1.101554 0.050704 0.027907 0.412941 0.071692 0.413306 0.028032 0.05471301 0.071827 0.05351698 0.867044 -0.393066 0.867165 -0.06488097 0.909536 -0.3931251 0.909657 -0.06493998 0.815066 0.02802902 0.773849 0.02797103 0.814949 0.36815 0.773731 0.368093 0.798035 0.07485503 0.027353 0.07485598 0.798035 0.389819 0.027353 0.389819 -0.74333 0.389819 -0.74333 0.07485503 -2.067455 0.38673 0.519424 0.38673 -2.067455 0.02533603 0.519424 0.02533698 3.106301 0.386725 3.106302 0.02533299 0.083226 0.952258 0.084331 0.533413 0.030797 0.961994 0.029241 0.545497 1.142869 0.937365 1.14323 0.591049 1.095452 0.936269 1.095114 0.590038 0.750818 0.354064 0.788758 0.354117 0.750934 0.03363001 0.788875 0.033683 0.86464 -0.06554794 0.86451 -0.387302 0.822294 -0.06548905 0.822165 -0.387242 -0.74333 0.920924 0.027353 0.920924 -0.74333 0.605963 0.027353 0.605963 0.798036 0.605961 0.798036 0.920924 -1.879786 0.979587 0.522212 0.979587 -1.879786 0.644022 0.522212 0.644022 2.924208 0.979583 2.924209 0.644019 0.677964 1.971684 2.008806 1.401721 -0.851436 0.322994 -0.851436 0.939424 -0.974142 0.92248</float_array>
+					<technique_common>
+						<accessor source="#polygon3-ID_UVArr0" count="120" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon3-ID_Vertices">
+					<input semantic="POSITION" source="#polygon3-ID_Positions" />
+				</vertices>
+				<triangles material="stageAshibaWaku-ID" count="72">
+					<input semantic="VERTEX" source="#polygon3-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon3-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon3-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon3-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 0 0 1 0 0 0 0 3 0 0 3 1 0 0 1 2 0 0 2 4 0 0 4 3 0 0 3 2 0 0 2 5 0 0 5 3 0 0 3 4 0 0 4 8 1 1 8 7 1 1 7 6 1 1 6 9 1 1 9 7 1 1 7 8 1 1 8 10 1 1 10 9 1 1 9 8 1 1 8 13 2 1 13 12 2 1 12 11 2 1 11 14 2 1 14 12 2 1 12 13 2 1 13 15 2 1 15 14 2 1 14 13 2 1 13 18 3 0 18 17 3 0 17 16 3 0 16 19 3 0 19 17 3 0 17 18 3 0 18 20 3 0 20 19 3 0 19 18 3 0 18 23 3 0 23 22 3 0 22 21 3 0 21 24 3 0 24 22 3 0 22 23 3 0 23 25 3 0 25 24 3 0 24 23 3 0 23 28 0 0 28 27 0 0 27 26 0 0 26 29 0 0 29 27 0 0 27 28 0 0 28 30 0 0 30 29 0 0 29 28 0 0 28 20 4 1 33 7 1 1 32 31 4 1 31 6 1 1 34 7 1 1 32 20 4 1 33 33 5 1 37 17 4 1 36 32 4 1 35 0 5 1 38 17 4 1 36 33 5 1 37 10 1 1 41 11 2 1 40 12 2 1 39 34 1 1 42 11 2 1 40 10 1 1 41 36 2 1 45 35 5 1 44 15 2 1 43 4 5 1 46 35 5 1 44 36 2 1 45 31 4 1 49 19 4 1 48 20 4 1 47 37 4 1 50 19 4 1 48 31 4 1 49 32 4 1 51 19 4 1 48 37 4 1 50 17 4 1 52 19 4 1 48 32 4 1 51 33 5 1 55 2 5 1 54 0 5 1 53 38 5 1 56 2 5 1 54 33 5 1 55 35 5 1 57 2 5 1 54 38 5 1 56 4 5 1 58 2 5 1 54 35 5 1 57 20 6 0 61 39 6 0 60 6 6 0 59 40 6 0 62 39 6 0 60 20 6 0 61 1 7 0 65 17 7 0 64 0 7 0 63 16 7 0 66 17 7 0 64 1 7 0 65 42 8 1 69 34 8 1 68 41 8 1 67 11 8 1 70 34 8 1 68 42 8 1 69 4 9 1 73 43 9 1 72 5 9 1 71 36 9 1 74 43 9 1 72 4 9 1 73 39 10 0 77 8 10 0 76 6 10 0 75 44 10 0 78 8 10 0 76 39 10 0 77 34 10 0 80 44 10 0 78 41 10 0 79 8 10 0 76 44 10 0 78 34 10 0 80 42 11 1 83 13 11 1 82 11 11 1 81 45 11 1 84 13 11 1 82 42 11 1 83 13 11 1 82 43 11 1 86 36 11 1 85 45 11 1 84 43 11 1 86 13 11 1 82 26 13 0 89 47 13 0 88 46 12 0 87 27 14 0 90 47 13 0 88 26 13 0 89 21 16 0 93 49 16 0 92 48 15 0 91 22 6 0 94 49 16 0 92 21 16 0 93 52 9 1 97 51 9 1 96 50 9 1 95 30 9 1 98 51 9 1 96 52 9 1 97 55 8 1 101 54 8 1 100 53 8 1 99 56 8 1 102 54 8 1 100 55 8 1 101 49 10 0 105 57 10 0 104 48 10 0 103 58 10 0 106 57 10 0 104 49 10 0 105 56 10 0 107 57 10 0 104 58 10 0 106 55 10 0 108 57 10 0 104 56 10 0 107 50 11 1 111 59 11 1 110 52 11 1 109 60 11 1 112 59 11 1 110 50 11 1 111 59 11 1 110 53 11 1 114 54 11 1 113 60 11 1 112 53 11 1 114 59 11 1 110 34 1 1 115 10 1 1 10 8 1 1 8 36 2 1 116 15 2 1 15 13 2 1 13 40 3 0 117 20 3 0 20 18 3 0 18 61 3 0 118 25 3 0 25 23 3 0 23 28 0 0 28 51 0 0 119 30 0 0 30</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon4-ID" name="polygon4">
+			<mesh>
+				<source id="polygon4-ID_Positions">
+					<float_array id="polygon4-ID_PosArr" count="27">-24.76976 24.27634 -9.125298 -24.76977 24.27514 0.124306 -41.99564 24.27634 -9.125307 -41.99564 24.27514 0.124297 -59.22175 24.27514 0.124288 -59.22175 24.27631 9.38846 -41.99564 24.27631 9.388471 -24.76977 24.27631 9.388478 -59.22174 24.27634 -9.125317</float_array>
+					<technique_common>
+						<accessor source="#polygon4-ID_PosArr" count="9" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon4-ID_Normals">
+					<float_array id="polygon4-ID_NormArr" count="3">0 1 0.00013</float_array>
+					<technique_common>
+						<accessor source="#polygon4-ID_NormArr" count="1" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon4-ID_Colors0">
+					<float_array id="polygon4-ID_ColorArr0" count="4">0.5019608 0.5019608 0.5019608 1</float_array>
+					<technique_common>
+						<accessor source="#polygon4-ID_ColorArr0" count="1" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon4-ID_UVs0">
+					<float_array id="polygon4-ID_UVArr0" count="18">0.908677 0.98503 0.908677 0.503351 0.497932 0.98503 0.497932 0.503351 0.087186 0.503351 0.087186 0.02167302 0.497932 0.02167302 0.908677 0.02167302 0.087186 0.98503</float_array>
+					<technique_common>
+						<accessor source="#polygon4-ID_UVArr0" count="9" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon4-ID_Vertices">
+					<input semantic="POSITION" source="#polygon4-ID_Positions" />
+				</vertices>
+				<triangles material="MShadow1-ID" count="8">
+					<input semantic="VERTEX" source="#polygon4-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon4-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon4-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon4-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 0 0 1 0 0 0 0 3 0 0 3 1 0 0 1 2 0 0 2 4 0 0 4 3 0 0 3 2 0 0 2 5 0 0 5 3 0 0 3 4 0 0 4 6 0 0 6 3 0 0 3 5 0 0 5 7 0 0 7 3 0 0 3 6 0 0 6 7 0 0 7 1 0 0 1 3 0 0 3 8 0 0 8 4 0 0 4 2 0 0 2</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon5-ID" name="polygon5">
+			<mesh>
+				<source id="polygon5-ID_Positions">
+					<float_array id="polygon5-ID_PosArr" count="48">-24.84007 25.00908 -9.127738 -24.84007 20.99094 -9.127738 -24.84008 25.00908 0.008152992 -24.84008 20.99094 0.008152992 -24.84008 20.99045 9.366699 -59.15212 25.00908 9.366699 -59.15212 20.99045 9.366699 -59.15212 25.00908 0.008152992 -59.15168 20.99094 0.008152992 -59.15211 20.99094 -9.127738 -24.84008 25.00908 9.366699 -41.99566 25.00907 9.366699 -41.99566 20.99045 9.366699 -41.99565 20.99094 -9.127738 -41.99565 25.00907 -9.127738 -59.15211 25.00908 -9.127738</float_array>
+					<technique_common>
+						<accessor source="#polygon5-ID_PosArr" count="16" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon5-ID_Normals">
+					<float_array id="polygon5-ID_NormArr" count="12">1 0 0 -1 -5.5E-05 2.3E-05 0 0 1 0 0 -1</float_array>
+					<technique_common>
+						<accessor source="#polygon5-ID_NormArr" count="4" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon5-ID_Colors0">
+					<float_array id="polygon5-ID_ColorArr0" count="4">0.3529412 0.3529412 0.3529412 1</float_array>
+					<technique_common>
+						<accessor source="#polygon5-ID_ColorArr0" count="1" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon5-ID_UVs0">
+					<float_array id="polygon5-ID_UVArr0" count="36">0.999224 -0.21541 0.034073 -0.2154109 0.999224 -0.05641901 0.034073 -0.05641901 0.034073 0.102572 0.999224 0.784589 0.034073 0.784589 0.999224 0.94358 0.034073 0.943581 0.034073 1.102572 0.999224 0.102572 0.99922 0.443581 0.034073 0.44358 0.034073 1.443581 0.99922 1.44358 0.999224 1.102572 0.99922 -0.556419 0.034073 -0.556419</float_array>
+					<technique_common>
+						<accessor source="#polygon5-ID_UVArr0" count="18" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon5-ID_Vertices">
+					<input semantic="POSITION" source="#polygon5-ID_Positions" />
+				</vertices>
+				<triangles material="stageLineYellow-ID" count="16">
+					<input semantic="VERTEX" source="#polygon5-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon5-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon5-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon5-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 0 0 1 0 0 0 0 3 0 0 3 1 0 0 1 2 0 0 2 4 0 0 4 3 0 0 3 2 0 0 2 7 1 0 7 6 1 0 6 5 1 0 5 8 1 0 8 6 1 0 6 7 1 0 7 9 1 0 9 8 1 0 8 7 1 0 7 11 2 0 11 4 2 0 4 10 2 0 10 12 2 0 12 4 2 0 4 11 2 0 11 6 2 0 6 12 2 0 12 11 2 0 11 9 3 0 9 14 3 0 14 13 3 0 13 15 3 0 15 14 3 0 14 9 3 0 9 1 3 0 1 14 3 0 16 0 3 0 0 13 3 0 17 14 3 0 16 1 3 0 1 5 2 0 5 6 2 0 6 11 2 0 11 10 0 0 10 4 0 0 4 2 0 0 2 15 1 0 15 9 1 0 9 7 1 0 7</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon6-ID" name="polygon6">
+			<mesh>
+				<source id="polygon6-ID_Positions">
+					<float_array id="polygon6-ID_PosArr" count="96">-25.05659 23.24812 -2.570684 -24.43704 23.24812 -2.570683 -25.03636 23.24812 -9.637322 -24.43704 23.24812 -9.637321 -24.43704 23.69898 -2.570683 -24.43704 23.69898 -9.637321 -24.76952 24.39491 -2.72938 -24.76952 24.39491 -9.79602 -59.56297 23.24512 -2.729397 -58.94224 23.24512 -2.729395 -59.56295 23.24512 -9.79602 -58.94222 23.24512 -9.796019 -59.56295 23.73594 -9.79602 -59.56297 23.73594 -2.729397 -59.29023 24.39491 -9.796021 -59.29025 24.39491 -2.729397 -25.05659 23.24812 10.79514 -24.43704 23.24812 10.79514 -25.05659 23.24812 3.7285 -24.43704 23.24812 3.7285 -24.43704 23.69898 10.79514 -24.43704 23.69898 3.7285 -24.76952 24.39491 10.63644 -24.76952 24.39491 3.569802 -59.56297 23.24512 10.63643 -58.94224 23.24512 10.63643 -59.56295 23.24512 3.569802 -58.94222 23.24512 3.569804 -59.56295 23.73594 3.569802 -59.56297 23.73594 10.63643 -59.29023 24.39491 3.569802 -59.29025 24.39491 10.63643</float_array>
+					<technique_common>
+						<accessor source="#polygon6-ID_PosArr" count="32" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon6-ID_Normals">
+					<float_array id="polygon6-ID_NormArr" count="21">3E-06 -1 0 0.707108 -0.707106 0 0.975272 0.221006 0 0.533346 0.845897 0 -1 0 -2E-06 -0.980815 0.194941 -2E-06 -0.555697 0.831385 -1E-06</float_array>
+					<technique_common>
+						<accessor source="#polygon6-ID_NormArr" count="7" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon6-ID_Colors0">
+					<float_array id="polygon6-ID_ColorArr0" count="4">0.5019608 0.5019608 0.5019608 1</float_array>
+					<technique_common>
+						<accessor source="#polygon6-ID_ColorArr0" count="1" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon6-ID_UVs0">
+					<float_array id="polygon6-ID_UVArr0" count="64">0.894889 -0.565796 0.894889 -0.363176 0.104133 -0.565796 0.104133 -0.363176 0.894889 -0.1866781 0.104133 -0.1866781 0.894889 -0.002601027 0.104133 -0.002601027 0.894889 1.369594 0.894889 1.497971 0.104133 1.369594 0.104133 1.497971 0.104133 1.189133 0.894889 1.189133 0.104133 1.004921 0.894889 1.004921 -0.080707 -0.58911 -0.080707 -0.415437 -0.879126 -0.58911 -0.879126 -0.415437 -0.080707 -0.2202359 -0.879126 -0.2202359 -0.080707 -0.005825043 -0.879126 -0.005825043 -0.080707 1.370084 -0.080707 1.509874 -0.879126 1.370084 -0.879126 1.509874 -0.879126 1.189133 -0.080707 1.189133 -0.879126 1.004921 -0.080707 1.004921</float_array>
+					<technique_common>
+						<accessor source="#polygon6-ID_UVArr0" count="32" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon6-ID_Vertices">
+					<input semantic="POSITION" source="#polygon6-ID_Positions" />
+				</vertices>
+				<triangles material="stageLineBlue-ID" count="28">
+					<input semantic="VERTEX" source="#polygon6-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon6-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon6-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon6-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 1 0 1 0 0 0 0 3 1 0 3 1 1 0 1 2 0 0 2 3 1 0 3 4 2 0 4 1 1 0 1 5 2 0 5 4 2 0 4 3 1 0 3 5 2 0 5 6 3 0 6 4 2 0 4 7 3 0 7 6 3 0 6 5 2 0 5 10 0 0 10 9 0 0 9 8 0 0 8 11 0 0 11 9 0 0 9 10 0 0 10 8 4 0 8 12 5 0 12 10 4 0 10 13 5 0 13 12 5 0 12 8 4 0 8 13 5 0 13 14 6 0 14 12 5 0 12 15 6 0 15 14 6 0 14 13 5 0 13 14 6 0 14 6 3 0 6 7 3 0 7 15 6 0 15 6 3 0 6 14 6 0 14 18 0 0 18 17 1 0 17 16 0 0 16 19 1 0 19 17 1 0 17 18 0 0 18 19 1 0 19 20 2 0 20 17 1 0 17 21 2 0 21 20 2 0 20 19 1 0 19 21 2 0 21 22 3 0 22 20 2 0 20 23 3 0 23 22 3 0 22 21 2 0 21 26 0 0 26 25 0 0 25 24 0 0 24 27 0 0 27 25 0 0 25 26 0 0 26 24 4 0 24 28 5 0 28 26 4 0 26 29 5 0 29 28 5 0 28 24 4 0 24 29 5 0 29 30 6 0 30 28 5 0 28 31 6 0 31 30 6 0 30 29 5 0 29 30 6 0 30 22 3 0 22 23 3 0 23 31 6 0 31 22 3 0 22 30 6 0 30</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon7-ID" name="polygon7">
+			<mesh>
+				<source id="polygon7-ID_Positions">
+					<float_array id="polygon7-ID_PosArr" count="96">-24.45232 23.25961 -7.435419 -25.05455 23.25961 -7.435418 -24.45232 23.25961 -5.881637 -25.05455 23.25961 -5.881634 -24.45232 23.7042 -7.435419 -24.45232 23.7042 -5.881634 -24.76303 24.1949 -7.435417 -24.76303 24.19491 -5.881635 -59.54488 23.25962 -5.853348 -58.94265 23.25961 -5.853348 -59.54488 23.25962 -7.407131 -58.94265 23.25962 -7.407131 -59.54488 23.70421 -5.853348 -59.54488 23.70421 -7.407131 -59.2164 24.19491 -5.853349 -59.2164 24.19491 -7.407131 -24.45232 23.25961 6.557691 -25.05455 23.25961 6.557691 -24.45232 23.25961 8.111472 -25.05455 23.25961 8.111475 -24.45232 23.7042 6.557691 -24.45232 23.7042 8.111475 -24.76303 24.19491 6.557693 -24.76303 24.19491 8.111474 -59.54488 23.25962 8.139761 -58.94265 23.25962 8.139761 -59.54488 23.25962 6.585979 -58.94265 23.25962 6.585979 -59.54488 23.7042 8.139761 -59.54488 23.70421 6.585979 -59.21639 24.19491 8.139761 -59.21639 24.19491 6.585979</float_array>
+					<technique_common>
+						<accessor source="#polygon7-ID_PosArr" count="32" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon7-ID_Normals">
+					<float_array id="polygon7-ID_NormArr" count="18">0 -1 -1E-06 1 -9E-06 0 0.844876 0.534962 0 -1 0 0 -0.830994 0.556281 0 0 1 0</float_array>
+					<technique_common>
+						<accessor source="#polygon7-ID_NormArr" count="6" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon7-ID_Colors0">
+					<float_array id="polygon7-ID_ColorArr0" count="4">0.5019608 0.5019608 0.5019608 1</float_array>
+					<technique_common>
+						<accessor source="#polygon7-ID_ColorArr0" count="1" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon7-ID_UVs0">
+					<float_array id="polygon7-ID_UVArr0" count="36">-1.775708 0.594776 2.784579 0.594775 -1.775708 0.88899 2.784579 0.88899 2.896256 0.889783 2.947843 0.887541 2.896256 0.595568 2.947843 0.593326 2.789836 0.88961 2.781685 0.595396 -1.897659 0.594603 -1.949246 0.596846 -1.897659 0.888818 -1.949246 0.89106 -1.791239 0.594776 -1.783088 0.88899 2.78705 0.88899 2.770746 0.594776</float_array>
+					<technique_common>
+						<accessor source="#polygon7-ID_UVArr0" count="18" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon7-ID_Vertices">
+					<input semantic="POSITION" source="#polygon7-ID_Positions" />
+				</vertices>
+				<triangles material="yukaMizo-ID" count="28">
+					<input semantic="VERTEX" source="#polygon7-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon7-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon7-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon7-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 0 0 1 0 0 0 0 3 0 0 3 1 0 0 1 2 0 0 2 5 1 0 6 0 1 0 5 4 1 0 4 2 1 0 7 0 1 0 5 5 1 0 6 7 2 0 9 4 2 0 4 6 2 0 8 5 2 0 6 4 2 0 4 7 2 0 9 10 0 0 2 9 0 0 1 8 0 0 0 11 0 0 3 9 0 0 1 10 0 0 2 13 3 0 12 8 3 0 11 12 3 0 10 10 3 0 13 8 3 0 11 13 3 0 12 15 4 0 15 12 4 0 10 14 4 0 14 13 4 0 12 12 4 0 10 15 4 0 15 14 5 0 14 6 5 0 16 15 5 0 15 7 5 0 17 6 5 0 16 14 5 0 14 18 0 0 2 17 0 0 1 16 0 0 0 19 0 0 3 17 0 0 1 18 0 0 2 21 1 0 6 16 1 0 5 20 1 0 4 18 1 0 7 16 1 0 5 21 1 0 6 23 2 0 9 20 2 0 4 22 2 0 8 21 2 0 6 20 2 0 4 23 2 0 9 26 0 0 2 25 0 0 1 24 0 0 0 27 0 0 3 25 0 0 1 26 0 0 2 29 3 0 12 24 3 0 11 28 3 0 10 26 3 0 13 24 3 0 11 29 3 0 12 31 4 0 15 28 4 0 10 30 4 0 14 29 4 0 12 28 4 0 10 31 4 0 15 30 5 0 14 22 5 0 16 31 5 0 15 23 5 0 17 22 5 0 16 30 5 0 14</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon8-ID" name="polygon8">
+			<mesh>
+				<source id="polygon8-ID_Positions">
+					<float_array id="polygon8-ID_PosArr" count="54">-24.7642 24.49491 -6.104828 -24.76924 24.49491 -2.865457 -41.35908 24.49491 -6.104832 -41.36411 24.49491 -2.865465 -59.24405 24.49491 -2.865473 -59.23901 24.49491 -6.104836 -59.23397 24.49491 -9.344198 -41.35404 24.49491 -9.344198 -24.75917 24.49491 10.63644 -41.35405 24.49491 10.63643 -41.35405 24.49491 7.103118 -59.23399 24.49491 10.63643 -59.23398 24.49491 7.103114 -59.23398 24.49491 3.569802 -41.35404 24.49491 3.569802 -24.75916 24.49491 3.569802 -24.75916 24.49491 -9.344198 -24.75917 24.49491 7.103122</float_array>
+					<technique_common>
+						<accessor source="#polygon8-ID_PosArr" count="18" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon8-ID_Normals">
+					<float_array id="polygon8-ID_NormArr" count="3">0 1 0</float_array>
+					<technique_common>
+						<accessor source="#polygon8-ID_NormArr" count="1" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon8-ID_Colors0">
+					<float_array id="polygon8-ID_ColorArr0" count="8">0 0 0 1 0.6 0.6 0.6 0</float_array>
+					<technique_common>
+						<accessor source="#polygon8-ID_ColorArr0" count="2" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon8-ID_UVs0">
+					<float_array id="polygon8-ID_UVArr0" count="36">0.699237 0.100744 0.709285 0.128219 0.824198 0.05526203 0.834246 0.08273703 0.959206 0.03725499 0.949158 0.00977999 0.93911 -0.01769602 0.81415 0.02778602 0.750172 0.240816 0.875133 0.195334 0.864124 0.165088 1.000093 0.149852 0.989084 0.119606 0.978075 0.08935899 0.853115 0.134841 0.728154 0.180323 0.689189 0.073268 0.739163 0.21057</float_array>
+					<technique_common>
+						<accessor source="#polygon8-ID_UVArr0" count="18" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon8-ID_Vertices">
+					<input semantic="POSITION" source="#polygon8-ID_Positions" />
+				</vertices>
+				<triangles material="stageLineRed-ID" count="16">
+					<input semantic="VERTEX" source="#polygon8-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon8-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon8-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon8-ID_UVs0" set="0" offset="3" />
+					<p>2 0 1 2 1 0 0 1 0 0 0 0 3 0 0 3 1 0 0 1 2 0 1 2 4 0 0 4 3 0 0 3 2 0 1 2 2 0 1 2 5 0 0 5 4 0 0 4 6 0 0 6 5 0 0 5 2 0 1 2 7 0 0 7 6 0 0 6 2 0 1 2 10 0 1 10 9 0 0 9 8 0 0 8 11 0 0 11 9 0 0 9 10 0 1 10 12 0 0 12 11 0 0 11 10 0 1 10 10 0 1 10 13 0 0 13 12 0 0 12 14 0 0 14 13 0 0 13 10 0 1 10 15 0 0 15 14 0 0 14 10 0 1 10 16 0 0 16 2 0 1 2 0 0 0 0 7 0 0 7 2 0 1 2 16 0 0 16 17 0 0 17 10 0 1 10 8 0 0 8 15 0 0 15 10 0 1 10 17 0 0 17</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon0-ID_Controller">
+			<skin source="#polygon0-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon0-ID_Joints">
+					<Name_array id="polygon0-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Matrices">
+					<float_array id="polygon0-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Weights">
+					<float_array id="polygon0-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon0-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon0-ID_Matrices" />
+				</joints>
+				<vertex_weights count="24">
+					<input semantic="JOINT" offset="0" source="#polygon0-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon0-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon1-ID_Controller">
+			<skin source="#polygon1-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon1-ID_Joints">
+					<Name_array id="polygon1-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Matrices">
+					<float_array id="polygon1-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Weights">
+					<float_array id="polygon1-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon1-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon1-ID_Matrices" />
+				</joints>
+				<vertex_weights count="42">
+					<input semantic="JOINT" offset="0" source="#polygon1-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon1-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon2-ID_Controller">
+			<skin source="#polygon2-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon2-ID_Joints">
+					<Name_array id="polygon2-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon2-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon2-ID_Matrices">
+					<float_array id="polygon2-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon2-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon2-ID_Weights">
+					<float_array id="polygon2-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon2-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon2-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon2-ID_Matrices" />
+				</joints>
+				<vertex_weights count="48">
+					<input semantic="JOINT" offset="0" source="#polygon2-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon2-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon3-ID_Controller">
+			<skin source="#polygon3-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon3-ID_Joints">
+					<Name_array id="polygon3-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon3-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon3-ID_Matrices">
+					<float_array id="polygon3-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon3-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon3-ID_Weights">
+					<float_array id="polygon3-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon3-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon3-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon3-ID_Matrices" />
+				</joints>
+				<vertex_weights count="62">
+					<input semantic="JOINT" offset="0" source="#polygon3-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon3-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon4-ID_Controller">
+			<skin source="#polygon4-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon4-ID_Joints">
+					<Name_array id="polygon4-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon4-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon4-ID_Matrices">
+					<float_array id="polygon4-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon4-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon4-ID_Weights">
+					<float_array id="polygon4-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon4-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon4-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon4-ID_Matrices" />
+				</joints>
+				<vertex_weights count="9">
+					<input semantic="JOINT" offset="0" source="#polygon4-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon4-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1</vcount>
+					<v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon5-ID_Controller">
+			<skin source="#polygon5-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon5-ID_Joints">
+					<Name_array id="polygon5-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon5-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon5-ID_Matrices">
+					<float_array id="polygon5-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon5-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon5-ID_Weights">
+					<float_array id="polygon5-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon5-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon5-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon5-ID_Matrices" />
+				</joints>
+				<vertex_weights count="16">
+					<input semantic="JOINT" offset="0" source="#polygon5-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon5-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon6-ID_Controller">
+			<skin source="#polygon6-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon6-ID_Joints">
+					<Name_array id="polygon6-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon6-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon6-ID_Matrices">
+					<float_array id="polygon6-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon6-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon6-ID_Weights">
+					<float_array id="polygon6-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon6-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon6-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon6-ID_Matrices" />
+				</joints>
+				<vertex_weights count="32">
+					<input semantic="JOINT" offset="0" source="#polygon6-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon6-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon7-ID_Controller">
+			<skin source="#polygon7-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon7-ID_Joints">
+					<Name_array id="polygon7-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon7-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon7-ID_Matrices">
+					<float_array id="polygon7-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon7-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon7-ID_Weights">
+					<float_array id="polygon7-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon7-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon7-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon7-ID_Matrices" />
+				</joints>
+				<vertex_weights count="32">
+					<input semantic="JOINT" offset="0" source="#polygon7-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon7-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon8-ID_Controller">
+			<skin source="#polygon8-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon8-ID_Joints">
+					<Name_array id="polygon8-ID_JointArr" count="2">zStgBattleFieldAshiba01-ID NShadow1A_10-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon8-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon8-ID_Matrices">
+					<float_array id="polygon8-ID_MatArr" count="32">1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1 1 0 0 42 0 1 0 -23 0 0 1 -0.5 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon8-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon8-ID_Weights">
+					<float_array id="polygon8-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon8-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon8-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon8-ID_Matrices" />
+				</joints>
+				<vertex_weights count="18">
+					<input semantic="JOINT" offset="0" source="#polygon8-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon8-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNodeID" name="RootNode">
+			<node id="zStgBattleFieldAshiba01-ID" name="zStgBattleFieldAshiba01" sid="zStgBattleFieldAshiba01-ID" type="JOINT">
+				<translate>-42 23 0.5</translate>
+				<node id="NShadow1A_10-ID" name="NShadow1A_10" sid="NShadow1A_10-ID" type="JOINT" />
+			</node>
+			<node id="polygon0-ID" name="polygon0" type="NODE">
+				<instance_controller url="#polygon0-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="stageMonyou-ID" target="#stageMonyou">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon1-ID" name="polygon1" type="NODE">
+				<instance_controller url="#polygon1-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="stageAshiba-ID" target="#stageAshiba">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon2-ID" name="polygon2" type="NODE">
+				<instance_controller url="#polygon2-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="stageAshibaMonyou-ID" target="#stageAshibaMonyou">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon3-ID" name="polygon3" type="NODE">
+				<instance_controller url="#polygon3-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="stageAshibaWaku-ID" target="#stageAshibaWaku">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon4-ID" name="polygon4" type="NODE">
+				<instance_controller url="#polygon4-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="MShadow1-ID" target="#MShadow1">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon5-ID" name="polygon5" type="NODE">
+				<instance_controller url="#polygon5-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="stageLineYellow-ID" target="#stageLineYellow">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon6-ID" name="polygon6" type="NODE">
+				<instance_controller url="#polygon6-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="stageLineBlue-ID" target="#stageLineBlue">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon7-ID" name="polygon7" type="NODE">
+				<instance_controller url="#polygon7-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="yukaMizo-ID" target="#yukaMizo">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon8-ID" name="polygon8" type="NODE">
+				<instance_controller url="#polygon8-ID_Controller">
+					<skeleton>#zStgBattleFieldAshiba01</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="stageLineRed-ID" target="#stageLineRed">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNodeID" />
+	</scene>
+</COLLADA>

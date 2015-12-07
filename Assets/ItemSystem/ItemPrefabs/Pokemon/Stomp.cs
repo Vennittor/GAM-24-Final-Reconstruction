@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Stomp : MonoBehaviour
 {
-
+    public GameObject master;
     float stompVelocity = 500;
     // Use this for initialization
     void Start () {
@@ -11,12 +11,15 @@ public class Stomp : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
     void OnTriggerEnter(Collider other)
     {
+        Physics.IgnoreCollision(master.GetComponent<BoxCollider>(), GetComponent<CapsuleCollider>());
         Debug.Log("hit");
+        if (other.GetComponent<BaseCharacter>())
               other.GetComponent<Rigidbody>().AddForce(Vector3.up * stompVelocity);
     }
 }

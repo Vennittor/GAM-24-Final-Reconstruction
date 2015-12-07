@@ -11,6 +11,7 @@ public class Snorlax : MonoBehaviour
     void Start()
     {
         Invoke("fly", 2);
+        Destroy(gameObject, 10f);
     }
 
     // Update is called once per frame
@@ -37,9 +38,15 @@ public class Snorlax : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (gameObject.transform.position.x - other.gameObject.transform.position.x <= 0)
+        {
+            if(other.gameObject.GetComponent<BaseCharacter>())
             other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(1, 1, 0) * SnorlaxVelocity);
+        }
         else
-            other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(-1, 1, 0) * SnorlaxVelocity);
+        {
+            if (other.gameObject.GetComponent<BaseCharacter>())
+                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(-1, 1, 0) * SnorlaxVelocity);
+        }
 
     }
 }

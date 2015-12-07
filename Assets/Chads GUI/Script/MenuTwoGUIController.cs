@@ -16,8 +16,6 @@ public class MenuTwoGUIController : MonoBehaviour
 	public Vector3 newBRPositoin;
 	public Vector3 newRSTNPosition;
 
-	public AudioSource buttonPushAudio;
-
 	public Image background;
 
 	// Use this for initialization
@@ -63,30 +61,16 @@ public class MenuTwoGUIController : MonoBehaviour
 		}
 	}
 
-	public void Back()
-	{
-		fadeIn = false;
-		buttonMove = false;
-//		buttonPushAudio.Play ();
-		Invoke ("LoadMainMenu",0.75f);
-	}
-
 	public void BrawlButton ()
 	{
 		fadeIn = false;
 		buttonMove = false;
-//		buttonPushAudio.Play ();
-		Invoke ("LoadCharacterSelect",0.75f);
+		Invoke ("LoadCharacterSelect",.75f);
 	}
 
 	void LoadCharacterSelect ()
 	{
 		Application.LoadLevel (3);
-	}
-
-	void LoadMainMenu ()
-	{
-		Application.LoadLevel (1);
 	}
 }
 

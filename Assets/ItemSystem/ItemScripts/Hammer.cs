@@ -9,9 +9,8 @@ public class Hammer : ItemBaseScript
         damage = 20;
         base.Start();
     }
-    public override void FunctionAlpha()
+    public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
     {
-        //transform.parent.gameObject.GetComponent<>().HammerEffect();
         int headDropChance = Random.Range(0, 100);
         if (headDropChance < 20)
         {
@@ -20,7 +19,9 @@ public class Hammer : ItemBaseScript
             head.GetComponent<Rigidbody>().isKinematic = false;
             this.damage = 5;
         }
-            
+
+        //transform.parent.gameObject.GetComponent<>().HammerEffect();
+
         base.FunctionAlpha();
     }
     public override void Update()

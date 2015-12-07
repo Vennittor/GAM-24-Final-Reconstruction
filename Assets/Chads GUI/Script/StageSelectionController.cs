@@ -10,7 +10,7 @@ public class StageSelectionController : MonoBehaviour
 	public bool fade;
 	public bool buttonMove;
 
-	public GameObject stageDataHolder;
+	public GameObject playerDataHolder;
 	public GameObject stageButtons;
 	public GameObject brawlBackButtons;
 
@@ -22,7 +22,7 @@ public class StageSelectionController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		stageDataHolder = GameObject.Find ("DataHolder");
+		playerDataHolder = GameObject.Find ("PlayerDataHolder");
 		fade = true;
 		buttonMove = true;
 	}
@@ -66,23 +66,17 @@ public class StageSelectionController : MonoBehaviour
 		Application.LoadLevel (5);
 	}
 
-	void LoadCharacterSelect ()
-	{
-		Application.LoadLevel (3);
-	}
-
 //	BUTTONS
-	
-	public void BackButton ()
-	{
-		fade = false;
-		buttonMove = false;
-		Invoke ("LoadCharacterSelect",0.75f);
-	}
+
+//	Dont implement yet. It will break the game.
+//	public void BackButton ()
+//	{
+//		Application.LoadLevel (3);
+//	}
 
 	public void BrawlButton ()
 	{
-		if (stageDataHolder.GetComponent<DataHolder> ().stageSelection != DataHolder.StageSelect.none) 
+		if (playerDataHolder.GetComponent<PlayerDataHolder> ().stageSelection != PlayerDataHolder.StageSelect.none) 
 		{
 			fade = false;
 			buttonMove = false;
@@ -93,28 +87,28 @@ public class StageSelectionController : MonoBehaviour
 	//Stages
 	public void FinalDestination ()
 	{
-		stageDataHolder.GetComponent<DataHolder>().stageSelection = DataHolder.StageSelect.finalDestination;
+		playerDataHolder.GetComponent<PlayerDataHolder>().stageSelection = PlayerDataHolder.StageSelect.finalDestination;
 		selectedStage.sprite = stages[0];
 		selectedStage.color = new Color (1,1,1,1);
 	}
 
 	public void PokemonStadium ()
 	{
-		stageDataHolder.GetComponent<DataHolder>().stageSelection = DataHolder.StageSelect.pokemonStadium;
+		playerDataHolder.GetComponent<PlayerDataHolder>().stageSelection = PlayerDataHolder.StageSelect.pokemonStadium;
 		selectedStage.sprite = stages[1];
 		selectedStage.color = new Color (1,1,1,1);
 	}
 
 	public void GreenyGreens ()
 	{
-		stageDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.greenyGreens;
+		playerDataHolder.GetComponent<PlayerDataHolder> ().stageSelection = PlayerDataHolder.StageSelect.greenyGreens;
 		selectedStage.sprite = stages [2];
 		selectedStage.color = new Color (1,1,1,1);
 	}
 
 	public void Hyrule ()
 	{
-		stageDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.hyrule;
+		playerDataHolder.GetComponent<PlayerDataHolder> ().stageSelection = PlayerDataHolder.StageSelect.hyrule;
 		selectedStage.sprite = stages[3];
 		selectedStage.color = new Color (1,1,1,1);
 	}

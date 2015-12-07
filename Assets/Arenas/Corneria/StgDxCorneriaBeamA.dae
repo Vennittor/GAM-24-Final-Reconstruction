@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlBox</authoring_tool>
+		</contributor>
+		<created>2013-11-26T03:23:27Z</created>
+		<modified>2013-11-26T03:23:27Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_materials>
+		<material id="default5">
+			<instance_effect url="#default5-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="default5-fx" name="default5">
+			<profile_COMMON>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse />
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon0-ID" name="polygon0">
+			<mesh>
+				<source id="polygon0-ID_Positions">
+					<float_array id="polygon0-ID_PosArr" count="132">-1.138621 -0.1985566 9.383325E-08 -1.138621 -0.1682403 0.09713411 -0.8749968 7.814998E-07 9.383325E-08 -1.138621 -0.0992779 0.1719558 -1.138621 7.814998E-07 0.1942681 -1.239446 -0.1239171 0.2146321 -1.239446 7.814998E-07 0.2424819 -1.30958 -0.1012198 0.1753194 -1.30958 7.814998E-07 0.1980681 -1.344067 -0.05327324 0.09227327 -1.344067 0.0532747 0.09227327 -1.351554 6.876665E-07 9.383325E-08 -1.344067 0.1065486 9.383325E-08 -1.344067 0.0532747 -0.09227318 -1.30958 0.1715326 -0.09903397 -1.30958 0.1012212 -0.1753192 -1.239446 0.1239186 -0.2146319 -1.239446 6.876665E-07 -0.2424818 -1.138621 6.876665E-07 -0.194268 -1.138621 -0.09927799 -0.1719556 -1.138621 -0.1682404 -0.09713393 -1.239446 -0.2099947 -0.1212408 -1.239446 -0.247835 9.383325E-08 -1.30958 -0.1715312 -0.09903386 -1.30958 -0.2024404 9.383325E-08 -1.344067 -0.1065472 9.383325E-08 -1.30958 -0.1715311 0.09903415 -1.138621 0.09927937 -0.1719556 -1.138621 0.1682417 -0.09713393 -1.239446 0.2099962 -0.1212408 -1.239446 0.2478365 9.383325E-08 -1.30958 0.2024419 9.383325E-08 -1.30958 0.1715327 0.09903406 -1.138621 0.198558 9.383325E-08 -1.138621 0.1682418 0.09713411 -1.239446 0.2099962 0.121241 -1.239446 0.1239187 0.2146321 -1.30958 0.1012213 0.1753193 -1.344067 -0.05327324 -0.09227318 -1.30958 6.876665E-07 -0.1980679 -1.30958 -0.1012199 -0.1753192 -1.239446 -0.1239172 -0.2146319 -1.239446 -0.2099947 0.1212411 -1.138621 0.09927946 0.1719558</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_PosArr" count="44" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Normals">
+					<float_array id="polygon0-ID_NormArr" count="132">0.002497702 -0.00402235 0 0.0024976 -0.003560127 0.002055417 0.0025 0 0 0.002497702 -0.002011128 0.003483466 0.0024976 0 0.004110929 -0.002369618 -0.01495345 0.02590023 -0.002364335 0 0.03049027 -0.002499697 -0.0007297412 0.001264028 -0.00249977 0 0.001275945 -0.00249998 -0.0001893555 0.0003279472 -0.00249998 0.0001893555 0.0003279472 -0.0025 0 0 -0.00249998 0.000378711 0 -0.00249998 0.0001893555 -0.0003279472 -0.00249977 0.00110498 -0.0006379723 -0.002499697 0.0007297412 -0.001264028 -0.002369618 0.01495345 -0.02590014 -0.002364335 0 -0.03049027 0.0024976 0 -0.004110929 0.002497702 -0.002011128 -0.003483466 0.0024976 -0.003560127 -0.002055417 -0.002364335 -0.02640533 -0.01524509 -0.002369618 -0.029907 0 -0.00249977 -0.00110498 -0.0006379723 -0.002499697 -0.001459576 0 -0.00249998 -0.000378711 0 -0.00249977 -0.00110498 0.0006379723 0.002497702 0.002011128 -0.003483466 0.0024976 0.003560127 -0.002055417 -0.002364335 0.02640533 -0.01524509 -0.002369618 0.029907 0 -0.002499697 0.001459576 0 -0.00249977 0.00110498 0.0006379723 0.002497702 0.00402235 0 0.0024976 0.003560127 0.002055417 -0.002364335 0.02640533 0.01524509 -0.002369618 0.01495345 0.02590014 -0.002499697 0.0007297412 0.001264028 -0.00249998 -0.0001893555 -0.0003279472 -0.00249977 0 -0.001275945 -0.002499697 -0.0007297412 -0.001264028 -0.002369618 -0.01495345 -0.02590014 -0.002364335 -0.02640533 0.01524509 0.002497702 0.002011128 0.003483466</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_NormArr" count="44" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Colors0">
+					<float_array id="polygon0-ID_ColorArr0" count="16">0 0.8901961 0.8901961 1 0.6235294 0.7176471 1 1 0.5019608 1 1 1 1 1 1 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_ColorArr0" count="4" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon0-ID_Vertices">
+					<input semantic="POSITION" source="#polygon0-ID_Positions" />
+				</vertices>
+				<triangles material="default5-ID" count="84">
+					<input semantic="VERTEX" source="#polygon0-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon0-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon0-ID_Colors0" set="0" offset="2" />
+					<p>2 2 1 1 1 0 0 0 0 3 3 0 1 1 0 2 2 1 4 4 0 3 3 0 2 2 1 5 5 2 3 3 0 4 4 0 6 6 2 5 5 2 4 4 0 7 7 3 5 5 2 6 6 2 8 8 3 7 7 3 6 6 2 9 9 3 7 7 3 8 8 3 10 10 3 9 9 3 8 8 3 11 11 3 9 9 3 10 10 3 12 12 3 11 11 3 10 10 3 13 13 3 11 11 3 12 12 3 14 14 3 13 13 3 12 12 3 15 15 3 13 13 3 14 14 3 16 16 2 15 15 3 14 14 3 17 17 2 15 15 3 16 16 2 18 18 0 17 17 2 16 16 2 19 19 0 17 17 2 18 18 0 2 2 1 19 19 0 18 18 0 20 20 0 19 19 0 2 2 1 0 0 0 20 20 0 2 2 1 21 21 2 20 20 0 0 0 0 22 22 2 21 21 2 0 0 0 23 23 3 21 21 2 22 22 2 24 24 3 23 23 3 22 22 2 25 25 3 23 23 3 24 24 3 26 26 3 25 25 3 24 24 3 9 9 3 25 25 3 26 26 3 7 7 3 9 9 3 26 26 3 27 27 0 2 2 1 18 18 0 28 28 0 2 2 1 27 27 0 29 29 2 28 28 0 27 27 0 30 30 2 28 28 0 29 29 2 31 31 3 30 30 2 29 29 2 32 32 3 30 30 2 31 31 3 12 12 3 32 32 3 31 31 3 10 10 3 32 32 3 12 12 3 33 33 0 2 2 1 28 28 0 34 34 0 2 2 1 33 33 0 35 35 2 34 34 0 33 33 0 36 36 2 34 34 0 35 35 2 37 37 3 36 36 2 35 35 2 8 8 3 36 36 2 37 37 3 10 10 3 8 8 3 37 37 3 11 11 3 25 25 3 9 9 3 38 38 3 25 25 3 11 11 3 13 13 3 38 38 3 11 11 3 39 39 3 38 38 3 13 13 3 15 15 3 39 39 3 13 13 3 17 17 2 39 39 3 15 15 3 38 38 3 23 23 3 25 25 3 40 40 3 23 23 3 38 38 3 39 39 3 40 40 3 38 38 3 41 41 2 40 40 3 39 39 3 17 17 2 41 41 2 39 39 3 19 19 0 41 41 2 17 17 2 1 1 0 22 22 2 0 0 0 42 42 2 22 22 2 1 1 0 3 3 0 42 42 2 1 1 0 5 5 2 42 42 2 3 3 0 42 42 2 24 24 3 22 22 2 26 26 3 24 24 3 42 42 2 5 5 2 26 26 3 42 42 2 7 7 3 26 26 3 5 5 2 6 6 2 36 36 2 8 8 3 43 43 0 36 36 2 6 6 2 4 4 0 43 43 0 6 6 2 2 2 1 43 43 0 4 4 0 16 16 2 27 27 0 18 18 0 29 29 2 27 27 0 16 16 2 14 14 3 29 29 2 16 16 2 30 30 2 33 33 0 28 28 0 35 35 2 33 33 0 30 30 2 32 32 3 35 35 2 30 30 2 20 20 0 41 41 2 19 19 0 21 21 2 41 41 2 20 20 0 40 40 3 21 21 2 23 23 3 41 41 2 21 21 2 40 40 3 31 31 3 14 14 3 12 12 3 29 29 2 14 14 3 31 31 3 37 37 3 32 32 3 10 10 3 35 35 2 32 32 3 37 37 3 34 34 0 43 43 0 2 2 1 36 36 2 43 43 0 34 34 0</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon0-ID_Controller">
+			<skin source="#polygon0-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon0-ID_Joints">
+					<Name_array id="polygon0-ID_JointArr" count="6">StgDxCorneriaBeamA-ID BeamAscaleN-ID null258-ID T_1-ID BeamRearAN-ID BeamFrontAN-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_JointArr" count="6">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Matrices">
+					<float_array id="polygon0-ID_MatArr" count="96">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 4 0 0 0 0 4 0 0 0 0 4 0 0 0 0 1 4 0 0 3.5 0 4 0 -2E-06 0 0 4 0 0 0 0 1 400 0 0 350 0 10.6572 0 -5.328601E-06 0 0 10.6572 0 0 0 0 1 400 0 0 350 0 10.6572 0 -5.328601E-06 0 0 10.6572 0 0 0 0 1 0.0008388949 0 -238.7473 0.001087512 0 11.57559 0 -0.0002838486 434.47 0 1.083666E-06 574.8329 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_MatArr" count="6" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Weights">
+					<float_array id="polygon0-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon0-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon0-ID_Matrices" />
+				</joints>
+				<vertex_weights count="44">
+					<input semantic="JOINT" offset="0" source="#polygon0-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon0-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNodeID" name="RootNode">
+			<node id="StgDxCorneriaBeamA-ID" name="StgDxCorneriaBeamA" sid="StgDxCorneriaBeamA-ID" type="JOINT">
+				<node id="BeamAscaleN-ID" name="BeamAscaleN" sid="BeamAscaleN-ID" type="JOINT">
+					<scale>0.25 0.25 0.25</scale>
+					<node id="null258-ID" name="null258" sid="null258-ID" type="JOINT">
+						<translate>-3.5 2E-06 0</translate>
+						<node id="T_1-ID" name="T_1" sid="T_1-ID" type="JOINT">
+							<scale>0.01 0.375333 0.375333</scale>
+							<node id="BeamRearAN-ID" name="BeamRearAN" sid="BeamRearAN-ID" type="JOINT">
+								<node id="BeamFrontAN-ID" name="BeamFrontAN" sid="BeamFrontAN-ID" type="JOINT">
+									<translate>-179.2268 0.000256 -1E-06</translate>
+									<rotate>0 1 0 89.99999</rotate>
+									<scale>0.044638 0.920662 0.920662</scale>
+								</node>
+							</node>
+						</node>
+					</node>
+				</node>
+			</node>
+			<node id="polygon0-ID" name="polygon0" type="NODE">
+				<instance_controller url="#polygon0-ID_Controller">
+					<skeleton>#StgDxCorneriaBeamA</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="default5-ID" target="#default5" />
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNodeID" />
+	</scene>
+</COLLADA>

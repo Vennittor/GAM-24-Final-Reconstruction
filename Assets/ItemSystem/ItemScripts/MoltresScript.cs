@@ -10,7 +10,8 @@ public class MoltresScript : MonoBehaviour {
     void Start ()
     {
         Invoke("fly", 2);
-	}
+        Destroy(gameObject, 10f);
+    }
 	
 	// Update is called once per frame
 	void Update ()

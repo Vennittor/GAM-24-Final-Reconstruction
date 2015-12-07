@@ -4,8 +4,8 @@ using System.Collections;
 public class Bumper : ItemBaseScript 
 {
 	bool active = false;
-
-	float bumperVelocity = 50;
+    GameObject holder;
+	float bumperVelocity = 300;
 	// Use this for initialization
 	public override void Start () 
 	{
@@ -16,12 +16,15 @@ public class Bumper : ItemBaseScript
 	// Update is called once per frame
 	public override void Update () 
 	{
-
-		base.Update();
+        if (held)
+            GetComponent<CapsuleCollider>().enabled = false;
+        else
+            GetComponent<CapsuleCollider>().enabled = true;
+        base.Update();
 	}
-	public override void FunctionAlpha ()
+	public override void FunctionAlpha (Vector3 throwDirection = default(Vector3))
 	{
-
+        Released(throwDirection);
 		base.FunctionAlpha ();
 	}
 	public override void FunctionBeta ()
@@ -31,34 +34,35 @@ public class Bumper : ItemBaseScript
 		rb.constraints = RigidbodyConstraints.FreezeAll;
 		base.FunctionBeta ();
 	}
-	void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
 	{
+        
+            foreach (ContactPoint contact in other.contacts)
+            {
+                Vector3 vect1;
+                Vector3 vect2;
 
-			foreach (ContactPoint contact in other.contacts) 
-			{
-				Vector3 vect1;
-				Vector3 vect2;
+                if (contact.otherCollider.attachedRigidbody)
+                {
+                    vect2 = contact.otherCollider.attachedRigidbody.velocity;
 
-				if(contact.otherCollider.attachedRigidbody)
-				{	
-					vect2 = contact.otherCollider.attachedRigidbody.velocity;
+                    vect2.Normalize();
 
-					vect2.Normalize();
-					
-					vect1 = Vector3.Reflect(vect2, contact.normal);
-					vect1.Normalize();
-					if (thrown)
-					{
-						rb.AddForce(vect1 * bumperVelocity);
-						FunctionBeta();
-					}
-					if(active)
-					{
-						contact.otherCollider.attachedRigidbody.AddForce(vect1 * bumperVelocity);
-						durability--;
-					}
-				}
-			}
+                    vect1 = Vector3.Reflect(vect2, contact.normal);
+                    vect1.Normalize();
+                    if (thrown)
+                    {
+                        rb.AddForce(vect1 * bumperVelocity);
+                        FunctionBeta();
+                    }
+                    if (active)
+                    {
+                        contact.otherCollider.attachedRigidbody.AddForce(vect1 * bumperVelocity);
+                        durability--;
+                    }
+                }
+            }
+        
 	}
 
 

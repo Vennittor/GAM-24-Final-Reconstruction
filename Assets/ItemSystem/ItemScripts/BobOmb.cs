@@ -1,36 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bobomb : ItemBaseScript
+public class BobOmb : ItemBaseScript
 {
-    public GameObject rayThrower;
-   public float timer = 4;
+    public GameObject rayThrower, explosion;
+    public float timer = 4;
 
     public bool goRight = true;
+    bool active = false;
+
+    float walkSpeed = 3;
     // Use this for initialization
-    public virtual void Start ()
+    public override void Start ()
     {
         base.Start();
 	}
 	
 	// Update is called once per frame
-	public virtual void Update ()
+	public override void Update ()
     {
-        if(held == false)
+        if(held == false && thrown == false)
             timer -= Time.deltaTime;
         if(timer<=0)
         {
-
+            active = true;
             Vector3 moveDir = Vector3.right;
             if (goRight)
             {
                 transform.rotation = Quaternion.Euler(0, 90, 0);
-                gameObject.transform.position += Vector3.right * Time.deltaTime;
+                gameObject.transform.position += Vector3.right *  walkSpeed * Time.deltaTime;
             }
             else
             {
                 transform.rotation = Quaternion.Euler(0, -90, 0);
-                gameObject.transform.position += Vector3.left * Time.deltaTime;
+                gameObject.transform.position += Vector3.left * walkSpeed * Time.deltaTime;
             }
 
             if (Physics.Raycast(rayThrower.transform.position, Vector3.down, 1))
@@ -45,14 +48,15 @@ public class Bobomb : ItemBaseScript
               
         base.Update();
 	}
-    public override void FunctionAlpha()
+    public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
     {
-
+        Released(throwDirection);
         base.FunctionAlpha();
     }
     public override void FunctionBeta()
     {
-
+        //explode
+        StartCoroutine("Explode");
         base.FunctionBeta();
     }
     Vector3 PickDirection()
@@ -64,4 +68,30 @@ public class Bobomb : ItemBaseScript
             return Vector3.left;
 
     }
+    void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("Exploding");
+    }
+    void OnCollisionEnter(Collision other)
+    {
+        if (thrown)
+            FunctionBeta();
+        else if (active)
+             {
+            if (other.gameObject.GetComponent<BaseCharacter>())
+                FunctionBeta();
+             }
+    }
+    IEnumerator Explode()
+    {
+       explosion.GetComponent<ParticleSystem>().Play();
+       MeshRenderer[] meshes = GetComponentsInChildren<MeshRenderer>();
+        foreach(MeshRenderer mesh in meshes)
+        {
+            mesh.enabled = false;
+        }
+        yield return new WaitForSeconds(1);
+        durability = 0;
+    }
+
 }

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlBox</authoring_tool>
+		</contributor>
+		<created>2013-11-26T00:39:23Z</created>
+		<modified>2013-11-26T00:39:23Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_images>
+		<image id="taiyo-image" name="taiyo">
+			<init_from>
+				<ref>taiyo.png</ref>
+			</init_from>
+		</image>
+		<image id="taiyoFlare-image" name="taiyoFlare">
+			<init_from>
+				<ref>taiyoFlare.png</ref>
+			</init_from>
+		</image>
+	</library_images>
+	<library_materials>
+		<material id="zTaiyo">
+			<instance_effect url="#zTaiyo-fx" />
+		</material>
+		<material id="zzTaiyo">
+			<instance_effect url="#zzTaiyo-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="zTaiyo-fx" name="zTaiyo">
+			<profile_COMMON>
+				<newparam sid="taiyoFlare-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>taiyoFlare-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="taiyoFlare-sampler">
+					<sampler2D>
+						<source>taiyoFlare-surface</source>
+						<instance_image url="#taiyoFlare-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="taiyoFlare-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="zzTaiyo-fx" name="zzTaiyo">
+			<profile_COMMON>
+				<newparam sid="taiyo-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>taiyo-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="taiyo-sampler">
+					<sampler2D>
+						<source>taiyo-surface</source>
+						<instance_image url="#taiyo-image" />
+						<wrap_s>WRAP</wrap_s>
+						<wrap_t>WRAP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="taiyo-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon0-ID" name="polygon0">
+			<mesh>
+				<source id="polygon0-ID_Positions">
+					<float_array id="polygon0-ID_PosArr" count="54">-14326.1 -4646.583 -5569.888 -13034.47 -5937.813 -5537.765 -14326.1 -5937.813 -5537.765 -13034.47 -4646.583 -5569.888 -11742.84 -5937.813 -5537.765 -11742.84 -4646.583 -5569.888 -14326.1 -3355.352 -5602.008 -13034.47 -3355.352 -5602.008 -11742.84 -3355.352 -5602.008 -15492.37 -4651.979 -5786.767 -13034.47 -7109.112 -5725.643 -15492.37 -7109.112 -5725.643 -13034.47 -4652.256 -5797.937 -10576.58 -7109.112 -5725.643 -10576.58 -4651.979 -5786.767 -15492.37 -2194.854 -5847.892 -13034.47 -2194.854 -5847.892 -10576.58 -2194.854 -5847.892</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_PosArr" count="18" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Normals">
+					<float_array id="polygon0-ID_NormArr" count="3">-3.26401E-08 0.02486906 0.9996907</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_NormArr" count="1" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Colors0">
+					<float_array id="polygon0-ID_ColorArr0" count="8">0.4 0.4 0.4 1 0.2 0.2 0.2 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_ColorArr0" count="2" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_UVs0">
+					<float_array id="polygon0-ID_UVArr0" count="18">0.00495 0.509899 0.50495 0.00989902 0.00495 0.00989902 0.50495 0.509899 1.00495 0.00989902 1.00495 0.509899 0.00495 1.0099 0.50495 1.0099 1.00495 1.0099</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_UVArr0" count="9" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon0-ID_Vertices">
+					<input semantic="POSITION" source="#polygon0-ID_Positions" />
+				</vertices>
+				<triangles material="zzTaiyo-ID" count="16">
+					<input semantic="VERTEX" source="#polygon0-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon0-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon0-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon0-ID_UVs0" set="0" offset="3" />
+					<p>2 0 0 2 1 0 0 1 0 0 0 0 1 0 0 1 3 0 0 3 0 0 0 0 1 0 0 1 4 0 0 4 3 0 0 3 4 0 0 4 5 0 0 5 3 0 0 3 0 0 0 0 3 0 0 3 6 0 0 6 3 0 0 3 7 0 0 7 6 0 0 6 3 0 0 3 5 0 0 5 7 0 0 7 5 0 0 5 8 0 0 8 7 0 0 7 11 0 1 2 10 0 1 1 9 0 1 0 10 0 1 1 12 0 1 3 9 0 1 0 10 0 1 1 13 0 1 4 12 0 1 3 13 0 1 4 14 0 1 5 12 0 1 3 9 0 1 0 12 0 1 3 15 0 1 6 12 0 1 3 16 0 1 7 15 0 1 6 12 0 1 3 14 0 1 5 16 0 1 7 14 0 1 5 17 0 1 8 16 0 1 7</p>
+				</triangles>
+			</mesh>
+		</geometry>
+		<geometry id="polygon1-ID" name="polygon1">
+			<mesh>
+				<source id="polygon1-ID_Positions">
+					<float_array id="polygon1-ID_PosArr" count="54">-17418.31 -9020.284 -5728.437 -13034.47 -4640.471 -5947.577 -13034.47 -9020.284 -5728.437 -17418.31 -4637.811 -5837.46 -8650.632 -9020.284 -5728.437 -8650.632 -4637.811 -5837.46 -17418.31 -255.3119 -5946.482 -13034.47 -255.3119 -5946.482 -8650.632 -255.3119 -5946.482 -23080.21 -4863.412 -7518.402 -13034.4 -4684.068 -7700.556 -17989.66 -9817.957 -7395.149 -18174.31 273.9036 -7646.205 -12850.74 -14722.35 -7273.145 -7894.666 -9633.391 -7399.743 -13218.21 5362.901 -7772.802 -8079.292 458.5032 -7650.796 -2988.74 -4496.043 -7527.543</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_PosArr" count="18" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Normals">
+					<float_array id="polygon1-ID_NormArr" count="27">0.01256097 0.03742225 0.9992204 -3.26401E-08 0.02486906 0.9996907 -3.260939E-08 0.04997144 0.9987502 0.02511797 0.0248612 0.9993748 -0.01256103 0.03742225 0.9992204 -0.02511803 0.02486123 0.9993758 0.01256097 0.01230802 0.9998451 -3.265018E-08 -0.0002500274 0.9999995 -0.01256103 0.01230802 0.9998451</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_NormArr" count="9" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Colors0">
+					<float_array id="polygon1-ID_ColorArr0" count="8">0.4 0.4 0.4 1 0.2 0.2 0.2 1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_ColorArr0" count="2" stride="4">
+							<param name="R" type="float" />
+							<param name="G" type="float" />
+							<param name="B" type="float" />
+							<param name="A" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_UVs0">
+					<float_array id="polygon1-ID_UVArr0" count="18">0.000232 -0.0002089739 0.500233 0.499791 0.500233 -0.0002089739 0.000232 0.499791 1.000233 -0.0002089739 1.000233 0.499791 0.000232 0.999791 0.500233 0.999791 1.000233 0.999791</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_UVArr0" count="9" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon1-ID_Vertices">
+					<input semantic="POSITION" source="#polygon1-ID_Positions" />
+				</vertices>
+				<triangles material="zTaiyo-ID" count="16">
+					<input semantic="VERTEX" source="#polygon1-ID_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon1-ID_Normals" offset="1" />
+					<input semantic="COLOR" source="#polygon1-ID_Colors0" set="0" offset="2" />
+					<input semantic="TEXCOORD" source="#polygon1-ID_UVs0" set="0" offset="3" />
+					<p>2 2 0 2 1 1 1 1 0 0 0 0 3 3 0 3 0 0 0 0 1 1 1 1 5 5 0 5 1 1 1 1 4 4 0 4 1 1 1 1 2 2 0 2 4 4 0 4 3 3 0 3 1 1 1 1 6 6 0 6 6 6 0 6 1 1 1 1 7 7 0 7 7 7 0 7 1 1 1 1 8 8 0 8 1 1 1 1 5 5 0 5 8 8 0 8 11 2 0 2 10 1 1 1 9 0 0 0 12 3 0 3 9 0 0 0 10 1 1 1 14 5 0 5 10 1 1 1 13 4 0 4 10 1 1 1 11 2 0 2 13 4 0 4 12 3 0 3 10 1 1 1 15 6 0 6 15 6 0 6 10 1 1 1 16 7 0 7 16 7 0 7 10 1 1 1 17 8 0 8 10 1 1 1 14 5 0 5 17 8 0 8</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon0-ID_Controller">
+			<skin source="#polygon0-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon0-ID_Joints">
+					<Name_array id="polygon0-ID_JointArr" count="2">bStgBattleFieldTAiyo-ID taiyo1-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Matrices">
+					<float_array id="polygon0-ID_MatArr" count="32">1 0 0 13034.47 0 1 0 5192.578 0 0 1 5678.561 0 0 0 1 1 0 0 13034.47 0 1 0 5377.531 0 0 1 5654.304 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0-ID_Weights">
+					<float_array id="polygon0-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon0-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon0-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon0-ID_Matrices" />
+				</joints>
+				<vertex_weights count="18">
+					<input semantic="JOINT" offset="0" source="#polygon0-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon0-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+		<controller id="polygon1-ID_Controller">
+			<skin source="#polygon1-ID">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon1-ID_Joints">
+					<Name_array id="polygon1-ID_JointArr" count="2">bStgBattleFieldTAiyo-ID taiyo1-ID</Name_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_JointArr" count="2">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Matrices">
+					<float_array id="polygon1-ID_MatArr" count="32">1 0 0 13034.47 0 1 0 5192.578 0 0 1 5678.561 0 0 0 1 1 0 0 13034.47 0 1 0 5377.531 0 0 1 5654.304 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_MatArr" count="2" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon1-ID_Weights">
+					<float_array id="polygon1-ID_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon1-ID_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon1-ID_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon1-ID_Matrices" />
+				</joints>
+				<vertex_weights count="18">
+					<input semantic="JOINT" offset="0" source="#polygon1-ID_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon1-ID_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNodeID" name="RootNode">
+			<node id="bStgBattleFieldTAiyo-ID" name="bStgBattleFieldTAiyo" sid="bStgBattleFieldTAiyo-ID" type="JOINT">
+				<translate>-13034.47 -5192.578 -5678.561</translate>
+				<node id="taiyo1-ID" name="taiyo1" sid="taiyo1-ID" type="JOINT">
+					<translate>0 -184.953 24.25624</translate>
+				</node>
+			</node>
+			<node id="polygon0-ID" name="polygon0" type="NODE">
+				<instance_controller url="#polygon0-ID_Controller">
+					<skeleton>#bStgBattleFieldTAiyo</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="zzTaiyo-ID" target="#zzTaiyo">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+			<node id="polygon1-ID" name="polygon1" type="NODE">
+				<instance_controller url="#polygon1-ID_Controller">
+					<skeleton>#bStgBattleFieldTAiyo</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="zTaiyo-ID" target="#zTaiyo">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNodeID" />
+	</scene>
+</COLLADA>

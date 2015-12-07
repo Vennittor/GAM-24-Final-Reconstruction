@@ -23,36 +23,42 @@ public class KirbyCharacter : BaseCharacter
 		attackCount = 0;
 		hasEaten = false;
 		eatenPlayer = null;
-
-		//bool hasItem;
 	}
 
 	public override void StandingA()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.1f;
-			Vector3 boxCollider = new Vector3 (0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3 (1f, 0f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.zero;
-			float rotationSpeed = 0.0f;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
-		// Neutral Standing A Animation
-		// Neutral Standing A Sound 
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha();
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 0.1f;
+                Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
+                Vector3 position = new Vector3(1f, 0f, 0f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = false;
+                Vector3 rotationDirection = Vector3.zero;
+                float rotationSpeed = 0.0f;
+
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+            // Neutral Standing A Animation
+            // Neutral Standing A Sound 
+        }
 	}
 	public override void ComboA()
 	{
@@ -99,328 +105,405 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void LeftRightA()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.15f;
-			Vector3 boxCollider = new Vector3 (1.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3 (1f, 0f, 0.5f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 500.0f;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha();
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 0.15f;
+                Vector3 boxCollider = new Vector3(1.5f, 0.5f, 0.5f);
+                Vector3 position = new Vector3(1f, 0f, 0.5f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = true;
+                Vector3 rotationDirection = Vector3.up;
+                float rotationSpeed = 500.0f;
+
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+        }
 	}
 	public override void DownA()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.15f;
-			Vector3 boxCollider = new Vector3 (1.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3 (1f, -0.3f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 500.0f;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.down);
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 0.15f;
+                Vector3 boxCollider = new Vector3(1.5f, 0.5f, 0.5f);
+                Vector3 position = new Vector3(1f, -0.3f, 0f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = true;
+                Vector3 rotationDirection = Vector3.up;
+                float rotationSpeed = 500.0f;
+
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+        }
 	}
 	public override void UpA()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.25f;
-			Vector3 boxCollider = new Vector3 (3.0f, 0.4f, 0.1f);
-			Vector3 position = new Vector3 (-1.0f, 0f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = Vector3.forward;
-			float rotationSpeed = 1200.0f;
-			
-			inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
-			inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 0.25f;
+                Vector3 boxCollider = new Vector3(3.0f, 0.4f, 0.1f);
+                Vector3 position = new Vector3(-1.0f, 0f, 0f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = true;
+                Vector3 rotationDirection = Vector3.forward;
+                float rotationSpeed = 1200.0f;
+
+                inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
+                inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
+
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+        }
 	}
 	public override void SprintA()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float temp = 0;
-			if (transform.rotation == Quaternion.Euler(new Vector3 (0f, 180f, 0f)))
-				temp = -100f;
-			else if (transform.rotation == Quaternion.identity)
-				temp = 100f;
-			
-			float attackLegnth = 0.7f;
-			Vector3 boxCollider = new Vector3 (3f, 1f, 0.2f);
-			Vector3 position = new Vector3 (0f, 1f, 0f);
-			Vector3 lerpVelocity = new Vector3 (temp, 0f, 0f);
-			float lerpSpeed = 1.0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 1500.0f;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
-		// Kirby Dashing A Animation
-		// Kirby Dashing A Sound
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(transform.forward);
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float temp = 0;
+                if (transform.rotation == Quaternion.Euler(new Vector3(0f, 180f, 0f)))
+                    temp = -100f;
+                else if (transform.rotation == Quaternion.identity)
+                    temp = 100f;
+
+                float attackLegnth = 0.7f;
+                Vector3 boxCollider = new Vector3(3f, 1f, 0.2f);
+                Vector3 position = new Vector3(0f, 1f, 0f);
+                Vector3 lerpVelocity = new Vector3(temp, 0f, 0f);
+                float lerpSpeed = 1.0f;
+                bool pivot = false;
+                Vector3 rotationDirection = Vector3.up;
+                float rotationSpeed = 1500.0f;
+
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+            // Kirby Dashing A Animation
+            // Kirby Dashing A Sound
+        }
 	}
 	public override void NeutralAAir()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.5f;
-			Vector3 boxCollider = new Vector3 (3.0f, 3.0f, 0.2f);
-			Vector3 position = Vector3.zero;
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.forward;
-			float rotationSpeed = 1250.0f;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha();
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 0.5f;
+                Vector3 boxCollider = new Vector3(3.0f, 3.0f, 0.2f);
+                Vector3 position = Vector3.zero;
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = false;
+                Vector3 rotationDirection = Vector3.forward;
+                float rotationSpeed = 1250.0f;
 
-		// Neutral A Air Animation
-		// Neutral A Air Sound 
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+
+            // Neutral A Air Animation
+            // Neutral A Air Sound 
+        }
 	}
 	public override void UpAir()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.2f;
-			Vector3 boxCollider = new Vector3 (3.0f, 0.4f, 0.1f);
-			Vector3 position = new Vector3 (1.0f, -0.5f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = Vector3.forward;
-			float rotationSpeed = 1200.0f;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
-		// Up Air Animation
-		// Up Air Sound
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha();
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 0.2f;
+                Vector3 boxCollider = new Vector3(3.0f, 0.4f, 0.1f);
+                Vector3 position = new Vector3(1.0f, -0.5f, 0f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = true;
+                Vector3 rotationDirection = Vector3.forward;
+                float rotationSpeed = 1200.0f;
+
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+            // Up Air Animation
+            // Up Air Sound
+        }
 	}
 	public override void DownAir()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.4f;
-			Vector3 boxCollider = new Vector3 (1.5f, 0.4f, 0.1f);
-			Vector3 position = new Vector3 (1.2f, -1.1f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 1200.0f;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
-		// Down Air Animation
-		// Down Air Sound
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.down);
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 1f;
+                Vector3 boxCollider = new Vector3(1.5f, 0.4f, 0.1f);
+                Vector3 position = new Vector3(1.2f, -1.1f, 0f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = false;
+                Vector3 rotationDirection = Vector3.up;
+                float rotationSpeed = 1200.0f;
+
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+            // Down Air Animation
+            // Down Air Sound
+        }
 	}
 	public override void LeftRightAir()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.4f;
-			Vector3 boxCollider = new Vector3 (1.5f, 0.4f, 0.1f);
-			Vector3 position = new Vector3 (1f, -0.2f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 1200.0f;
-			
-			StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(transform.forward);
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 1f;
+                Vector3 boxCollider = new Vector3(1.5f, 0.4f, 0.1f);
+                Vector3 position = new Vector3(1f, -0.2f, 0f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = false;
+                Vector3 rotationDirection = Vector3.up;
+                float rotationSpeed = 1200.0f;
+
+                StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+        }
 
 		// Left Air Animation
 		// Left Air Sound
 	}
 	public override void UpSmashA()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.2f;
-			Vector3 boxCollider = new Vector3 (3.0f, 0.4f, 0.1f);
-			Vector3 position = new Vector3 (1.0f, 0f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = Vector3.forward;
-			float rotationSpeed = 1200.0f;
-			
-			if (!started)
-			{
-				smashTime = new Timer (1.2f);
-				started = true;
-				StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
-				                           pivot, rotationDirection, rotationSpeed));
-			}
-			smashTime.timerComplete += () => {started = false;};
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 0.2f;
+                Vector3 boxCollider = new Vector3(3.0f, 0.4f, 0.1f);
+                Vector3 position = new Vector3(1.0f, 0f, 0f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = true;
+                Vector3 rotationDirection = Vector3.forward;
+                float rotationSpeed = 1200.0f;
+
+                if (!started)
+                {
+                    smashTime = new Timer(1.2f);
+                    started = true;
+                    StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
+                                               pivot, rotationDirection, rotationSpeed));
+                }
+                smashTime.timerComplete += () => { started = false; };
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+        }
 	}
 	public override void DownSmashA()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float attackLegnth = 0.6f;
-			Vector3 boxCollider = new Vector3 (3.5f, 0.8f, 0.1f);
-			Vector3 position = new Vector3 (0f, -0.5f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.down;
-			float rotationSpeed = 1200.0f;
-			
-			if (!started)
-			{
-				smashTime = new Timer (1.2f);
-				started = true;
-				StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
-				                           pivot, rotationDirection, rotationSpeed));
-			}
-			smashTime.timerComplete += () => {started = false;};
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.down);
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float attackLegnth = 0.6f;
+                Vector3 boxCollider = new Vector3(3.5f, 0.8f, 0.1f);
+                Vector3 position = new Vector3(0f, -0.5f, 0f);
+                Vector3 lerpVelocity = Vector3.zero;
+                float lerpSpeed = 0f;
+                bool pivot = false;
+                Vector3 rotationDirection = Vector3.down;
+                float rotationSpeed = 1200.0f;
+
+                if (!started)
+                {
+                    smashTime = new Timer(1.2f);
+                    started = true;
+                    StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
+                                               pivot, rotationDirection, rotationSpeed));
+                }
+                smashTime.timerComplete += () => { started = false; };
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+        }
 	}
 	public override void LeftRightSmashA()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
-		{
-			float temp = 0;
-			if (transform.rotation == Quaternion.Euler(new Vector3 (0f, 180f, 0f)))
-				temp = -15f;
-			else if (transform.rotation == Quaternion.identity)
-				temp = 15f;
-			
-			float attackLegnth = 0.2f;
-			Vector3 boxCollider = new Vector3 (1.5f, 0.8f, 0.1f);
-			Vector3 position = new Vector3 (1f, 0f, 0f);
-			Vector3 lerpVelocity = new Vector3 (temp, 0f, 0f);
-			float lerpSpeed = 1000f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.zero;
-			float rotationSpeed = 0f;
-			
-			if (!started)
-			{
-				smashTime = new Timer (1.2f);
-				started = true;
-				StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
-				                           pivot, rotationDirection, rotationSpeed));
-			}
-			smashTime.timerComplete += () => {started = false;};
-		}
-		else
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (1200f, 0f, 0f));
-			eatenPlayer = null;
-		}
-		// Left A Smash Animarion 
-		// Left A Smash Sound 
+        if (hasItem)
+        {
+            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+        }
+        else
+        {
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            {
+                float temp = 0;
+                if (transform.rotation == Quaternion.Euler(new Vector3(0f, 180f, 0f)))
+                    temp = -15f;
+                else if (transform.rotation == Quaternion.identity)
+                    temp = 15f;
+
+                float attackLegnth = 0.2f;
+                Vector3 boxCollider = new Vector3(1.5f, 0.8f, 0.1f);
+                Vector3 position = new Vector3(1f, 0f, 0f);
+                Vector3 lerpVelocity = new Vector3(temp, 0f, 0f);
+                float lerpSpeed = 1000f;
+                bool pivot = false;
+                Vector3 rotationDirection = Vector3.zero;
+                float rotationSpeed = 0f;
+
+                if (!started)
+                {
+                    smashTime = new Timer(1.2f);
+                    started = true;
+                    StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
+                                               pivot, rotationDirection, rotationSpeed));
+                }
+                smashTime.timerComplete += () => { started = false; };
+            }
+            else
+            {
+                eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+                eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
+                eatenPlayer.transform.parent = null;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+                eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3(1200f, 0f, 0f));
+                eatenPlayer = null;
+            }
+            // Left A Smash Animarion 
+            // Left A Smash Sound 
+        }
 	}
 	public override void NeutralB()
 	{
@@ -501,31 +584,13 @@ public class KirbyCharacter : BaseCharacter
 
 	public override void DownSpecialB()
 	{
-		float attackLegnth = 0.5f;
-		Vector3 boxCollider = new Vector3 (2.0f, 1.5f, 0.2f);
-		Vector3 position = new Vector3 (1.0f, 0f, 0.3f);
-		Vector3 lerpVelocity = Vector3.zero;
-		float lerpSpeed = 0f;
-		bool pivot = true;
-		Vector3 rotationDirection = Vector3.up;
-		float rotationSpeed = 550.0f;
-		
-		StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+		print ("Kirby Special B Down was called");
 		// Down B Special Animarion 
 		// Down B Special Sound 
 	}
 	public override void LeftRightSpecialB()
 	{
-		float attackLegnth = 0.5f;
-		Vector3 boxCollider = new Vector3 (2.0f, 1.5f, 0.2f);
-		Vector3 position = new Vector3 (1.0f, 0f, 0.3f);
-		Vector3 lerpVelocity = Vector3.zero;
-		float lerpSpeed = 0f;
-		bool pivot = true;
-		Vector3 rotationDirection = Vector3.up;
-		float rotationSpeed = 550.0f;
-		
-		StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+		print ("Kirby Special B LeftRight was called");
 		// Left B Special Animarion 
 		// Left B Special Sound 
 	}

@@ -13,13 +13,12 @@ public class Ice : ItemBaseScript
         }
         public override void Update()
         {
-
             base.Update();
         }
-        public override void FunctionAlpha()
+        public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
         {
-            thrown = true;
-            base.FunctionAlpha();
+            Released(throwDirection);
+            base.FunctionAlpha(throwDirection);
         }
         public override void FunctionBeta()
         {
@@ -31,16 +30,7 @@ public class Ice : ItemBaseScript
         {
             if (thrown)
             {
-                if (other.gameObject.tag == "Floor")
-                {
-                    canFreeze = true;
-                }
-                if (canFreeze)
-                {
-                    //if (other is player)
-                    FunctionBeta();
-                }
-
+            FunctionBeta();
             }
         }
     }

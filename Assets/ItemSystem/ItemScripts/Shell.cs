@@ -15,15 +15,20 @@ public class Shell : ItemBaseScript
 	}
     public override void Update () 
 	{
-		if(timer>=0)
-		timer -= Time.deltaTime;
-		if (timer <= 0)
-			FunctionBeta ();
+        if (!held && !thrown)
+        {
+            if (timer >= 0)
+                timer -= Time.deltaTime;
+            if (timer <= 0)
+                FunctionBeta();
+        }
         base.Update();
 	}
-	public override void FunctionAlpha ()
+	public override void FunctionAlpha (Vector3 throwDirection = default(Vector3))
 	{
-		timer = 0;
+
+        Released(throwDirection);
+
 		base.FunctionAlpha ();
 	}
 	public override void FunctionBeta ()

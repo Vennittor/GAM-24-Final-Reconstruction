@@ -14,7 +14,7 @@ public class Beamsword : ItemBaseScript
     {
         base.Update();
     }
-    public override void FunctionAlpha()
+    public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
     {
         //swingANimation
         if (!activeAttack)

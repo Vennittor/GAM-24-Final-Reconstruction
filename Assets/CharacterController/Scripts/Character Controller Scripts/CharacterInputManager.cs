@@ -95,12 +95,13 @@ public class CharacterInputManager : MonoBehaviour
 
 				if (leftInput < -0.1f && attackButton || rightInput > 0.1f && attackButton)
 				{
+					yield return null;
 					if (leftInput < -0.1f)
 						transform.rotation = Quaternion.Euler(new Vector3 (0f, 180f, 0f));
 					else if (rightInput > 0.1f)
 						transform.rotation = Quaternion.identity;
-					yield return null;
-					if (leftInput < -0.6f || rightInput > 0.6f)
+
+					if (leftInput < -0.7f || rightInput > 0.7f)
 						character.LeftRightSmashA();
 					else
 						character.LeftRightA();
@@ -131,7 +132,7 @@ public class CharacterInputManager : MonoBehaviour
 				{
 					if (attackButton && leftInput >= -0.1f && rightInput <= 0.1f)
 						character.ComboA();
-					else if (spamButton && leftInput >= -0.1f && rightInput <= 0.1f)// && !character.hasItem)
+					else if (spamButton && leftInput >= -0.1f && rightInput <= 0.1f && !character.hasItem)
 						character.StandingA();
 				}
 
@@ -525,7 +526,7 @@ public class CharacterInputManager : MonoBehaviour
 			RaycastHit hit;
 			if (Physics.Raycast(bottomLeft + Vector3.right * raySpacing * i, Vector3.down, out hit, 0.1f)) 
 		    {
-				if (hit.collider.tag == "Ground")
+				if (hit.collider.tag == "Floor")
 				{
 					jumpCount = jumpMax;
 					grounded = true;
