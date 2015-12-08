@@ -41,9 +41,9 @@ public class DataHolder : MonoBehaviour
 	public List <ItemSelector.itemName> common;
 
 	public enum itemName {FAN, BEAMSWORD, HOMERUNBAT, POKEBALL, BO_OMB,
-						ICE, METAL,MUSHROOM,LASERGUN,STAR,SMASHBALL,BUNNYEARS,
-						HAMMER,PILL,SHELL,TOMATO,FIREFLOWER,TRIPMINE,BANANAPEEL,
-						BUMPER};
+		ICE, METAL,MUSHROOM,LASERGUN,STAR,SMASHBALL,BUNNYEARS,
+		HAMMER,PILL,SHELL,TOMATO,FIREFLOWER,TRIPMINE,BANANAPEEL,
+		BUMPER};
 
 	public enum CharacterSelection {mario,donkeyKong,samus,kirby,
 									luigi,zelda,yoshi,bowser,link,zeroSuitSamus}
@@ -65,8 +65,6 @@ public class DataHolder : MonoBehaviour
 		pTwoIsPlayer = true;
 		pThreeIsPlayer = true;
 		pFourIsPlayer = true;
-
-		DefaultItemSpawns ();
 	}
 	
 	// Update is called once per frame
@@ -74,34 +72,6 @@ public class DataHolder : MonoBehaviour
 	{
 		PlayerInfo ();
 //		ItemSpawner ();
-	}
-
-	void DefaultItemSpawns ()
-	{
-		//Very Rare Items
-		veryRare.Add (ItemSelector.itemName.SMASHBALL);
-		veryRare.Add (ItemSelector.itemName.HAMMER);
-		//Rare Items
-		rare.Add (ItemSelector.itemName.HOMERUNBAT);
-		rare.Add (ItemSelector.itemName.MUSHROOM);
-		rare.Add (ItemSelector.itemName.FAN);
-		rare.Add (ItemSelector.itemName.LASERGUN);
-		//Uncommon Items
-		uncommon.Add (ItemSelector.itemName.BEAMSWORD);
-		uncommon.Add (ItemSelector.itemName.POKEBALL);
-		uncommon.Add (ItemSelector.itemName.BO_OMB);
-		uncommon.Add (ItemSelector.itemName.ICE);
-		uncommon.Add (ItemSelector.itemName.METAL);
-		uncommon.Add (ItemSelector.itemName.STAR);
-		uncommon.Add (ItemSelector.itemName.BUNNYEARS);
-		//Common Items
-		common.Add (ItemSelector.itemName.PILL);
-		common.Add (ItemSelector.itemName.SHELL);
-		common.Add (ItemSelector.itemName.TOMATO);
-		common.Add (ItemSelector.itemName.FIREFLOWER);
-		common.Add (ItemSelector.itemName.TRIPMINE);
-		common.Add (ItemSelector.itemName.BANANAPEEL);
-		common.Add (ItemSelector.itemName.BUMPER);
 	}
 
 	void ItemSpawner ()
@@ -115,6 +85,31 @@ public class DataHolder : MonoBehaviour
 			itemSpawn.GetComponent<ItemSelector>().unCommon = uncommon;
 			itemSpawn.GetComponent<ItemSelector>().common = common;
 
+//			//Fallback code incase we cant get items lists to work
+//			//Very Rare Items
+//			itemSpawn.GetComponent<ItemSelector>().veryRare.Add (ItemSelector.itemName.SMASHBALL);
+//			itemSpawn.GetComponent<ItemSelector>().veryRare.Add (ItemSelector.itemName.HAMMER);
+//			//Rare Items
+//			itemSpawn.GetComponent<ItemSelector>().rare.Add (ItemSelector.itemName.HOMERUNBAT);
+//			itemSpawn.GetComponent<ItemSelector>().rare.Add (ItemSelector.itemName.MUSHROOM);
+//			itemSpawn.GetComponent<ItemSelector>().rare.Add (ItemSelector.itemName.FAN);
+//			itemSpawn.GetComponent<ItemSelector>().rare.Add (ItemSelector.itemName.LASERGUN);
+//			//Uncommon Items
+//			itemSpawn.GetComponent<ItemSelector>().unCommon.Add (ItemSelector.itemName.BEAMSWORD);
+//			itemSpawn.GetComponent<ItemSelector>().unCommon.Add (ItemSelector.itemName.POKEBALL);
+//			itemSpawn.GetComponent<ItemSelector>().unCommon.Add (ItemSelector.itemName.BO_OMB);
+//			itemSpawn.GetComponent<ItemSelector>().unCommon.Add (ItemSelector.itemName.ICE);
+//			itemSpawn.GetComponent<ItemSelector>().unCommon.Add (ItemSelector.itemName.METAL);
+//			itemSpawn.GetComponent<ItemSelector>().unCommon.Add (ItemSelector.itemName.STAR);
+//			itemSpawn.GetComponent<ItemSelector>().unCommon.Add (ItemSelector.itemName.BUNNYEARS);
+//			//Common Items
+//			itemSpawn.GetComponent<ItemSelector>().common.Add (ItemSelector.itemName.PILL);
+//			itemSpawn.GetComponent<ItemSelector>().common.Add (ItemSelector.itemName.SHELL);
+//			itemSpawn.GetComponent<ItemSelector>().common.Add (ItemSelector.itemName.TOMATO);
+//			itemSpawn.GetComponent<ItemSelector>().common.Add (ItemSelector.itemName.FIREFLOWER);
+//			itemSpawn.GetComponent<ItemSelector>().common.Add (ItemSelector.itemName.TRIPMINE);
+//			itemSpawn.GetComponent<ItemSelector>().common.Add (ItemSelector.itemName.BANANAPEEL);
+//			itemSpawn.GetComponent<ItemSelector>().common.Add (ItemSelector.itemName.BUMPER);
 			//Change spawn rate
 			itemSpawn.GetComponent<ItemSpawner>().spawnRate = itemSpawnDelay;
 		}
