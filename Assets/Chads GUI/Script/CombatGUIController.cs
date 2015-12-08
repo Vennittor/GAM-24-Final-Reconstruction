@@ -94,29 +94,20 @@ public class CombatGUIController : MonoBehaviour
 		pOnePercentText.text = "" + (int)pOneCurrentPercent + "%";
 
 		//Stock Images
-		if (playerOne.GetComponent<TempPlayerController> ().lives == 3)
+		if (playerOne.GetComponent<TempPlayerController> ().lives == 2) 
 		{
 			pOneStockImageOne.gameObject.SetActive (true);
 			pOneStockImageTwo.gameObject.SetActive (true);
-			pOneStockImageThree.gameObject.SetActive (true);
-		}
-		else if (playerOne.GetComponent<TempPlayerController> ().lives == 2) 
-		{
-			pOneStockImageOne.gameObject.SetActive (true);
-			pOneStockImageTwo.gameObject.SetActive (true);
-			pOneStockImageThree.gameObject.SetActive (false);
 		} 
 		else if (playerOne.GetComponent<TempPlayerController> ().lives == 1) 
 		{
 			pOneStockImageOne.gameObject.SetActive (true);
 			pOneStockImageTwo.gameObject.SetActive (false);
-			pOneStockImageThree.gameObject.SetActive (false);
 		}
 		else if (playerOne.GetComponent<TempPlayerController> ().lives == 0)
 		{
 			pOneStockImageOne.gameObject.SetActive (false);
 			pOneStockImageTwo.gameObject.SetActive (false);
-			pOneStockImageThree.gameObject.SetActive (false);
 		}
 
 		//Percent Color
@@ -150,29 +141,20 @@ public class CombatGUIController : MonoBehaviour
 		pTwoPercentText.text = "" + (int)pOneCurrentPercent + "%";
 
 		//Stock Images
-		if (playerTwo.GetComponent<TempPlayerController> ().lives == 3)
+		if (playerTwo.GetComponent<TempPlayerController> ().lives == 2) 
 		{
 			pTwoStockImageOne.gameObject.SetActive (true);
 			pTwoStockImageTwo.gameObject.SetActive (true);
-			pTwoStockImageThree.gameObject.SetActive (true);
-		}
-		else if (playerTwo.GetComponent<TempPlayerController> ().lives == 2) 
-		{
-			pTwoStockImageOne.gameObject.SetActive (true);
-			pTwoStockImageTwo.gameObject.SetActive (true);
-			pTwoStockImageThree.gameObject.SetActive (false);
 		} 
 		else if (playerOne.GetComponent<TempPlayerController> ().lives == 1) 
 		{
 			pTwoStockImageOne.gameObject.SetActive (true);
 			pTwoStockImageTwo.gameObject.SetActive (false);
-			pTwoStockImageThree.gameObject.SetActive (false);
 		}
 		else if (playerOne.GetComponent<TempPlayerController> ().lives == 0)
 		{
 			pTwoStockImageOne.gameObject.SetActive (false);
 			pTwoStockImageTwo.gameObject.SetActive (false);
-			pTwoStockImageThree.gameObject.SetActive (false);
 		}
 
 		//Percent color
@@ -208,29 +190,20 @@ public class CombatGUIController : MonoBehaviour
 			pThreePercentText.text = "" + (int)pThreeCurrentPercent + "%";
 
 			//Stock Images
-			if (playerThree.GetComponent<TempPlayerController> ().lives == 3)
-			{
-				pThreeStockImageOne.gameObject.SetActive (true);
-				pThreeStockImageTwo.gameObject.SetActive (true);
-				pThreeStockImageThree.gameObject.SetActive (true);
-			}
 			if (playerThree.GetComponent<TempPlayerController> ().lives == 2) 
 			{
 				pThreeStockImageOne.gameObject.SetActive (true);
 				pThreeStockImageTwo.gameObject.SetActive (true);
-				pThreeStockImageThree.gameObject.SetActive (false);
 			} 
 			else if (playerThree.GetComponent<TempPlayerController> ().lives == 1) 
 			{
 				pThreeStockImageOne.gameObject.SetActive (true);
 				pThreeStockImageTwo.gameObject.SetActive (false);
-				pThreeStockImageThree.gameObject.SetActive (false);
 			}
 			else if (playerThree.GetComponent<TempPlayerController> ().lives == 0)
 			{
 				pThreeStockImageOne.gameObject.SetActive (false);
 				pThreeStockImageTwo.gameObject.SetActive (false);
-				pThreeStockImageThree.gameObject.SetActive (false);
 			}
 			
 			//Percent color
@@ -267,29 +240,20 @@ public class CombatGUIController : MonoBehaviour
 			pFourPercentText.text = "" + (int)pFourCurrentPercent + "%";
 
 			//Stock Images
-			if (playerFour.GetComponent<TempPlayerController> ().lives == 3)
-			{
-				pFourStockImageOne.gameObject.SetActive (true);
-				pFourStockImageTwo.gameObject.SetActive (true);
-				pFourStockImageThree.gameObject.SetActive (true);
-			}
 			if (playerFour.GetComponent<TempPlayerController> ().lives == 2) 
 			{
 				pFourStockImageOne.gameObject.SetActive (true);
 				pFourStockImageTwo.gameObject.SetActive (true);
-				pFourStockImageThree.gameObject.SetActive (false);
 			} 
 			else if (playerFour.GetComponent<TempPlayerController> ().lives == 1) 
 			{
 				pFourStockImageOne.gameObject.SetActive (true);
 				pFourStockImageTwo.gameObject.SetActive (false);
-				pFourStockImageThree.gameObject.SetActive (false);
 			}
 			else if (playerFour.GetComponent<TempPlayerController> ().lives == 0)
 			{
 				pFourStockImageOne.gameObject.SetActive (false);
 				pFourStockImageTwo.gameObject.SetActive (false);
-				pFourStockImageThree.gameObject.SetActive (false);
 			}
 			
 			//Percent color
