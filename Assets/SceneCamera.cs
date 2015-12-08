@@ -87,7 +87,7 @@ public class SceneCamera : MonoBehaviour
         
         float camSize = distance;
 
-        camera.orthographicSize = Mathf.Clamp(camSize * 0.5f, 3, 20);
+        camera.orthographicSize = Mathf.Clamp(camSize * 0.5f, 4, 20);
       
     }
 }
