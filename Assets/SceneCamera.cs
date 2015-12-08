@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class SceneCamera : MonoBehaviour
 {
 
-    public GameObject[] players;
-
+    public List<GameObject> players;
+    
     Camera camera;
     
     float minX = 0, maxX = 0,
@@ -14,6 +14,12 @@ public class SceneCamera : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        BaseCharacter[] characters = (BaseCharacter[])GameObject.FindObjectsOfType(typeof(BaseCharacter));
+        foreach (BaseCharacter character in characters)
+        {
+            players.Add(character.gameObject);        
+        }
+
         camera = GetComponent<Camera>();
 	}
 	
@@ -79,9 +85,9 @@ public class SceneCamera : MonoBehaviour
             screenCenter += player.transform.position;
         }
 
-        screenCenter = screenCenter / players.Length;
+        screenCenter = screenCenter / players.Count;
         Vector3 targetPos = new Vector3(Mathf.Clamp(screenCenter.x,-7,7), Mathf.Clamp(screenCenter.y, -7, 7), transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, targetPos, 10 * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPos, 50 * Time.deltaTime);
 
         float distance = Mathf.Sqrt(Mathf.Pow(maxX - minX, 2) + Mathf.Pow(maxY - minY, 2));
         
