@@ -9,6 +9,7 @@ public class ItemBaseScript : MonoBehaviour
 
 	public int damage = 1;
 	public int thrownDMG = 5;
+    public int knockBack;
 
 	public int durability = 1;
 

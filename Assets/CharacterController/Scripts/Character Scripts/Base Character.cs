@@ -289,7 +289,15 @@ public class BaseCharacter : MonoBehaviour
    
 
 
+    public virtual void TakeDamage(int damage, float knockBack)
+    {
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.NODAMAGE))
+            damage = 0;
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK))
+            knockBack = 0;
 
+        health += damage;
+    }
 	public virtual void TakeDamage(int damage, float knockBack, PlayerStates.disabledAndProtectiveStates state, float stateDuration, Transform hitTransform)
 	{
 
@@ -403,12 +411,13 @@ public class BaseCharacter : MonoBehaviour
 
     public virtual void Freeze(float length)
     {
-       if(length !=0)
-        length += length * (health / 10);
-
+        if (length != 0)
+            length += length * (health / 10);
         Debug.Log(length);
         if (length > 0)
         {
+           GameObject ice = Instantiate(Resources.Load("Frozen"), transform.position, Quaternion.identity) as GameObject;
+            ice.transform.parent = transform;
             frozen = true;
             if (!playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
                 playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FROZEN);
@@ -416,7 +425,7 @@ public class BaseCharacter : MonoBehaviour
                 playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.GRABIMMUNE);
             if (!playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE))
                 playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
-            StartCoroutine(FrozenEffect(length));
+            StartCoroutine(FrozenEffect(length, ice));
         }
         else
         {
@@ -430,11 +439,14 @@ public class BaseCharacter : MonoBehaviour
                 playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
         }
     }
-    public virtual IEnumerator FrozenEffect(float length)
+    public virtual IEnumerator FrozenEffect(float length, GameObject ice)
     {
         int i = 0;
         while ( i < length + 1)
         {
+            ice.transform.localScale = Vector3.Lerp(ice.transform.localScale, 
+                new Vector3((length - i)/10, (length - i) / 10, (length - i) / 10),.5f);
+
             Debug.Log("TImer" + i);
             if(inputManager.attackButton || inputManager.grabButton || inputManager.jumpButton || inputManager.shieldButton 
                 || inputManager.specialButton || inputManager.spamButton || inputManager.spamSpecial ||
@@ -443,16 +455,20 @@ public class BaseCharacter : MonoBehaviour
                 length -= 0.2f;
                 Debug.Log(length);
             }
-            if (length <= 0)
-            {
-                Freeze(length);
-                yield return null;
+           if (length <= 0)
+           {
+                Destroy(ice);
+                Freeze(0);
+               yield return null;
             }
             i++;
             yield return new WaitForSeconds(1);
         }
-        if (length<=i)
+        if (length <= i)
+        {
+            Destroy(ice);
             Freeze(0);
+        }
         yield return null;
     }
 

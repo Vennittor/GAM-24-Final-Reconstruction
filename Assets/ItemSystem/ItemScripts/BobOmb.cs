@@ -84,8 +84,8 @@ public class BobOmb : ItemBaseScript
     IEnumerator Explode()
     {
        explosion.GetComponent<ParticleSystem>().Play();
-       MeshRenderer[] meshes = GetComponentsInChildren<MeshRenderer>();
-        foreach(MeshRenderer mesh in meshes)
+       SkinnedMeshRenderer[] meshes = GetComponentsInChildren<SkinnedMeshRenderer>();
+        foreach(SkinnedMeshRenderer mesh in meshes)
         {
             mesh.enabled = false;
         }

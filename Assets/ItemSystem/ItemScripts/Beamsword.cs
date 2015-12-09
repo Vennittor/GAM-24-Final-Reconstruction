@@ -7,6 +7,7 @@ public class Beamsword : ItemBaseScript
     public override void Start()
     {
         damage = 5;
+        knockBack = 1;
         base.Start();
     }
 
@@ -28,7 +29,8 @@ public class Beamsword : ItemBaseScript
         {
             if(other.transform != transform.parent)
             {
-                //apply damage to collider
+                if (other.gameObject.GetComponent<BaseCharacter>())
+                    other.gameObject.GetComponent<BaseCharacter>().TakeDamage(damage, knockBack);
                 Debug.Log("hit");
             }
 
@@ -38,7 +40,10 @@ public class Beamsword : ItemBaseScript
     IEnumerator Swinging()
     {
         activeAttack = true;
-        yield return new WaitForSeconds(1);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 45)), 3);
+        yield return new WaitForSeconds(.5f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, 0)), 3);
         activeAttack = false;
+
     }
 }

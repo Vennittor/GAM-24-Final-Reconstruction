@@ -28,12 +28,14 @@ public class Ice : ItemBaseScript
         }
         void OnCollisionEnter(Collision other)
         {
-        //  if (thrown)
-        //{
-        if (other.gameObject.GetComponent<BaseCharacter>())
-        {
-            FunctionBeta(other.gameObject);
-        }
-           // }
+             if (thrown)
+             {
+                if (other.gameObject.GetComponent<BaseCharacter>())
+                {
+                    FunctionBeta(other.gameObject);
+                }
+                else
+                    durability--;
+             }
         }
     }
