@@ -87,7 +87,7 @@ public class CharacterInputManager : MonoBehaviour
 		{
 			if (grounded)
 			{
-				if (jumpButton && jumpCount == jumpMax)
+				if (jumpButton && jumpCount == jumpMax && !character.frozen)
 				{
 					//Input -> Physics -> Gravity -> set to -80
 					rigidBody.AddForce(0f, 16 * ((jumpHeight * jumpHeight) / weight), 0f);
@@ -221,7 +221,7 @@ public class CharacterInputManager : MonoBehaviour
 		{
 			if (grounded)
 			{
-				if (jumpButton && jumpCount == jumpMax)
+				if (jumpButton && jumpCount == jumpMax && !character.frozen)
 				{
 					//Input -> Physics -> Gravity -> set to -80
 					rigidBody.AddForce(0f, 16 * ((jumpHeight * jumpHeight) / weight), 0f);
@@ -263,7 +263,8 @@ public class CharacterInputManager : MonoBehaviour
 				targetVelocity = new Vector3 ((rightInput),0,0);
 
 			targetVelocity *= speed/weight;
-			rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, targetVelocity, 10.0f * Time.deltaTime);
+            if(!character.frozen)
+			    rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, targetVelocity, 10.0f * Time.deltaTime);
 
 			yield return null;
 		}
@@ -276,8 +277,9 @@ public class CharacterInputManager : MonoBehaviour
 		{
 			if (grounded)		
 			{
-				if (jumpButton && jumpCount == jumpMax)
+				if (jumpButton && jumpCount == jumpMax && !character.frozen)
 				{
+                    
 					//Input -> Physics -> Gravity -> set to -80
 					rigidBody.velocity /= 5.0f;
 					rigidBody.AddForce(0f, 16 * ((jumpHeight * jumpHeight) / weight), 0f);
@@ -318,7 +320,8 @@ public class CharacterInputManager : MonoBehaviour
 			if (targetVelocity != Vector3.zero)
 			{
 				targetVelocity *= speed/(float)weight * 2.0f;
-				rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, targetVelocity, 10.0f * Time.deltaTime);
+                if(!character.frozen)
+				    rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, targetVelocity, 10.0f * Time.deltaTime);
 			}
 
 			yield return null;
@@ -332,7 +335,7 @@ public class CharacterInputManager : MonoBehaviour
 			if (grounded)
 			{
 				changeToStanding ();
-				character.StopAllCoroutines();
+				//character.StopAllCoroutines();
 				character.ResetAttack();
 			}
 
@@ -354,7 +357,7 @@ public class CharacterInputManager : MonoBehaviour
 			else if (specialButton)
 				character.NeutralB();
 
-			if (jumpButton && jumpCount > 0)
+			if (jumpButton && jumpCount > 0 && !character.frozen)
 			{
 				//Input -> Physics -> Gravity -> set to -80
 				rigidBody.velocity = new Vector3(rigidBody.velocity.x, 0f, 0f);
@@ -383,7 +386,7 @@ public class CharacterInputManager : MonoBehaviour
 
 			targetVelocity *= speed/weight;
 
-			if (targetVelocity != null)
+			if (targetVelocity != null && !character.frozen)
 				rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, new Vector3 (targetVelocity.x/1.5f ,rigidBody.velocity.y + targetVelocity.y, 0f), 4.0f * Time.deltaTime);
 
 			yield return null;
@@ -394,7 +397,7 @@ public class CharacterInputManager : MonoBehaviour
 	{
 		while (playerStates.moveState == PlayerStates.movementStates.CROUCHING)
 		{
-			if (jumpButton && jumpCount == jumpMax)
+			if (jumpButton && jumpCount == jumpMax && !character.frozen)
 			{
 				//Input -> Physics -> Gravity -> set to -80
 				rigidBody.AddForce(0f, 16 * ((jumpHeight * jumpHeight) / weight), 0f);
@@ -433,8 +436,8 @@ public class CharacterInputManager : MonoBehaviour
 			}
 
 			targetVelocity *= speed/weight;
-			
-			rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, targetVelocity/1.5f, 10.0f * Time.deltaTime);
+			if(!character.frozen)
+			  rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, targetVelocity/1.5f, 10.0f * Time.deltaTime);
 
 			yield return null;
 		}

@@ -5,6 +5,7 @@ public class ItemBaseScript : MonoBehaviour
 {
 	public bool held = false;
 	public bool thrown = false;
+    public bool active = false;
 
 	public int damage = 1;
 	public int thrownDMG = 5;
@@ -23,7 +24,9 @@ public class ItemBaseScript : MonoBehaviour
 	{
 		spawner = GameObject.Find("ItemSpawn");
 		rb = GetComponent<Rigidbody>();
-	}
+        Physics.IgnoreLayerCollision(10, 10, true);//Items needs to be on layer 10
+        Physics.IgnoreLayerCollision(10, 9, true);//Players needs to be on layer 9
+    }
 	public virtual void Update()
 	{
 		if (durability <=0)
@@ -75,7 +78,7 @@ public class ItemBaseScript : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezePositionZ;
         GetComponent<Collider>().enabled = true;
         rb.AddForce(transVelocity + throwDirection * 500);
-        
+        gameObject.layer = 11;
         owner = null;
 	}
 	public virtual void FunctionAlpha(Vector3 throwDirection = new Vector3())
@@ -101,7 +104,7 @@ public class ItemBaseScript : MonoBehaviour
     {
         if (other.gameObject == owner)
         {
-           if(!held)
+           if (!held)
             {
                 owner = null;
             }

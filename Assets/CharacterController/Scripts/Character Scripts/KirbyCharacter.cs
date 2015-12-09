@@ -18,7 +18,7 @@ public class KirbyCharacter : BaseCharacter
 		attackCount = 0;
 		hasEaten = false;
 		eatenPlayer = null;
-
+        frozen = false;
         if (model == null)
         {
             model = Instantiate(Resources.Load("kirby_2"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
@@ -31,9 +31,12 @@ public class KirbyCharacter : BaseCharacter
 
 	public override void StandingA()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
         }
         else
         {
@@ -73,7 +76,9 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void ComboA()
 	{
-		if (!started)
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        if (!started)
 		{
 			attackCount = 0;
 			comboTime = new Timer (0.5f);
@@ -122,9 +127,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void LeftRightA()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            else
+                hasItem = false;
         }
         else
         {
@@ -160,9 +170,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void DownA()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.down);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.down);
+            else
+                hasItem = false;
         }
         else
         {
@@ -198,9 +213,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void UpA()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+            else
+                hasItem = false;
         }
         else
         {
@@ -239,9 +259,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void SprintA()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            else
+                hasItem = false;
         }
         else
         {
@@ -285,9 +310,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void NeutralAAir()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
+            if (GetComponentInChildren<ItemBaseScript>())
             GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+            else
+                hasItem = false;
         }
         else
         {
@@ -326,9 +356,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void UpAir()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+            else
+                hasItem = false;
         }
         else
         {
@@ -366,9 +401,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void DownAir()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            else
+                hasItem = false;
         }
         else
         {
@@ -406,9 +446,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void LeftRightAir()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            else
+                hasItem = false;
         }
         else
         {
@@ -447,9 +492,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void UpSmashA()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            else
+                hasItem = false;
         }
         else
         {
@@ -486,9 +536,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void DownSmashA()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.down);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.down);
+            else
+                hasItem = false;
         }
         else
         {
@@ -525,9 +580,14 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void LeftRightSmashA()
 	{
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
         if (hasItem)
         {
-            GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            if (GetComponentInChildren<ItemBaseScript>())
+                GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.forward);
+            else
+                hasItem = false;
         }
         else
         {
@@ -572,7 +632,9 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void NeutralB()
 	{
-		if (eatenPlayer == null)
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        if (eatenPlayer == null)
 		{
 			if (!rock)
 			{
@@ -615,7 +677,11 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void UpSpecialB()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
 		{
 			float attackLegnth = 0.3f;
 			Vector3 boxCollider = new Vector3 (3f, 1f, 0.5f);
@@ -644,7 +710,9 @@ public class KirbyCharacter : BaseCharacter
 	}
 	private void UpBEnd()
 	{
-		float attackLegnth = 100f;
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        float attackLegnth = 100f;
 		Vector3 boxCollider = new Vector3 (3f, 1f, 0.5f);
 		Vector3 position = new Vector3 (1f, 0f, 0f);
 		Vector3 lerpVelocity = new Vector3(0f, -50f, 0f);
@@ -657,10 +725,11 @@ public class KirbyCharacter : BaseCharacter
 
 		StartCoroutine (SpecialMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, buttonHold, ()=> {}, neutralB));
 	}
-
 	public override void DownSpecialB()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
 		{
 			if (!rock)
 			{
@@ -703,7 +772,9 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void LeftRightSpecialB()
 	{
-		if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
 		{
 			float attackLegnth = 0.5f;
 			Vector3 boxCollider = new Vector3 (2.0f, 1.5f, 0.2f);
@@ -736,13 +807,17 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void AGrab()
 	{
-		print ("Kirby A Grab was called");
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        print ("Kirby A Grab was called");
 		// A Grab Animation
 		// A Grab Sound
 	}
 	public override void UpThrow()
 	{
-		print ("Kirby Up Throw was called");
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+            return;
+        print ("Kirby Up Throw was called");
 		// Up Throw Animation
 		// Up Throw Sound 
 	}

@@ -5,7 +5,7 @@ public class Star : ItemBaseScript
 {
     public override void Start()
     {
-        InvokeRepeating("Bounce", 2, 1);
+        //InvokeRepeating("Bounce", 1.5f, .7f);
         base.Start();
     }
     public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
@@ -14,7 +14,7 @@ public class Star : ItemBaseScript
     }
     public override void Grabbed(GameObject owner)
     {
-        // invinc state
+        owner.GetComponent<BaseCharacter>().Star(10);
         durability = 0;
     
     }
@@ -23,8 +23,9 @@ public class Star : ItemBaseScript
         base.Update();
     }
     void Bounce()
-    {
-        rb.AddForce(Vector3.up  + new Vector3(Random.Range(-1,2),0,0)* 100);
+    {   
+        Debug.Log("Bounce");
+        rb.AddForce((Vector3.up * 1000) + (new Vector3(Random.Range(-1,1.1f),0,0) * 500));
     }
 
 }

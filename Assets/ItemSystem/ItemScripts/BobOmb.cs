@@ -7,7 +7,6 @@ public class BobOmb : ItemBaseScript
     public float timer = 4;
 
     public bool goRight = true;
-    bool active = false;
 
     float walkSpeed = 3;
     // Use this for initialization
@@ -72,7 +71,7 @@ public class BobOmb : ItemBaseScript
     {
         Debug.Log("Exploding");
     }
-    void OnCollisionEnter(Collision other)
+   void OnCollisionEnter(Collision other)
     {
         if (thrown)
             FunctionBeta();
