@@ -8,10 +8,6 @@ public class TempPlayerController : MonoBehaviour
 
 	public float health;
 
-	public bool isDead;
-
-	public string characterName;
-
 	// Use this for initialization
 	void Start () 
 	{

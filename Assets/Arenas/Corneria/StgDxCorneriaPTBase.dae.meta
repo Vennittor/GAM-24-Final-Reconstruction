@@ -1,0 +1,134 @@
+fileFormatVersion: 2
+guid: 99f16087256a5544bbf8ba15c691103f
+timeCreated: 1449113136
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: null268
+    100002: null269
+    100004: null269_1
+    100006: null270
+    100008: PokemonTrainer1N
+    100010: PokemonTrainer2N
+    100012: PokemonTrainer3N
+    100014: PokemonTrainer4N
+    100016: polygon0
+    100018: polygon1
+    100020: polygon2
+    100022: polygon3
+    100024: polygon4
+    100026: polygon5
+    100028: polygon6
+    100030: polygon7
+    100032: polygon8
+    100034: polySurface1
+    100036: sphere33
+    100038: sphere33_1
+    100040: StgDxCorneriaPTBace
+    100042: //RootNode
+    400000: null268
+    400002: null269
+    400004: null269_1
+    400006: null270
+    400008: PokemonTrainer1N
+    400010: PokemonTrainer2N
+    400012: PokemonTrainer3N
+    400014: PokemonTrainer4N
+    400016: polygon0
+    400018: polygon1
+    400020: polygon2
+    400022: polygon3
+    400024: polygon4
+    400026: polygon5
+    400028: polygon6
+    400030: polygon7
+    400032: polygon8
+    400034: polySurface1
+    400036: sphere33
+    400038: sphere33_1
+    400040: StgDxCorneriaPTBace
+    400042: //RootNode
+    4300000: polygon0
+    4300002: polygon1
+    4300004: polygon2
+    4300006: polygon3
+    4300008: polygon4
+    4300010: polygon5
+    4300012: polygon6
+    4300014: polygon7
+    4300016: polygon8
+    9500000: //RootNode
+    13700000: polygon0
+    13700002: polygon1
+    13700004: polygon2
+    13700006: polygon3
+    13700008: polygon4
+    13700010: polygon5
+    13700012: polygon6
+    13700014: polygon7
+    13700016: polygon8
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

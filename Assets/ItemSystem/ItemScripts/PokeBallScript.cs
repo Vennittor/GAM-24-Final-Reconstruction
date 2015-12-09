@@ -22,21 +22,33 @@ public class PokeBallScript : ItemBaseScript
         base.Update();
     }
 
-    public override void FunctionAlpha()
+    public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
     {
-        thrown = true;
+        Released(throwDirection);
         base.FunctionAlpha();
     }
     public override void FunctionBeta()
     {
-        Instantiate(SpawnPokemon(Roll()), gameObject.transform.position + Vector3.up, Quaternion.identity);
+        GameObject a = Instantiate(SpawnPokemon(Roll()), gameObject.transform.position + Vector3.up, Quaternion.identity) as GameObject;
+        if (a.GetComponent<Metagross>())
+            a.transform.rotation = Quaternion.Euler(new Vector3(-90, -90, 0));
+        else if (a.GetComponent<ChikoritaScript>())
+            a.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
+        else if (a.GetComponent<Snorlax>())
+            a.transform.rotation = Quaternion.Euler(new Vector3(0, -180, 0));
+        else if (a.GetComponent<MoltresScript>())
+            a.transform.rotation = Quaternion.Euler(new Vector3(0, -180, 0));
+
         base.FunctionBeta();
     }
     void OnCollisionEnter(Collision other)
     {
         if (thrown)
-        //apply thrown damage
-        FunctionBeta();
+        {
+            FunctionBeta();
+            durability = 0;
+        }
+        
     }
     PokemonNames Roll()
     {

@@ -5,8 +5,7 @@ public class Animation_Controller : MonoBehaviour {
 
 	public Animation anim;
 
-	void Awake() 
-	{
+	void Awake() {
 		anim = gameObject.transform.GetComponent<Animation>();
 	}
 
@@ -16,16 +15,23 @@ public class Animation_Controller : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		
 	}
 
 	// Plays the input animation for the input number of seconds.
 	// animName is the name of the animation to be played.
-	// time is the length in seconds you want to to finish by.
-	public void playAnim(string a, float time)
+	// time is the length in seconds you want to to finish by. If time = 0, playspeed will be set to normal (1).
+	public void playTime(string a, float time = 0)
 	{
-		anim [a].speed = anim [a].length / time;
-		anim.Play (a);	
+		if(anim.Play (a))
+		{
+			if(time > 0)
+				anim [a].speed = anim [a].length / time;
+			else
+				anim [a].speed = 1;
+		}
 	}
 
 	// Stops all animation
@@ -34,49 +40,9 @@ public class Animation_Controller : MonoBehaviour {
 		anim.Stop ();
 	}
 
-	public void idle()
+	public void playLoop(string a)
 	{
-		if(!anim.IsPlaying("Idle"))
-			anim.Play ("Idle");
+		if(!anim.IsPlaying(a))
+			anim.Play (a);
 	}
-	
-
-	#region ApplyForce example
-	//These are placeholder variables and need to be properly referenced in the script.
-	Vector3 position;	//of the hitCollider
-	GameObject other;
-
-	public void ApplyForce(float force)
-	{
-
-		Vector3 forceDir = position - this.gameObject.transform.position;
-		forceDir *= force;
-
-		_ApplyForce(forceDir, ForceMode.Force);
-	}
-	
-	public void ApplyForce(float force, ForceMode forcemode)
-	{
-		Vector3 forceDir = position - this.gameObject.transform.position;
-		forceDir *= force;
-		
-		_ApplyForce(forceDir, forcemode);
-	}
-
-	public void ApplyForce(Vector3 forceDir)
-	{
-		_ApplyForce(forceDir, ForceMode.Force);
-	}
-
-	public void ApplyForce(Vector3 forceDir, ForceMode forcemode)
-	{
-		_ApplyForce(forceDir, forcemode);
-	}
-
-	public void _ApplyForce(Vector3 force, ForceMode forcemode)
-	{
-		//Establish proper reference to the other characters rigidbody. 
-		other.gameObject.GetComponent<Rigidbody>().AddForce (force, forcemode);
-	}
-	#endregion
 }

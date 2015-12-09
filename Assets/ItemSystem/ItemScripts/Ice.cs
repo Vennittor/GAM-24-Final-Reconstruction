@@ -4,7 +4,7 @@ using UnityEngine;
 public class Ice : ItemBaseScript 
 {
         bool canFreeze = false;
-
+    float length = 5; 
         // Use this for initialization
         public override void Start()
         {
@@ -13,34 +13,29 @@ public class Ice : ItemBaseScript
         }
         public override void Update()
         {
-
             base.Update();
         }
-        public override void FunctionAlpha()
+        public override void FunctionAlpha(Vector3 throwDirection = default(Vector3))
         {
-            thrown = true;
-            base.FunctionAlpha();
+            Released(throwDirection);
+            base.FunctionAlpha(throwDirection);
         }
-        public override void FunctionBeta()
+        public void FunctionBeta(GameObject player)
         {
-            //make them prone
+            player.GetComponent<BaseCharacter>().Freeze(length);
             durability--;
             base.FunctionBeta();
         }
         void OnCollisionEnter(Collision other)
         {
-            if (thrown)
-            {
-                if (other.gameObject.tag == "Floor")
+             if (thrown)
+             {
+                if (other.gameObject.GetComponent<BaseCharacter>())
                 {
-                    canFreeze = true;
+                    FunctionBeta(other.gameObject);
                 }
-                if (canFreeze)
-                {
-                    //if (other is player)
-                    FunctionBeta();
-                }
-
-            }
+                else
+                    durability--;
+             }
         }
     }

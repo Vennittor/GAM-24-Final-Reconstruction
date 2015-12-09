@@ -27,7 +27,7 @@ public class TeleportBox : MonoBehaviour
 		{
 			other.GetComponent<TempPlayerController>().lives --;
 			other.GetComponent<TempPlayerController>().health = 0;
-			other.GetComponent<TempPlayerController>().isDead = true;
+			//other.GetComponent<TempPlayerController>().isDead = true;
 			if (other.GetComponent<TempPlayerController>().lives > 0)
 			{
 				other.transform.position = deathSpawnPoint.transform.position;
@@ -42,7 +42,7 @@ public class TeleportBox : MonoBehaviour
 		{
 			other.GetComponent<TempPlayerController>().lives --;
 			other.GetComponent<TempPlayerController>().health = 0;
-			other.GetComponent<TempPlayerController>().isDead = true;
+			//other.GetComponent<TempPlayerController>().isDead = true;
 			if (other.GetComponent<TempPlayerController>().lives > 0)
 			{
 				other.transform.position = deathSpawnPoint.transform.position;
@@ -56,8 +56,8 @@ public class TeleportBox : MonoBehaviour
 		else if (other.gameObject.name == "PlayerThree")
 		{
 			other.GetComponent<TempPlayerController>().lives --;
-			other.GetComponent<TempPlayerController>().health = 0;
-			other.GetComponent<TempPlayerController>().isDead = true;
+			//other.GetComponent<TempPlayerController>().health = 0;
+			//other.GetComponent<TempPlayerController>().isDead = true;
 			if (other.GetComponent<TempPlayerController>().lives > 0)
 			{
 				other.transform.position = deathSpawnPoint.transform.position;
@@ -72,7 +72,7 @@ public class TeleportBox : MonoBehaviour
 		{
 			other.GetComponent<TempPlayerController>().lives --;
 			other.GetComponent<TempPlayerController>().health = 0;
-			other.GetComponent<TempPlayerController>().isDead = true;
+			//other.GetComponent<TempPlayerController>().isDead = true;
 			if (other.GetComponent<TempPlayerController>().lives > 0)
 			{
 				other.transform.position = deathSpawnPoint.transform.position;

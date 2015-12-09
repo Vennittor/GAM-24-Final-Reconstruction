@@ -1,13 +1,19 @@
 ﻿
 
+using UnityEngine;
+
 public class Metal : ItemBaseScript 
 {
-	public override void FunctionAlpha ()
+	public override void FunctionAlpha (Vector3 throwDirection = default(Vector3))
 	{
-		//transform.parent.gameObject.GetComponent<>().MetalEffect();
+		
 		base.FunctionAlpha ();
 	}
-	public override void Update ()
+    public override void Grabbed(GameObject owner)
+    {
+        //transform.parent.gameObject.GetComponent<>().MetalEffect();
+    }
+    public override void Update ()
 	{
 		base.Update ();
 	}

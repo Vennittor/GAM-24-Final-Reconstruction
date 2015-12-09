@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tomato : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class Tomato : ItemBaseScript
+{
+   
+    public override void Grabbed(GameObject owner)
+    {
+        //add health
+        durability = 0;
+        base.Grabbed(owner);
+    }
 }
