@@ -860,6 +860,776 @@ public class OptionsMenuController : MonoBehaviour
 		}
 		SetDataHolderRarity ();
 	}
+
+	//Freezie
+	public void FreezieRarityIncrease ()
+	{
+		if (iceRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.ICE);
+			uncommon.Remove (ItemSelector.itemName.ICE);
+			rare.Remove (ItemSelector.itemName.ICE);
+			veryRare.Remove (ItemSelector.itemName.ICE);
+			uncommon.Add (ItemSelector.itemName.ICE);
+			iceRarity = ItemRarity.uncommon;
+			iceText.text = "HIGH";
+		}
+		else if (iceRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.ICE);
+			uncommon.Remove (ItemSelector.itemName.ICE);
+			rare.Remove (ItemSelector.itemName.ICE);
+			veryRare.Remove (ItemSelector.itemName.ICE);
+			rare.Add (ItemSelector.itemName.ICE);
+			iceRarity = ItemRarity.rare;
+			iceText.text = "MEDIUM";
+		}
+		else if (iceRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.ICE);
+			uncommon.Remove (ItemSelector.itemName.ICE);
+			rare.Remove (ItemSelector.itemName.ICE);
+			veryRare.Remove (ItemSelector.itemName.ICE);
+			veryRare.Add (ItemSelector.itemName.ICE);
+			iceRarity = ItemRarity.veryRare;
+			iceText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void FreezieRarityDecrease ()
+	{
+		if (iceRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.ICE);
+			uncommon.Remove (ItemSelector.itemName.ICE);
+			rare.Remove (ItemSelector.itemName.ICE);
+			veryRare.Remove (ItemSelector.itemName.ICE);
+			common.Add (ItemSelector.itemName.ICE);
+			iceRarity = ItemRarity.common;
+			iceText.text = "VERY HIGH";
+		}
+		else if (iceRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.ICE);
+			uncommon.Remove (ItemSelector.itemName.ICE);
+			rare.Remove (ItemSelector.itemName.ICE);
+			veryRare.Remove (ItemSelector.itemName.ICE);
+			uncommon.Add (ItemSelector.itemName.ICE);
+			iceRarity = ItemRarity.uncommon;
+			iceText.text = "HIGH";
+		}
+		else if (iceRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.ICE);
+			uncommon.Remove (ItemSelector.itemName.ICE);
+			rare.Remove (ItemSelector.itemName.ICE);
+			veryRare.Remove (ItemSelector.itemName.ICE);
+			rare.Add (ItemSelector.itemName.ICE);
+			iceRarity = ItemRarity.rare;
+			iceText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//MetalBox
+	public void MetalBoxRarityIncrease ()
+	{
+		if (metalRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.METAL);
+			uncommon.Remove (ItemSelector.itemName.METAL);
+			rare.Remove (ItemSelector.itemName.METAL);
+			veryRare.Remove (ItemSelector.itemName.METAL);
+			uncommon.Add (ItemSelector.itemName.METAL);
+			metalRarity = ItemRarity.uncommon;
+			metalText.text = "HIGH";
+		}
+		else if (metalRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.METAL);
+			uncommon.Remove (ItemSelector.itemName.METAL);
+			rare.Remove (ItemSelector.itemName.METAL);
+			veryRare.Remove (ItemSelector.itemName.METAL);
+			rare.Add (ItemSelector.itemName.METAL);
+			metalRarity = ItemRarity.rare;
+			metalText.text = "MEDIUM";
+		}
+		else if (metalRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.METAL);
+			uncommon.Remove (ItemSelector.itemName.METAL);
+			rare.Remove (ItemSelector.itemName.METAL);
+			veryRare.Remove (ItemSelector.itemName.METAL);
+			veryRare.Add (ItemSelector.itemName.METAL);
+			metalRarity = ItemRarity.veryRare;
+			metalText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void MetalBoxRarityDecrease ()
+	{
+		if (metalRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.METAL);
+			uncommon.Remove (ItemSelector.itemName.METAL);
+			rare.Remove (ItemSelector.itemName.METAL);
+			veryRare.Remove (ItemSelector.itemName.METAL);
+			common.Add (ItemSelector.itemName.METAL);
+			metalRarity = ItemRarity.common;
+			metalText.text = "VERY HIGH";
+		}
+		else if (metalRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.METAL);
+			uncommon.Remove (ItemSelector.itemName.METAL);
+			rare.Remove (ItemSelector.itemName.METAL);
+			veryRare.Remove (ItemSelector.itemName.METAL);
+			uncommon.Add (ItemSelector.itemName.METAL);
+			metalRarity = ItemRarity.uncommon;
+			metalText.text = "HIGH";
+		}
+		else if (metalRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.METAL);
+			uncommon.Remove (ItemSelector.itemName.METAL);
+			rare.Remove (ItemSelector.itemName.METAL);
+			veryRare.Remove (ItemSelector.itemName.METAL);
+			rare.Add (ItemSelector.itemName.METAL);
+			metalRarity = ItemRarity.rare;
+			metalText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//Star
+	public void StarRarityIncrease ()
+	{
+		if (starRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.STAR);
+			uncommon.Remove (ItemSelector.itemName.STAR);
+			rare.Remove (ItemSelector.itemName.STAR);
+			veryRare.Remove (ItemSelector.itemName.STAR);
+			uncommon.Add (ItemSelector.itemName.STAR);
+			starRarity = ItemRarity.uncommon;
+			starText.text = "HIGH";
+		}
+		else if (starRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.STAR);
+			uncommon.Remove (ItemSelector.itemName.STAR);
+			rare.Remove (ItemSelector.itemName.STAR);
+			veryRare.Remove (ItemSelector.itemName.STAR);
+			rare.Add (ItemSelector.itemName.STAR);
+			starRarity = ItemRarity.rare;
+			starText.text = "MEDIUM";
+		}
+		else if (starRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.STAR);
+			uncommon.Remove (ItemSelector.itemName.STAR);
+			rare.Remove (ItemSelector.itemName.STAR);
+			veryRare.Remove (ItemSelector.itemName.STAR);
+			veryRare.Add (ItemSelector.itemName.STAR);
+			starRarity = ItemRarity.veryRare;
+			starText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void StarRarityDecrease ()
+	{
+		if (starRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.STAR);
+			uncommon.Remove (ItemSelector.itemName.STAR);
+			rare.Remove (ItemSelector.itemName.STAR);
+			veryRare.Remove (ItemSelector.itemName.STAR);
+			common.Add (ItemSelector.itemName.STAR);
+			starRarity = ItemRarity.common;
+			starText.text = "VERY HIGH";
+		}
+		else if (starRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.STAR);
+			uncommon.Remove (ItemSelector.itemName.STAR);
+			rare.Remove (ItemSelector.itemName.STAR);
+			veryRare.Remove (ItemSelector.itemName.STAR);
+			uncommon.Add (ItemSelector.itemName.STAR);
+			starRarity = ItemRarity.uncommon;
+			starText.text = "HIGH";
+		}
+		else if (starRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.STAR);
+			uncommon.Remove (ItemSelector.itemName.STAR);
+			rare.Remove (ItemSelector.itemName.STAR);
+			veryRare.Remove (ItemSelector.itemName.STAR);
+			rare.Add (ItemSelector.itemName.STAR);
+			starRarity = ItemRarity.rare;
+			starText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//BunnyEars
+	public void BunnyEarsRarityIncrease ()
+	{
+		if (bunnyEarsRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.BUNNYEARS);
+			uncommon.Remove (ItemSelector.itemName.BUNNYEARS);
+			rare.Remove (ItemSelector.itemName.BUNNYEARS);
+			veryRare.Remove (ItemSelector.itemName.BUNNYEARS);
+			uncommon.Add (ItemSelector.itemName.BUNNYEARS);
+			bunnyEarsRarity = ItemRarity.uncommon;
+			bunnyEarsText.text = "HIGH";
+		}
+		else if (bunnyEarsRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.BUNNYEARS);
+			uncommon.Remove (ItemSelector.itemName.BUNNYEARS);
+			rare.Remove (ItemSelector.itemName.BUNNYEARS);
+			veryRare.Remove (ItemSelector.itemName.BUNNYEARS);
+			rare.Add (ItemSelector.itemName.BUNNYEARS);
+			bunnyEarsRarity = ItemRarity.rare;
+			bunnyEarsText.text = "MEDIUM";
+		}
+		else if (bunnyEarsRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.BUNNYEARS);
+			uncommon.Remove (ItemSelector.itemName.BUNNYEARS);
+			rare.Remove (ItemSelector.itemName.BUNNYEARS);
+			veryRare.Remove (ItemSelector.itemName.BUNNYEARS);
+			veryRare.Add (ItemSelector.itemName.BUNNYEARS);
+			bunnyEarsRarity = ItemRarity.veryRare;
+			bunnyEarsText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void BunnyEarsRarityDecrease ()
+	{
+		if (bunnyEarsRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.BUNNYEARS);
+			uncommon.Remove (ItemSelector.itemName.BUNNYEARS);
+			rare.Remove (ItemSelector.itemName.BUNNYEARS);
+			veryRare.Remove (ItemSelector.itemName.BUNNYEARS);
+			common.Add (ItemSelector.itemName.BUNNYEARS);
+			bunnyEarsRarity = ItemRarity.common;
+			bunnyEarsText.text = "VERY HIGH";
+		}
+		else if (bunnyEarsRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.BUNNYEARS);
+			uncommon.Remove (ItemSelector.itemName.BUNNYEARS);
+			rare.Remove (ItemSelector.itemName.BUNNYEARS);
+			veryRare.Remove (ItemSelector.itemName.BUNNYEARS);
+			uncommon.Add (ItemSelector.itemName.BUNNYEARS);
+			bunnyEarsRarity = ItemRarity.uncommon;
+			bunnyEarsText.text = "HIGH";
+		}
+		else if (bunnyEarsRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.BUNNYEARS);
+			uncommon.Remove (ItemSelector.itemName.BUNNYEARS);
+			rare.Remove (ItemSelector.itemName.BUNNYEARS);
+			veryRare.Remove (ItemSelector.itemName.BUNNYEARS);
+			rare.Add (ItemSelector.itemName.BUNNYEARS);
+			bunnyEarsRarity = ItemRarity.rare;
+			bunnyEarsText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//Pill
+	public void PillRarityIncrease ()
+	{
+		if (pillRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.PILL);
+			uncommon.Remove (ItemSelector.itemName.PILL);
+			rare.Remove (ItemSelector.itemName.PILL);
+			veryRare.Remove (ItemSelector.itemName.PILL);
+			uncommon.Add (ItemSelector.itemName.PILL);
+			pillRarity = ItemRarity.uncommon;
+			pillText.text = "HIGH";
+		}
+		else if (pillRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.PILL);
+			uncommon.Remove (ItemSelector.itemName.PILL);
+			rare.Remove (ItemSelector.itemName.PILL);
+			veryRare.Remove (ItemSelector.itemName.PILL);
+			rare.Add (ItemSelector.itemName.PILL);
+			pillRarity = ItemRarity.rare;
+			pillText.text = "MEDIUM";
+		}
+		else if (pillRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.PILL);
+			uncommon.Remove (ItemSelector.itemName.PILL);
+			rare.Remove (ItemSelector.itemName.PILL);
+			veryRare.Remove (ItemSelector.itemName.PILL);
+			veryRare.Add (ItemSelector.itemName.PILL);
+			pillRarity = ItemRarity.veryRare;
+			pillText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void PillRarityDecrease ()
+	{
+		if (pillRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.PILL);
+			uncommon.Remove (ItemSelector.itemName.PILL);
+			rare.Remove (ItemSelector.itemName.PILL);
+			veryRare.Remove (ItemSelector.itemName.PILL);
+			common.Add (ItemSelector.itemName.PILL);
+			pillRarity = ItemRarity.common;
+			pillText.text = "VERY HIGH";
+		}
+		else if (pillRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.PILL);
+			uncommon.Remove (ItemSelector.itemName.PILL);
+			rare.Remove (ItemSelector.itemName.PILL);
+			veryRare.Remove (ItemSelector.itemName.PILL);
+			uncommon.Add (ItemSelector.itemName.PILL);
+			pillRarity = ItemRarity.uncommon;
+			pillText.text = "HIGH";
+		}
+		else if (pillRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.PILL);
+			uncommon.Remove (ItemSelector.itemName.PILL);
+			rare.Remove (ItemSelector.itemName.PILL);
+			veryRare.Remove (ItemSelector.itemName.PILL);
+			rare.Add (ItemSelector.itemName.PILL);
+			pillRarity = ItemRarity.rare;
+			pillText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//Shell
+	public void ShellRarityIncrease ()
+	{
+		if (shellRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.SHELL);
+			uncommon.Remove (ItemSelector.itemName.SHELL);
+			rare.Remove (ItemSelector.itemName.SHELL);
+			veryRare.Remove (ItemSelector.itemName.SHELL);
+			uncommon.Add (ItemSelector.itemName.SHELL);
+			shellRarity = ItemRarity.uncommon;
+			shellText.text = "HIGH";
+		}
+		else if (shellRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.SHELL);
+			uncommon.Remove (ItemSelector.itemName.SHELL);
+			rare.Remove (ItemSelector.itemName.SHELL);
+			veryRare.Remove (ItemSelector.itemName.SHELL);
+			rare.Add (ItemSelector.itemName.SHELL);
+			shellRarity = ItemRarity.rare;
+			shellText.text = "MEDIUM";
+		}
+		else if (shellRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.SHELL);
+			uncommon.Remove (ItemSelector.itemName.SHELL);
+			rare.Remove (ItemSelector.itemName.SHELL);
+			veryRare.Remove (ItemSelector.itemName.SHELL);
+			veryRare.Add (ItemSelector.itemName.SHELL);
+			shellRarity = ItemRarity.veryRare;
+			shellText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void ShellRarityDecrease ()
+	{
+		if (shellRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.SHELL);
+			uncommon.Remove (ItemSelector.itemName.SHELL);
+			rare.Remove (ItemSelector.itemName.SHELL);
+			veryRare.Remove (ItemSelector.itemName.SHELL);
+			common.Add (ItemSelector.itemName.SHELL);
+			shellRarity = ItemRarity.common;
+			shellText.text = "VERY HIGH";
+		}
+		else if (shellRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.SHELL);
+			uncommon.Remove (ItemSelector.itemName.SHELL);
+			rare.Remove (ItemSelector.itemName.SHELL);
+			veryRare.Remove (ItemSelector.itemName.SHELL);
+			uncommon.Add (ItemSelector.itemName.SHELL);
+			shellRarity = ItemRarity.uncommon;
+			shellText.text = "HIGH";
+		}
+		else if (shellRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.SHELL);
+			uncommon.Remove (ItemSelector.itemName.SHELL);
+			rare.Remove (ItemSelector.itemName.SHELL);
+			veryRare.Remove (ItemSelector.itemName.SHELL);
+			rare.Add (ItemSelector.itemName.SHELL);
+			shellRarity = ItemRarity.rare;
+			shellText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//Tomato
+	public void TomatoRarityIncrease ()
+	{
+		if (tomatoRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.TOMATO);
+			uncommon.Remove (ItemSelector.itemName.TOMATO);
+			rare.Remove (ItemSelector.itemName.TOMATO);
+			veryRare.Remove (ItemSelector.itemName.TOMATO);
+			uncommon.Add (ItemSelector.itemName.TOMATO);
+			tomatoRarity = ItemRarity.uncommon;
+			tomatoText.text = "HIGH";
+		}
+		else if (tomatoRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.TOMATO);
+			uncommon.Remove (ItemSelector.itemName.TOMATO);
+			rare.Remove (ItemSelector.itemName.TOMATO);
+			veryRare.Remove (ItemSelector.itemName.TOMATO);
+			rare.Add (ItemSelector.itemName.TOMATO);
+			tomatoRarity = ItemRarity.rare;
+			tomatoText.text = "MEDIUM";
+		}
+		else if (tomatoRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.TOMATO);
+			uncommon.Remove (ItemSelector.itemName.TOMATO);
+			rare.Remove (ItemSelector.itemName.TOMATO);
+			veryRare.Remove (ItemSelector.itemName.TOMATO);
+			veryRare.Add (ItemSelector.itemName.TOMATO);
+			tomatoRarity = ItemRarity.veryRare;
+			tomatoText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void TomatoRarityDecrease ()
+	{
+		if (tomatoRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.TOMATO);
+			uncommon.Remove (ItemSelector.itemName.TOMATO);
+			rare.Remove (ItemSelector.itemName.TOMATO);
+			veryRare.Remove (ItemSelector.itemName.TOMATO);
+			common.Add (ItemSelector.itemName.TOMATO);
+			tomatoRarity = ItemRarity.common;
+			tomatoText.text = "VERY HIGH";
+		}
+		else if (tomatoRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.TOMATO);
+			uncommon.Remove (ItemSelector.itemName.TOMATO);
+			rare.Remove (ItemSelector.itemName.TOMATO);
+			veryRare.Remove (ItemSelector.itemName.TOMATO);
+			uncommon.Add (ItemSelector.itemName.TOMATO);
+			tomatoRarity = ItemRarity.uncommon;
+			tomatoText.text = "HIGH";
+		}
+		else if (tomatoRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.TOMATO);
+			uncommon.Remove (ItemSelector.itemName.TOMATO);
+			rare.Remove (ItemSelector.itemName.TOMATO);
+			veryRare.Remove (ItemSelector.itemName.TOMATO);
+			rare.Add (ItemSelector.itemName.TOMATO);
+			tomatoRarity = ItemRarity.rare;
+			tomatoText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//FireFlower
+	public void FireFlowerRarityIncrease ()
+	{
+		if (fireFolwerRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.FIREFLOWER);
+			uncommon.Remove (ItemSelector.itemName.FIREFLOWER);
+			rare.Remove (ItemSelector.itemName.FIREFLOWER);
+			veryRare.Remove (ItemSelector.itemName.FIREFLOWER);
+			uncommon.Add (ItemSelector.itemName.FIREFLOWER);
+			fireFolwerRarity = ItemRarity.uncommon;
+			fireFlowerText.text = "HIGH";
+		}
+		else if (fireFolwerRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.FIREFLOWER);
+			uncommon.Remove (ItemSelector.itemName.FIREFLOWER);
+			rare.Remove (ItemSelector.itemName.FIREFLOWER);
+			veryRare.Remove (ItemSelector.itemName.FIREFLOWER);
+			rare.Add (ItemSelector.itemName.FIREFLOWER);
+			fireFolwerRarity = ItemRarity.rare;
+			fireFlowerText.text = "MEDIUM";
+		}
+		else if (fireFolwerRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.FIREFLOWER);
+			uncommon.Remove (ItemSelector.itemName.FIREFLOWER);
+			rare.Remove (ItemSelector.itemName.FIREFLOWER);
+			veryRare.Remove (ItemSelector.itemName.FIREFLOWER);
+			veryRare.Add (ItemSelector.itemName.FIREFLOWER);
+			fireFolwerRarity = ItemRarity.veryRare;
+			fireFlowerText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void FireFlowerRarityDecrease ()
+	{
+		if (fireFolwerRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.FIREFLOWER);
+			uncommon.Remove (ItemSelector.itemName.FIREFLOWER);
+			rare.Remove (ItemSelector.itemName.FIREFLOWER);
+			veryRare.Remove (ItemSelector.itemName.FIREFLOWER);
+			common.Add (ItemSelector.itemName.FIREFLOWER);
+			fireFolwerRarity = ItemRarity.common;
+			fireFlowerText.text = "VERY HIGH";
+		}
+		else if (fireFolwerRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.FIREFLOWER);
+			uncommon.Remove (ItemSelector.itemName.FIREFLOWER);
+			rare.Remove (ItemSelector.itemName.FIREFLOWER);
+			veryRare.Remove (ItemSelector.itemName.FIREFLOWER);
+			uncommon.Add (ItemSelector.itemName.FIREFLOWER);
+			fireFolwerRarity = ItemRarity.uncommon;
+			fireFlowerText.text = "HIGH";
+		}
+		else if (fireFolwerRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.FIREFLOWER);
+			uncommon.Remove (ItemSelector.itemName.FIREFLOWER);
+			rare.Remove (ItemSelector.itemName.FIREFLOWER);
+			veryRare.Remove (ItemSelector.itemName.FIREFLOWER);
+			rare.Add (ItemSelector.itemName.FIREFLOWER);
+			fireFolwerRarity = ItemRarity.rare;
+			fireFlowerText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//SmartBomb
+	public void SmartBombRarityIncrease ()
+	{
+		if (tripMineRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.TRIPMINE);
+			uncommon.Remove (ItemSelector.itemName.TRIPMINE);
+			rare.Remove (ItemSelector.itemName.TRIPMINE);
+			veryRare.Remove (ItemSelector.itemName.TRIPMINE);
+			uncommon.Add (ItemSelector.itemName.TRIPMINE);
+			tripMineRarity = ItemRarity.uncommon;
+			tripMineText.text = "HIGH";
+		}
+		else if (tripMineRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.TRIPMINE);
+			uncommon.Remove (ItemSelector.itemName.TRIPMINE);
+			rare.Remove (ItemSelector.itemName.TRIPMINE);
+			veryRare.Remove (ItemSelector.itemName.TRIPMINE);
+			rare.Add (ItemSelector.itemName.TRIPMINE);
+			tripMineRarity = ItemRarity.rare;
+			tripMineText.text = "MEDIUM";
+		}
+		else if (tripMineRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.TRIPMINE);
+			uncommon.Remove (ItemSelector.itemName.TRIPMINE);
+			rare.Remove (ItemSelector.itemName.TRIPMINE);
+			veryRare.Remove (ItemSelector.itemName.TRIPMINE);
+			veryRare.Add (ItemSelector.itemName.TRIPMINE);
+			tripMineRarity = ItemRarity.veryRare;
+			tripMineText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void SmartBombRarityDecrease ()
+	{
+		if (tripMineRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.TRIPMINE);
+			uncommon.Remove (ItemSelector.itemName.TRIPMINE);
+			rare.Remove (ItemSelector.itemName.TRIPMINE);
+			veryRare.Remove (ItemSelector.itemName.TRIPMINE);
+			common.Add (ItemSelector.itemName.TRIPMINE);
+			tripMineRarity = ItemRarity.common;
+			tripMineText.text = "VERY HIGH";
+		}
+		else if (tripMineRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.TRIPMINE);
+			uncommon.Remove (ItemSelector.itemName.TRIPMINE);
+			rare.Remove (ItemSelector.itemName.TRIPMINE);
+			veryRare.Remove (ItemSelector.itemName.TRIPMINE);
+			uncommon.Add (ItemSelector.itemName.TRIPMINE);
+			tripMineRarity = ItemRarity.uncommon;
+			tripMineText.text = "HIGH";
+		}
+		else if (tripMineRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.TRIPMINE);
+			uncommon.Remove (ItemSelector.itemName.TRIPMINE);
+			rare.Remove (ItemSelector.itemName.TRIPMINE);
+			veryRare.Remove (ItemSelector.itemName.TRIPMINE);
+			rare.Add (ItemSelector.itemName.TRIPMINE);
+			tripMineRarity = ItemRarity.rare;
+			tripMineText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//BananaPeel
+	public void BananaPeelRarityIncrease ()
+	{
+		if (bananaPeelRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.BANANAPEEL);
+			uncommon.Remove (ItemSelector.itemName.BANANAPEEL);
+			rare.Remove (ItemSelector.itemName.BANANAPEEL);
+			veryRare.Remove (ItemSelector.itemName.BANANAPEEL);
+			uncommon.Add (ItemSelector.itemName.BANANAPEEL);
+			bananaPeelRarity = ItemRarity.uncommon;
+			bananaPeelText.text = "HIGH";
+		}
+		else if (bananaPeelRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.BANANAPEEL);
+			uncommon.Remove (ItemSelector.itemName.BANANAPEEL);
+			rare.Remove (ItemSelector.itemName.BANANAPEEL);
+			veryRare.Remove (ItemSelector.itemName.BANANAPEEL);
+			rare.Add (ItemSelector.itemName.BANANAPEEL);
+			bananaPeelRarity = ItemRarity.rare;
+			bananaPeelText.text = "MEDIUM";
+		}
+		else if (bananaPeelRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.BANANAPEEL);
+			uncommon.Remove (ItemSelector.itemName.BANANAPEEL);
+			rare.Remove (ItemSelector.itemName.BANANAPEEL);
+			veryRare.Remove (ItemSelector.itemName.BANANAPEEL);
+			veryRare.Add (ItemSelector.itemName.BANANAPEEL);
+			bananaPeelRarity = ItemRarity.veryRare;
+			bananaPeelText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void BananaPeelRarityDecrease ()
+	{
+		if (bananaPeelRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.BANANAPEEL);
+			uncommon.Remove (ItemSelector.itemName.BANANAPEEL);
+			rare.Remove (ItemSelector.itemName.BANANAPEEL);
+			veryRare.Remove (ItemSelector.itemName.BANANAPEEL);
+			common.Add (ItemSelector.itemName.BANANAPEEL);
+			bananaPeelRarity = ItemRarity.common;
+			bananaPeelText.text = "VERY HIGH";
+		}
+		else if (bananaPeelRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.BANANAPEEL);
+			uncommon.Remove (ItemSelector.itemName.BANANAPEEL);
+			rare.Remove (ItemSelector.itemName.BANANAPEEL);
+			veryRare.Remove (ItemSelector.itemName.BANANAPEEL);
+			uncommon.Add (ItemSelector.itemName.BANANAPEEL);
+			bananaPeelRarity = ItemRarity.uncommon;
+			bananaPeelText.text = "HIGH";
+		}
+		else if (bananaPeelRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.BANANAPEEL);
+			uncommon.Remove (ItemSelector.itemName.BANANAPEEL);
+			rare.Remove (ItemSelector.itemName.BANANAPEEL);
+			veryRare.Remove (ItemSelector.itemName.BANANAPEEL);
+			rare.Add (ItemSelector.itemName.BANANAPEEL);
+			bananaPeelRarity = ItemRarity.rare;
+			bananaPeelText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
+
+	//Bumper
+	public void BumperRarityIncrease ()
+	{
+		if (bumperRarity == ItemRarity.common) 
+		{
+			common.Remove (ItemSelector.itemName.BUMPER);
+			uncommon.Remove (ItemSelector.itemName.BUMPER);
+			rare.Remove (ItemSelector.itemName.BUMPER);
+			veryRare.Remove (ItemSelector.itemName.BUMPER);
+			uncommon.Add (ItemSelector.itemName.BUMPER);
+			bumperRarity = ItemRarity.uncommon;
+			bumperText.text = "HIGH";
+		}
+		else if (bumperRarity == ItemRarity.uncommon)
+		{
+			common.Remove (ItemSelector.itemName.BUMPER);
+			uncommon.Remove (ItemSelector.itemName.BUMPER);
+			rare.Remove (ItemSelector.itemName.BUMPER);
+			veryRare.Remove (ItemSelector.itemName.BUMPER);
+			rare.Add (ItemSelector.itemName.BUMPER);
+			bumperRarity = ItemRarity.rare;
+			bumperText.text = "MEDIUM";
+		}
+		else if (bumperRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.BUMPER);
+			uncommon.Remove (ItemSelector.itemName.BUMPER);
+			rare.Remove (ItemSelector.itemName.BUMPER);
+			veryRare.Remove (ItemSelector.itemName.BUMPER);
+			veryRare.Add (ItemSelector.itemName.BUMPER);
+			bumperRarity = ItemRarity.veryRare;
+			bumperText.text = "LOW";
+		}
+		SetDataHolderRarity ();
+	}
+	public void BumperRarityDecrease ()
+	{
+		if (bumperRarity == ItemRarity.uncommon) 
+		{
+			common.Remove (ItemSelector.itemName.BUMPER);
+			uncommon.Remove (ItemSelector.itemName.BUMPER);
+			rare.Remove (ItemSelector.itemName.BUMPER);
+			veryRare.Remove (ItemSelector.itemName.BUMPER);
+			common.Add (ItemSelector.itemName.BUMPER);
+			bumperRarity = ItemRarity.common;
+			bumperText.text = "VERY HIGH";
+		}
+		else if (bumperRarity == ItemRarity.rare)
+		{
+			common.Remove (ItemSelector.itemName.BUMPER);
+			uncommon.Remove (ItemSelector.itemName.BUMPER);
+			rare.Remove (ItemSelector.itemName.BUMPER);
+			veryRare.Remove (ItemSelector.itemName.BUMPER);
+			uncommon.Add (ItemSelector.itemName.BUMPER);
+			bumperRarity = ItemRarity.uncommon;
+			bumperText.text = "HIGH";
+		}
+		else if (bumperRarity == ItemRarity.veryRare)
+		{
+			common.Remove (ItemSelector.itemName.BUMPER);
+			uncommon.Remove (ItemSelector.itemName.BUMPER);
+			rare.Remove (ItemSelector.itemName.BUMPER);
+			veryRare.Remove (ItemSelector.itemName.BUMPER);
+			rare.Add (ItemSelector.itemName.BUMPER);
+			bumperRarity = ItemRarity.rare;
+			bumperText.text = "MEDIUM";
+		}
+		SetDataHolderRarity ();
+	}
 }
 
 
