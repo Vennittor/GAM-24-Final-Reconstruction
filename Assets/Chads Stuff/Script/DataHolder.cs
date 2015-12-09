@@ -33,6 +33,8 @@ public class DataHolder : MonoBehaviour
 	public Sprite pThreeStock;
 	public Sprite pFourStock;
 
+	public AudioSource menuMusic;
+
 	public List <GameObject> possibleWinnersList;
 
 	public List <ItemSelector.itemName> veryRare;
@@ -58,15 +60,20 @@ public class DataHolder : MonoBehaviour
 
 	public StageSelect stageSelection;
 
+	//Cursor
+	public Texture2D handTexture;
+
 	// Use this for initialization
 	void Start () 
 	{
 		DontDestroyOnLoad (transform.gameObject);
+		Cursor.SetCursor (handTexture,Vector2.zero,CursorMode.Auto);
 		pOneIsPlayer = true;
 		pTwoIsPlayer = true;
 		pThreeIsPlayer = true;
 		pFourIsPlayer = true;
 
+		menuMusic.Play ();
 		DefaultItemSpawns ();
 	}
 	
@@ -75,6 +82,15 @@ public class DataHolder : MonoBehaviour
 	{
 		PlayerInfo ();
 //		ItemSpawner ();
+		MenuMusic ();
+	}
+
+	void MenuMusic ()
+	{
+		if (Application.loadedLevel == 5)
+		{
+			menuMusic.Stop ();
+		}
 	}
 
 	void DefaultItemSpawns ()

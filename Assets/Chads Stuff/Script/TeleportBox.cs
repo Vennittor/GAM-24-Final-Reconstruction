@@ -38,7 +38,7 @@ public class TeleportBox : MonoBehaviour
 				other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 			}
 		}
-		else if (other.gameObject.name == "PlayerTwo")
+		if (other.gameObject.name == "PlayerTwo")
 		{
 			other.GetComponent<TempPlayerController>().lives --;
 			other.GetComponent<TempPlayerController>().health = 0;
@@ -53,7 +53,7 @@ public class TeleportBox : MonoBehaviour
 				other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 			}
 		}
-		else if (other.gameObject.name == "PlayerThree")
+		if (other.gameObject.name == "PlayerThree")
 		{
 			other.GetComponent<TempPlayerController>().lives --;
 			other.GetComponent<TempPlayerController>().health = 0;
@@ -68,7 +68,7 @@ public class TeleportBox : MonoBehaviour
 				other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 			}
 		}
-		else if (other.gameObject.name == "PlayerFour")
+		if (other.gameObject.name == "PlayerFour")
 		{
 			other.GetComponent<TempPlayerController>().lives --;
 			other.GetComponent<TempPlayerController>().health = 0;

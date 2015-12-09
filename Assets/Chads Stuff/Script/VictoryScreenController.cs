@@ -14,6 +14,8 @@ public class VictoryScreenController : MonoBehaviour
 
 	public Sprite[] characterSprites;
 
+	public AudioSource victory;
+
 	public Image winnerSprite;
 
 	public Text winnerText;
@@ -22,6 +24,7 @@ public class VictoryScreenController : MonoBehaviour
 	void Start () 
 	{
 		dataHolder = GameObject.Find ("DataHolder");
+		victory.Play ();
 		winnerName = dataHolder.GetComponent<DataHolder> ().winnerName;
 		Invoke ("DetermineWinner",1.0f);
 		InvokeRepeating ("WinnerMovement",1.5f,0.0001f);

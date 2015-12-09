@@ -373,37 +373,37 @@ public class CharacterSelect : MonoBehaviour
 			pFourCharacterText.text = "DONKEY KONG";
 		}
 	}
-//	public void Samus ()
-//	{
-//		if (playerTurn == TurnTracker.playerOne)
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.samus;
-//			pOneCharacter.color = new Color (1,1,1,1);
-//			pOneCharacter.sprite = characterSprites[2];
-//			pOneCharacterText.text = "SAMUS";
-//		}
-//		else if (playerTurn == TurnTracker.playerTwo) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.samus;
-//			pTwoCharacter.color = new Color (1,1,1,1);
-//			pTwoCharacter.sprite = characterSprites[2];
-//			pTwoCharacterText.text = "SAMUS";
-//		}
-//		else if (playerTurn == TurnTracker.playerThree) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.samus;
-//			pThreeCharacter.color = new Color (1,1,1,1);
-//			pThreeCharacter.sprite = characterSprites[2];
-//			pThreeCharacterText.text = "SAMUS";
-//		}
-//		else if (playerTurn == TurnTracker.playerFour) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.samus;
-//			pFourCharacter.color = new Color (1,1,1,1);
-//			pFourCharacter.sprite = characterSprites[2];
-//			pFourCharacterText.text = "SAMUS";
-//		}
-//	}
+	public void Samus ()
+	{
+		if (playerTurn == TurnTracker.playerOne)
+		{
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.samus;
+			pOneCharacter.color = new Color (1,1,1,1);
+			pOneCharacter.sprite = characterSprites[2];
+			pOneCharacterText.text = "SAMUS";
+		}
+		else if (playerTurn == TurnTracker.playerTwo) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.samus;
+			pTwoCharacter.color = new Color (1,1,1,1);
+			pTwoCharacter.sprite = characterSprites[2];
+			pTwoCharacterText.text = "SAMUS";
+		}
+		else if (playerTurn == TurnTracker.playerThree) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.samus;
+			pThreeCharacter.color = new Color (1,1,1,1);
+			pThreeCharacter.sprite = characterSprites[2];
+			pThreeCharacterText.text = "SAMUS";
+		}
+		else if (playerTurn == TurnTracker.playerFour) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.samus;
+			pFourCharacter.color = new Color (1,1,1,1);
+			pFourCharacter.sprite = characterSprites[2];
+			pFourCharacterText.text = "SAMUS";
+		}
+	}
 	public void Kirby ()
 	{
 		if (playerTurn == TurnTracker.playerOne)
@@ -435,99 +435,99 @@ public class CharacterSelect : MonoBehaviour
 			pFourCharacterText.text = "KIRBY";
 		}
 	}
-//	public void Luigi ()
-//	{
-//		if (playerTurn == TurnTracker.playerOne)
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.luigi;
-//			pOneCharacter.color = new Color (1,1,1,1);
-//			pOneCharacter.sprite = characterSprites[4];
-//			pOneCharacterText.text = "LUIGI";
-//		}
-//		else if (playerTurn == TurnTracker.playerTwo) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.luigi;
-//			pTwoCharacter.color = new Color (1,1,1,1);
-//			pTwoCharacter.sprite = characterSprites[4];
-//			pTwoCharacterText.text = "LUIGI";
-//		}
-//		else if (playerTurn == TurnTracker.playerThree) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.luigi;
-//			pThreeCharacter.color = new Color (1,1,1,1);
-//			pThreeCharacter.sprite = characterSprites[4];
-//			pThreeCharacterText.text = "LUIGI";
-//		}
-//		else if (playerTurn == TurnTracker.playerFour) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.luigi;
-//			pFourCharacter.color = new Color (1,1,1,1);
-//			pFourCharacter.sprite = characterSprites[4];
-//			pFourCharacterText.text = "LUIGI";
-//		}
-//	}
-//	public void Zelda ()
-//	{
-//		if (playerTurn == TurnTracker.playerOne)
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.zelda;
-//			pOneCharacter.color = new Color (1,1,1,1);
-//			pOneCharacter.sprite = characterSprites[5];
-//			pOneCharacterText.text = "ZELDA";
-//		}
-//		else if (playerTurn == TurnTracker.playerTwo) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.zelda;
-//			pTwoCharacter.color = new Color (1,1,1,1);
-//			pTwoCharacter.sprite = characterSprites[5];
-//			pTwoCharacterText.text = "ZELDA";
-//		}
-//		else if (playerTurn == TurnTracker.playerThree) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.zelda;
-//			pThreeCharacter.color = new Color (1,1,1,1);
-//			pThreeCharacter.sprite = characterSprites[5];
-//			pThreeCharacterText.text = "ZELDA";
-//		}
-//		else if (playerTurn == TurnTracker.playerFour) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.zelda;
-//			pFourCharacter.color = new Color (1,1,1,1);
-//			pFourCharacter.sprite = characterSprites[5];
-//			pFourCharacterText.text = "ZELDA";
-//		}
-//	}
-//	public void Yoshi ()
-//	{
-//		if (playerTurn == TurnTracker.playerOne)
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.yoshi;
-//			pOneCharacter.color = new Color (1,1,1,1);
-//			pOneCharacter.sprite = characterSprites[6];
-//			pOneCharacterText.text = "YOSHI";
-//		}
-//		else if (playerTurn == TurnTracker.playerTwo) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.yoshi;
-//			pTwoCharacter.color = new Color (1,1,1,1);
-//			pTwoCharacter.sprite = characterSprites[6];
-//			pTwoCharacterText.text = "YOSHI";
-//		}
-//		else if (playerTurn == TurnTracker.playerThree) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.yoshi;
-//			pThreeCharacter.color = new Color (1,1,1,1);
-//			pThreeCharacter.sprite = characterSprites[6];
-//			pThreeCharacterText.text = "YOSHI";
-//		}
-//		else if (playerTurn == TurnTracker.playerFour) 
-//		{
-//			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.yoshi;
-//			pFourCharacter.color = new Color (1,1,1,1);
-//			pFourCharacter.sprite = characterSprites[6];
-//			pFourCharacterText.text = "YOSHI";
-//		}
-//	}
+	public void Luigi ()
+	{
+		if (playerTurn == TurnTracker.playerOne)
+		{
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.luigi;
+			pOneCharacter.color = new Color (1,1,1,1);
+			pOneCharacter.sprite = characterSprites[4];
+			pOneCharacterText.text = "LUIGI";
+		}
+		else if (playerTurn == TurnTracker.playerTwo) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.luigi;
+			pTwoCharacter.color = new Color (1,1,1,1);
+			pTwoCharacter.sprite = characterSprites[4];
+			pTwoCharacterText.text = "LUIGI";
+		}
+		else if (playerTurn == TurnTracker.playerThree) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.luigi;
+			pThreeCharacter.color = new Color (1,1,1,1);
+			pThreeCharacter.sprite = characterSprites[4];
+			pThreeCharacterText.text = "LUIGI";
+		}
+		else if (playerTurn == TurnTracker.playerFour) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.luigi;
+			pFourCharacter.color = new Color (1,1,1,1);
+			pFourCharacter.sprite = characterSprites[4];
+			pFourCharacterText.text = "LUIGI";
+		}
+	}
+	public void Zelda ()
+	{
+		if (playerTurn == TurnTracker.playerOne)
+		{
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.zelda;
+			pOneCharacter.color = new Color (1,1,1,1);
+			pOneCharacter.sprite = characterSprites[5];
+			pOneCharacterText.text = "ZELDA";
+		}
+		else if (playerTurn == TurnTracker.playerTwo) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.zelda;
+			pTwoCharacter.color = new Color (1,1,1,1);
+			pTwoCharacter.sprite = characterSprites[5];
+			pTwoCharacterText.text = "ZELDA";
+		}
+		else if (playerTurn == TurnTracker.playerThree) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.zelda;
+			pThreeCharacter.color = new Color (1,1,1,1);
+			pThreeCharacter.sprite = characterSprites[5];
+			pThreeCharacterText.text = "ZELDA";
+		}
+		else if (playerTurn == TurnTracker.playerFour) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.zelda;
+			pFourCharacter.color = new Color (1,1,1,1);
+			pFourCharacter.sprite = characterSprites[5];
+			pFourCharacterText.text = "ZELDA";
+		}
+	}
+	public void Yoshi ()
+	{
+		if (playerTurn == TurnTracker.playerOne)
+		{
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.yoshi;
+			pOneCharacter.color = new Color (1,1,1,1);
+			pOneCharacter.sprite = characterSprites[6];
+			pOneCharacterText.text = "YOSHI";
+		}
+		else if (playerTurn == TurnTracker.playerTwo) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.yoshi;
+			pTwoCharacter.color = new Color (1,1,1,1);
+			pTwoCharacter.sprite = characterSprites[6];
+			pTwoCharacterText.text = "YOSHI";
+		}
+		else if (playerTurn == TurnTracker.playerThree) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.yoshi;
+			pThreeCharacter.color = new Color (1,1,1,1);
+			pThreeCharacter.sprite = characterSprites[6];
+			pThreeCharacterText.text = "YOSHI";
+		}
+		else if (playerTurn == TurnTracker.playerFour) 
+		{
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.yoshi;
+			pFourCharacter.color = new Color (1,1,1,1);
+			pFourCharacter.sprite = characterSprites[6];
+			pFourCharacterText.text = "YOSHI";
+		}
+	}
 	public void Bowser ()
 	{
 		if (playerTurn == TurnTracker.playerOne)
