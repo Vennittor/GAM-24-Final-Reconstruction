@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -76,7 +76,7 @@ public class StageSelectionController : MonoBehaviour
 
 	public void BrawlButton ()
 	{
-		if (playerDataHolder.GetComponent<PlayerDataHolder> ().stageSelection != PlayerDataHolder.StageSelect.none) 
+		if (playerDataHolder.GetComponent<DataHolder> ().stageSelection != DataHolder.StageSelect.none) 
 		{
 			fade = false;
 			buttonMove = false;
@@ -87,28 +87,28 @@ public class StageSelectionController : MonoBehaviour
 	//Stages
 	public void FinalDestination ()
 	{
-		playerDataHolder.GetComponent<PlayerDataHolder>().stageSelection = PlayerDataHolder.StageSelect.finalDestination;
+		playerDataHolder.GetComponent<DataHolder>().stageSelection = DataHolder.StageSelect.finalDestination;
 		selectedStage.sprite = stages[0];
 		selectedStage.color = new Color (1,1,1,1);
 	}
 
 	public void PokemonStadium ()
 	{
-		playerDataHolder.GetComponent<PlayerDataHolder>().stageSelection = PlayerDataHolder.StageSelect.pokemonStadium;
+		playerDataHolder.GetComponent<DataHolder>().stageSelection = DataHolder.StageSelect.pokemonStadium;
 		selectedStage.sprite = stages[1];
 		selectedStage.color = new Color (1,1,1,1);
 	}
 
 	public void GreenyGreens ()
 	{
-		playerDataHolder.GetComponent<PlayerDataHolder> ().stageSelection = PlayerDataHolder.StageSelect.greenyGreens;
+		playerDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.greenyGreens;
 		selectedStage.sprite = stages [2];
 		selectedStage.color = new Color (1,1,1,1);
 	}
 
 	public void Hyrule ()
 	{
-		playerDataHolder.GetComponent<PlayerDataHolder> ().stageSelection = PlayerDataHolder.StageSelect.hyrule;
+		playerDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.hyrule;
 		selectedStage.sprite = stages[3];
 		selectedStage.color = new Color (1,1,1,1);
 	}

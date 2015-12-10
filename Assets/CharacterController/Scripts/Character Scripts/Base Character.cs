@@ -3,6 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(DisabledStates))]
+[RequireComponent(typeof(CharacterInputManager))]
+[RequireComponent(typeof(PlayerStates))]
 public class BaseCharacter : MonoBehaviour 
 {
 	public PlayerStates playerStates;
@@ -22,6 +27,7 @@ public class BaseCharacter : MonoBehaviour
 	public int attackCount;
 	public bool started;
 	public float time;
+	public int lives = 3;
 
 
 	public GameObject hitCollider;
@@ -40,12 +46,19 @@ public class BaseCharacter : MonoBehaviour
         disabledStates = this.gameObject.GetComponent<DisabledStates>();
         inputManager = this.gameObject.GetComponent<CharacterInputManager>();
         rigidBody = this.gameObject.GetComponent<Rigidbody>();
-        Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), hitCollider.GetComponent<Collider>());
+        //Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), hitCollider.GetComponent<Collider>());
+		rigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
+		rigidBody.freezeRotation = true;
+		parent = this.gameObject.transform.FindChild ("GameObject").gameObject;
+		hitCollider = parent.transform.FindChild("HitCollider").gameObject;
         hitCollider.SetActive(false);
         hitCollider.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        smashBar = transform.FindChild("SmashBar").gameObject;
     }
 	public virtual void Update()
 	{
+		if (health > 999)
+			health = 999;
 		time = 0;
 		if (smashTime != null)
 		{
@@ -60,6 +73,7 @@ public class BaseCharacter : MonoBehaviour
                 animControl.playLoop("Idle");
                 if (inputManager.jumpButton)
                 {
+                    Debug.Log("Jump");
                     animControl.playTime("Jump");
                 }
             }
@@ -67,6 +81,7 @@ public class BaseCharacter : MonoBehaviour
             {
                 if (inputManager.jumpButton)
                 {
+                    
                     animControl.playTime("Jump");
                 }
                 animControl.playLoop("Run");
@@ -310,14 +325,14 @@ public class BaseCharacter : MonoBehaviour
             health += damage;
 		//((((health/10 + health*damage/20) * 200/(weight+100) * 1.4f) + 18) * knockBack)
 
-//		if (damage != 0 && knockBack != 0f)
-//		{
-//			direction = transform.position - hitTransform.position;
-//			direction = Vector3.Normalize (direction);
-//			direction = new Vector3 (direction.x, direction.y + 0.1f, 0f);
-//
-//			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 100f);
-//		}
+		if (damage != 0 && knockBack != 0f)
+		{
+			direction = transform.position - hitTransform.position;
+			direction = Vector3.Normalize (direction);
+			direction = new Vector3 (direction.x, direction.y + 0.6f, 0f);
+
+			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 100f);
+		}
 
 	}
 

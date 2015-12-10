@@ -17,14 +17,17 @@ public class DisabledStates : MonoBehaviour
 	// Use this for initialization
 	void Awake () 
 	{
-		character = this.gameObject.GetComponent<BaseCharacter> ();
-		playerStates = this.gameObject.GetComponent<PlayerStates> ();
-		inputManager = this.gameObject.GetComponent<CharacterInputManager> ();
+        character = this.gameObject.GetComponent<BaseCharacter>();
+        playerStates = this.gameObject.GetComponent<PlayerStates>();
+        inputManager = this.gameObject.GetComponent<CharacterInputManager> ();
 	}
 
 	void Start()
 	{
-		AddKeys ();
+        character = this.gameObject.GetComponent<BaseCharacter>();
+        playerStates = this.gameObject.GetComponent<PlayerStates>();
+        inputManager = this.gameObject.GetComponent<CharacterInputManager>();
+        AddKeys ();
 	}
 
 	// Update is called once per frame

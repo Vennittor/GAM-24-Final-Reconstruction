@@ -51,8 +51,8 @@ public class CharacterSelect : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		playerCount = playerDataHolder.GetComponent<PlayerDataHolder> ().playerCount;
-		playerCountText.text = "NUMBER OF PLAYERS    " + playerDataHolder.GetComponent<PlayerDataHolder> ().playerCount;
+		playerCount = playerDataHolder.GetComponent<DataHolder> ().playerCount;
+		playerCountText.text = "NUMBER OF PLAYERS    " + playerDataHolder.GetComponent<DataHolder> ().playerCount;
 
 		PlayerSelectionDisplay ();
 		Fade ();
@@ -138,16 +138,16 @@ public class CharacterSelect : MonoBehaviour
 	//playerCount controller
 	public void PlayerCountIncrease ()
 	{
-		if (playerDataHolder.GetComponent<PlayerDataHolder>().playerCount < 4)
+		if (playerDataHolder.GetComponent<DataHolder>().playerCount < 4)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().playerCount ++;
+			playerDataHolder.GetComponent<DataHolder>().playerCount ++;
 		}
 	}
 	public void PlayerCountDecrease ()
 	{
-		if (playerDataHolder.GetComponent<PlayerDataHolder>().playerCount > 1)
+		if (playerDataHolder.GetComponent<DataHolder>().playerCount > 1)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().playerCount --;
+			playerDataHolder.GetComponent<DataHolder>().playerCount --;
 		}
 	}
 
@@ -204,25 +204,25 @@ public class CharacterSelect : MonoBehaviour
 	{
 		if (playerTurn == TurnTracker.playerOne)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pOneSelection = PlayerDataHolder.CharacterSelection.mario;
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.mario;
 			pOneCharacter.sprite = characterSprites[0];
 			pOneCharacterText.text = "MARIO";
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pTwoSelection = PlayerDataHolder.CharacterSelection.mario;
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.mario;
 			pTwoCharacter.sprite = characterSprites[0];
 			pTwoCharacterText.text = "MARIO";
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pThreeSelection = PlayerDataHolder.CharacterSelection.mario;
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.mario;
 			pThreeCharacter.sprite = characterSprites[0];
 			pThreeCharacterText.text = "MARIO";
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pFourSelection = PlayerDataHolder.CharacterSelection.mario;
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.mario;
 			pFourCharacter.sprite = characterSprites[0];
 			pFourCharacterText.text = "MARIO";
 		}
@@ -231,25 +231,25 @@ public class CharacterSelect : MonoBehaviour
 	{
 		if (playerTurn == TurnTracker.playerOne)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pOneSelection = PlayerDataHolder.CharacterSelection.donkeyKong;
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.donkeyKong;
 			pOneCharacter.sprite = characterSprites[1];
 			pOneCharacterText.text = "DONKEY KONG";
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pTwoSelection = PlayerDataHolder.CharacterSelection.donkeyKong;
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.donkeyKong;
 			pTwoCharacter.sprite = characterSprites[1];
 			pTwoCharacterText.text = "DONKEY KONG";
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pThreeSelection = PlayerDataHolder.CharacterSelection.donkeyKong;
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.donkeyKong;
 			pThreeCharacter.sprite = characterSprites[1];
 			pThreeCharacterText.text = "DONKEY KONG";
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pFourSelection = PlayerDataHolder.CharacterSelection.donkeyKong;
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.donkeyKong;
 			pFourCharacter.sprite = characterSprites[1];
 			pFourCharacterText.text = "DONKEY KONG";
 		}
@@ -258,25 +258,25 @@ public class CharacterSelect : MonoBehaviour
 	{
 		if (playerTurn == TurnTracker.playerOne)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pOneSelection = PlayerDataHolder.CharacterSelection.samus;
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.samus;
 			pOneCharacter.sprite = characterSprites[2];
 			pOneCharacterText.text = "SAMUS";
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pTwoSelection = PlayerDataHolder.CharacterSelection.samus;
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.samus;
 			pTwoCharacter.sprite = characterSprites[2];
 			pTwoCharacterText.text = "SAMUS";
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pThreeSelection = PlayerDataHolder.CharacterSelection.samus;
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.samus;
 			pThreeCharacter.sprite = characterSprites[2];
 			pThreeCharacterText.text = "SAMUS";
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pFourSelection = PlayerDataHolder.CharacterSelection.samus;
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.samus;
 			pFourCharacter.sprite = characterSprites[2];
 			pFourCharacterText.text = "SAMUS";
 		}
@@ -285,25 +285,25 @@ public class CharacterSelect : MonoBehaviour
 	{
 		if (playerTurn == TurnTracker.playerOne)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pOneSelection = PlayerDataHolder.CharacterSelection.kirby;
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.kirby;
 			pOneCharacter.sprite = characterSprites[3];
 			pOneCharacterText.text = "KIRBY";
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pTwoSelection = PlayerDataHolder.CharacterSelection.kirby;
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.kirby;
 			pTwoCharacter.sprite = characterSprites[3];
 			pTwoCharacterText.text = "KIRBY";
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pThreeSelection = PlayerDataHolder.CharacterSelection.kirby;
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.kirby;
 			pThreeCharacter.sprite = characterSprites[3];
 			pThreeCharacterText.text = "KIRBY";
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pFourSelection = PlayerDataHolder.CharacterSelection.kirby;
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.kirby;
 			pFourCharacter.sprite = characterSprites[3];
 			pFourCharacterText.text = "KIRBY";
 		}
@@ -312,25 +312,25 @@ public class CharacterSelect : MonoBehaviour
 	{
 		if (playerTurn == TurnTracker.playerOne)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pOneSelection = PlayerDataHolder.CharacterSelection.luigi;
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.luigi;
 			pOneCharacter.sprite = characterSprites[4];
 			pOneCharacterText.text = "LUIGI";
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pTwoSelection = PlayerDataHolder.CharacterSelection.luigi;
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.luigi;
 			pTwoCharacter.sprite = characterSprites[4];
 			pTwoCharacterText.text = "LUIGI";
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pThreeSelection = PlayerDataHolder.CharacterSelection.luigi;
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.luigi;
 			pThreeCharacter.sprite = characterSprites[4];
 			pThreeCharacterText.text = "LUIGI";
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pFourSelection = PlayerDataHolder.CharacterSelection.luigi;
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.luigi;
 			pFourCharacter.sprite = characterSprites[4];
 			pFourCharacterText.text = "LUIGI";
 		}
@@ -339,25 +339,25 @@ public class CharacterSelect : MonoBehaviour
 	{
 		if (playerTurn == TurnTracker.playerOne)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pOneSelection = PlayerDataHolder.CharacterSelection.zelda;
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.zelda;
 			pOneCharacter.sprite = characterSprites[5];
 			pOneCharacterText.text = "ZELDA";
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pTwoSelection = PlayerDataHolder.CharacterSelection.zelda;
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.zelda;
 			pTwoCharacter.sprite = characterSprites[5];
 			pTwoCharacterText.text = "ZELDA";
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pThreeSelection = PlayerDataHolder.CharacterSelection.zelda;
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.zelda;
 			pThreeCharacter.sprite = characterSprites[5];
 			pThreeCharacterText.text = "ZELDA";
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pFourSelection = PlayerDataHolder.CharacterSelection.zelda;
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.zelda;
 			pFourCharacter.sprite = characterSprites[5];
 			pFourCharacterText.text = "ZELDA";
 		}
@@ -366,25 +366,25 @@ public class CharacterSelect : MonoBehaviour
 	{
 		if (playerTurn == TurnTracker.playerOne)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pOneSelection = PlayerDataHolder.CharacterSelection.yoshi;
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.yoshi;
 			pOneCharacter.sprite = characterSprites[6];
 			pOneCharacterText.text = "YOSHI";
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pTwoSelection = PlayerDataHolder.CharacterSelection.yoshi;
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.yoshi;
 			pTwoCharacter.sprite = characterSprites[6];
 			pTwoCharacterText.text = "YOSHI";
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pThreeSelection = PlayerDataHolder.CharacterSelection.yoshi;
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.yoshi;
 			pThreeCharacter.sprite = characterSprites[6];
 			pThreeCharacterText.text = "YOSHI";
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pFourSelection = PlayerDataHolder.CharacterSelection.yoshi;
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.yoshi;
 			pFourCharacter.sprite = characterSprites[6];
 			pFourCharacterText.text = "YOSHI";
 		}
@@ -393,25 +393,25 @@ public class CharacterSelect : MonoBehaviour
 	{
 		if (playerTurn == TurnTracker.playerOne)
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pOneSelection = PlayerDataHolder.CharacterSelection.bowser;
+			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.bowser;
 			pOneCharacter.sprite = characterSprites[7];
 			pOneCharacterText.text = "BOWSER";
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pTwoSelection = PlayerDataHolder.CharacterSelection.bowser;
+			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.bowser;
 			pTwoCharacter.sprite = characterSprites[7];
 			pTwoCharacterText.text = "BOWSER";
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pThreeSelection = PlayerDataHolder.CharacterSelection.bowser;
+			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.bowser;
 			pThreeCharacter.sprite = characterSprites[7];
 			pThreeCharacterText.text = "BOWSER";
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
-			playerDataHolder.GetComponent<PlayerDataHolder>().pFourSelection = PlayerDataHolder.CharacterSelection.bowser;
+			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.bowser;
 			pFourCharacter.sprite = characterSprites[7];
 			pFourCharacterText.text = "BOWSER";
 		}
