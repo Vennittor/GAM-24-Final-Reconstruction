@@ -22,7 +22,7 @@ public class BaseCharacter : MonoBehaviour
 	public int attackCount;
 	public bool started;
 	public float time;
-	public GameObject camera;
+
 
 	public GameObject hitCollider;
 

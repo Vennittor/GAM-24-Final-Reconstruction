@@ -31,7 +31,7 @@ public class KirbyCharacter : BaseCharacter
 
 	public override void StandingA()
 	{
-        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))//checks frozen
             return;
         if (hasItem)
         {
@@ -40,7 +40,7 @@ public class KirbyCharacter : BaseCharacter
         }
         else
         {
-            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)
+            if (eatenPlayer == null && !hasEaten || eatenPlayer != null && hasEaten)// kirby spec
             {
                 float attackLegnth = 0.1f;
                 Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
@@ -59,7 +59,7 @@ public class KirbyCharacter : BaseCharacter
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
             }
-            else
+            else// kirby spec
             {
                 eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
                 eatenPlayer.transform.localScale = new Vector3(1f, 1f, 1f);
