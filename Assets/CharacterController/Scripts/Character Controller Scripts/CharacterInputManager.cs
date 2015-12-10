@@ -88,7 +88,6 @@ public class CharacterInputManager : MonoBehaviour
 				if (jumpButton && jumpCount == jumpMax && !character.frozen)
 				{
                     //Input -> Physics -> Gravity -> set to -80
-                    Debug.Log("ShouldJump");
 					rigidBody.AddForce(0f, 16 * ((jumpHeight * jumpHeight) / weight), 0f);
 				}
 
@@ -154,7 +153,6 @@ public class CharacterInputManager : MonoBehaviour
 				{
 					if (leftInput < 0)
 					{
-                        Debug.Log(leftInput);
 						leftList.Add(leftInput);
 						if (leftList.Count > 3)
 							leftList.RemoveAt(0);

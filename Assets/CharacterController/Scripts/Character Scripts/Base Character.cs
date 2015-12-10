@@ -73,7 +73,6 @@ public class BaseCharacter : MonoBehaviour
                 animControl.playLoop("Idle");
                 if (inputManager.jumpButton)
                 {
-                    Debug.Log("Jump");
                     animControl.playTime("Jump");
                 }
             }
@@ -485,6 +484,62 @@ public class BaseCharacter : MonoBehaviour
             Freeze(0);
         }
         yield return null;
+    }
+    public virtual void Respawn(bool canMove)
+    {
+        if (canMove)
+        {
+            playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK);
+            playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.UNCOLLIDABLE);
+            playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.NODAMAGE);
+            playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.GRABIMMUNE);
+            playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
+            StartCoroutine(RespawnFreezing(canMove));
+        }
+        else
+        {
+            if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK))
+                playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK);
+            if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.UNCOLLIDABLE))
+                playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.UNCOLLIDABLE);
+            if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.NODAMAGE))
+                playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.NODAMAGE);
+            if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.GRABIMMUNE))
+                playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.GRABIMMUNE);
+            if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE))
+                playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
+        }
+    }
+    public virtual IEnumerator RespawnFreezing(bool canMove)
+    {
+        frozen = canMove;
+        Component[] components = model.GetComponentsInChildren<Component>();
+        List<SkinnedMeshRenderer> meshes = new List<SkinnedMeshRenderer>();
+        foreach (Component component in components)
+        {
+            if (component is SkinnedMeshRenderer)
+            {
+                meshes.Add((component as SkinnedMeshRenderer));
+            }
+        }
+        while (frozen)
+        {
+            foreach (SkinnedMeshRenderer mesh in meshes)
+            {
+                mesh.material.color = Color.Lerp(mesh.material.color, Color.cyan, 2);
+            }
+            yield return new WaitForSeconds(.2f);
+            foreach (SkinnedMeshRenderer mesh in meshes)
+            {
+                mesh.material.color = Color.Lerp(mesh.material.color, Color.white, 2);
+            }
+            yield return new WaitForSeconds(.2f);
+        }
+        if (!frozen)
+        {
+            yield return null;
+        }
+       
     }
 
 }

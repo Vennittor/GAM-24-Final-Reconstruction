@@ -48,6 +48,8 @@ public class CombatGUIController : MonoBehaviour
 	public GameObject playerThree;
 	public GameObject playerThreeGUI;
 
+    public GameObject spawnPlatform;
+
 	//player four
 	public Image pFourCharacterPortrait;
 	public Image pFourStockImageOne;
@@ -81,12 +83,13 @@ public class CombatGUIController : MonoBehaviour
 	void PlayerOneGUI ()
 	{
 		playerOne = gameManager.GetComponent<GameManager> ().playerOne;
-		pOneCurrentPercent = playerOne.GetComponent<BaseCharacter> ().health;
+		pOneCurrentPercent = playerOne.GetComponent<BaseCharacter>().health;
 		pOneName.text = playerDataHolder.GetComponent<DataHolder>().pOneCharacterName;
 		pOneCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pOnePortrait;
 		pOneStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pOneStock;
 		pOneStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pOneStock;
 		pOnePercentText.text = "" + (int)pOneCurrentPercent + "%";
+        
 
 		//Stock Images
 		if (playerOne.GetComponent<BaseCharacter> ().lives == 2) 
@@ -132,8 +135,7 @@ public class CombatGUIController : MonoBehaviour
 		pTwoCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoPortrait;
 		pTwoStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoStock;
 		pTwoStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoStock;
-		pTwoPercentText.text = "" + (int)pOneCurrentPercent + "%";
-
+		pTwoPercentText.text = "" + (int)pTwoCurrentPercent + "%";
 		//Stock Images
 		if (playerTwo.GetComponent<BaseCharacter> ().lives == 2) 
 		{
