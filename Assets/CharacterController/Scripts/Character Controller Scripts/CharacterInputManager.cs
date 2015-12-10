@@ -556,7 +556,7 @@ public class CharacterInputManager : MonoBehaviour
 		{
 			if (Input.GetAxis (playerName + "_Vertical") < 0)
 				downInput = Input.GetAxis (playerName + "_Vertical");
-			else if (Input.GetAxis (playerName + "_Vertical") > 0)
+			else if (Input.GetAxis (playerName + "_Vertical") > 0)s
 				upInput = Input.GetAxis (playerName + "_Vertical");
 		}
 		else

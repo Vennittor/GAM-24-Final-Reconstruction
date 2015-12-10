@@ -34,8 +34,8 @@ public class Animation_Controller : MonoBehaviour {
 		}
 	}
 
-	// Stops all animation
-	public void stop()
+    // Stops all animation
+    public void stop()
 	{
 		anim.Stop ();
 	}

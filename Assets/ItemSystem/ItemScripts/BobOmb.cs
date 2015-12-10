@@ -23,6 +23,7 @@ public class BobOmb : ItemBaseScript
         if(timer<=0)
         {
             active = true;
+            gameObject.layer = 11;
             Vector3 moveDir = Vector3.right;
             if (goRight)
             {
