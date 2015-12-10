@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
 	void AddToCharacters()
 	{
 		character.Add (DataHolder.CharacterSelection.kirby, typeof(KirbyCharacter));
-		//character.Add (DataHolder.CharacterSelection.link, typeof(LinkCharacter));
-		//character.Add (DataHolder.CharacterSelection.donkeyKong, typeof(DonkeyKongCharacter));
-		//character.Add (DataHolder.CharacterSelection.mario, typeof(MarioCharacter));
+//		character.Add (DataHolder.CharacterSelection.link, typeof(LinkCharacter));
+//		character.Add (DataHolder.CharacterSelection.donkeyKong, typeof(DonkeyKongCharacter));
+//		character.Add (DataHolder.CharacterSelection.mario, typeof(MarioCharacter));
 	}
 
 	void InitialSpawn ()
@@ -67,18 +67,14 @@ public class GameManager : MonoBehaviour
 				playerOne = temp;
 			else if (i == 1)
 				playerTwo = temp;
-			else if (i==3)
+			else if (i == 2)
 				playerThree = temp;
-			else if (i==4)
+			else if (i == 3)
 				playerFour = temp;
 
-			foreach (DataHolder.CharacterSelection chars in playerDataHolder.GetComponent<DataHolder>().characters)
+			if (character.TryGetValue(playerDataHolder.GetComponent<DataHolder>().characters[i], out value))
 			{
-				if (character.TryGetValue(chars, out value))
-				{
-					temp.AddComponent(value);
-					break;
-				}
+				temp.AddComponent(value);
 			}
 		}
 	}

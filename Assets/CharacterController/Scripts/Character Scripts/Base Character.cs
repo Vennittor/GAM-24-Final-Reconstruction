@@ -322,14 +322,14 @@ public class BaseCharacter : MonoBehaviour
             health += damage;
 		//((((health/10 + health*damage/20) * 200/(weight+100) * 1.4f) + 18) * knockBack)
 
-//		if (damage != 0 && knockBack != 0f)
-//		{
-//			direction = transform.position - hitTransform.position;
-//			direction = Vector3.Normalize (direction);
-//			direction = new Vector3 (direction.x, direction.y + 0.1f, 0f);
-//
-//			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 100f);
-//		}
+		if (damage != 0 && knockBack != 0f)
+		{
+			direction = transform.position - hitTransform.position;
+			direction = Vector3.Normalize (direction);
+			direction = new Vector3 (direction.x, direction.y + 0.6f, 0f);
+
+			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 100f);
+		}
 
 	}
 

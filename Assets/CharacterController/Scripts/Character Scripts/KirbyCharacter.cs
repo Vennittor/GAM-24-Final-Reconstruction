@@ -670,7 +670,15 @@ public class KirbyCharacter : BaseCharacter
 			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (0, 2100f, 0f));
 		}
 		else
-			eatenPlayer.GetComponent<BaseCharacter>().NeutralB();
+		{
+			if (eatenPlayer.GetComponent<BaseCharacter>().name != "KirbyCharacter")
+				eatenPlayer.GetComponent<BaseCharacter>().NeutralB();
+			else
+			{
+				eatenPlayer = null;
+				hasEaten = false;
+			}
+		}
 
 		// Neutral B Animation
 		// Neutral B Sound
@@ -839,119 +847,14 @@ public class KirbyCharacter : BaseCharacter
 		// Ledge Attack Animation
 		// Ledge Attack Sound
 	}
-	
-	/*public override IEnumerator AttackMovement(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
-	                                  bool pivot, Vector3 rotationDirection, float rotationSpeed, int damage, float knockBack, PlayerStates.disabledAndProtectiveStates state,
-	                                           float stateDuration)
-	{
-        playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-        hitCollider.SetActive(true);
-
-        while (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK))
-        {
-            disabledStates.vAttackLength = attackLength;
-
-            hitCollider.transform.localPosition = position;
-            hitCollider.transform.localScale = boxCollider;
-
-            rigidBody.velocity = Vector3.Lerp(this.rigidBody.velocity, lerpVelocity, lerpSpeed * Time.deltaTime);
-
-            if (pivot)
-                parent.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
-            else
-                hitCollider.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
-
-            hitCollider.GetComponent<HitCollider>().damage = damage;
-            hitCollider.GetComponent<HitCollider>().knockBack = knockBack;
-            hitCollider.GetComponent<HitCollider>().state = state;
-            hitCollider.GetComponent<HitCollider>().stateDuration = stateDuration;
-
-            yield return null;
-        }
-    }*/
 
 	public override void ResetAttack()
 	{
 		if (!rock)
 		{
             base.ResetAttack();
-            /*
-                if (disabledStates.lockTime != null)
-				disabledStates.lockTime.Kill ();
-
-			hitCollider.GetComponent<HitCollider> ().otherPlayer = null;
-			hitCollider.GetComponent<HitCollider> ().hitPlayer = false;
-			hitCollider.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
-			hitCollider.transform.localPosition = Vector3.zero;
-			hitCollider.SetActive (false);
-			hitCollider.transform.localRotation = Quaternion.identity;
-
-			smashBar.GetComponentInParent<Canvas> ().transform.localPosition = new Vector3 (300f, 300f, 300f);
-
-			if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK))
-				playerStates.disabledStates.Remove (PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			
-			if (parent != null)
-			{
-				parent.transform.localPosition = Vector3.zero;
-				parent.transform.localRotation = Quaternion.identity;
-			}            
-            */
         }
     }
-
-	//public override IEnumerator ComboAttack (float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, bool pivot, Vector3 rotationDirection, float rotationSpeed)
-	//{
-        /*
-        hitCollider.SetActive (true);
-		while (Input.GetButton(inputManager.playerName + "_Attack"))
-		{
-			inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
-			inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = false;
-
-			disabledStates.vAttackLength = attackLength;
-			
-			hitCollider.transform.localPosition = new Vector3 (1f, Random.Range(-1f, 1f), 0f);
-			hitCollider.transform.localScale = boxCollider;
-			
-			rigidBody.velocity = Vector3.Lerp (this.rigidBody.velocity, lerpVelocity, lerpSpeed * Time.deltaTime);
-			
-			if (pivot)
-				parent.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
-			else
-				hitCollider.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
-			
-			yield return null;
-		}
-		ResetAttack ();
-		comboTime.Kill ();
-        */
-   // }
-
-   /* public override IEnumerator SmashAttack (float attackLegnth, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed,
-	                                         bool pivot, Vector3 rotationDirection, float rotationSpeed)
-	{
-        smashBar.GetComponentInParent<Canvas>().transform.localPosition = new Vector3(0f, 2f, 0f);
-        while (Input.GetButton(inputManager.playerName + "_Attack") && started)
-        {
-            inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
-            inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
-
-            yield return null;
-        }
-
-        inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
-        inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
-
-        int damage = 3;
-        float knockBack = 1.0f;
-        PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-        float stateDuration = 0.5f;
-
-        StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-                                        knockBack, state, stateDuration));
-        smashTime.Kill();
-    }*/
 
     private IEnumerator SpecialMovement(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
 	                                           bool pivot, Vector3 rotationDirection, float rotationSpeed, bool buttonHold, System.Action end, bool neutralB)
