@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class TeleportBox : MonoBehaviour 
@@ -25,10 +25,10 @@ public class TeleportBox : MonoBehaviour
 	{
 		if (other.gameObject.name == "PlayerOne")
 		{
-			other.GetComponent<TempPlayerController>().lives --;
-			other.GetComponent<TempPlayerController>().health = 0;
+			other.GetComponent<BaseCharacter>().lives --;
+			other.GetComponent<BaseCharacter>().health = 0;
 			//other.GetComponent<TempPlayerController>().isDead = true;
-			if (other.GetComponent<TempPlayerController>().lives > 0)
+			if (other.GetComponent<BaseCharacter>().lives > 0)
 			{
 				other.transform.position = deathSpawnPoint.transform.position;
 			}
@@ -40,10 +40,10 @@ public class TeleportBox : MonoBehaviour
 		}
 		else if (other.gameObject.name == "PlayerTwo")
 		{
-			other.GetComponent<TempPlayerController>().lives --;
-			other.GetComponent<TempPlayerController>().health = 0;
+			other.GetComponent<BaseCharacter>().lives --;
+			other.GetComponent<BaseCharacter>().health = 0;
 			//other.GetComponent<TempPlayerController>().isDead = true;
-			if (other.GetComponent<TempPlayerController>().lives > 0)
+			if (other.GetComponent<BaseCharacter>().lives > 0)
 			{
 				other.transform.position = deathSpawnPoint.transform.position;
 			}
@@ -55,10 +55,10 @@ public class TeleportBox : MonoBehaviour
 		}
 		else if (other.gameObject.name == "PlayerThree")
 		{
-			other.GetComponent<TempPlayerController>().lives --;
+			other.GetComponent<BaseCharacter>().lives --;
 			//other.GetComponent<TempPlayerController>().health = 0;
 			//other.GetComponent<TempPlayerController>().isDead = true;
-			if (other.GetComponent<TempPlayerController>().lives > 0)
+			if (other.GetComponent<BaseCharacter>().lives > 0)
 			{
 				other.transform.position = deathSpawnPoint.transform.position;
 			}
@@ -70,10 +70,10 @@ public class TeleportBox : MonoBehaviour
 		}
 		else if (other.gameObject.name == "PlayerFour")
 		{
-			other.GetComponent<TempPlayerController>().lives --;
-			other.GetComponent<TempPlayerController>().health = 0;
+			other.GetComponent<BaseCharacter>().lives --;
+			other.GetComponent<BaseCharacter>().health = 0;
 			//other.GetComponent<TempPlayerController>().isDead = true;
-			if (other.GetComponent<TempPlayerController>().lives > 0)
+			if (other.GetComponent<BaseCharacter>().lives > 0)
 			{
 				other.transform.position = deathSpawnPoint.transform.position;
 			}

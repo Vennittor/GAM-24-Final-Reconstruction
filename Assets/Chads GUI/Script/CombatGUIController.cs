@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -65,7 +65,7 @@ public class CombatGUIController : MonoBehaviour
 	void Start () 
 	{
 		playerDataHolder = GameObject.Find ("PlayerDataHolder");
-		playerCount = playerDataHolder.GetComponent<PlayerDataHolder>().playerCount;
+		playerCount = playerDataHolder.GetComponent<DataHolder>().playerCount;
 	}
 	
 	// Update is called once per frame
@@ -81,44 +81,44 @@ public class CombatGUIController : MonoBehaviour
 	void PlayerOneGUI ()
 	{
 		playerOne = gameManager.GetComponent<GameManager> ().playerOne;
-		pOneCurrentPercent = playerOne.GetComponent<TempPlayerController> ().health;
-		pOneName.text = playerDataHolder.GetComponent<PlayerDataHolder>().pOneCharacterName;
-		pOneCharacterPortrait.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pOnePortrait;
-		pOneStockImageOne.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pOneStock;
-		pOneStockImageTwo.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pOneStock;
+		pOneCurrentPercent = playerOne.GetComponent<BaseCharacter> ().health;
+		pOneName.text = playerDataHolder.GetComponent<DataHolder>().pOneCharacterName;
+		pOneCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pOnePortrait;
+		pOneStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pOneStock;
+		pOneStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pOneStock;
 		pOnePercentText.text = "" + (int)pOneCurrentPercent + "%";
 
 		//Stock Images
-		if (playerOne.GetComponent<TempPlayerController> ().lives == 2) 
+		if (playerOne.GetComponent<BaseCharacter> ().lives == 2) 
 		{
 			pOneStockImageOne.gameObject.SetActive (true);
 			pOneStockImageTwo.gameObject.SetActive (true);
 		} 
-		else if (playerOne.GetComponent<TempPlayerController> ().lives == 1) 
+		else if (playerOne.GetComponent<BaseCharacter> ().lives == 1) 
 		{
 			pOneStockImageOne.gameObject.SetActive (true);
 			pOneStockImageTwo.gameObject.SetActive (false);
 		}
-		else if (playerOne.GetComponent<TempPlayerController> ().lives == 0)
+		else if (playerOne.GetComponent<BaseCharacter> ().lives == 0)
 		{
 			pOneStockImageOne.gameObject.SetActive (false);
 			pOneStockImageTwo.gameObject.SetActive (false);
 		}
 
 		//Percent Color
-		if (playerOne.GetComponent<TempPlayerController> ().health < 50)
+		if (playerOne.GetComponent<BaseCharacter> ().health < 50)
 		{
 			pOnePercentText.color = new Color (1,1,1);
 		}
-		if (playerOne.GetComponent<TempPlayerController> ().health >= 50 && playerOne.GetComponent<TempPlayerController> ().health < 100)
+		if (playerOne.GetComponent<BaseCharacter> ().health >= 50 && playerOne.GetComponent<BaseCharacter> ().health < 100)
 		{
 			pOnePercentText.color = new Color (1,0.35f,0);
 		}
-		if (playerOne.GetComponent<TempPlayerController> ().health >= 100 && playerOne.GetComponent<TempPlayerController> ().health < 150)
+		if (playerOne.GetComponent<BaseCharacter> ().health >= 100 && playerOne.GetComponent<BaseCharacter> ().health < 150)
 		{
 			pOnePercentText.color = new Color (1,0,0);
 		}
-		if (playerOne.GetComponent<TempPlayerController> ().health >= 150)
+		if (playerOne.GetComponent<BaseCharacter> ().health >= 150)
 		{
 			pOnePercentText.color = new Color (0.7f,0,0);
 		}
@@ -127,44 +127,44 @@ public class CombatGUIController : MonoBehaviour
 	void PlayerTwoGUI ()
 	{ 
 		playerTwo = gameManager.GetComponent<GameManager> ().playerTwo;
-		pTwoCurrentPercent = playerTwo.GetComponent<TempPlayerController> ().health;
-		pTwoName.text = playerDataHolder.GetComponent<PlayerDataHolder>().pTwoCharacterName;
-		pTwoCharacterPortrait.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pTwoPortrait;
-		pTwoStockImageOne.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pTwoStock;
-		pTwoStockImageTwo.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pTwoStock;
+		pTwoCurrentPercent = playerTwo.GetComponent<BaseCharacter> ().health;
+		pTwoName.text = playerDataHolder.GetComponent<DataHolder>().pTwoCharacterName;
+		pTwoCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoPortrait;
+		pTwoStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoStock;
+		pTwoStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoStock;
 		pTwoPercentText.text = "" + (int)pOneCurrentPercent + "%";
 
 		//Stock Images
-		if (playerTwo.GetComponent<TempPlayerController> ().lives == 2) 
+		if (playerTwo.GetComponent<BaseCharacter> ().lives == 2) 
 		{
 			pTwoStockImageOne.gameObject.SetActive (true);
 			pTwoStockImageTwo.gameObject.SetActive (true);
 		} 
-		else if (playerOne.GetComponent<TempPlayerController> ().lives == 1) 
+		else if (playerOne.GetComponent<BaseCharacter> ().lives == 1) 
 		{
 			pTwoStockImageOne.gameObject.SetActive (true);
 			pTwoStockImageTwo.gameObject.SetActive (false);
 		}
-		else if (playerOne.GetComponent<TempPlayerController> ().lives == 0)
+		else if (playerOne.GetComponent<BaseCharacter> ().lives == 0)
 		{
 			pTwoStockImageOne.gameObject.SetActive (false);
 			pTwoStockImageTwo.gameObject.SetActive (false);
 		}
 
 		//Percent color
-		if (playerTwo.GetComponent<TempPlayerController> ().health < 50)
+		if (playerTwo.GetComponent<BaseCharacter> ().health < 50)
 		{
 			pTwoPercentText.color = new Color (1,1,1);
 		}
-		if (playerTwo.GetComponent<TempPlayerController> ().health >= 50 && playerOne.GetComponent<TempPlayerController> ().health < 100)
+		if (playerTwo.GetComponent<BaseCharacter> ().health >= 50 && playerOne.GetComponent<BaseCharacter> ().health < 100)
 		{
 			pTwoPercentText.color = new Color (1,0.2f,0.2f);
 		}
-		if (playerTwo.GetComponent<TempPlayerController> ().health >= 100 && playerOne.GetComponent<TempPlayerController> ().health < 150)
+		if (playerTwo.GetComponent<BaseCharacter> ().health >= 100 && playerOne.GetComponent<BaseCharacter> ().health < 150)
 		{
 			pTwoPercentText.color = new Color (1,0,0);
 		}
-		if (playerTwo.GetComponent<TempPlayerController> ().health >= 150)
+		if (playerTwo.GetComponent<BaseCharacter> ().health >= 150)
 		{
 			pTwoPercentText.color = new Color (0.7f,0,0);
 		}
@@ -175,44 +175,44 @@ public class CombatGUIController : MonoBehaviour
 		if (playerCount > 2) 
 		{	
 			playerThree = gameManager.GetComponent<GameManager> ().playerThree;
-			pThreeCurrentPercent = playerThree.GetComponent<TempPlayerController> ().health;
-			pThreeName.text = playerDataHolder.GetComponent<PlayerDataHolder>().pThreeCharacterName;
-			pThreeCharacterPortrait.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pThreePortrait;
-			pThreeStockImageOne.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pThreeStock;
-			pThreeStockImageTwo.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pThreeStock;
+			pThreeCurrentPercent = playerThree.GetComponent<BaseCharacter> ().health;
+			pThreeName.text = playerDataHolder.GetComponent<DataHolder>().pThreeCharacterName;
+			pThreeCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pThreePortrait;
+			pThreeStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pThreeStock;
+			pThreeStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pThreeStock;
 			pThreePercentText.text = "" + (int)pThreeCurrentPercent + "%";
 
 			//Stock Images
-			if (playerThree.GetComponent<TempPlayerController> ().lives == 2) 
+			if (playerThree.GetComponent<BaseCharacter> ().lives == 2) 
 			{
 				pThreeStockImageOne.gameObject.SetActive (true);
 				pThreeStockImageTwo.gameObject.SetActive (true);
 			} 
-			else if (playerThree.GetComponent<TempPlayerController> ().lives == 1) 
+			else if (playerThree.GetComponent<BaseCharacter> ().lives == 1) 
 			{
 				pThreeStockImageOne.gameObject.SetActive (true);
 				pThreeStockImageTwo.gameObject.SetActive (false);
 			}
-			else if (playerThree.GetComponent<TempPlayerController> ().lives == 0)
+			else if (playerThree.GetComponent<BaseCharacter> ().lives == 0)
 			{
 				pThreeStockImageOne.gameObject.SetActive (false);
 				pThreeStockImageTwo.gameObject.SetActive (false);
 			}
 			
 			//Percent color
-			if (playerThree.GetComponent<TempPlayerController> ().health < 50)
+			if (playerThree.GetComponent<BaseCharacter> ().health < 50)
 			{
 				pThreePercentText.color = new Color (1,1,1);
 			}
-			if (playerThree.GetComponent<TempPlayerController> ().health >= 50 && playerOne.GetComponent<TempPlayerController> ().health < 100)
+			if (playerThree.GetComponent<BaseCharacter> ().health >= 50 && playerOne.GetComponent<BaseCharacter> ().health < 100)
 			{
 				pThreePercentText.color = new Color (1,0.2f,0.2f);
 			}
-			if (playerThree.GetComponent<TempPlayerController> ().health >= 100 && playerOne.GetComponent<TempPlayerController> ().health < 150)
+			if (playerThree.GetComponent<BaseCharacter> ().health >= 100 && playerOne.GetComponent<BaseCharacter> ().health < 150)
 			{
 				pThreePercentText.color = new Color (1,0,0);
 			}
-			if (playerThree.GetComponent<TempPlayerController> ().health >= 150)
+			if (playerThree.GetComponent<BaseCharacter> ().health >= 150)
 			{
 				pThreePercentText.color = new Color (0.7f,0,0);
 			}
@@ -224,44 +224,44 @@ public class CombatGUIController : MonoBehaviour
 		if (playerCount > 3) 
 		{
 			playerFour = gameManager.GetComponent<GameManager> ().playerFour;
-			pFourCurrentPercent = playerFour.GetComponent<TempPlayerController> ().health;
-			pFourName.text = playerDataHolder.GetComponent<PlayerDataHolder>().pFourCharacterName;
-			pFourCharacterPortrait.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pFourPortrait;
-			pFourStockImageOne.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pFourStock;
-			pFourStockImageTwo.sprite = playerDataHolder.GetComponent<PlayerDataHolder> ().pFourStock;
+			pFourCurrentPercent = playerFour.GetComponent<BaseCharacter> ().health;
+			pFourName.text = playerDataHolder.GetComponent<DataHolder>().pFourCharacterName;
+			pFourCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pFourPortrait;
+			pFourStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pFourStock;
+			pFourStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pFourStock;
 			pFourPercentText.text = "" + (int)pFourCurrentPercent + "%";
 
 			//Stock Images
-			if (playerFour.GetComponent<TempPlayerController> ().lives == 2) 
+			if (playerFour.GetComponent<BaseCharacter> ().lives == 2) 
 			{
 				pFourStockImageOne.gameObject.SetActive (true);
 				pFourStockImageTwo.gameObject.SetActive (true);
 			} 
-			else if (playerFour.GetComponent<TempPlayerController> ().lives == 1) 
+			else if (playerFour.GetComponent<BaseCharacter> ().lives == 1) 
 			{
 				pFourStockImageOne.gameObject.SetActive (true);
 				pFourStockImageTwo.gameObject.SetActive (false);
 			}
-			else if (playerFour.GetComponent<TempPlayerController> ().lives == 0)
+			else if (playerFour.GetComponent<BaseCharacter> ().lives == 0)
 			{
 				pFourStockImageOne.gameObject.SetActive (false);
 				pFourStockImageTwo.gameObject.SetActive (false);
 			}
 			
 			//Percent color
-			if (playerFour.GetComponent<TempPlayerController> ().health < 50)
+			if (playerFour.GetComponent<BaseCharacter> ().health < 50)
 			{
 				pFourPercentText.color = new Color (1,1,1);
 			}
-			if (playerFour.GetComponent<TempPlayerController> ().health >= 50 && playerOne.GetComponent<TempPlayerController> ().health < 100)
+			if (playerFour.GetComponent<BaseCharacter> ().health >= 50 && playerOne.GetComponent<BaseCharacter> ().health < 100)
 			{
 				pFourPercentText.color = new Color (1,0.2f,0.2f);
 			}
-			if (playerFour.GetComponent<TempPlayerController> ().health >= 100 && playerOne.GetComponent<TempPlayerController> ().health < 150)
+			if (playerFour.GetComponent<BaseCharacter> ().health >= 100 && playerOne.GetComponent<BaseCharacter> ().health < 150)
 			{
 				pFourPercentText.color = new Color (1,0,0);
 			}
-			if (playerFour.GetComponent<TempPlayerController> ().health >= 150)
+			if (playerFour.GetComponent<BaseCharacter> ().health >= 150)
 			{
 				pFourPercentText.color = new Color (0.7f,0,0);
 			}

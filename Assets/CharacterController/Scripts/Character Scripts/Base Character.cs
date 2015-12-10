@@ -3,6 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(DisabledStates))]
+[RequireComponent(typeof(CharacterInputManager))]
+[RequireComponent(typeof(PlayerStates))]
 public class BaseCharacter : MonoBehaviour 
 {
 	public PlayerStates playerStates;
@@ -22,6 +27,7 @@ public class BaseCharacter : MonoBehaviour
 	public int attackCount;
 	public bool started;
 	public float time;
+	public int lives = 3;
 
 
 	public GameObject hitCollider;
@@ -40,12 +46,18 @@ public class BaseCharacter : MonoBehaviour
         disabledStates = this.gameObject.GetComponent<DisabledStates>();
         inputManager = this.gameObject.GetComponent<CharacterInputManager>();
         rigidBody = this.gameObject.GetComponent<Rigidbody>();
-        Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), hitCollider.GetComponent<Collider>());
+        //Physics.IgnoreCollision(this.gameObject.GetComponent<Collider>(), hitCollider.GetComponent<Collider>());
+		rigidBody.constraints = RigidbodyConstraints.FreezePositionZ;
+		rigidBody.freezeRotation = true;
+		parent = this.gameObject.transform.FindChild ("GameObject").gameObject;
+		hitCollider = parent.transform.FindChild("HitCollider").gameObject;
         hitCollider.SetActive(false);
         hitCollider.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
     }
 	public virtual void Update()
 	{
+		if (health > 999)
+			health = 999;
 		time = 0;
 		if (smashTime != null)
 		{
