@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-
+//[RequireComponent(typeof(CharacterInputManager))]
 public class PlayerStates : MonoBehaviour 
 {
 	//Switch state to determine which movement state it is currently in
@@ -49,12 +49,17 @@ public class PlayerStates : MonoBehaviour
 	{
 		inputManager = this.gameObject.GetComponent<CharacterInputManager> ();
 	}
+    void Start()
+    {
+      inputManager = GetComponent<CharacterInputManager>();
+    }
 
 	void EnterState (movementStates state)
 	{
-		if (inputManager != null)
+        if (inputManager != null)
 		{
-			switch (state)
+            Debug.Log("imp");
+            switch (state)
 			{
 			case movementStates.STANDING:
 				this.GetComponent<MeshRenderer>().material.color = Color.black;

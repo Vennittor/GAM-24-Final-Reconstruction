@@ -53,6 +53,7 @@ public class BaseCharacter : MonoBehaviour
 		hitCollider = parent.transform.FindChild("HitCollider").gameObject;
         hitCollider.SetActive(false);
         hitCollider.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        smashBar = transform.FindChild("SmashBar").gameObject;
     }
 	public virtual void Update()
 	{
@@ -72,6 +73,7 @@ public class BaseCharacter : MonoBehaviour
                 animControl.playLoop("Idle");
                 if (inputManager.jumpButton)
                 {
+                    Debug.Log("Jump");
                     animControl.playTime("Jump");
                 }
             }
@@ -79,6 +81,7 @@ public class BaseCharacter : MonoBehaviour
             {
                 if (inputManager.jumpButton)
                 {
+                    
                     animControl.playTime("Jump");
                 }
                 animControl.playLoop("Run");

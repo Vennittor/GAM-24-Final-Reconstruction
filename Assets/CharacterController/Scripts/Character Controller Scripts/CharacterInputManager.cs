@@ -34,7 +34,7 @@ public class CharacterInputManager : MonoBehaviour
 	//Ground Check
 	float groundRayCount = 4;
 	float raySpacing;
-	bool grounded;
+	public bool grounded;
 	BaseCharacter character;
 
 	//Input
@@ -68,9 +68,7 @@ public class CharacterInputManager : MonoBehaviour
 	}
 
 	void Update()
-	{
-		if (Input.GetKeyDown (KeyCode.Space))
-			rigidBody.AddForce (10000f, 0f, 0f);
+    {
 		CheckGround ();
 	}
 
@@ -89,7 +87,8 @@ public class CharacterInputManager : MonoBehaviour
 			{
 				if (jumpButton && jumpCount == jumpMax && !character.frozen)
 				{
-					//Input -> Physics -> Gravity -> set to -80
+                    //Input -> Physics -> Gravity -> set to -80
+                    Debug.Log("ShouldJump");
 					rigidBody.AddForce(0f, 16 * ((jumpHeight * jumpHeight) / weight), 0f);
 				}
 
@@ -155,6 +154,7 @@ public class CharacterInputManager : MonoBehaviour
 				{
 					if (leftInput < 0)
 					{
+                        Debug.Log(leftInput);
 						leftList.Add(leftInput);
 						if (leftList.Count > 3)
 							leftList.RemoveAt(0);
@@ -517,10 +517,9 @@ public class CharacterInputManager : MonoBehaviour
 
 	void CheckGround()
 	{
-		Bounds bounds = collider.bounds;
+        Bounds bounds = collider.bounds;
 		bounds.Expand (0.015f * -2);
-
-		Vector3 bottomLeft = new Vector3 (bounds.min.x, bounds.min.y, bounds.min.z);
+        Vector3 bottomLeft = new Vector3 (bounds.min.x, bounds.min.y, bounds.min.z);
 		raySpacing = bounds.size.x / (groundRayCount - 1);
 
 		for (int i=0; i < groundRayCount; i++)
