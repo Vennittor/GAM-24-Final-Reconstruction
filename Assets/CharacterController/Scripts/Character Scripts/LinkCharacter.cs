@@ -459,7 +459,7 @@ public class LinkCharacter : BaseCharacter
 		// Left A Smash Animarion 
 		// Left A Smash Sound 
 	}
-	public override IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
+	public IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
 	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
 	{
 		hitCollider.SetActive(true);
@@ -470,7 +470,7 @@ public class LinkCharacter : BaseCharacter
 			
 			disabledStates.vAttackLength = attackLength;
 			
-			hitCollider.transform.localPosition = new Vector3(1f, Random.Range(-1f, 1f), 0f);
+			hitCollider.transform.localPosition = position;
 			hitCollider.transform.localScale = boxCollider;
 			
 			rigidBody.velocity = Vector3.Lerp(this.rigidBody.velocity, lerpVelocity, lerpSpeed * Time.deltaTime);
