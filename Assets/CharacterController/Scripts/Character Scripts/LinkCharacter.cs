@@ -22,13 +22,10 @@ public class LinkCharacter : BaseCharacter
 		base.Awake();
 		//bool hasItem;
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
+    public virtual void Start()
+    {
 
+    }
 	public override void StandingA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))

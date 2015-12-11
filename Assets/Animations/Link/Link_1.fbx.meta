@@ -290,11 +290,17 @@ ModelImporter:
     7400004: Crouch
     7400006: Jump
     7400008: Fall
-    7400010: Attack-1
-    7400012: Attack-2
-    7400014: Attack-3
-    7400016: Forward-Attack
-    7400018: Crouch-Attack
+    7400010: Combo-1
+    7400012: Combo-2
+    7400014: Combo-3
+    7400016: Ground-Forward
+    7400018: Ground-Down
+    7400020: Ground-Up
+    7400022: Dash-Attack
+    7400024: Aerial-Forward
+    7400026: Smash-Charge
+    7400028: Smash-Forward
+    7400030: Smash-Down
     9500000: //RootNode
     11100000: //RootNode
     13700000: mesh0
@@ -1758,7 +1764,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Attack-1
+      name: Combo-1
       takeName: Take 001
       firstFrame: 70
       lastFrame: 74
@@ -2042,7 +2048,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Attack-2
+      name: Combo-2
       takeName: Take 001
       firstFrame: 75
       lastFrame: 80
@@ -2326,7 +2332,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Attack-3
+      name: Combo-3
       takeName: Take 001
       firstFrame: 82
       lastFrame: 84
@@ -2610,9 +2616,9 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Forward-Attack
+      name: Ground-Forward
       takeName: Take 001
-      firstFrame: 12
+      firstFrame: 18
       lastFrame: 28
       wrapMode: 0
       orientationOffsetY: 0
@@ -2894,7 +2900,1711 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Crouch-Attack
+      name: Ground-Down
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/TopN
+        weight: 1
+      - path: Armature/TopN/EyeYellowM
+        weight: 1
+      - path: Armature/TopN/HaM
+        weight: 1
+      - path: Armature/TopN/TransN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagAM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagBM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ/LToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ/RToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenE
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN/KenEdgeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa/L1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa/L2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa/L3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa/L4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa/LThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN/HatDN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LEyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/REyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa/R1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa/R2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa/R3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa/R4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa/RThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN/TateM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN/KenMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/TateMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/ThrowN
+        weight: 1
+      - path: Controller_GRP
+        weight: 1
+      - path: Controller_GRP/Master_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3/L_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6/R_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR/L_finger_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR/head_aimTarget
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1/L_finger_CTR 1
+        weight: 1
+      - path: Controller_GRP/nurbsCircle4
+        weight: 1
+      - path: Mesh_GRP
+        weight: 1
+      - path: Mesh_GRP/mesh0
+        weight: 1
+      - path: Mesh_GRP/mesh1
+        weight: 1
+      - path: Mesh_GRP/mesh2
+        weight: 1
+      - path: Mesh_GRP/mesh3
+        weight: 1
+      - path: Mesh_GRP/mesh4
+        weight: 1
+      - path: Mesh_GRP/mesh5
+        weight: 1
+      - path: Mesh_GRP/mesh6
+        weight: 1
+      - path: Mesh_GRP/mesh7
+        weight: 1
+      - path: Mesh_GRP/mesh8
+        weight: 1
+      - path: Mesh_GRP/mesh9
+        weight: 1
+      - path: Mesh_GRP/mesh10
+        weight: 1
+      - path: Mesh_GRP/mesh11
+        weight: 1
+      - path: Mesh_GRP/mesh12
+        weight: 1
+      - path: Mesh_GRP/mesh13
+        weight: 1
+      - path: Mesh_GRP/mesh14
+        weight: 1
+      - path: Mesh_GRP/mesh15
+        weight: 1
+      - path: Mesh_GRP/mesh15_001
+        weight: 1
+      - path: Mesh_GRP/mesh16
+        weight: 1
+      - path: Mesh_GRP/mesh16_001
+        weight: 1
+      - path: Mesh_GRP/mesh17
+        weight: 1
+      - path: Mesh_GRP/mesh18
+        weight: 1
+      - path: Mesh_GRP/mesh19
+        weight: 1
+      - path: Mesh_GRP/mesh20
+        weight: 1
+      - path: Mesh_GRP/mesh21
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Ground-Up
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 85
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/TopN
+        weight: 1
+      - path: Armature/TopN/EyeYellowM
+        weight: 1
+      - path: Armature/TopN/HaM
+        weight: 1
+      - path: Armature/TopN/TransN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagAM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagBM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ/LToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ/RToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenE
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN/KenEdgeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa/L1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa/L2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa/L3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa/L4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa/LThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN/HatDN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LEyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/REyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa/R1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa/R2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa/R3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa/R4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa/RThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN/TateM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN/KenMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/TateMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/ThrowN
+        weight: 1
+      - path: Controller_GRP
+        weight: 1
+      - path: Controller_GRP/Master_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3/L_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6/R_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR/L_finger_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR/head_aimTarget
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1/L_finger_CTR 1
+        weight: 1
+      - path: Controller_GRP/nurbsCircle4
+        weight: 1
+      - path: Mesh_GRP
+        weight: 1
+      - path: Mesh_GRP/mesh0
+        weight: 1
+      - path: Mesh_GRP/mesh1
+        weight: 1
+      - path: Mesh_GRP/mesh2
+        weight: 1
+      - path: Mesh_GRP/mesh3
+        weight: 1
+      - path: Mesh_GRP/mesh4
+        weight: 1
+      - path: Mesh_GRP/mesh5
+        weight: 1
+      - path: Mesh_GRP/mesh6
+        weight: 1
+      - path: Mesh_GRP/mesh7
+        weight: 1
+      - path: Mesh_GRP/mesh8
+        weight: 1
+      - path: Mesh_GRP/mesh9
+        weight: 1
+      - path: Mesh_GRP/mesh10
+        weight: 1
+      - path: Mesh_GRP/mesh11
+        weight: 1
+      - path: Mesh_GRP/mesh12
+        weight: 1
+      - path: Mesh_GRP/mesh13
+        weight: 1
+      - path: Mesh_GRP/mesh14
+        weight: 1
+      - path: Mesh_GRP/mesh15
+        weight: 1
+      - path: Mesh_GRP/mesh15_001
+        weight: 1
+      - path: Mesh_GRP/mesh16
+        weight: 1
+      - path: Mesh_GRP/mesh16_001
+        weight: 1
+      - path: Mesh_GRP/mesh17
+        weight: 1
+      - path: Mesh_GRP/mesh18
+        weight: 1
+      - path: Mesh_GRP/mesh19
+        weight: 1
+      - path: Mesh_GRP/mesh20
+        weight: 1
+      - path: Mesh_GRP/mesh21
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dash-Attack
+      takeName: Take 001
+      firstFrame: 18
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/TopN
+        weight: 1
+      - path: Armature/TopN/EyeYellowM
+        weight: 1
+      - path: Armature/TopN/HaM
+        weight: 1
+      - path: Armature/TopN/TransN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagAM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagBM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ/LToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ/RToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenE
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN/KenEdgeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa/L1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa/L2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa/L3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa/L4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa/LThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN/HatDN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LEyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/REyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa/R1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa/R2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa/R3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa/R4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa/RThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN/TateM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN/KenMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/TateMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/ThrowN
+        weight: 1
+      - path: Controller_GRP
+        weight: 1
+      - path: Controller_GRP/Master_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3/L_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6/R_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR/L_finger_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR/head_aimTarget
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1/L_finger_CTR 1
+        weight: 1
+      - path: Controller_GRP/nurbsCircle4
+        weight: 1
+      - path: Mesh_GRP
+        weight: 1
+      - path: Mesh_GRP/mesh0
+        weight: 1
+      - path: Mesh_GRP/mesh1
+        weight: 1
+      - path: Mesh_GRP/mesh2
+        weight: 1
+      - path: Mesh_GRP/mesh3
+        weight: 1
+      - path: Mesh_GRP/mesh4
+        weight: 1
+      - path: Mesh_GRP/mesh5
+        weight: 1
+      - path: Mesh_GRP/mesh6
+        weight: 1
+      - path: Mesh_GRP/mesh7
+        weight: 1
+      - path: Mesh_GRP/mesh8
+        weight: 1
+      - path: Mesh_GRP/mesh9
+        weight: 1
+      - path: Mesh_GRP/mesh10
+        weight: 1
+      - path: Mesh_GRP/mesh11
+        weight: 1
+      - path: Mesh_GRP/mesh12
+        weight: 1
+      - path: Mesh_GRP/mesh13
+        weight: 1
+      - path: Mesh_GRP/mesh14
+        weight: 1
+      - path: Mesh_GRP/mesh15
+        weight: 1
+      - path: Mesh_GRP/mesh15_001
+        weight: 1
+      - path: Mesh_GRP/mesh16
+        weight: 1
+      - path: Mesh_GRP/mesh16_001
+        weight: 1
+      - path: Mesh_GRP/mesh17
+        weight: 1
+      - path: Mesh_GRP/mesh18
+        weight: 1
+      - path: Mesh_GRP/mesh19
+        weight: 1
+      - path: Mesh_GRP/mesh20
+        weight: 1
+      - path: Mesh_GRP/mesh21
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Aerial-Forward
+      takeName: Take 001
+      firstFrame: 75
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/TopN
+        weight: 1
+      - path: Armature/TopN/EyeYellowM
+        weight: 1
+      - path: Armature/TopN/HaM
+        weight: 1
+      - path: Armature/TopN/TransN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagAM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagBM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ/LToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ/RToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenE
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN/KenEdgeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa/L1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa/L2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa/L3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa/L4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa/LThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN/HatDN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LEyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/REyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa/R1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa/R2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa/R3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa/R4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa/RThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN/TateM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN/KenMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/TateMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/ThrowN
+        weight: 1
+      - path: Controller_GRP
+        weight: 1
+      - path: Controller_GRP/Master_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3/L_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6/R_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR/L_finger_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR/head_aimTarget
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1/L_finger_CTR 1
+        weight: 1
+      - path: Controller_GRP/nurbsCircle4
+        weight: 1
+      - path: Mesh_GRP
+        weight: 1
+      - path: Mesh_GRP/mesh0
+        weight: 1
+      - path: Mesh_GRP/mesh1
+        weight: 1
+      - path: Mesh_GRP/mesh2
+        weight: 1
+      - path: Mesh_GRP/mesh3
+        weight: 1
+      - path: Mesh_GRP/mesh4
+        weight: 1
+      - path: Mesh_GRP/mesh5
+        weight: 1
+      - path: Mesh_GRP/mesh6
+        weight: 1
+      - path: Mesh_GRP/mesh7
+        weight: 1
+      - path: Mesh_GRP/mesh8
+        weight: 1
+      - path: Mesh_GRP/mesh9
+        weight: 1
+      - path: Mesh_GRP/mesh10
+        weight: 1
+      - path: Mesh_GRP/mesh11
+        weight: 1
+      - path: Mesh_GRP/mesh12
+        weight: 1
+      - path: Mesh_GRP/mesh13
+        weight: 1
+      - path: Mesh_GRP/mesh14
+        weight: 1
+      - path: Mesh_GRP/mesh15
+        weight: 1
+      - path: Mesh_GRP/mesh15_001
+        weight: 1
+      - path: Mesh_GRP/mesh16
+        weight: 1
+      - path: Mesh_GRP/mesh16_001
+        weight: 1
+      - path: Mesh_GRP/mesh17
+        weight: 1
+      - path: Mesh_GRP/mesh18
+        weight: 1
+      - path: Mesh_GRP/mesh19
+        weight: 1
+      - path: Mesh_GRP/mesh20
+        weight: 1
+      - path: Mesh_GRP/mesh21
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Smash-Charge
+      takeName: Take 001
+      firstFrame: 17
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/TopN
+        weight: 1
+      - path: Armature/TopN/EyeYellowM
+        weight: 1
+      - path: Armature/TopN/HaM
+        weight: 1
+      - path: Armature/TopN/TransN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagAM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagBM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ/LToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ/RToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenE
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN/KenEdgeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa/L1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa/L2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa/L3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa/L4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa/LThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN/HatDN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LEyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/REyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa/R1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa/R2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa/R3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa/R4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa/RThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN/TateM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN/KenMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/TateMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/ThrowN
+        weight: 1
+      - path: Controller_GRP
+        weight: 1
+      - path: Controller_GRP/Master_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3/L_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6/R_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR/L_finger_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR/head_aimTarget
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1/L_finger_CTR 1
+        weight: 1
+      - path: Controller_GRP/nurbsCircle4
+        weight: 1
+      - path: Mesh_GRP
+        weight: 1
+      - path: Mesh_GRP/mesh0
+        weight: 1
+      - path: Mesh_GRP/mesh1
+        weight: 1
+      - path: Mesh_GRP/mesh2
+        weight: 1
+      - path: Mesh_GRP/mesh3
+        weight: 1
+      - path: Mesh_GRP/mesh4
+        weight: 1
+      - path: Mesh_GRP/mesh5
+        weight: 1
+      - path: Mesh_GRP/mesh6
+        weight: 1
+      - path: Mesh_GRP/mesh7
+        weight: 1
+      - path: Mesh_GRP/mesh8
+        weight: 1
+      - path: Mesh_GRP/mesh9
+        weight: 1
+      - path: Mesh_GRP/mesh10
+        weight: 1
+      - path: Mesh_GRP/mesh11
+        weight: 1
+      - path: Mesh_GRP/mesh12
+        weight: 1
+      - path: Mesh_GRP/mesh13
+        weight: 1
+      - path: Mesh_GRP/mesh14
+        weight: 1
+      - path: Mesh_GRP/mesh15
+        weight: 1
+      - path: Mesh_GRP/mesh15_001
+        weight: 1
+      - path: Mesh_GRP/mesh16
+        weight: 1
+      - path: Mesh_GRP/mesh16_001
+        weight: 1
+      - path: Mesh_GRP/mesh17
+        weight: 1
+      - path: Mesh_GRP/mesh18
+        weight: 1
+      - path: Mesh_GRP/mesh19
+        weight: 1
+      - path: Mesh_GRP/mesh20
+        weight: 1
+      - path: Mesh_GRP/mesh21
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Smash-Forward
+      takeName: Take 001
+      firstFrame: 18
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/TopN
+        weight: 1
+      - path: Armature/TopN/EyeYellowM
+        weight: 1
+      - path: Armature/TopN/HaM
+        weight: 1
+      - path: Armature/TopN/TransN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagAM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/BagBM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/LLegJ/LKneeJ/LFootJ/LToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/RLegJ/RKneeJ/RFootJ/RToeN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenE
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/KenC/KenJ/KenModelN/KenEdgeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa/L1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa/L2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa/L3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa/L4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa/LThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatAN/HatBN/HatCN/HatDN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LEyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/REyeM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RHairN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RSideN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa/R1stNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa/R2ndNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa/R3rdNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa/R4thNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RHaveN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa/RThumbNb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/TateN/TateM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RSSabN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaM
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/SayaTukaN/KenMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/HipN/WaistN/BustN/SayaN/TateMb
+        weight: 1
+      - path: Armature/TopN/TransN/YRotN/ThrowN
+        weight: 1
+      - path: Controller_GRP
+        weight: 1
+      - path: Controller_GRP/Master_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3
+        weight: 1
+      - path: Controller_GRP/Master_CTR/L_thigh_CTR/nurbsCircle3/L_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6
+        weight: 1
+      - path: Controller_GRP/Master_CTR/R_thigh_CTR/nurbsCircle6/R_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_wrist_CTR/hand_C_G/L_knuckle_CTR/L_finger_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/neck_CTR/head_CTR/head_aimTarget
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1
+        weight: 1
+      - path: Controller_GRP/Master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/R_wrist_CTR/hand_C_G1/L_knuckle_CTR
+          1/L_finger_CTR 1
+        weight: 1
+      - path: Controller_GRP/nurbsCircle4
+        weight: 1
+      - path: Mesh_GRP
+        weight: 1
+      - path: Mesh_GRP/mesh0
+        weight: 1
+      - path: Mesh_GRP/mesh1
+        weight: 1
+      - path: Mesh_GRP/mesh2
+        weight: 1
+      - path: Mesh_GRP/mesh3
+        weight: 1
+      - path: Mesh_GRP/mesh4
+        weight: 1
+      - path: Mesh_GRP/mesh5
+        weight: 1
+      - path: Mesh_GRP/mesh6
+        weight: 1
+      - path: Mesh_GRP/mesh7
+        weight: 1
+      - path: Mesh_GRP/mesh8
+        weight: 1
+      - path: Mesh_GRP/mesh9
+        weight: 1
+      - path: Mesh_GRP/mesh10
+        weight: 1
+      - path: Mesh_GRP/mesh11
+        weight: 1
+      - path: Mesh_GRP/mesh12
+        weight: 1
+      - path: Mesh_GRP/mesh13
+        weight: 1
+      - path: Mesh_GRP/mesh14
+        weight: 1
+      - path: Mesh_GRP/mesh15
+        weight: 1
+      - path: Mesh_GRP/mesh15_001
+        weight: 1
+      - path: Mesh_GRP/mesh16
+        weight: 1
+      - path: Mesh_GRP/mesh16_001
+        weight: 1
+      - path: Mesh_GRP/mesh17
+        weight: 1
+      - path: Mesh_GRP/mesh18
+        weight: 1
+      - path: Mesh_GRP/mesh19
+        weight: 1
+      - path: Mesh_GRP/mesh20
+        weight: 1
+      - path: Mesh_GRP/mesh21
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Smash-Down
       takeName: Take 001
       firstFrame: 60
       lastFrame: 65

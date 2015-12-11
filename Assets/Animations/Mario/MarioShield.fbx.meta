@@ -221,8 +221,9 @@ ModelImporter:
     4300022: polygon11
     4300024: polygon12
     4300026: polygon13
-    7400000: Take 001
+    7400000: Guard
     9500000: //RootNode
+    11100000: //RootNode
     13700000: polygon0
     13700002: polygon1
     13700004: polygon10
@@ -246,17 +247,243 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
-    animationImportWarnings: 
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Guard
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Controller_GRP
+        weight: 1
+      - path: Controller_GRP/master_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/L_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/L_thigh_CTR/L_knee_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/L_thigh_CTR/L_knee_CTR/L_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/R_thigh_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/R_thigh_CTR/R_knee_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/R_thigh_CTR/R_knee_CTR/R_Foot_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/L_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_hand_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_hand_CTR/nurbsCircle2
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_hand_CTR/nurbsCircle2/nurbsCircle3
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/L_shoulder_CTR/L_elbow_CTR/L_hand_CTR/nurbsCircle2/nurbsCircle3/nurbsCircle4
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/nurbsCircle1
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/R_shoulder_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/r_hand_CTR
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/r_hand_CTR/nurbsCircle5
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/r_hand_CTR/nurbsCircle5/nurbsCircle3
+          1
+        weight: 1
+      - path: Controller_GRP/master_CTR/waist_CTR/R_shoulder_CTR/R_elbow_CTR/r_hand_CTR/nurbsCircle5/nurbsCircle3
+          1/nurbsCircle4 1
+        weight: 1
+      - path: Mesh_GRP
+        weight: 1
+      - path: Mesh_GRP/polygon0
+        weight: 1
+      - path: Mesh_GRP/polygon1
+        weight: 1
+      - path: Mesh_GRP/polygon2
+        weight: 1
+      - path: Mesh_GRP/polygon3
+        weight: 1
+      - path: Mesh_GRP/polygon4
+        weight: 1
+      - path: Mesh_GRP/polygon5
+        weight: 1
+      - path: Mesh_GRP/polygon6
+        weight: 1
+      - path: Mesh_GRP/polygon7
+        weight: 1
+      - path: Mesh_GRP/polygon8
+        weight: 1
+      - path: Mesh_GRP/polygon9
+        weight: 1
+      - path: Mesh_GRP/polygon10
+        weight: 1
+      - path: Mesh_GRP/polygon11
+        weight: 1
+      - path: Mesh_GRP/polygon12
+        weight: 1
+      - path: Mesh_GRP/polygon13
+        weight: 1
+      - path: TopN
+        weight: 1
+      - path: TopN/CapM
+        weight: 1
+      - path: TopN/EyeYellowM
+        weight: 1
+      - path: TopN/FaceDmgM
+        weight: 1
+      - path: TopN/FaceM
+        weight: 1
+      - path: TopN/HairM
+        weight: 1
+      - path: TopN/HairMb
+        weight: 1
+      - path: TopN/TransN
+        weight: 1
+      - path: TopN/TransN/XRotN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/LLegJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/LLegJ/LKneeJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/LLegJ/LKneeJ/LFootE
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/LLegJ/LKneeJ/LFootJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/LLegJ/LKneeJ/LFootJ/LToeN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/RLegJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/RLegJ/RKneeJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/RLegJ/RKneeJ/RFootE
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/RLegJ/RKneeJ/RFootJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/RLegJ/RKneeJ/RFootJ/RToeN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L1stNa/L1stNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L2ndNa/L2ndNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L3rdNa/L3rdNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/L4thNa/L4thNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandN/LThumbNa/LThumbNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/LShoulderN/LShoulderJ/LArmJ/LHandNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/NeckN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/NeckN/HeadN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/HatN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/LHigeN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/MouthN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/NoseN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/NeckN/HeadN/RHigeN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R1stNa/R1stNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R2ndNa/R2ndNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R3rdNa/R3rdNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/R4thNa/R4thNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RHaveN
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandN/RThumbNa/RThumbNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistN/BustN/RShoulderN/RShoulderJ/RArmJ/RHandNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/HipN/WaistNb
+        weight: 1
+      - path: TopN/TransN/XRotN/YRotN/ThrowN
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -294,7 +521,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
