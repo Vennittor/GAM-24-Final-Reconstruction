@@ -44,6 +44,7 @@ public class CharacterSelect : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+		playerDataHolder = GameObject.Find ("DataHolder");
 		fadeIn = true;
 		buttonMove = true;
 	}
@@ -414,6 +415,62 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.bowser;
 			pFourCharacter.sprite = characterSprites[7];
 			pFourCharacterText.text = "BOWSER";
+		}
+	}
+
+	public void Link ()
+	{
+		if (playerTurn == TurnTracker.playerOne) 
+		{
+			playerDataHolder.GetComponent<DataHolder> ().pOneSelection = DataHolder.CharacterSelection.link;
+			pOneCharacter.sprite = characterSprites [8];
+			pOneCharacterText.text = "LINK";
+		} 
+		else if (playerTurn == TurnTracker.playerTwo) 
+		{
+			playerDataHolder.GetComponent<DataHolder> ().pTwoSelection = DataHolder.CharacterSelection.link;
+			pTwoCharacter.sprite = characterSprites [8];
+			pTwoCharacterText.text = "LINK";
+		}
+		else if (playerTurn == TurnTracker.playerThree) 
+		{
+			playerDataHolder.GetComponent<DataHolder> ().pThreeSelection = DataHolder.CharacterSelection.link;
+			pThreeCharacter.sprite = characterSprites [8];
+			pThreeCharacterText.text = "LINK";
+		} 
+		else if (playerTurn == TurnTracker.playerFour) 
+		{
+			playerDataHolder.GetComponent<DataHolder> ().pFourSelection = DataHolder.CharacterSelection.link;
+			pFourCharacter.sprite = characterSprites [8];
+			pFourCharacterText.text = "LINK";
+		}
+	}
+
+	public void ZeroSuitSamus ()
+	{
+		if (playerTurn == TurnTracker.playerOne) 
+		{
+			playerDataHolder.GetComponent<DataHolder> ().pOneSelection = DataHolder.CharacterSelection.zeroSuitSamus;
+			pOneCharacter.sprite = characterSprites [9];
+			pOneCharacterText.text = "ZERO SUIT SAMUS";
+		} 
+		else if (playerTurn == TurnTracker.playerTwo) 
+		{
+			playerDataHolder.GetComponent<DataHolder> ().pTwoSelection = DataHolder.CharacterSelection.zeroSuitSamus;
+			pTwoCharacter.sprite = characterSprites [9];
+			pTwoCharacterText.text = "ZERO SUIT SAMUS";
+		}
+		else if (playerTurn == TurnTracker.playerThree) 
+		{
+			playerDataHolder.GetComponent<DataHolder> ().pThreeSelection = DataHolder.CharacterSelection.zeroSuitSamus;
+			pThreeCharacter.sprite = characterSprites [9];
+			pThreeCharacterText.text = "ZERO SUIT SAMUS";
+		} 
+		else if (playerTurn == TurnTracker.playerFour) 
+		{
+			playerDataHolder.GetComponent<DataHolder> ().pFourSelection = DataHolder.CharacterSelection.zeroSuitSamus;
+			pFourCharacter.sprite = characterSprites [9];
+			pFourCharacterText.text = "ZERO SUIT SAMUS";
 		}
 	}
 }

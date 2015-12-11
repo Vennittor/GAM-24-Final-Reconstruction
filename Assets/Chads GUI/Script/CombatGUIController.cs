@@ -66,7 +66,7 @@ public class CombatGUIController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		playerDataHolder = GameObject.Find ("PlayerDataHolder");
+		playerDataHolder = GameObject.Find ("DataHolder");
 		playerCount = playerDataHolder.GetComponent<DataHolder>().playerCount;
 	}
 	

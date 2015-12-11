@@ -22,7 +22,7 @@ public class StageSelectionController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		playerDataHolder = GameObject.Find ("PlayerDataHolder");
+		playerDataHolder = GameObject.Find ("DataHolder");
 		fade = true;
 		buttonMove = true;
 	}

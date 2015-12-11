@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 	void Start () 
 	{
 		spawns = GameObject.FindGameObjectsWithTag ("Spawners");
-		playerDataHolder = GameObject.Find ("PlayerDataHolder");
+		playerDataHolder = GameObject.Find ("DataHolder");
 		playerCount = playerDataHolder.GetComponent<DataHolder> ().playerCount;
 		AddToCharacters ();
 		InitialSpawn ();
