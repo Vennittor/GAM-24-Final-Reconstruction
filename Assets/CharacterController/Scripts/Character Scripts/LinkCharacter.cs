@@ -9,23 +9,20 @@ public class LinkCharacter : BaseCharacter
 		weight = 1.5f;
 		speed = 15.0f;
 		health = 0;
-		jumpHeight = 7f;
-		jumpMax = 2;
+		jumpHeight = 9f;
+		jumpMax = 1;
 		attackCount = 0;
 		frozen = false;
 		if (model == null)
 		{
-			model = Instantiate(Resources.Load("Kirby_2"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
+			model = Instantiate(Resources.Load("Link_1"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}
 		base.Awake();
 		//bool hasItem;
 	}
-    public virtual void Start()
-    {
 
-    }
 	public override void StandingA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
