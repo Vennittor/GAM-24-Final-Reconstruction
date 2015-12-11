@@ -92,16 +92,14 @@ public class DataHolder : MonoBehaviour
 		if (Application.loadedLevel == 5)
 		{
 			menuMusic.Stop ();
-			if (stageSelection == StageSelect.finalDestination)
-			{
-				finalDestination.enabled = true;
-				finalDestination.Play ();
-			}
-			else if (stageSelection == StageSelect.pokemonStadium)
-			{
-				pokemonStadium.enabled = true;
-				pokemonStadium.Play();
-			}
+//			if (stageSelection == StageSelect.finalDestination)
+//			{
+//				finalDestination.Play ();
+//			}
+//			else if (stageSelection == StageSelect.pokemonStadium)
+//			{
+//				pokemonStadium.Play();
+//			}
 		}
 	}
 
