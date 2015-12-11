@@ -60,6 +60,8 @@ public class DataHolder : MonoBehaviour
 
 	public StageSelect stageSelection;
 
+	public AudioSource menuMusic;
+
 	//mouse pointer
 	public Texture2D handTexture;
 
@@ -72,6 +74,7 @@ public class DataHolder : MonoBehaviour
 		pThreeIsPlayer = true;
 		pFourIsPlayer = true;
 		Cursor.SetCursor (handTexture,Vector2.zero,CursorMode.Auto);
+		menuMusic.Play ();
 	}
 	
 	// Update is called once per frame
@@ -85,6 +88,7 @@ public class DataHolder : MonoBehaviour
 	{
 		if (Application.loadedLevel == 5)
 		{
+			menuMusic.Stop ();
 			GameObject itemSpawn;
 			itemSpawn = GameObject.Find ("ItemSpawn");
 			itemSpawn.GetComponent<ItemSelector>().veryRare = veryRare;
