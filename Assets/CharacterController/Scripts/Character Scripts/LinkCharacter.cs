@@ -6,7 +6,7 @@ public class LinkCharacter : BaseCharacter
 	// Use this for initialization
 	public override void Awake () 
 	{
-		weight = 3f;
+		weight = 1.5f;
 		speed = 15.0f;
 		health = 0;
 		jumpHeight = 7f;
@@ -15,20 +15,17 @@ public class LinkCharacter : BaseCharacter
 		frozen = false;
 		if (model == null)
 		{
-			model = Instantiate(Resources.Load("Link_1"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
+			model = Instantiate(Resources.Load("Kirby_2"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}
 		base.Awake();
 		//bool hasItem;
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
+    public virtual void Start()
+    {
 
+    }
 	public override void StandingA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
@@ -465,13 +462,38 @@ public class LinkCharacter : BaseCharacter
 		// Left A Smash Animarion 
 		// Left A Smash Sound 
 	}
-
-
-//	pu7blic override void NeutralB()
-//	{
-//		print ("Link Neutral B was called");
-//		// Neutral B Animation
-//		// Neutral B Sound
+	public override IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
+	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
+	{
+		hitCollider.SetActive(true);
+		while (Input.GetButton(inputManager.playerName + "_Attack"))
+		{
+			inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
+			inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = false;
+			
+			disabledStates.vAttackLength = attackLength;
+			
+			hitCollider.transform.localPosition = new Vector3(1f, Random.Range(-1f, 1f), 0f);
+			hitCollider.transform.localScale = boxCollider;
+			
+			rigidBody.velocity = Vector3.Lerp(this.rigidBody.velocity, lerpVelocity, lerpSpeed * Time.deltaTime);
+			
+			if (pivot)
+				parent.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
+			else
+				hitCollider.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
+			
+			yield return null;
+		}
+		ResetAttack();
+		comboTime.Kill();
+	}
+	
+	//	pu7blic override void NeutralB()
+	//	{
+	//		print ("Link Neutral B was called");
+	//		// Neutral B Animation
+	//		// Neutral B Sound
 //	}
 //	public void UpSpecialB()
 //	{

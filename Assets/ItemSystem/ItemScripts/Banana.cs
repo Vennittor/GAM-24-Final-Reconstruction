@@ -23,7 +23,7 @@ public class Banana : ItemBaseScript
     }
     public override void FunctionBeta ()
 	{
-		//make them prone
+		//owner.GetComponent<DisabledStates
 		durability--;
 		base.FunctionBeta ();
 	}
