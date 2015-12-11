@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class KirbyCharacter : BaseCharacter 
 {
+	public AudioClip[] audioClips;
 	public bool hasEaten;
 	public GameObject eatenPlayer;
 	public bool rock;
@@ -24,6 +25,7 @@ public class KirbyCharacter : BaseCharacter
             model.transform.parent = gameObject.transform;
             animControl = model.GetComponent<Animation_Controller>(); 
         }
+		audioClips = Resources.LoadAll<AudioClip>("Kirby_Sounds");
         base.Awake();
 		//bool hasItem;
 	}
@@ -70,6 +72,7 @@ public class KirbyCharacter : BaseCharacter
             // Neutral Standing A Animation
             // Neutral Standing A Sound 
             animControl.playTime("Ground-Forward", 0.1f);
+			AudioManager.instance.PlaySound(audioClips[1] as AudioClip);
 
         }
 	}
@@ -99,6 +102,8 @@ public class KirbyCharacter : BaseCharacter
 				float rotationSpeed = 0.0f;
 
 				StartCoroutine (ComboAttack (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+				AudioManager.instance.PlaySound(audioClips[2] as AudioClip);
+
 			}
 			else
 				StandingA();
@@ -123,6 +128,7 @@ public class KirbyCharacter : BaseCharacter
 		
 		StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
 		                                knockBack, state, stateDuration));
+		AudioManager.instance.PlaySound(audioClips[3] as AudioClip);
 	}
 	public override void LeftRightA()
 	{
@@ -155,6 +161,7 @@ public class KirbyCharacter : BaseCharacter
 
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
+				AudioManager.instance.PlaySound(audioClips[9] as AudioClip);
             }
             else
             {
@@ -198,6 +205,7 @@ public class KirbyCharacter : BaseCharacter
 
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
+				AudioManager.instance.PlaySound(audioClips[10] as AudioClip);
             }
             else
             {
@@ -244,6 +252,7 @@ public class KirbyCharacter : BaseCharacter
 
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
+				AudioManager.instance.PlaySound(audioClips[11] as AudioClip);
             }
             else
             {
@@ -293,6 +302,7 @@ public class KirbyCharacter : BaseCharacter
 
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
+				AudioManager.instance.PlaySound(audioClips[7] as AudioClip);
             }
             else
             {
@@ -338,6 +348,8 @@ public class KirbyCharacter : BaseCharacter
 
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
+
+				AudioManager.instance.PlaySound(audioClips[8] as AudioClip);
             }
             else
             {
@@ -384,6 +396,7 @@ public class KirbyCharacter : BaseCharacter
 
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
+				AudioManager.instance.PlaySound(audioClips[6] as AudioClip);
             }
             else
             {
@@ -429,6 +442,7 @@ public class KirbyCharacter : BaseCharacter
 
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
+				AudioManager.instance.PlaySound(audioClips[31] as AudioClip);
             }
             else
             {
@@ -474,6 +488,7 @@ public class KirbyCharacter : BaseCharacter
 
                 StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                                 knockBack, state, stateDuration));
+				AudioManager.instance.PlaySound(audioClips[7] as AudioClip);
             }
             else
             {

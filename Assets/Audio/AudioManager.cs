@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
 		DontDestroyOnLoad (gameObject);
 	}
 
-	void PlaySound (AudioClip clip)
+	public void PlaySound (AudioClip clip)
 	{
 		go = Instantiate (prefab);
 		sfx = go.GetComponent<AudioSource> ();

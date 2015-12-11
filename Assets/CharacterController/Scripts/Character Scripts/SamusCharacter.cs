@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SamusCharacter : BaseCharacter 
 {
-
+	public AudioClip[] audioClips;
 	// Use this for initialization
 	public override void Awake () 
 	{
@@ -22,6 +22,7 @@ public class SamusCharacter : BaseCharacter
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}
+		audioClips = Resources.LoadAll<AudioClip>("ZeroSuit_Sounds");
 		base.Awake();
 		//bool hasItem;
 	}

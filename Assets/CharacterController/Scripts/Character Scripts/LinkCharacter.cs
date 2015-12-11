@@ -3,6 +3,7 @@ using System.Collections;
 
 public class LinkCharacter : BaseCharacter
 {
+	public AudioClip[] audioClips;
 	// Use this for initialization
 	public override void Awake () 
 	{
@@ -19,6 +20,7 @@ public class LinkCharacter : BaseCharacter
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}
+		audioClips = Resources.LoadAll<AudioClip>("Link_Sounds");
 		base.Awake();
 		//bool hasItem;
 	}

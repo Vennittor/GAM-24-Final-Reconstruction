@@ -221,7 +221,7 @@ ModelImporter:
     4300022: polygon11
     4300024: polygon12
     4300026: polygon13
-    7400000: Smash-Forward
+    7400000: MarioSuperPunch
     7400002: Aerial-Forward
     7400004: Take 001
     9500000: //RootNode
@@ -249,6 +249,10 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -257,7 +261,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Smash-Forward
+      name: MarioSuperPunch
       takeName: Take 001
       firstFrame: 1
       lastFrame: 34
@@ -752,8 +756,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

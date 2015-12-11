@@ -221,7 +221,7 @@ ModelImporter:
     4300022: polygon11
     4300024: polygon12
     4300026: polygon13
-    7400000: Special-Up
+    7400000: Mario_UpperCut
     7400002: Jump
     7400004: Fall
     7400006: Idle
@@ -250,6 +250,10 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -258,7 +262,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Special-Up
+      name: Mario_UpperCut
       takeName: Take 001
       firstFrame: 1
       lastFrame: 36
@@ -983,8 +987,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
