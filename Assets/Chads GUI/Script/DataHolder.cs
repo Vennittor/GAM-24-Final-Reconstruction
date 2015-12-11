@@ -61,11 +61,8 @@ public class DataHolder : MonoBehaviour
 	public StageSelect stageSelection;
 
 	public AudioSource menuMusic;
-<<<<<<< HEAD
 	public AudioSource finalDestination;
 	public AudioSource pokemonStadium;
-=======
->>>>>>> origin/master
 
 	//mouse pointer
 	public Texture2D handTexture;
@@ -95,7 +92,6 @@ public class DataHolder : MonoBehaviour
 		if (Application.loadedLevel == 5)
 		{
 			menuMusic.Stop ();
-<<<<<<< HEAD
 			if (stageSelection == StageSelect.finalDestination)
 			{
 				finalDestination.Play ();
@@ -104,8 +100,6 @@ public class DataHolder : MonoBehaviour
 			{
 				pokemonStadium.Play();
 			}
-=======
->>>>>>> origin/master
 		}
 	}
 
