@@ -26,9 +26,9 @@ public class Shell : ItemBaseScript
 	}
 	public override void FunctionAlpha (Vector3 throwDirection = default(Vector3))
 	{
-
         Released(throwDirection);
-
+        leftright = new Vector3(throwDirection.x, 0, 0);
+        FunctionBeta();
 		base.FunctionAlpha ();
 	}
 	public override void FunctionBeta ()
@@ -46,8 +46,9 @@ public class Shell : ItemBaseScript
 	}
 	void OnCollisionEnter(Collision other)
 	{
-
-		if (other.gameObject.name != "Floor") 
+        if (other.gameObject.GetComponent<BaseCharacter>())
+            AddDamage(other.gameObject);
+        if (other.gameObject.name != "Floor") 
 		{
 			hitCount ++;
 			if(hitCount>1)

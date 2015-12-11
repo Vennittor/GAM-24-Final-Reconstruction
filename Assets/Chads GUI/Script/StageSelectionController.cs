@@ -68,11 +68,11 @@ public class StageSelectionController : MonoBehaviour
 
 //	BUTTONS
 
-//	Dont implement yet. It will break the game.
-//	public void BackButton ()
-//	{
-//		Application.LoadLevel (3);
-//	}
+
+	public void BackButton ()
+	{
+		Application.LoadLevel (3);
+	}
 
 	public void BrawlButton ()
 	{
@@ -111,6 +111,20 @@ public class StageSelectionController : MonoBehaviour
 		playerDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.hyrule;
 		selectedStage.sprite = stages[3];
 		selectedStage.color = new Color (1,1,1,1);
+	}
+
+	public void YoshiIsland ()
+	{
+		playerDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.yoshiIsland;
+		selectedStage.sprite = stages[4];
+		selectedStage.color = new Color (1,1,1,1);
+	}
+
+	public void FrigateOrpheon ()
+	{
+		playerDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.frigateOrpheon;
+		selectedStage.sprite = stages [5];
+		selectedStage.color = new Color (1, 1, 1, 1);
 	}
 }
 

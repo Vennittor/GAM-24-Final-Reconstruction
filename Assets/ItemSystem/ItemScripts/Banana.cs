@@ -8,6 +8,8 @@ public class Banana : ItemBaseScript
 	// Use this for initialization
 	public override void Start () 
 	{
+        damage = 3;
+        knockBack = .5f;
 		durability = 1;
 		base.Start();
 	}
@@ -21,10 +23,11 @@ public class Banana : ItemBaseScript
         Released(throwDirection);
         base.FunctionAlpha(throwDirection);
     }
-    public override void FunctionBeta ()
+    public void FunctionBeta (GameObject player)
 	{
-		//owner.GetComponent<DisabledStates
-		durability--;
+        player.gameObject.GetComponent<DisabledStates>().AbilityLock(1.0f);
+        AddDamage(player);
+        durability--;
 		base.FunctionBeta ();
 	}
 	void OnCollisionEnter(Collision other)
@@ -38,7 +41,7 @@ public class Banana : ItemBaseScript
 			if (canSlip)
 			{
 				if (other.gameObject.GetComponent<BaseCharacter>())
-				FunctionBeta();
+				    FunctionBeta(other.gameObject);
 			}
 
 		}

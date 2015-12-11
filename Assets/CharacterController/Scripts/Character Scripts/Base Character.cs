@@ -19,13 +19,13 @@ public class BaseCharacter : MonoBehaviour
 	public Timer comboTime, smashTime, cantMove, invincTime;
 	public float weight; 
 	public float speed;
-	public float damageModifier; 
+	public int damageModifier; 
 	public float defence; 
 	public float jumpHeight;
 	public int health; 
 	public int jumpMax;
 	public int attackCount;
-	public bool started;
+	public bool started, mmActive;
 	public float time;
 	public int lives = 2;
 
@@ -54,7 +54,8 @@ public class BaseCharacter : MonoBehaviour
         hitCollider.SetActive(false);
         hitCollider.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         smashBar = transform.FindChild("SmashBar").gameObject;
-		smashBar.transform.position = new Vector3 (500f, 500f, 500f);
+        smashBar.transform.position = new Vector3(500, 500, 500);
+        damageModifier = 1;
     }
 	public virtual void Update()
 	{
@@ -217,8 +218,8 @@ public class BaseCharacter : MonoBehaviour
             else
                 hitCollider.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
 
-            hitCollider.GetComponent<HitCollider>().damage = damage;
-            hitCollider.GetComponent<HitCollider>().knockBack = knockBack;
+            hitCollider.GetComponent<HitCollider>().damage = damage * damageModifier;
+            hitCollider.GetComponent<HitCollider>().knockBack = knockBack * damageModifier;
             hitCollider.GetComponent<HitCollider>().state = state;
             hitCollider.GetComponent<HitCollider>().stateDuration = stateDuration;
 
@@ -250,12 +251,6 @@ public class BaseCharacter : MonoBehaviour
         }
     }
 
-	public virtual IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
-	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
-	{
-		yield return null;
-    }
-
 	public virtual IEnumerator SmashAttack(float attackLegnth, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed,
 	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
 	{
@@ -264,20 +259,20 @@ public class BaseCharacter : MonoBehaviour
         {
             inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
             inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
-
             yield return null;
         }
 
         inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
         inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
 
-        int damage = 3;
-        float knockBack = 1.0f;
+        int damage = 10;
+        float knockBack = 2.0f;
         PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
         float stateDuration = 0.5f;
 
         StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                         knockBack, state, stateDuration));
+
         smashTime.Kill();
     }
    
@@ -310,7 +305,7 @@ public class BaseCharacter : MonoBehaviour
 			direction = Vector3.Normalize (direction);
 			direction = new Vector3 (direction.x, direction.y + 0.6f, 0f);
 
-			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 25f);
+			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 50f);
 		}
 
 	}
@@ -529,7 +524,43 @@ public class BaseCharacter : MonoBehaviour
         }
        
     }
-
+    public virtual void MetalXMushroom(string pick)
+    {
+        mmActive = true;
+        MetalXMushEffect(pick);
+    }
+    public IEnumerator MetalXMushEffect(string pick)
+    {
+        Timer effectLength = new Timer(5);
+        effectLength.timerComplete += () => mmActive = false; ;
+        while (mmActive)
+        {
+            if(pick == "Metal")
+            {
+                weight = weight * 1.2f;
+                speed = speed / 1.2f;
+            }
+            else if (pick == "Mushroom")
+            {
+                damageModifier = 2;
+                gameObject.transform.localScale = gameObject.transform.localScale * 2;
+            }
+        }
+        if (!mmActive)
+        {
+            if (pick == "Metal")
+            {
+                weight = weight / 1.2f;
+                speed = speed * 1.2f;
+            }
+            else if (pick == "Mushroom")
+            {
+                damageModifier = 1;
+                gameObject.transform.localScale = gameObject.transform.localScale / 2;
+            }
+        }
+        yield return null;
+    }
 }
 
 

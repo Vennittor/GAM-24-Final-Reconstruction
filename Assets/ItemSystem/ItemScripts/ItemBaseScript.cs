@@ -9,7 +9,7 @@ public class ItemBaseScript : MonoBehaviour
 
 	public int damage = 1;
 	public int thrownDMG = 5;
-    public int knockBack;
+    public float knockBack;
 
 	public int durability = 1;
 
@@ -72,11 +72,18 @@ public class ItemBaseScript : MonoBehaviour
 		held = false;
 
 		transform.parent = null;
+       CharacterInputManager input = owner.GetComponent<CharacterInputManager>();
+        if (input.leftInput > .7f)
+            throwDirection = Vector3.left;
+        else if (input.rightInput > .7f)
+            throwDirection = Vector3.right;
+        else if (input.upInput > .7f)
+            throwDirection = Vector3.up;
+        else if (input.downInput > .7f)
+            throwDirection = Vector3.down;
         if (throwDirection == new Vector3())
             throwDirection = Vector3.up;
         rb.isKinematic = false;
-        rb.constraints = RigidbodyConstraints.None;
-        rb.constraints = RigidbodyConstraints.FreezePositionZ;
         GetComponent<Collider>().enabled = true;
         rb.AddForce(transVelocity + throwDirection * 500);
         gameObject.layer = 11;
@@ -90,7 +97,7 @@ public class ItemBaseScript : MonoBehaviour
 	{
 		
 	}
-    public void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<BaseCharacter>())
         {
@@ -110,6 +117,12 @@ public class ItemBaseScript : MonoBehaviour
                 owner = null;
             }
         }
+    }
+    public void AddDamage(GameObject player)
+    {
+        if(player.gameObject.GetComponent<BaseCharacter>())
+            player.gameObject.GetComponent<BaseCharacter>().TakeDamage(damage, knockBack,
+            PlayerStates.disabledAndProtectiveStates.ASLEEP, 0, transform);
     }
 
 }

@@ -952,7 +952,7 @@ public class KirbyCharacter : BaseCharacter
 		}
 	}
 
-	public override IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
+	public IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
 	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
 	{
 		hitCollider.SetActive(true);

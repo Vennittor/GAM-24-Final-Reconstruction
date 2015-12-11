@@ -61,11 +61,23 @@ public class MenuTwoGUIController : MonoBehaviour
 		}
 	}
 
+	public void BackButton ()
+	{
+		fadeIn = false;
+		buttonMove = false;
+		Invoke ("LoadMainMenu",.75f);
+	}
+
 	public void BrawlButton ()
 	{
 		fadeIn = false;
 		buttonMove = false;
 		Invoke ("LoadCharacterSelect",.75f);
+	}
+
+	void LoadMainMenu ()
+	{
+		Application.LoadLevel (1);
 	}
 
 	void LoadCharacterSelect ()

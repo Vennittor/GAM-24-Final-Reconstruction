@@ -25,12 +25,15 @@ public class Animation_Controller : MonoBehaviour {
 	// time is the length in seconds you want to to finish by. If time = 0, playspeed will be set to normal (1).
 	public void playTime(string a, float time = 0)
 	{
-		if(anim.Play (a))
+		if (anim[a] != null)
 		{
-			if(time > 0)
-				anim [a].speed = anim [a].length / time;
-			else
-				anim [a].speed = 1;
+			if(anim.Play (a))
+			{
+				if(time > 0)
+					anim [a].speed = anim [a].length / time;
+				else
+					anim [a].speed = 1;
+			}
 		}
 	}
 
@@ -42,7 +45,10 @@ public class Animation_Controller : MonoBehaviour {
 
 	public void playLoop(string a)
 	{
-		if(!anim.IsPlaying(a))
-			anim.Play (a);
+		if (anim[a] != null)
+		{
+			if(!anim.IsPlaying(a))
+				anim.Play (a);
+		}
 	}
 }

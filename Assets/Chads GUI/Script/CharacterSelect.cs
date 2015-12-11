@@ -59,6 +59,19 @@ public class CharacterSelect : MonoBehaviour
 		Fade ();
 	}
 
+ 	public void OptionsMenu ()
+	{
+		fadeIn = false;
+		buttonMove = false;
+		playerDataHolder.GetComponent<DataHolder> ().characterMenuLoad = true;
+		Invoke ("LoadOptionsMenu",0.75f);
+	}
+
+	void LoadOptionsMenu ()
+	{
+		Application.LoadLevel (6);
+	}
+
 	//Fades the background in and out
 	void Fade ()
 	{
@@ -208,24 +221,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.mario;
 			pOneCharacter.sprite = characterSprites[0];
 			pOneCharacterText.text = "MARIO";
+			pOneCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.mario;
 			pTwoCharacter.sprite = characterSprites[0];
 			pTwoCharacterText.text = "MARIO";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.mario;
 			pThreeCharacter.sprite = characterSprites[0];
 			pThreeCharacterText.text = "MARIO";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.mario;
 			pFourCharacter.sprite = characterSprites[0];
 			pFourCharacterText.text = "MARIO";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 	public void DonkeyKong ()
@@ -235,24 +252,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.donkeyKong;
 			pOneCharacter.sprite = characterSprites[1];
 			pOneCharacterText.text = "DONKEY KONG";
+			pOneCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.donkeyKong;
 			pTwoCharacter.sprite = characterSprites[1];
 			pTwoCharacterText.text = "DONKEY KONG";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.donkeyKong;
 			pThreeCharacter.sprite = characterSprites[1];
 			pThreeCharacterText.text = "DONKEY KONG";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.donkeyKong;
 			pFourCharacter.sprite = characterSprites[1];
 			pFourCharacterText.text = "DONKEY KONG";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 	public void Samus ()
@@ -262,24 +283,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.samus;
 			pOneCharacter.sprite = characterSprites[2];
 			pOneCharacterText.text = "SAMUS";
+			pOneCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.samus;
 			pTwoCharacter.sprite = characterSprites[2];
 			pTwoCharacterText.text = "SAMUS";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.samus;
 			pThreeCharacter.sprite = characterSprites[2];
 			pThreeCharacterText.text = "SAMUS";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.samus;
 			pFourCharacter.sprite = characterSprites[2];
 			pFourCharacterText.text = "SAMUS";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 	public void Kirby ()
@@ -289,24 +314,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.kirby;
 			pOneCharacter.sprite = characterSprites[3];
 			pOneCharacterText.text = "KIRBY";
+			pOneCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.kirby;
 			pTwoCharacter.sprite = characterSprites[3];
 			pTwoCharacterText.text = "KIRBY";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.kirby;
 			pThreeCharacter.sprite = characterSprites[3];
 			pThreeCharacterText.text = "KIRBY";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.kirby;
 			pFourCharacter.sprite = characterSprites[3];
 			pFourCharacterText.text = "KIRBY";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 	public void Luigi ()
@@ -316,25 +345,30 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.luigi;
 			pOneCharacter.sprite = characterSprites[4];
 			pOneCharacterText.text = "LUIGI";
+			pOneCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.luigi;
 			pTwoCharacter.sprite = characterSprites[4];
 			pTwoCharacterText.text = "LUIGI";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.luigi;
 			pThreeCharacter.sprite = characterSprites[4];
 			pThreeCharacterText.text = "LUIGI";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.luigi;
 			pFourCharacter.sprite = characterSprites[4];
 			pFourCharacterText.text = "LUIGI";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
+		pOneCharacter.color = new Color (1,1,1,1);
 	}
 	public void Zelda ()
 	{
@@ -343,24 +377,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.zelda;
 			pOneCharacter.sprite = characterSprites[5];
 			pOneCharacterText.text = "ZELDA";
+			pOneCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.zelda;
 			pTwoCharacter.sprite = characterSprites[5];
 			pTwoCharacterText.text = "ZELDA";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.zelda;
 			pThreeCharacter.sprite = characterSprites[5];
 			pThreeCharacterText.text = "ZELDA";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.zelda;
 			pFourCharacter.sprite = characterSprites[5];
 			pFourCharacterText.text = "ZELDA";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 	public void Yoshi ()
@@ -370,24 +408,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.yoshi;
 			pOneCharacter.sprite = characterSprites[6];
 			pOneCharacterText.text = "YOSHI";
+			pOneCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.yoshi;
 			pTwoCharacter.sprite = characterSprites[6];
 			pTwoCharacterText.text = "YOSHI";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.yoshi;
 			pThreeCharacter.sprite = characterSprites[6];
 			pThreeCharacterText.text = "YOSHI";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.yoshi;
 			pFourCharacter.sprite = characterSprites[6];
 			pFourCharacterText.text = "YOSHI";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 	public void Bowser ()
@@ -397,24 +439,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder>().pOneSelection = DataHolder.CharacterSelection.bowser;
 			pOneCharacter.sprite = characterSprites[7];
 			pOneCharacterText.text = "BOWSER";
+			pOneCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pTwoSelection = DataHolder.CharacterSelection.bowser;
 			pTwoCharacter.sprite = characterSprites[7];
 			pTwoCharacterText.text = "BOWSER";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pThreeSelection = DataHolder.CharacterSelection.bowser;
 			pThreeCharacter.sprite = characterSprites[7];
 			pThreeCharacterText.text = "BOWSER";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder>().pFourSelection = DataHolder.CharacterSelection.bowser;
 			pFourCharacter.sprite = characterSprites[7];
 			pFourCharacterText.text = "BOWSER";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 
@@ -425,24 +471,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder> ().pOneSelection = DataHolder.CharacterSelection.link;
 			pOneCharacter.sprite = characterSprites [8];
 			pOneCharacterText.text = "LINK";
+			pOneCharacter.color = new Color (1,1,1,1);
 		} 
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder> ().pTwoSelection = DataHolder.CharacterSelection.link;
 			pTwoCharacter.sprite = characterSprites [8];
 			pTwoCharacterText.text = "LINK";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder> ().pThreeSelection = DataHolder.CharacterSelection.link;
 			pThreeCharacter.sprite = characterSprites [8];
 			pThreeCharacterText.text = "LINK";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		} 
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder> ().pFourSelection = DataHolder.CharacterSelection.link;
 			pFourCharacter.sprite = characterSprites [8];
 			pFourCharacterText.text = "LINK";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 
@@ -453,24 +503,28 @@ public class CharacterSelect : MonoBehaviour
 			playerDataHolder.GetComponent<DataHolder> ().pOneSelection = DataHolder.CharacterSelection.zeroSuitSamus;
 			pOneCharacter.sprite = characterSprites [9];
 			pOneCharacterText.text = "ZERO SUIT SAMUS";
+			pOneCharacter.color = new Color (1,1,1,1);
 		} 
 		else if (playerTurn == TurnTracker.playerTwo) 
 		{
 			playerDataHolder.GetComponent<DataHolder> ().pTwoSelection = DataHolder.CharacterSelection.zeroSuitSamus;
 			pTwoCharacter.sprite = characterSprites [9];
 			pTwoCharacterText.text = "ZERO SUIT SAMUS";
+			pTwoCharacter.color = new Color (1,1,1,1);
 		}
 		else if (playerTurn == TurnTracker.playerThree) 
 		{
 			playerDataHolder.GetComponent<DataHolder> ().pThreeSelection = DataHolder.CharacterSelection.zeroSuitSamus;
 			pThreeCharacter.sprite = characterSprites [9];
 			pThreeCharacterText.text = "ZERO SUIT SAMUS";
+			pThreeCharacter.color = new Color (1,1,1,1);
 		} 
 		else if (playerTurn == TurnTracker.playerFour) 
 		{
 			playerDataHolder.GetComponent<DataHolder> ().pFourSelection = DataHolder.CharacterSelection.zeroSuitSamus;
 			pFourCharacter.sprite = characterSprites [9];
 			pFourCharacterText.text = "ZERO SUIT SAMUS";
+			pFourCharacter.color = new Color (1,1,1,1);
 		}
 	}
 }

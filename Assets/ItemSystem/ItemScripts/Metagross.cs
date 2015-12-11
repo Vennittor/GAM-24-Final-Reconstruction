@@ -20,7 +20,7 @@ public class Metagross : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
-        GetComponent<Rigidbody>().isKinematic = true;
+        //GetComponent<Rigidbody>().isKinematic = true;
     }
     
 }

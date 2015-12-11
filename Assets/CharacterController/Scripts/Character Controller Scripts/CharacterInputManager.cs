@@ -537,63 +537,66 @@ public class CharacterInputManager : MonoBehaviour
 
 	void InputToVariables()
 	{
-		if (Input.GetAxis (playerName + "_Horizontal") != 0)
+		if (!playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK))
 		{
-			if (Input.GetAxis (playerName + "_Horizontal") < 0)
-				leftInput = Input.GetAxis (playerName + "_Horizontal");
-			else if (Input.GetAxis (playerName + "_Horizontal") > 0)
-				rightInput = Input.GetAxis (playerName + "_Horizontal");
+			if (Input.GetAxis (playerName + "_Horizontal") != 0)
+			{
+				if (Input.GetAxis (playerName + "_Horizontal") < 0)
+					leftInput = Input.GetAxis (playerName + "_Horizontal");
+				else if (Input.GetAxis (playerName + "_Horizontal") > 0)
+					rightInput = Input.GetAxis (playerName + "_Horizontal");
+			}
+			else
+			{
+				leftInput = rightInput = 0;
+			}
+			
+			if (Input.GetAxis (playerName + "_Vertical") != 0)
+			{
+				if (Input.GetAxis (playerName + "_Vertical") < 0)
+					downInput = Input.GetAxis (playerName + "_Vertical");
+				else if (Input.GetAxis (playerName + "_Vertical") > 0)
+					upInput = Input.GetAxis (playerName + "_Vertical");
+			}
+			else
+			{
+				upInput = downInput = 0;
+			}
+	//		
+	//		if (Input.GetButton (playerName + "_Shield"))
+	//			shieldButton = true;
+	//		else
+	//			shieldButton = false;
+
+			if (Input.GetButtonDown (playerName + "_Jump"))
+				jumpButton = true;
+			else
+				jumpButton = false;
+	//
+	//		if (Input.GetButtonDown (playerName + "_Grab"))
+	//			grabButton = true;
+	//		else
+	//			grabButton = false;
+
+			if (Input.GetButtonDown (playerName + "_Attack"))
+				attackButton = true;
+			else
+				attackButton = false;
+
+			if (Input.GetButton (playerName + "_Attack"))
+				spamButton = true;
+			else
+				spamButton = false;
+
+			if (Input.GetButtonDown (playerName + "_Special"))
+				specialButton = true;
+			else
+				specialButton = false;
+
+			if (Input.GetButton (playerName + "_Special"))
+				spamSpecial = true;
+			else
+				spamSpecial = false;
 		}
-		else
-		{
-			leftInput = rightInput = 0;
-		}
-		
-		if (Input.GetAxis (playerName + "_Vertical") != 0)
-		{
-			if (Input.GetAxis (playerName + "_Vertical") < 0)
-				downInput = Input.GetAxis (playerName + "_Vertical");
-			else if (Input.GetAxis (playerName + "_Vertical") > 0)
-				upInput = Input.GetAxis (playerName + "_Vertical");
-		}
-		else
-		{
-			upInput = downInput = 0;
-		}
-		
-		if (Input.GetButton (playerName + "_Shield"))
-			shieldButton = true;
-		else
-			shieldButton = false;
-
-		if (Input.GetButtonDown (playerName + "_Jump"))
-			jumpButton = true;
-		else
-			jumpButton = false;
-
-		if (Input.GetButtonDown (playerName + "_Grab"))
-			grabButton = true;
-		else
-			grabButton = false;
-
-		if (Input.GetButtonDown (playerName + "_Attack"))
-			attackButton = true;
-		else
-			attackButton = false;
-
-		if (Input.GetButton (playerName + "_Attack"))
-			spamButton = true;
-		else
-			spamButton = false;
-
-		if (Input.GetButtonDown (playerName + "_Special"))
-			specialButton = true;
-		else
-			specialButton = false;
-
-		if (Input.GetButton (playerName + "_Special"))
-			spamSpecial = true;
-		else
-			spamSpecial = false;
 	}
 }

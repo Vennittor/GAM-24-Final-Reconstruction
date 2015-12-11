@@ -8,15 +8,15 @@ public class LinkCharacter : BaseCharacter
 	public override void Awake () 
 	{
 		weight = 1.5f;
-		speed = 15.0f;
+		speed = 17.0f;
 		health = 0;
-		jumpHeight = 7f;
-		jumpMax = 2;
+		jumpHeight = 10f;
+		jumpMax = 1;
 		attackCount = 0;
 		frozen = false;
 		if (model == null)
 		{
-			model = Instantiate(Resources.Load("Kirby_2"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
+			model = Instantiate(Resources.Load("Link_1"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}
@@ -24,10 +24,7 @@ public class LinkCharacter : BaseCharacter
 		base.Awake();
 		//bool hasItem;
 	}
-    public virtual void Start()
-    {
 
-    }
 	public override void StandingA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
@@ -39,14 +36,14 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.3f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, 1f, 0f);
+			float attackLegnth = 0.1f;
+			Vector3 boxCollider = new Vector3(2f, 0.5f, 0.5f);
+			Vector3 position = new Vector3(1f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = Vector3.back;
-			float rotationSpeed = 20.0f;
+			bool pivot = false;
+			Vector3 rotationDirection = Vector3.zero;
+			float rotationSpeed = 0f;
 			
 			int damage = 5;
 			float knockBack = 1.0f;
@@ -57,7 +54,7 @@ public class LinkCharacter : BaseCharacter
 			                              knockBack, state, stateDuration));
 
 			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
+			animControl.playTime("Ground-Forward", 0.3f);
 			
 		}
 	}
@@ -78,16 +75,22 @@ public class LinkCharacter : BaseCharacter
 			if (attackCount >= 2)
 			{
 				comboTime.Pause();
-				float attackLegnth = 5f;
-				Vector3 boxCollider = new Vector3 (0.5f, 0.5f, 0.5f);
-				Vector3 position = new Vector3 (.5f, .5f, 0f);
+				float attackLegnth = 0.1f;
+				Vector3 boxCollider = new Vector3(2f, 0.5f, 0.5f);
+				Vector3 position = new Vector3(1f, 0f, 0f);
 				Vector3 lerpVelocity = Vector3.zero;
 				float lerpSpeed = 0f;
-				bool pivot = true;
-				Vector3 rotationDirection = new Vector3 (0,1,0);
-				float rotationSpeed = 0.0f;
+				bool pivot = false;
+				Vector3 rotationDirection = Vector3.zero;
+				float rotationSpeed = 0f;
 				
-				StartCoroutine (ComboAttack (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
+				int damage = 5;
+				float knockBack = 1.0f;
+				PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+				float stateDuration = 0.5f;
+				
+				StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+				                              knockBack, state, stateDuration));
 			}
 			else
 				StandingA();
@@ -96,7 +99,7 @@ public class LinkCharacter : BaseCharacter
 	}
 	public void comboEnd()
 	{
-		float attackLegnth = 0.15f;
+		float attackLegnth = 0.2f;
 		Vector3 boxCollider = new Vector3 (0.5f, 0.5f, 0.5f);
 		Vector3 position = new Vector3 (0.5f, 1f, 0f);
 		Vector3 lerpVelocity = Vector3.zero;
@@ -113,77 +116,107 @@ public class LinkCharacter : BaseCharacter
 		StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
 		                                knockBack, state, stateDuration));
 	}
-	public void DashingA()
+
+	public override void LeftRightA()
+	{
+		float attackLegnth = 0.2f;
+		Vector3 boxCollider = new Vector3 (0.5f, 0.5f, 0.5f);
+		Vector3 position = new Vector3 (0.5f, 1f, 0f);
+		Vector3 lerpVelocity = Vector3.zero;
+		float lerpSpeed = 0f;
+		bool pivot = true;
+		Vector3 rotationDirection = Vector3.back;
+		float rotationSpeed = 500.0f;
+		
+		int damage = 5;
+		float knockBack = 1.0f;
+		PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+		float stateDuration = 0.5f;
+		
+		StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+		                                knockBack, state, stateDuration));
+	}
+		
+	public override void DownA()
+	{
+		float attackLegnth = 0.2f;
+		Vector3 boxCollider = new Vector3 (3f, 0.5f, 0.5f);
+		Vector3 position = new Vector3 (0f, -1f, 0f);
+		Vector3 lerpVelocity = Vector3.zero;
+		float lerpSpeed = 0f;
+		bool pivot = false;
+		Vector3 rotationDirection = Vector3.zero;
+		float rotationSpeed = 0.0f;
+		
+		int damage = 5;
+		float knockBack = 1.0f;
+		PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+		float stateDuration = 0.5f;
+		
+		StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+		                                knockBack, state, stateDuration));
+	}
+
+	public override void UpA()
+	{
+		float attackLegnth = 0.25f;
+		Vector3 boxCollider = new Vector3(3.0f, 0.4f, 0.1f);
+		Vector3 position = new Vector3(-1.0f, 0f, 0f);
+		Vector3 lerpVelocity = Vector3.zero;
+		float lerpSpeed = 0f;
+		bool pivot = true;
+		Vector3 rotationDirection = Vector3.forward;
+		float rotationSpeed = 1200.0f;
+		
+		inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
+		inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
+		
+		int damage = 5;
+		float knockBack = 1.0f;
+		PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+		float stateDuration = 0.5f;
+		
+		StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+		                              knockBack, state, stateDuration));
+	}
+	
+	public override void SprintA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
 		if (hasItem)
 		{
 			if (GetComponentInChildren<ItemBaseScript>())
-				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
-		}
-		else
-		{
-			float attackLegnth = 2f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, 1.5f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = Vector3.back;
-			float rotationSpeed = 20.0f;
-			
-			int damage = 5;
-			float knockBack = 2.0f;
-			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-			float stateDuration = 0.5f;
-			
-			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-			                              knockBack, state, stateDuration));
-			
-			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
-			
-		}
+			GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+	}
+	else
+	{
+		float attackLegnth = 1f;
+		Vector3 boxCollider = new Vector3(0.5f, 3f, 0.5f);
+		Vector3 position = new Vector3(0f, 1f, 0f);
+		Vector3 lerpVelocity = Vector3.zero;
+		float lerpSpeed = 0f;
+		bool pivot = true;
+		Vector3 rotationDirection = Vector3.back;
+		float rotationSpeed = 200.0f;
+		
+		int damage = 5;
+		float knockBack = 1.0f;
+		PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+		float stateDuration = 0.5f;
+		
+		StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+		                              knockBack, state, stateDuration));
+		
+		// Neutral Standing A Sound 
+		animControl.playTime("Ground-Forward", 0.1f);
+		
+	}
 		// Dashing A Animation
 		// Dashing A Sound
 	}
-	public void NeutralStandingA()
-	{
-		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
-			return;
-		if (hasItem)
-		{
-			if (GetComponentInChildren<ItemBaseScript>())
-				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
-		}
-		else
-		{
-			float attackLegnth = 0.1f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(1f, 0f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.zero;
-			float rotationSpeed = 0.0f;
-			
-			int damage = 3;
-			float knockBack = 1.0f;
-			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-			float stateDuration = 0.5f;
-			
-			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-			                              knockBack, state, stateDuration));
-			
-			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
-			
-		}
-		// Neutral Standing A Animation
-		// Neutral Standing A Sound 
-	}
-	public void NeutralAAir()
+
+	public override void NeutralAAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -195,7 +228,7 @@ public class LinkCharacter : BaseCharacter
 		else
 		{
 			float attackLegnth = 0.5f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
+			Vector3 boxCollider = new Vector3(2f, 0.5f, 0.5f);
 			Vector3 position = new Vector3(.5f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
@@ -218,7 +251,8 @@ public class LinkCharacter : BaseCharacter
 		// Neutral A Air Animation
 		// Neutral A Air Sound 
 	}
-	public void UpAir()
+
+	public override void UpAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -230,13 +264,13 @@ public class LinkCharacter : BaseCharacter
 		else
 		{
 			float attackLegnth = 0.4f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, 1f, 0f);
+			Vector3 boxCollider = new Vector3(0.5f, 2f, 0.5f);
+			Vector3 position = new Vector3(0f, 1f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
 			bool pivot = false;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 40.0f;
+			Vector3 rotationDirection = Vector3.zero;
+			float rotationSpeed = 0.0f;
 			
 			int damage = 5;
 			float knockBack = 1.0f;
@@ -253,7 +287,7 @@ public class LinkCharacter : BaseCharacter
 		// Up Air Animation
 		// Up Air Sound
 	}
-	public void DownAir()
+	public override void DownAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -264,23 +298,23 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.5f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, -.5f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
+			float attackLegnth = 0.4f;
+			Vector3 boxCollider = new Vector3(0.5f, -2f, 0.5f);
+			Vector3 position = new Vector3(0f, -1f, 0f);
+			Vector3 lerpVelocity = new Vector3(0f, -100f, 0f);
+			float lerpSpeed = 10f;
 			bool pivot = false;
-			Vector3 rotationDirection = Vector3.back;
-			float rotationSpeed = 300.0f;
+			Vector3 rotationDirection = Vector3.zero;
+			float rotationSpeed = 0.0f;
 			
-			int damage = 20;
-			float knockBack = 5.0f;
+			int damage = 5;
+			float knockBack = 1.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
 			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
 			                              knockBack, state, stateDuration));
-			
+
 			// Neutral Standing A Sound 
 			animControl.playTime("Ground-Forward", 0.1f);
 			
@@ -288,7 +322,7 @@ public class LinkCharacter : BaseCharacter
 		// Down Air Animation
 		// Down Air Sound
 	}
-	public void LeftRightAir()
+	public override void LeftRightAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -335,7 +369,7 @@ public class LinkCharacter : BaseCharacter
 		else
 		{
 			float attackLegnth = 2f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
+			Vector3 boxCollider = new Vector3(2f, 0.5f, 0.5f);
 			Vector3 position = new Vector3(.5f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
@@ -358,7 +392,7 @@ public class LinkCharacter : BaseCharacter
 		// Right Air Animation
 		// Right Air Sound
 	}
-	public void UpSmashA()
+	public override void UpSmashA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -369,24 +403,26 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			attackCount++;
-			if (attackCount >= 3)
-			{
-				comboTime.Pause();
-				float attackLegnth = 5f;
-				Vector3 boxCollider = new Vector3 (0.5f, 0.5f, 0.5f);
-				Vector3 position = new Vector3 (.5f, 1f, 0f);
-				Vector3 lerpVelocity = Vector3.zero;
-				float lerpSpeed = 0f;
-				bool pivot = true;
-				Vector3 rotationDirection = Vector3.back;
-				float rotationSpeed = 10.0f;
-				
-				StartCoroutine (ComboAttack (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
-			}
-			else
-				UpA();
+			float attackLegnth = 0.18f;
+			Vector3 boxCollider = new Vector3 (0.5f, 0.5f, 0.5f);
+			Vector3 position = new Vector3 (0.5f, 1f, 0f);
+			Vector3 lerpVelocity = Vector3.zero;
+			float lerpSpeed = 0f;
+			bool pivot = true;
+			Vector3 rotationDirection = Vector3.back;
+			float rotationSpeed = 800.0f;
+
 			
+			if (!started)
+			{
+				smashTime = new Timer(1.2f);
+				started = true;
+				StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
+				                           pivot, rotationDirection, rotationSpeed));
+			}
+			smashTime.timerComplete += () => { started = false; };
+
+
 			// Neutral Standing A Sound 
 			animControl.playTime("Ground-Forward", 0.1f);
 			
@@ -394,7 +430,7 @@ public class LinkCharacter : BaseCharacter
 		// Up A Smash Animarion 
 		// Up A Smash Sound 
 	}
-	public void DownSmashA()
+	public override void DownSmashA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -405,22 +441,24 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.3f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, .5f, 0f);
+			float attackLegnth = 0.6f;
+			Vector3 boxCollider = new Vector3(3.5f, 0.8f, 0.1f);
+			Vector3 position = new Vector3(0f, -0.5f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = Vector3.back;
-			float rotationSpeed = 25.0f;
+			bool pivot = false;
+			Vector3 rotationDirection = Vector3.down;
+			float rotationSpeed = 900.0f;
 			
-			int damage = 10;
-			float knockBack = 5.0f;
-			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-			float stateDuration = 0.5f;
 			
-			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-			                              knockBack, state, stateDuration));
+			if (!started)
+			{
+				smashTime = new Timer(1.2f);
+				started = true;
+				StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
+				                           pivot, rotationDirection, rotationSpeed));
+			}
+			smashTime.timerComplete += () => { started = false; };
 			
 			// Neutral Standing A Sound 
 			animControl.playTime("Ground-Forward", 0.1f);
@@ -429,7 +467,7 @@ public class LinkCharacter : BaseCharacter
 		// Down A Smash Animarion 
 		// Down A Smash Sound 
 	}
-	public void LeftRightSmashA()
+	public override void LeftRightSmashA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -440,22 +478,23 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.3f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, 0f, 0f);
+			float attackLegnth = 0.2f;
+			Vector3 boxCollider = new Vector3 (2f, 0.5f, 0.5f);
+			Vector3 position = new Vector3 (0.5f, 1f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 10.0f;
-			
-			int damage = 6;
-			float knockBack = 1.5f;
-			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-			float stateDuration = 0.5f;
-			
-			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-			                              knockBack, state, stateDuration));
+			bool pivot = true;
+			Vector3 rotationDirection = Vector3.back;
+			float rotationSpeed = 500.0f;
+
+			if (!started)
+			{
+				smashTime = new Timer(1.2f);
+				started = true;
+				StartCoroutine(SmashAttack(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed,
+				                           pivot, rotationDirection, rotationSpeed));
+			}
+			smashTime.timerComplete += () => { started = false; };
 			
 			// Neutral Standing A Sound 
 			animControl.playTime("Ground-Forward", 0.1f);
@@ -464,7 +503,7 @@ public class LinkCharacter : BaseCharacter
 		// Left A Smash Animarion 
 		// Left A Smash Sound 
 	}
-	public override IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
+	public IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
 	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
 	{
 		hitCollider.SetActive(true);
@@ -475,7 +514,7 @@ public class LinkCharacter : BaseCharacter
 			
 			disabledStates.vAttackLength = attackLength;
 			
-			hitCollider.transform.localPosition = new Vector3(1f, Random.Range(-1f, 1f), 0f);
+			hitCollider.transform.localPosition = position;
 			hitCollider.transform.localScale = boxCollider;
 			
 			rigidBody.velocity = Vector3.Lerp(this.rigidBody.velocity, lerpVelocity, lerpSpeed * Time.deltaTime);
@@ -490,66 +529,4 @@ public class LinkCharacter : BaseCharacter
 		ResetAttack();
 		comboTime.Kill();
 	}
-	
-	//	pu7blic override void NeutralB()
-	//	{
-	//		print ("Link Neutral B was called");
-	//		// Neutral B Animation
-	//		// Neutral B Sound
-//	}
-//	public void UpSpecialB()
-//	{
-//		print ("Link Special B Up was called");
-//		// Up B Special Animarion 
-//		// Up B Special Sound 
-//	}
-//	public void DownSpecialB()
-//	{
-//		print ("Link Special B Down was called");
-//		// Down B Special Animarion 
-//		// Down B Special Sound 
-//	}
-//	public void LeftRightSpecialB()
-//	{
-//		print ("Link Special B LeftRight was called");
-//		// Left B Special Animarion 
-//		// Left B Special Sound 
-//	}
-//	public void AGrab()
-//	{
-//		print ("Link A Grab was called");
-//		// A Grab Animation
-//		// A Grab Sound
-//	}
-//	public void UpThrow()
-//	{
-//		print ("Link Up Throw was called");
-//		// Up Throw Animation
-//		// Up Throw Sound 
-//	}
-//	public void DownThrow()
-//	{
-//		print ("Link Down Throw was called");
-//		// Down Throw Animation
-//		// Down Throw Sound 
-//	}
-//	public void LeftRightThrow()
-//	{
-//		print ("Link LeftRight Throw was called");
-//		// Left Throw Animation
-//		// Left Throw Sound 
-//	}
-//	public void LedgeAttack()
-//	{
-//		print ("Link Ledge Attack was called");
-//		// Ledge Attack Animation
-//		// Ledge Attack Sound
-//	}
-//	public void FinalSmash()
-//	{
-//		print ("Link Final Smash was called");
-//		// Final Smash Animation
-//		// Final Smash Sound
-//	}
-	
 }

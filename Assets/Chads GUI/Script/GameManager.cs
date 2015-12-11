@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 	public GameObject[] characters;
 	public GameObject[] stages;
 
+	public List<GameObject> possibleWinners = new List<GameObject>();
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -27,6 +29,66 @@ public class GameManager : MonoBehaviour
 		playerCount = playerDataHolder.GetComponent<DataHolder> ().playerCount;
 		AddToCharacters ();
 		InitialSpawn ();
+		PossibleWinnersList ();
+	}
+
+	void Update ()
+	{
+		Winning ();
+		RemoveLooser ();
+	}
+
+	void PossibleWinnersList ()
+	{
+		possibleWinners.Add (playerOne);
+		possibleWinners.Add (playerTwo);
+		if (playerDataHolder.GetComponent<DataHolder> ().playerCount >= 3) 
+		{
+			possibleWinners.Add (playerThree);
+		}
+		if (playerDataHolder.GetComponent<DataHolder> ().playerCount >= 4) 
+		{
+			possibleWinners.Add (playerFour);
+		}
+		playerDataHolder.GetComponent<DataHolder> ().possibleWinnersList = possibleWinners;
+	}
+
+	void RemoveLooser ()
+	{
+		if (playerOne.GetComponent<BaseCharacter>().lives <= 0)
+		{
+			possibleWinners.Remove (playerOne);
+		}
+		if (playerTwo.GetComponent<BaseCharacter>().lives <= 0)
+		{
+			possibleWinners.Remove (playerTwo);
+		}
+		if (playerCount > 2) 
+		{
+			if (playerThree.GetComponent<BaseCharacter>().lives <= 0)
+			{
+				possibleWinners.Remove (playerThree);
+			}
+		}
+		if (playerCount > 3) 
+		{
+			if (playerFour.GetComponent<BaseCharacter>().lives <= 0)
+			{
+				possibleWinners.Remove (playerFour);
+			}
+		}
+		playerDataHolder.GetComponent<DataHolder> ().possibleWinnersList = possibleWinners;
+		playerDataHolder.GetComponent<DataHolder> ().winnerName = possibleWinners [0].gameObject.name;
+	}
+	
+
+
+	void Winning ()
+	{
+		if (possibleWinners.Count <= 1) 
+		{
+			Application.LoadLevel (7);
+		}
 	}
 
 	void AddToCharacters()

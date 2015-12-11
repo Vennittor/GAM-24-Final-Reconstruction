@@ -33,7 +33,7 @@ public class ChikoritaScript : MonoBehaviour {
                 transform.position,
                Quaternion.identity) as GameObject;
             leaf.GetComponent<Leaf>().direction = Vector3.right;
-            leaf.transform.position += new Vector3(0, .5f, 0);
+            leaf.transform.position += new Vector3(0, .8f, 0);
             leaf.transform.rotation = Quaternion.Euler(new Vector3(10f, 100f, 140f));
             
         }

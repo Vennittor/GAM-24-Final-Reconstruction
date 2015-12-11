@@ -41,8 +41,12 @@ public class MoltresScript : MonoBehaviour {
 
                 vect1 = Vector3.Reflect(vect2, contact.normal);
                 vect1.Normalize();
-               
-                    contact.otherCollider.attachedRigidbody.AddForce(vect1 * moltresVelocity);
+                if (other.gameObject.GetComponent<BaseCharacter>())
+                {
+                    other.gameObject.GetComponent<BaseCharacter>().TakeDamage(100, 3,
+       PlayerStates.disabledAndProtectiveStates.ASLEEP, 0, transform);
+                }
+                contact.otherCollider.attachedRigidbody.AddForce(vect1 * moltresVelocity);
                 }
             }
         }

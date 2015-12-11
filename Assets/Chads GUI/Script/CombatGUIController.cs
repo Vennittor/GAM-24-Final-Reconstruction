@@ -13,6 +13,7 @@ public class CombatGUIController : MonoBehaviour
 	public Image pOneCharacterPortrait;
 	public Image pOneStockImageOne;
 	public Image pOneStockImageTwo;
+	public Image pOneStockImageThree;
 
 	public Text pOneName;
 	public Text pOnePercentText;
@@ -26,6 +27,7 @@ public class CombatGUIController : MonoBehaviour
 	public Image pTwoCharacterPortrait;
 	public Image pTwoStockImageOne;
 	public Image pTwoStockImageTwo;
+	public Image pTwoStockImageThree;
 
 	public Text pTwoName;
 	public Text pTwoPercentText;
@@ -39,7 +41,8 @@ public class CombatGUIController : MonoBehaviour
 	public Image pThreeCharacterPortrait;
 	public Image pThreeStockImageOne;
 	public Image pThreeStockImageTwo;
-	
+	public Image pThreeStockImageThree;
+
 	public Text pThreeName;
 	public Text pThreePercentText;
 	
@@ -54,9 +57,11 @@ public class CombatGUIController : MonoBehaviour
 	public Image pFourCharacterPortrait;
 	public Image pFourStockImageOne;
 	public Image pFourStockImageTwo;
-	
+	public Image pFourStockImageThree;
+
 	public Text pFourName;
 	public Text pFourPercentText;
+	public Text pFourHeadTag;
 	
 	public float pFourCurrentPercent;
 	
@@ -88,24 +93,34 @@ public class CombatGUIController : MonoBehaviour
 		pOneCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pOnePortrait;
 		pOneStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pOneStock;
 		pOneStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pOneStock;
+		pOneStockImageThree.sprite = playerDataHolder.GetComponent<DataHolder> ().pOneStock;
 		pOnePercentText.text = "" + (int)pOneCurrentPercent + "%";
         
 
 		//Stock Images
-		if (playerOne.GetComponent<BaseCharacter> ().lives == 2) 
+		if (playerOne.GetComponent<BaseCharacter> ().lives == 3) 
 		{
 			pOneStockImageOne.gameObject.SetActive (true);
 			pOneStockImageTwo.gameObject.SetActive (true);
+			pOneStockImageThree.gameObject.SetActive (true);
+		} 
+		else if (playerOne.GetComponent<BaseCharacter> ().lives == 2) 
+		{
+			pOneStockImageOne.gameObject.SetActive (true);
+			pOneStockImageTwo.gameObject.SetActive (true);
+			pOneStockImageThree.gameObject.SetActive (false);
 		} 
 		else if (playerOne.GetComponent<BaseCharacter> ().lives == 1) 
 		{
 			pOneStockImageOne.gameObject.SetActive (true);
 			pOneStockImageTwo.gameObject.SetActive (false);
+			pOneStockImageThree.gameObject.SetActive (false);
 		}
 		else if (playerOne.GetComponent<BaseCharacter> ().lives == 0)
 		{
 			pOneStockImageOne.gameObject.SetActive (false);
 			pOneStockImageTwo.gameObject.SetActive (false);
+			pOneStockImageThree.gameObject.SetActive (false);
 		}
 
 		//Percent Color
@@ -135,22 +150,32 @@ public class CombatGUIController : MonoBehaviour
 		pTwoCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoPortrait;
 		pTwoStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoStock;
 		pTwoStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoStock;
+		pTwoStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pTwoStock;
 		pTwoPercentText.text = "" + (int)pTwoCurrentPercent + "%";
 		//Stock Images
-		if (playerTwo.GetComponent<BaseCharacter> ().lives == 2) 
+		if (playerTwo.GetComponent<BaseCharacter> ().lives == 3) 
 		{
 			pTwoStockImageOne.gameObject.SetActive (true);
 			pTwoStockImageTwo.gameObject.SetActive (true);
+			pTwoStockImageThree.gameObject.SetActive (true);
+		} 
+		else if (playerTwo.GetComponent<BaseCharacter> ().lives == 2) 
+		{
+			pTwoStockImageOne.gameObject.SetActive (true);
+			pTwoStockImageTwo.gameObject.SetActive (true);
+			pTwoStockImageThree.gameObject.SetActive (false);
 		} 
 		else if (playerTwo.GetComponent<BaseCharacter> ().lives == 1) 
 		{
 			pTwoStockImageOne.gameObject.SetActive (true);
 			pTwoStockImageTwo.gameObject.SetActive (false);
+			pTwoStockImageThree.gameObject.SetActive (false);
 		}
 		else if (playerTwo.GetComponent<BaseCharacter> ().lives == 0)
 		{
 			pTwoStockImageOne.gameObject.SetActive (false);
 			pTwoStockImageTwo.gameObject.SetActive (false);
+			pTwoStockImageThree.gameObject.SetActive (false);
 		}
 
 		//Percent color
@@ -182,23 +207,33 @@ public class CombatGUIController : MonoBehaviour
 			pThreeCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pThreePortrait;
 			pThreeStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pThreeStock;
 			pThreeStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pThreeStock;
+			pThreeStockImageThree.sprite = playerDataHolder.GetComponent<DataHolder> ().pThreeStock;
 			pThreePercentText.text = "" + (int)pThreeCurrentPercent + "%";
 
 			//Stock Images
-			if (playerThree.GetComponent<BaseCharacter> ().lives == 2) 
+			if (playerThree.GetComponent<BaseCharacter> ().lives == 3) 
 			{
 				pThreeStockImageOne.gameObject.SetActive (true);
 				pThreeStockImageTwo.gameObject.SetActive (true);
+				pThreeStockImageThree.gameObject.SetActive (true);
+			} 
+			else if (playerThree.GetComponent<BaseCharacter> ().lives == 2) 
+			{
+				pThreeStockImageOne.gameObject.SetActive (true);
+				pThreeStockImageTwo.gameObject.SetActive (true);
+				pThreeStockImageThree.gameObject.SetActive (false);
 			} 
 			else if (playerThree.GetComponent<BaseCharacter> ().lives == 1) 
 			{
 				pThreeStockImageOne.gameObject.SetActive (true);
 				pThreeStockImageTwo.gameObject.SetActive (false);
+				pThreeStockImageThree.gameObject.SetActive (false);
 			}
 			else if (playerThree.GetComponent<BaseCharacter> ().lives == 0)
 			{
 				pThreeStockImageOne.gameObject.SetActive (false);
 				pThreeStockImageTwo.gameObject.SetActive (false);
+				pThreeStockImageThree.gameObject.SetActive (false);
 			}
 			
 			//Percent color
@@ -220,7 +255,7 @@ public class CombatGUIController : MonoBehaviour
 			}
 		}
 	}
-//
+
 	void PlayerFourGUI ()
 	{
 		if (playerCount > 3) 
@@ -231,23 +266,33 @@ public class CombatGUIController : MonoBehaviour
 			pFourCharacterPortrait.sprite = playerDataHolder.GetComponent<DataHolder> ().pFourPortrait;
 			pFourStockImageOne.sprite = playerDataHolder.GetComponent<DataHolder> ().pFourStock;
 			pFourStockImageTwo.sprite = playerDataHolder.GetComponent<DataHolder> ().pFourStock;
+			pFourStockImageThree.sprite = playerDataHolder.GetComponent<DataHolder> ().pFourStock;
 			pFourPercentText.text = "" + (int)pFourCurrentPercent + "%";
 
 			//Stock Images
+			if (playerFour.GetComponent<BaseCharacter> ().lives == 3) 
+			{
+				pFourStockImageOne.gameObject.SetActive (true);
+				pFourStockImageTwo.gameObject.SetActive (true);
+				pFourStockImageThree.gameObject.SetActive (true);
+			} 
 			if (playerFour.GetComponent<BaseCharacter> ().lives == 2) 
 			{
 				pFourStockImageOne.gameObject.SetActive (true);
 				pFourStockImageTwo.gameObject.SetActive (true);
+				pFourStockImageThree.gameObject.SetActive (false);
 			} 
 			else if (playerFour.GetComponent<BaseCharacter> ().lives == 1) 
 			{
 				pFourStockImageOne.gameObject.SetActive (true);
 				pFourStockImageTwo.gameObject.SetActive (false);
+				pFourStockImageThree.gameObject.SetActive (false);
 			}
 			else if (playerFour.GetComponent<BaseCharacter> ().lives == 0)
 			{
 				pFourStockImageOne.gameObject.SetActive (false);
 				pFourStockImageTwo.gameObject.SetActive (false);
+				pFourStockImageThree.gameObject.SetActive (false);
 			}
 			
 			//Percent color
