@@ -26,21 +26,21 @@ public class TeleportBox : MonoBehaviour
     {
         if (other.gameObject.GetComponent<BaseCharacter>())
         {
-            other.GetComponent<BaseCharacter>().lives--;
-            other.GetComponent<BaseCharacter>().health = 0;
+            other.gameObject.GetComponent<BaseCharacter>().lives--;
+            other.gameObject.GetComponent<BaseCharacter>().health = 0;
             GameObject sceneCam = GameObject.Find("SceneCamera");
             sceneCam.GetComponent<SceneCamera>().players.Remove(other.gameObject);
-            if (other.GetComponent<BaseCharacter>().lives > 0)
+            if (other.gameObject.GetComponent<BaseCharacter>().lives > 0)
             {
                 Debug.Log("respawn");
-                deathSpawnPoint.GetComponent<Collider>().enabled = true;
-                other.transform.position = deathSpawnPoint.transform.position + Vector3.up;
-                other.GetComponent<BaseCharacter>().Respawn(true,sceneCam);
+                other.transform.position = deathSpawnPoint.transform.position;
+                other.GetComponent<BaseCharacter>().Respawn(true);
+                sceneCam.GetComponent<SceneCamera>().players.Add(other.gameObject);
             }
             else
             {
-                other.GetComponent<Rigidbody>().useGravity = false;
-                other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                other.gameObject.GetComponent<DisabledStates>().LockAll();
+                other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             }
         }
     }

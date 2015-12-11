@@ -58,7 +58,6 @@ public class PlayerStates : MonoBehaviour
 	{
         if (inputManager != null)
 		{
-            Debug.Log("imp");
             switch (state)
 			{
 			case movementStates.STANDING:

@@ -48,7 +48,7 @@ public class CombatGUIController : MonoBehaviour
 	public GameObject playerThree;
 	public GameObject playerThreeGUI;
 
-    public GameObject spawnPlatform;
+    //public GameObject spawnPlatform;
 
 	//player four
 	public Image pFourCharacterPortrait;
@@ -142,12 +142,12 @@ public class CombatGUIController : MonoBehaviour
 			pTwoStockImageOne.gameObject.SetActive (true);
 			pTwoStockImageTwo.gameObject.SetActive (true);
 		} 
-		else if (playerOne.GetComponent<BaseCharacter> ().lives == 1) 
+		else if (playerTwo.GetComponent<BaseCharacter> ().lives == 1) 
 		{
 			pTwoStockImageOne.gameObject.SetActive (true);
 			pTwoStockImageTwo.gameObject.SetActive (false);
 		}
-		else if (playerOne.GetComponent<BaseCharacter> ().lives == 0)
+		else if (playerTwo.GetComponent<BaseCharacter> ().lives == 0)
 		{
 			pTwoStockImageOne.gameObject.SetActive (false);
 			pTwoStockImageTwo.gameObject.SetActive (false);

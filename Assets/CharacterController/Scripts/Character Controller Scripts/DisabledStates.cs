@@ -54,7 +54,7 @@ public class DisabledStates : MonoBehaviour
 		lockTime.timerComplete += () => {character.ResetAttack (); started = false;};
 	}
 	
-	void LockAll()
+	public void LockAll()
 	{
 		inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
 		inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;

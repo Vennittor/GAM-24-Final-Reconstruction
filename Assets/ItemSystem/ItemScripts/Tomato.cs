@@ -6,7 +6,7 @@ public class Tomato : ItemBaseScript
    
     public override void Grabbed(GameObject owner)
     {
-        //add health
+        owner.GetComponent<BaseCharacter>().health -= 50;
         durability = 0;
         base.Grabbed(owner);
     }

@@ -27,7 +27,7 @@ public class BaseCharacter : MonoBehaviour
 	public int attackCount;
 	public bool started;
 	public float time;
-	public int lives = 3;
+	public int lives = 2;
 
 
 	public GameObject hitCollider;
@@ -485,7 +485,7 @@ public class BaseCharacter : MonoBehaviour
         }
         yield return null;
     }
-    public virtual void Respawn(bool canMove,GameObject cam = null)
+    public virtual void Respawn(bool canMove)
     {
         if (canMove)
         {
@@ -497,7 +497,7 @@ public class BaseCharacter : MonoBehaviour
             playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
             cantMove = new Timer(1.0f);
             invincTime = new Timer(2.0f);
-            StartCoroutine(RespawnFreezing(canMove,cam));
+            StartCoroutine(RespawnFreezing(canMove));
         }
         else
         {
@@ -514,16 +514,11 @@ public class BaseCharacter : MonoBehaviour
                 playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
         }
     }
-    public virtual IEnumerator RespawnFreezing(bool invinc, GameObject cam)
+    public virtual IEnumerator RespawnFreezing(bool invinc)
     {
         frozen = invinc;
         cantMove.timerComplete += () => frozen = false; ;
         invincTime.timerComplete += () => invinc = false; ;
-        if(!frozen)
-        {
-            if (cam != null)
-                cam.GetComponent<SceneCamera>().players.Add(gameObject);
-        }
         Component[] components = model.GetComponentsInChildren<Component>();
         List<SkinnedMeshRenderer> meshes = new List<SkinnedMeshRenderer>();
         foreach (Component component in components)
