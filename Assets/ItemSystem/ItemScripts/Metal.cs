@@ -11,7 +11,8 @@ public class Metal : ItemBaseScript
 	}
     public override void Grabbed(GameObject owner)
     {
-        //transform.parent.gameObject.GetComponent<>().MetalEffect();
+       // owner.GetComponent<BaseCharacter>()
+        durability = 0;
     }
     public override void Update ()
 	{

@@ -23,7 +23,7 @@ public class Banana : ItemBaseScript
     }
     public override void FunctionBeta ()
 	{
-		//owner.GetComponent<DisabledStates
+        owner.gameObject.GetComponent<DisabledStates>().AbilityLock(1.0f);
 		durability--;
 		base.FunctionBeta ();
 	}
