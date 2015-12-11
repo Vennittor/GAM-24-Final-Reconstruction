@@ -112,6 +112,20 @@ public class StageSelectionController : MonoBehaviour
 		selectedStage.sprite = stages[3];
 		selectedStage.color = new Color (1,1,1,1);
 	}
+
+	public void YoshiIsland ()
+	{
+		playerDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.yoshiIsland;
+		selectedStage.sprite = stages[4];
+		selectedStage.color = new Color (1,1,1,1);
+	}
+
+	public void FrigateOrpheon ()
+	{
+		playerDataHolder.GetComponent<DataHolder> ().stageSelection = DataHolder.StageSelect.frigateOrpheon;
+		selectedStage.sprite = stages [5];
+		selectedStage.color = new Color (1, 1, 1, 1);
+	}
 }
 
 

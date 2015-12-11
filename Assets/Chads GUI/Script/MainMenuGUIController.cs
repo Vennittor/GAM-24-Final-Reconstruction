@@ -67,8 +67,20 @@ public class MainMenuGUIController : MonoBehaviour
 		Invoke ("LoadMenuTwo", 0.75f);
 	}
 
+	public void OptionsButton ()
+	{
+		fadeIn = false;
+		moveButtonsIn = false;
+		Invoke ("LoadOptionsMenu",0.75f);
+	}
+
 	void LoadMenuTwo ()
 	{
 		Application.LoadLevel (2);
+	}
+
+	void LoadOptionsMenu ()
+	{
+		Application.LoadLevel (6);
 	}
 }
