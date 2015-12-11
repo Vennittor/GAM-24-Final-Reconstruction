@@ -6,8 +6,6 @@ public class LinkCharacter : BaseCharacter
 	// Use this for initialization
 	public override void Awake () 
 	{
-		rigidBody = this.gameObject.GetComponent<Rigidbody> ();
-
 		weight = 3f;
 		speed = 15.0f;
 		health = 0;

@@ -9,11 +9,10 @@ public class KirbyCharacter : BaseCharacter
 	public bool rock;
 	public override void Awake () 
 	{
-		
 		weight = 1f;
 		speed = 15.0f;
 		health = 0;
-		jumpHeight = 8f;
+		jumpHeight = 9f;
 		jumpMax = 5;
 		attackCount = 0;
 		hasEaten = false;
@@ -238,7 +237,7 @@ public class KirbyCharacter : BaseCharacter
                 inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
                 inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
 
-                int damage = 3;
+                int damage = 5;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -287,7 +286,7 @@ public class KirbyCharacter : BaseCharacter
                 Vector3 rotationDirection = Vector3.up;
                 float rotationSpeed = 1500.0f;
 
-                int damage = 2;
+                int damage = 3;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -378,7 +377,7 @@ public class KirbyCharacter : BaseCharacter
                 Vector3 rotationDirection = Vector3.forward;
                 float rotationSpeed = 1200.0f;
 
-                int damage = 3;
+                int damage = 10;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -423,7 +422,7 @@ public class KirbyCharacter : BaseCharacter
                 Vector3 rotationDirection = Vector3.up;
                 float rotationSpeed = 1200.0f;
 
-                int damage = 3;
+                int damage = 6;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -468,7 +467,7 @@ public class KirbyCharacter : BaseCharacter
                 Vector3 rotationDirection = Vector3.up;
                 float rotationSpeed = 1200.0f;
 
-                int damage = 3;
+                int damage = 9;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;

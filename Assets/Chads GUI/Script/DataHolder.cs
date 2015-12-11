@@ -55,7 +55,7 @@ public class DataHolder : MonoBehaviour
 	public CharacterSelection pThreeSelection;
 	public CharacterSelection pFourSelection;
 
-	public enum StageSelect {none,finalDestination,pokemonStadium,hyrule,greenyGreens}
+	public enum StageSelect {none,finalDestination,pokemonStadium,hyrule,greenyGreens,yoshiStadium,frigateOrpheon}
 
 	public StageSelect stageSelection;
 

@@ -2,19 +2,10 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class New_Mario : BaseCharacter 
+public class MarioCharacter : BaseCharacter 
 {
-
 	public override void Awake () 
 	{
-//		playerStates = this.gameObject.GetComponent<PlayerStates> ();
-//		disabledStates = this.gameObject.GetComponent<DisabledStates> ();
-//		inputManager = this.gameObject.GetComponent<CharacterInputManager> ();
-//		rigidBody = this.gameObject.GetComponent<Rigidbody> ();
-//		Physics.IgnoreCollision (this.gameObject.GetComponent<Collider> (), hitCollider.GetComponent<Collider> ());
-//		hitCollider.SetActive (false);
-//		hitCollider.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
-
 		weight = 2f;
 		speed = 20.0f;
 		health = 0;
@@ -28,7 +19,7 @@ public class New_Mario : BaseCharacter
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}
-		
+		base.Awake();
 		//bool hasItem;
 	}
 
