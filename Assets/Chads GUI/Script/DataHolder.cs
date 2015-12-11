@@ -60,6 +60,9 @@ public class DataHolder : MonoBehaviour
 
 	public StageSelect stageSelection;
 
+	//mouse pointer
+	public Texture2D handTexture;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -68,6 +71,7 @@ public class DataHolder : MonoBehaviour
 		pTwoIsPlayer = true;
 		pThreeIsPlayer = true;
 		pFourIsPlayer = true;
+		Cursor.SetCursor (handTexture,Vector2.zero,CursorMode.Auto);
 	}
 	
 	// Update is called once per frame
