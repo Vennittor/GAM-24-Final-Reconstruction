@@ -60,6 +60,8 @@ public class Bumper : ItemBaseScript
                     if (active)
                     {
                         contact.otherCollider.attachedRigidbody.AddForce(vect1 * bumperVelocity);
+                        if(other.gameObject.GetComponent<BaseCharacter>())
+                            AddDamage(other.gameObject);
                         durability--;
                     }
                 }

@@ -12,8 +12,10 @@ public class ItemSelector : MonoBehaviour
 	public List<itemName> unCommon;
 	public List<itemName> rare;
 	public List<itemName> veryRare;
+    public List<itemName> dontSpawn;
 
-	public List<GameObject>itemPrefabs;
+
+    public List<GameObject>itemPrefabs;
 
 	public itemName RandomDrop()
 	{

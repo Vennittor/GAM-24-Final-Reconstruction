@@ -68,11 +68,10 @@ public class BobOmb : ItemBaseScript
             return Vector3.right;
         else
             return Vector3.left;
-
     }
     void OnParticleCollision(GameObject other)
     {
-        other.gameObject.GetComponent<BaseCharacter>().TakeDamage(5, 3);
+       
     }
    void OnCollisionEnter(Collision other)
     {
@@ -86,7 +85,8 @@ public class BobOmb : ItemBaseScript
     }
     IEnumerator Explode()
     {
-       explosion.GetComponent<ParticleSystem>().Play();
+        trigger.SetActive(trigger);
+        explosion.GetComponent<ParticleSystem>().Play();
        SkinnedMeshRenderer[] meshes = GetComponentsInChildren<SkinnedMeshRenderer>();
         foreach(SkinnedMeshRenderer mesh in meshes)
         {
@@ -95,5 +95,10 @@ public class BobOmb : ItemBaseScript
         yield return new WaitForSeconds(1);
         durability = 0;
     }
-
+    public override void OnTriggerEnter(Collider other)
+    {
+        if (active)
+            AddDamage(other.gameObject);
+        base.OnTriggerEnter(other);
+    }
 }

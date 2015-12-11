@@ -47,7 +47,7 @@ public class Shell : ItemBaseScript
 	void OnCollisionEnter(Collision other)
 	{
         if (other.gameObject.GetComponent<BaseCharacter>())
-            other.gameObject.GetComponent<BaseCharacter>().TakeDamage(damage, knockBack);
+            AddDamage(other.gameObject);
         if (other.gameObject.name != "Floor") 
 		{
 			hitCount ++;

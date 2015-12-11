@@ -39,13 +39,21 @@ public class Snorlax : MonoBehaviour
     {
         if (gameObject.transform.position.x - other.gameObject.transform.position.x <= 0)
         {
-            if(other.gameObject.GetComponent<BaseCharacter>())
-            other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(1, 1, 0) * SnorlaxVelocity);
+            if (other.gameObject.GetComponent<BaseCharacter>())
+            {
+                other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(1, 1, 0) * SnorlaxVelocity);
+                other.gameObject.GetComponent<BaseCharacter>().TakeDamage(50, 2,
+           PlayerStates.disabledAndProtectiveStates.ASLEEP, 0, transform);
+            }
         }
         else
         {
             if (other.gameObject.GetComponent<BaseCharacter>())
+            {
                 other.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(-1, 1, 0) * SnorlaxVelocity);
+                other.gameObject.GetComponent<BaseCharacter>().TakeDamage(50, 2,
+          PlayerStates.disabledAndProtectiveStates.ASLEEP, 0, transform);
+            }
         }
 
     }

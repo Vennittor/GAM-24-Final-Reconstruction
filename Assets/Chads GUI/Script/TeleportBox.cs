@@ -33,6 +33,7 @@ public class TeleportBox : MonoBehaviour
             if (other.gameObject.GetComponent<BaseCharacter>().lives > 0)
             {
                 Debug.Log("respawn");
+                other.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 other.transform.position = deathSpawnPoint.transform.position;
                 other.GetComponent<BaseCharacter>().Respawn(true);
                 
