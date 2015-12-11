@@ -59,6 +59,19 @@ public class CharacterSelect : MonoBehaviour
 		Fade ();
 	}
 
+ 	public void OptionsMenu ()
+	{
+		fadeIn = false;
+		buttonMove = false;
+		playerDataHolder.GetComponent<DataHolder> ().characterMenuLoad = true;
+		Invoke ("LoadOptionsMenu",0.75f);
+	}
+
+	void LoadOptionsMenu ()
+	{
+		Application.LoadLevel (6);
+	}
+
 	//Fades the background in and out
 	void Fade ()
 	{
