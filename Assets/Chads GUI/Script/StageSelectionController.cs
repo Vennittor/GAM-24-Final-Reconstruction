@@ -68,11 +68,11 @@ public class StageSelectionController : MonoBehaviour
 
 //	BUTTONS
 
-//	Dont implement yet. It will break the game.
-//	public void BackButton ()
-//	{
-//		Application.LoadLevel (3);
-//	}
+
+	public void BackButton ()
+	{
+		Application.LoadLevel (3);
+	}
 
 	public void BrawlButton ()
 	{
