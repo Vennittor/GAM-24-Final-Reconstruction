@@ -122,13 +122,13 @@ public class MarioCharacter : BaseCharacter
 		else
 		{
 			float attackLegnth = 1f;
-			Vector3 boxCollider = new Vector3 (0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3 (0.5f, 0f, 0f);
+			Vector3 boxCollider = new Vector3 (1f, 0.5f, 0.5f);
+			Vector3 position = new Vector3 (1f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
 			bool pivot = false;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 400.0f;
+			Vector3 rotationDirection = Vector3.zero;
+			float rotationSpeed = 0.0f;
 			
 			int damage = 5;
 			float knockBack = 0.0f;
@@ -185,12 +185,12 @@ public class MarioCharacter : BaseCharacter
 		{
 			float attackLegnth = 0.25f;
 			Vector3 boxCollider = new Vector3(.5f, .5f, 0.5f);
-			Vector3 position = new Vector3(0f, 1f, 0f);
+			Vector3 position = new Vector3(-0.1f, -1f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.zero;
-			float rotationSpeed = 0.0f;
+			bool pivot = true;
+			Vector3 rotationDirection = Vector3.forward;
+			float rotationSpeed = 1000.0f;
 			
 			inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
 			inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
@@ -208,17 +208,26 @@ public class MarioCharacter : BaseCharacter
 	{
 		if (playerStates.disabledStates.Contains (PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
-		if (hasItem) {
+		if (hasItem) 
+		{
 			if (GetComponentInChildren<ItemBaseScript> ())
 				GetComponentInChildren<ItemBaseScript> ().FunctionAlpha (Vector3.up);
 			else
 				hasItem = false;
-		} else {
+		}
+		else 
+		{
+			float temp = 0;
+			if (transform.rotation == Quaternion.Euler(new Vector3(0f, 180f, 0f)))
+				temp = -10f;
+			else if (transform.rotation == Quaternion.identity)
+				temp = 10f;
+
 			float attackLegnth = 0.25f;
-			Vector3 boxCollider = new Vector3 (.5f, .5f, 0.5f);
-			Vector3 position = new Vector3 (0f, 1f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
+			Vector3 boxCollider = new Vector3 (1f, 1f, 0.5f);
+			Vector3 position = new Vector3 (1f, -0.5f, 0f);
+			Vector3 lerpVelocity = new Vector3 (temp, 0f, 0f);
+			float lerpSpeed = 1f;
 			bool pivot = false;
 			Vector3 rotationDirection = Vector3.zero;
 			float rotationSpeed = 0.0f;
@@ -252,7 +261,7 @@ public class MarioCharacter : BaseCharacter
 		{
 			float attackLegnth = 0.5f;
 			Vector3 boxCollider = new Vector3(0.5f,0.5f,0.5f);
-			Vector3 position = Vector3.zero;
+			Vector3 position = new Vector3 (1.0f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
 			bool pivot = false;
@@ -272,39 +281,6 @@ public class MarioCharacter : BaseCharacter
 		} 
 	}
 	public override void UpAir()
-	{
-		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
-			return;
-		if (hasItem)
-		{
-			if (GetComponentInChildren<ItemBaseScript>())
-				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
-			else
-				hasItem = false;
-		}
-		else
-		{
-			float attackLegnth = 0.1f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(0.0f, 1f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.forward;
-			float rotationSpeed = 0.0f;
-			
-			int damage = 3;
-			float knockBack = 1.0f;
-			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-			float stateDuration = 0.5f;
-			
-			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-			                              knockBack, state, stateDuration));
-			// Up Air Animation
-			// Up Air Sound
-		}
-	}
-	public override void DownAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -335,6 +311,39 @@ public class MarioCharacter : BaseCharacter
 			                              knockBack, state, stateDuration));
 			// Down Air Animation
 			// Down Air Sound
+		}
+	}
+	public override void DownAir()
+	{
+		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+			return;
+		if (hasItem)
+		{
+			if (GetComponentInChildren<ItemBaseScript>())
+				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+			else
+				hasItem = false;
+		}
+		else
+		{
+			float attackLegnth = 0.6f;
+			Vector3 boxCollider = new Vector3(2f, 2.1f, 0.5f);
+			Vector3 position = Vector3.zero;
+			Vector3 lerpVelocity = Vector3.zero;
+			float lerpSpeed = 0f;
+			bool pivot = false;
+			Vector3 rotationDirection = Vector3.up;
+			float rotationSpeed = 1000.0f;
+			
+			int damage = 3;
+			float knockBack = 1.0f;
+			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+			float stateDuration = 0.5f;
+			
+			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+			                              knockBack, state, stateDuration));
+			// Up Air Animation
+			// Up Air Sound
 		}
 	}
 	public override void LeftRightAir()
@@ -384,15 +393,23 @@ public class MarioCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.5f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(1.0f, 0f, 0f);
+			float attackLegnth = 0.25f;
+			Vector3 boxCollider = new Vector3(.5f, .5f, 0.5f);
+			Vector3 position = new Vector3(-0.1f, -1f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = false;
+			bool pivot = true;
 			Vector3 rotationDirection = Vector3.forward;
-			float rotationSpeed = 1200.0f;
+			float rotationSpeed = 1000.0f;
 			
+			inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
+			inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
+			
+			int damage = 4;
+			float knockBack = 1.0f;
+			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+			float stateDuration = 0.5f;
+
 			if (!started)
 			{
 				smashTime = new Timer(1.2f);
@@ -416,8 +433,8 @@ public class MarioCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.7f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
+			float attackLegnth = 0.3f;
+			Vector3 boxCollider = new Vector3(3f, 1f, 0.5f);
 			Vector3 position = new Vector3(0f, -0.5f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
@@ -457,8 +474,8 @@ public class MarioCharacter : BaseCharacter
 			float attackLegnth = 0.2f;
 			Vector3 boxCollider = new Vector3(1.5f, 0.8f, 0.1f);
 			Vector3 position = new Vector3(1f, 0f, 0f);
-			Vector3 lerpVelocity = new Vector3(temp, 0f, 0f);
-			float lerpSpeed = 1000f;
+			Vector3 lerpVelocity = Vector3.zero;
+			float lerpSpeed = 0f;
 			bool pivot = false;
 			Vector3 rotationDirection = Vector3.zero;
 			float rotationSpeed = 0f;

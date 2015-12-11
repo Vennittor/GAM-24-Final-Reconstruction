@@ -18,7 +18,7 @@ public class SamusCharacter : BaseCharacter
 		frozen = false;
 		if (model == null)
 		{
-			model = Instantiate(Resources.Load("ZSSamus"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
+			model = Instantiate(Resources.Load("Kirby_2"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}

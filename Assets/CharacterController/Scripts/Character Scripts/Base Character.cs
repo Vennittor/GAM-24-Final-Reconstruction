@@ -54,6 +54,7 @@ public class BaseCharacter : MonoBehaviour
         hitCollider.SetActive(false);
         hitCollider.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         smashBar = transform.FindChild("SmashBar").gameObject;
+		smashBar.transform.position = new Vector3 (500f, 500f, 500f);
     }
 	public virtual void Update()
 	{
@@ -309,7 +310,7 @@ public class BaseCharacter : MonoBehaviour
 			direction = Vector3.Normalize (direction);
 			direction = new Vector3 (direction.x, direction.y + 0.6f, 0f);
 
-			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 50f);
+			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 25f);
 		}
 
 	}
