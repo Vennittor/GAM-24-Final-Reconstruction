@@ -193,7 +193,7 @@ public class CharacterInputManager : MonoBehaviour
 						{
 							if (PlatformDown)
 							{
-								Physics.IgnoreLayerCollision(9,8, true);
+								Physics.IgnoreLayerCollision(7,8, true);
 							}
 							else
 								changeToCrouching();
@@ -375,10 +375,10 @@ public class CharacterInputManager : MonoBehaviour
 				targetVelocity = new Vector3 (rightInput, 0, 0);
 			}
 
-			Physics.IgnoreLayerCollision(9,8, false);
+			Physics.IgnoreLayerCollision(7,8, false);
 			if (downInput < -0.1f)
 			{
-				Physics.IgnoreLayerCollision(9,8, true);
+				Physics.IgnoreLayerCollision(7,8, true);
 				targetVelocity += new Vector3 (0, downInput, 0);
 			}
 

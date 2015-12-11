@@ -16,7 +16,7 @@ public class BaseCharacter : MonoBehaviour
 	public GameObject parent;
 	public Rigidbody rigidBody;
 	public GameObject smashBar;
-	public Timer comboTime, smashTime;
+	public Timer comboTime, smashTime, cantMove, invincTime;
 	public float weight; 
 	public float speed;
 	public float damageModifier; 
@@ -485,19 +485,23 @@ public class BaseCharacter : MonoBehaviour
         }
         yield return null;
     }
-    public virtual void Respawn(bool canMove)
+    public virtual void Respawn(bool canMove,GameObject cam = null)
     {
         if (canMove)
         {
+            
             playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK);
             playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.UNCOLLIDABLE);
             playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.NODAMAGE);
             playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.GRABIMMUNE);
             playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
-            StartCoroutine(RespawnFreezing(canMove));
+            cantMove = new Timer(1.0f);
+            invincTime = new Timer(2.0f);
+            StartCoroutine(RespawnFreezing(canMove,cam));
         }
         else
         {
+           
             if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK))
                 playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK);
             if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.UNCOLLIDABLE))
@@ -510,9 +514,16 @@ public class BaseCharacter : MonoBehaviour
                 playerStates.disabledStates.Add(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
         }
     }
-    public virtual IEnumerator RespawnFreezing(bool canMove)
+    public virtual IEnumerator RespawnFreezing(bool invinc, GameObject cam)
     {
-        frozen = canMove;
+        frozen = invinc;
+        cantMove.timerComplete += () => frozen = false; ;
+        invincTime.timerComplete += () => invinc = false; ;
+        if(!frozen)
+        {
+            if (cam != null)
+                cam.GetComponent<SceneCamera>().players.Add(gameObject);
+        }
         Component[] components = model.GetComponentsInChildren<Component>();
         List<SkinnedMeshRenderer> meshes = new List<SkinnedMeshRenderer>();
         foreach (Component component in components)
@@ -522,8 +533,9 @@ public class BaseCharacter : MonoBehaviour
                 meshes.Add((component as SkinnedMeshRenderer));
             }
         }
-        while (frozen)
+        while (invinc)
         {
+            
             foreach (SkinnedMeshRenderer mesh in meshes)
             {
                 mesh.material.color = Color.Lerp(mesh.material.color, Color.cyan, 2);
@@ -535,8 +547,9 @@ public class BaseCharacter : MonoBehaviour
             }
             yield return new WaitForSeconds(.2f);
         }
-        if (!frozen)
+        if (!invinc)
         {
+            Respawn(invinc);
             yield return null;
         }
        

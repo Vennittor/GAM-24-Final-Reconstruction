@@ -11,9 +11,9 @@ public class KirbyCharacter : BaseCharacter
 	{
 		
 		weight = 1f;
-		speed = 20.0f;
+		speed = 15.0f;
 		health = 0;
-		jumpHeight = 10f;
+		jumpHeight = 8f;
 		jumpMax = 5;
 		attackCount = 0;
 		hasEaten = false;
