@@ -8,7 +8,7 @@ public class MarioCharacter : BaseCharacter
 	public override void Awake() 
 	{
 		weight = 1.5f;
-		speed = 25.0f;
+		speed = 20.0f;
 		health = 0;
 		jumpHeight = 10f;
 		jumpMax = 1;
@@ -493,7 +493,7 @@ public class MarioCharacter : BaseCharacter
 		}
 	}
 
-	public override IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
+	public IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
 	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
 	{
 		hitCollider.SetActive(true);
