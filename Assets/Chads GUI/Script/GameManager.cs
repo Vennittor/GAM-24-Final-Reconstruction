@@ -75,6 +75,9 @@ public class GameManager : MonoBehaviour
 			if (character.TryGetValue(playerDataHolder.GetComponent<DataHolder>().characters[i], out value))
 			{
 				temp.AddComponent(value);
+				if (playerDataHolder.GetComponent<DataHolder>().colliderSizes[i] != new Vector3 (1f, 1f, 1f))
+					temp.GetComponent<BoxCollider>().center = new Vector3 (0f, 1f,0f);
+				temp.GetComponent<BoxCollider>().size = playerDataHolder.GetComponent<DataHolder>().colliderSizes[i];
 			}
 		}
 	}

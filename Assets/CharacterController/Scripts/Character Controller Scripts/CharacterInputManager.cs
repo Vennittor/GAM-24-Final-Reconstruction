@@ -560,21 +560,21 @@ public class CharacterInputManager : MonoBehaviour
 		{
 			upInput = downInput = 0;
 		}
-		
-		if (Input.GetButton (playerName + "_Shield"))
-			shieldButton = true;
-		else
-			shieldButton = false;
+//		
+//		if (Input.GetButton (playerName + "_Shield"))
+//			shieldButton = true;
+//		else
+//			shieldButton = false;
 
 		if (Input.GetButtonDown (playerName + "_Jump"))
 			jumpButton = true;
 		else
 			jumpButton = false;
-
-		if (Input.GetButtonDown (playerName + "_Grab"))
-			grabButton = true;
-		else
-			grabButton = false;
+//
+//		if (Input.GetButtonDown (playerName + "_Grab"))
+//			grabButton = true;
+//		else
+//			grabButton = false;
 
 		if (Input.GetButtonDown (playerName + "_Attack"))
 			attackButton = true;

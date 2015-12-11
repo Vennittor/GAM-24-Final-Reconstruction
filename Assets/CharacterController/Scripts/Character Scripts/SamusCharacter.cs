@@ -9,29 +9,23 @@ public class SamusCharacter : BaseCharacter
 	{
 		rigidBody = this.gameObject.GetComponent<Rigidbody> ();
 		
-		weight = 4f;
-		speed = 17.0f;
+		weight = 1.3f;
+		speed = 18.0f;
 		health = 0;
-		jumpHeight = 8f;
-		jumpMax = 2;
+		jumpHeight = 10f;
+		jumpMax = 1;
 		attackCount = 0;
 		frozen = false;
 		if (model == null)
 		{
-			model = Instantiate(Resources.Load("Kirby_2"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
+			model = Instantiate(Resources.Load("ZSSamus_1"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}
 		base.Awake();
 		//bool hasItem;
 	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		
-	}
-	
+
 	public override void StandingA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))

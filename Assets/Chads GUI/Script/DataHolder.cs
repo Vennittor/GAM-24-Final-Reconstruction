@@ -49,6 +49,7 @@ public class DataHolder : MonoBehaviour
 									luigi,zelda,yoshi,bowser,link,zeroSuitSamus}
 
 	public CharacterSelection[] characters = new CharacterSelection[4];
+	public Vector3[] colliderSizes = new Vector3[4];
 
 	public CharacterSelection pOneSelection;
 	public CharacterSelection pTwoSelection;
@@ -127,6 +128,7 @@ public class DataHolder : MonoBehaviour
 			pOnePortrait = characterPortraits[0];
 			pOneStock = stockImages[0];
 			characters[0] = CharacterSelection.mario;
+			colliderSizes[0] = new Vector3(1f, 2.5f, 1f);
 		}
 		else if (pOneSelection == CharacterSelection.donkeyKong)
 		{
@@ -148,6 +150,7 @@ public class DataHolder : MonoBehaviour
 			pOnePortrait = characterPortraits[3];
 			pOneStock = stockImages[3];
 			characters[0] = CharacterSelection.kirby;
+			colliderSizes[0] = new Vector3(1f, 1f, 1f);
 		}
 		else if (pOneSelection == CharacterSelection.luigi)
 		{
@@ -183,6 +186,7 @@ public class DataHolder : MonoBehaviour
 			pOnePortrait = characterPortraits[8];
 			pOneStock = stockImages[8];
 			characters[0] = CharacterSelection.link;
+			colliderSizes[0] = new Vector3(1f, 2.5f, 1f);
 		}
 		else if (pOneSelection == CharacterSelection.zeroSuitSamus)
 		{
@@ -190,6 +194,7 @@ public class DataHolder : MonoBehaviour
 			pOnePortrait = characterPortraits[9];
 			pOneStock = stockImages[9];
 			characters[0] = CharacterSelection.zeroSuitSamus;
+			colliderSizes[0] = new Vector3(1f, 3.5f, 1f);
 		}
 
 		//Player Two
@@ -199,6 +204,7 @@ public class DataHolder : MonoBehaviour
 			pTwoPortrait = characterPortraits[0];
 			pTwoStock = stockImages[0];
 			characters[1] = CharacterSelection.mario;
+			colliderSizes[1] = new Vector3(1f, 2.5f, 1f);
 		}
 		else if (pTwoSelection == CharacterSelection.donkeyKong)
 		{
@@ -220,6 +226,7 @@ public class DataHolder : MonoBehaviour
 			pTwoPortrait = characterPortraits[3];
 			pTwoStock = stockImages[3];
 			characters[1] = CharacterSelection.kirby;
+			colliderSizes[1] = new Vector3(1f, 1f, 1f);
 		}
 		else if (pTwoSelection == CharacterSelection.luigi)
 		{
@@ -255,6 +262,7 @@ public class DataHolder : MonoBehaviour
 			pTwoPortrait = characterPortraits[8];
 			pTwoStock = stockImages[8];
 			characters[1] = CharacterSelection.link;
+			colliderSizes[1] = new Vector3(1f, 2.5f, 1f);
 		}
 		else if (pTwoSelection == CharacterSelection.zeroSuitSamus)
 		{
@@ -262,6 +270,7 @@ public class DataHolder : MonoBehaviour
 			pTwoPortrait = characterPortraits[9];
 			pTwoStock = stockImages[9];
 			characters[1] = CharacterSelection.zeroSuitSamus;
+			colliderSizes[1] = new Vector3(1f, 3.5f, 1f);
 		}
 
 		//Player Three
@@ -271,6 +280,7 @@ public class DataHolder : MonoBehaviour
 			pThreePortrait = characterPortraits[0];
 			pThreeStock = stockImages[0];
 			characters[2] = CharacterSelection.mario;
+			colliderSizes[2] = new Vector3(1f, 2.5f, 1f);
 		}
 		else if (pThreeSelection == CharacterSelection.donkeyKong)
 		{
@@ -292,6 +302,7 @@ public class DataHolder : MonoBehaviour
 			pThreePortrait = characterPortraits[3];
 			pThreeStock = stockImages[3];
 			characters[2] = CharacterSelection.kirby;
+			colliderSizes[2] = new Vector3(1f, 1f, 1f);
 		}
 		else if (pThreeSelection == CharacterSelection.luigi)
 		{
@@ -326,6 +337,7 @@ public class DataHolder : MonoBehaviour
 			pThreePortrait = characterPortraits[8];
 			pThreeStock = stockImages[8];
 			characters[2] = CharacterSelection.link;
+			colliderSizes[2] = new Vector3(1f, 2.5f, 1f);
 		}
 		else if (pOneSelection == CharacterSelection.zeroSuitSamus)
 		{
@@ -333,6 +345,7 @@ public class DataHolder : MonoBehaviour
 			pThreePortrait = characterPortraits[9];
 			pThreeStock = stockImages[9];
 			characters[2] = CharacterSelection.zeroSuitSamus;
+			colliderSizes[2] = new Vector3(1f, 3.5f, 1f);
 		}
 
 		//Player Four
@@ -342,6 +355,7 @@ public class DataHolder : MonoBehaviour
 			pFourPortrait = characterPortraits[0];
 			pFourStock = stockImages[0];
 			characters[3] = CharacterSelection.mario;
+			colliderSizes[3] = new Vector3(1f, 2.5f, 1f);
 		}
 		else if (pFourSelection == CharacterSelection.donkeyKong)
 		{
@@ -363,6 +377,7 @@ public class DataHolder : MonoBehaviour
 			pFourPortrait = characterPortraits[3];
 			pFourStock = stockImages[3];
 			characters[3] = CharacterSelection.kirby;
+			colliderSizes[3] = new Vector3(1f, 1f, 1f);
 		}
 		else if (pFourSelection == CharacterSelection.luigi)
 		{
@@ -398,6 +413,7 @@ public class DataHolder : MonoBehaviour
 			pFourPortrait = characterPortraits[8];
 			pFourStock = stockImages[8];
 			characters[3] = CharacterSelection.link;
+			colliderSizes[3] = new Vector3(1f, 2.5f, 1f);
 		}
 		else if (pOneSelection == CharacterSelection.zeroSuitSamus)
 		{
@@ -405,6 +421,7 @@ public class DataHolder : MonoBehaviour
 			pFourPortrait = characterPortraits[9];
 			pFourStock = stockImages[9];
 			characters[3] = CharacterSelection.zeroSuitSamus;
+			colliderSizes[3] = new Vector3(1f, 3.5f, 1f);
 		}
 	}
 }
