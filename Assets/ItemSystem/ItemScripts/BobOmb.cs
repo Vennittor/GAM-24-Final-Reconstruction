@@ -12,6 +12,8 @@ public class BobOmb : ItemBaseScript
     // Use this for initialization
     public override void Start ()
     {
+        damage = 5;
+        knockBack = 3;
         base.Start();
 	}
 	
@@ -70,7 +72,7 @@ public class BobOmb : ItemBaseScript
     }
     void OnParticleCollision(GameObject other)
     {
-        Debug.Log("Exploding");
+        other.gameObject.GetComponent<BaseCharacter>().TakeDamage(5, 3);
     }
    void OnCollisionEnter(Collision other)
     {

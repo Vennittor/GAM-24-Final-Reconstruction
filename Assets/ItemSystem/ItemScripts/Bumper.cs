@@ -9,7 +9,9 @@ public class Bumper : ItemBaseScript
 	// Use this for initialization
 	public override void Start () 
 	{
-		durability = 20;
+        damage = 5;
+        knockBack = 1;
+		durability = 50;
 		base.Start ();
 	}
 	

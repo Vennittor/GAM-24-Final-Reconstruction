@@ -72,11 +72,18 @@ public class ItemBaseScript : MonoBehaviour
 		held = false;
 
 		transform.parent = null;
+       CharacterInputManager input = owner.GetComponent<CharacterInputManager>();
+        if (input.leftInput > .7f)
+            throwDirection = Vector3.left;
+        else if (input.rightInput > .7f)
+            throwDirection = Vector3.right;
+        else if (input.upInput > .7f)
+            throwDirection = Vector3.up;
+        else if (input.downInput > .7f)
+            throwDirection = Vector3.down;
         if (throwDirection == new Vector3())
             throwDirection = Vector3.up;
         rb.isKinematic = false;
-        rb.constraints = RigidbodyConstraints.None;
-        rb.constraints = RigidbodyConstraints.FreezePositionZ;
         GetComponent<Collider>().enabled = true;
         rb.AddForce(transVelocity + throwDirection * 500);
         gameObject.layer = 11;
