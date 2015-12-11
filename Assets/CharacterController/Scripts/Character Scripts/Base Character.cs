@@ -252,28 +252,7 @@ public class BaseCharacter : MonoBehaviour
 	public virtual IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
 	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
 	{
-        hitCollider.SetActive(true);
-        while (Input.GetButton(inputManager.playerName + "_Attack"))
-        {
-            inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
-            inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = false;
-
-            disabledStates.vAttackLength = attackLength;
-
-            hitCollider.transform.localPosition = new Vector3(1f, Random.Range(-1f, 1f), 0f);
-            hitCollider.transform.localScale = boxCollider;
-
-            rigidBody.velocity = Vector3.Lerp(this.rigidBody.velocity, lerpVelocity, lerpSpeed * Time.deltaTime);
-
-            if (pivot)
-                parent.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
-            else
-                hitCollider.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
-
-            yield return null;
-        }
-        ResetAttack();
-        comboTime.Kill();
+		yield return null;
     }
 
 	public virtual IEnumerator SmashAttack(float attackLegnth, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed,
