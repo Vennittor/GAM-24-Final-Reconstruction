@@ -87,13 +87,13 @@ public class SceneCamera : MonoBehaviour
 
         screenCenter = screenCenter / players.Count;
         Vector3 targetPos = new Vector3(Mathf.Clamp(screenCenter.x,-7,7), Mathf.Clamp(screenCenter.y, -7, 7), transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, targetPos, 50 * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPos, 30 * Time.deltaTime);
 
         float distance = Mathf.Sqrt(Mathf.Pow(maxX - minX, 2) + Mathf.Pow(maxY - minY, 2));
         
         float camSize = distance;
 
-        camera.orthographicSize = Mathf.Clamp(camSize * 0.5f, 4, 20);
+        camera.orthographicSize = Mathf.Clamp(camSize * 0.5f, 6, 20);
       
     }
 }

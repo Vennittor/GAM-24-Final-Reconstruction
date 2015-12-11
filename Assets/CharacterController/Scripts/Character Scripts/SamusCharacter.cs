@@ -1,23 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LinkCharacter : BaseCharacter
+public class SamusCharacter : BaseCharacter 
 {
+
 	// Use this for initialization
 	public override void Awake () 
 	{
 		rigidBody = this.gameObject.GetComponent<Rigidbody> ();
-
-		weight = 3f;
-		speed = 15.0f;
+		
+		weight = 4f;
+		speed = 17.0f;
 		health = 0;
-		jumpHeight = 7f;
+		jumpHeight = 8f;
 		jumpMax = 2;
 		attackCount = 0;
 		frozen = false;
 		if (model == null)
 		{
-			model = Instantiate(Resources.Load("Link_1"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
+			model = Instantiate(Resources.Load("ZSSamus"), gameObject.transform.position - new Vector3(0,0.5f,0),Quaternion.Euler(new Vector3(0,90,0))) as GameObject;
 			model.transform.parent = gameObject.transform;
 			animControl = model.GetComponent<Animation_Controller>(); 
 		}
@@ -30,7 +31,7 @@ public class LinkCharacter : BaseCharacter
 	{
 		
 	}
-
+	
 	public override void StandingA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
@@ -47,7 +48,7 @@ public class LinkCharacter : BaseCharacter
 			Vector3 position = new Vector3(.5f, 1f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = true;
+			bool pivot = false;
 			Vector3 rotationDirection = Vector3.back;
 			float rotationSpeed = 20.0f;
 			
@@ -58,13 +59,13 @@ public class LinkCharacter : BaseCharacter
 			
 			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
 			                              knockBack, state, stateDuration));
-
+			
 			// Neutral Standing A Sound 
 			animControl.playTime("Ground-Forward", 0.1f);
 			
 		}
 	}
-
+	
 	public override void ComboA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
@@ -83,12 +84,12 @@ public class LinkCharacter : BaseCharacter
 				comboTime.Pause();
 				float attackLegnth = 5f;
 				Vector3 boxCollider = new Vector3 (0.5f, 0.5f, 0.5f);
-				Vector3 position = new Vector3 (.5f, .5f, 0f);
+				Vector3 position = new Vector3 (.5f, 0f, 0f);
 				Vector3 lerpVelocity = Vector3.zero;
 				float lerpSpeed = 0f;
 				bool pivot = true;
-				Vector3 rotationDirection = new Vector3 (0,1,0);
-				float rotationSpeed = 0.0f;
+				Vector3 rotationDirection = Vector3.back;
+				float rotationSpeed = 10.0f;
 				
 				StartCoroutine (ComboAttack (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed));
 			}
@@ -104,12 +105,12 @@ public class LinkCharacter : BaseCharacter
 		Vector3 position = new Vector3 (0.5f, 1f, 0f);
 		Vector3 lerpVelocity = Vector3.zero;
 		float lerpSpeed = 0f;
-		bool pivot = true;
+		bool pivot = false;
 		Vector3 rotationDirection = Vector3.back;
 		float rotationSpeed = 500.0f;
 		
-		int damage = 5;
-		float knockBack = 1.0f;
+		int damage = 10;
+		float knockBack = 6.0f;
 		PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 		float stateDuration = 0.5f;
 		
@@ -129,15 +130,15 @@ public class LinkCharacter : BaseCharacter
 		{
 			float attackLegnth = 2f;
 			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, 1.5f, 0f);
+			Vector3 position = new Vector3(.5f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
 			bool pivot = true;
 			Vector3 rotationDirection = Vector3.back;
-			float rotationSpeed = 20.0f;
+			float rotationSpeed = 500.0f;
 			
 			int damage = 5;
-			float knockBack = 2.0f;
+			float knockBack = 8.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -197,17 +198,17 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.5f;
+			float attackLegnth = 2f;
 			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
 			Vector3 position = new Vector3(.5f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.back;
+			bool pivot = true;
+			Vector3 rotationDirection = new Vector3(0,1,0);
 			float rotationSpeed = 400.0f;
 			
-			int damage = 6;
-			float knockBack = 4.0f;
+			int damage = 10;
+			float knockBack = 10.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -232,17 +233,17 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.4f;
+			float attackLegnth = 1f;
 			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, 1f, 0f);
+			Vector3 position = new Vector3(.5f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 40.0f;
+			bool pivot = true;
+			Vector3 rotationDirection = Vector3.left;
+			float rotationSpeed = 300.0f;
 			
-			int damage = 5;
-			float knockBack = 1.0f;
+			int damage = 8;
+			float knockBack = 8.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -276,8 +277,8 @@ public class LinkCharacter : BaseCharacter
 			Vector3 rotationDirection = Vector3.back;
 			float rotationSpeed = 300.0f;
 			
-			int damage = 20;
-			float knockBack = 5.0f;
+			int damage = 11;
+			float knockBack = 11.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -337,17 +338,17 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 2f;
+			float attackLegnth = 1f;
 			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
 			Vector3 position = new Vector3(.5f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = true;
-			Vector3 rotationDirection = new Vector3(0,1,0);
-			float rotationSpeed = 30.0f;
+			bool pivot = false;
+			Vector3 rotationDirection = Vector3.back;
+			float rotationSpeed = 300.0f;
 			
-			int damage = 9;
-			float knockBack = 5.0f;
+			int damage = 12;
+			float knockBack = 12.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -409,15 +410,15 @@ public class LinkCharacter : BaseCharacter
 		else
 		{
 			float attackLegnth = 0.3f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, .5f, 0f);
+			Vector3 boxCollider = new Vector3(2f, 0.1f, .1f);
+			Vector3 position = new Vector3(0f, -1f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = true;
+			bool pivot = false;
 			Vector3 rotationDirection = Vector3.back;
-			float rotationSpeed = 25.0f;
+			float rotationSpeed = 0.0f;
 			
-			int damage = 10;
+			int damage = 8;
 			float knockBack = 5.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
@@ -443,17 +444,17 @@ public class LinkCharacter : BaseCharacter
 		}
 		else
 		{
-			float attackLegnth = 0.3f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, 0f, 0f);
+			float attackLegnth = 2f;
+			Vector3 boxCollider = new Vector3(0.5f, 1f, 0.5f);
+			Vector3 position = new Vector3(1f, 0f, 0f);
 			Vector3 lerpVelocity = Vector3.zero;
 			float lerpSpeed = 0f;
-			bool pivot = false;
+			bool pivot = true;
 			Vector3 rotationDirection = Vector3.up;
-			float rotationSpeed = 10.0f;
+			float rotationSpeed = 500.0f;
 			
-			int damage = 6;
-			float knockBack = 1.5f;
+			int damage = 22;
+			float knockBack = 22f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -467,67 +468,4 @@ public class LinkCharacter : BaseCharacter
 		// Left A Smash Animarion 
 		// Left A Smash Sound 
 	}
-
-
-//	pu7blic override void NeutralB()
-//	{
-//		print ("Link Neutral B was called");
-//		// Neutral B Animation
-//		// Neutral B Sound
-//	}
-//	public void UpSpecialB()
-//	{
-//		print ("Link Special B Up was called");
-//		// Up B Special Animarion 
-//		// Up B Special Sound 
-//	}
-//	public void DownSpecialB()
-//	{
-//		print ("Link Special B Down was called");
-//		// Down B Special Animarion 
-//		// Down B Special Sound 
-//	}
-//	public void LeftRightSpecialB()
-//	{
-//		print ("Link Special B LeftRight was called");
-//		// Left B Special Animarion 
-//		// Left B Special Sound 
-//	}
-//	public void AGrab()
-//	{
-//		print ("Link A Grab was called");
-//		// A Grab Animation
-//		// A Grab Sound
-//	}
-//	public void UpThrow()
-//	{
-//		print ("Link Up Throw was called");
-//		// Up Throw Animation
-//		// Up Throw Sound 
-//	}
-//	public void DownThrow()
-//	{
-//		print ("Link Down Throw was called");
-//		// Down Throw Animation
-//		// Down Throw Sound 
-//	}
-//	public void LeftRightThrow()
-//	{
-//		print ("Link LeftRight Throw was called");
-//		// Left Throw Animation
-//		// Left Throw Sound 
-//	}
-//	public void LedgeAttack()
-//	{
-//		print ("Link Ledge Attack was called");
-//		// Ledge Attack Animation
-//		// Ledge Attack Sound
-//	}
-//	public void FinalSmash()
-//	{
-//		print ("Link Final Smash was called");
-//		// Final Smash Animation
-//		// Final Smash Sound
-//	}
-	
 }
