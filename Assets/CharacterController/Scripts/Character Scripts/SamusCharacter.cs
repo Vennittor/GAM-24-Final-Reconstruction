@@ -104,14 +104,14 @@ public class SamusCharacter : BaseCharacter
 		float rotationSpeed = 500.0f;
 		
 		int damage = 10;
-		float knockBack = 6.0f;
+		float knockBack = 1.0f;
 		PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 		float stateDuration = 0.5f;
 		
 		StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
 		                                knockBack, state, stateDuration));
 	}
-	public void DashingA()
+	public override void SprintA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -132,7 +132,7 @@ public class SamusCharacter : BaseCharacter
 			float rotationSpeed = 500.0f;
 			
 			int damage = 5;
-			float knockBack = 8.0f;
+			float knockBack = 1.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -146,42 +146,42 @@ public class SamusCharacter : BaseCharacter
 		// Dashing A Animation
 		// Dashing A Sound
 	}
-	public void NeutralStandingA()
-	{
-		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
-			return;
-		if (hasItem)
-		{
-			if (GetComponentInChildren<ItemBaseScript>())
-				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
-		}
-		else
-		{
-			float attackLegnth = 0.1f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(1f, 0f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.zero;
-			float rotationSpeed = 0.0f;
-			
-			int damage = 3;
-			float knockBack = 1.0f;
-			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-			float stateDuration = 0.5f;
-			
-			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-			                              knockBack, state, stateDuration));
-			
-			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
-			
-		}
-		// Neutral Standing A Animation
-		// Neutral Standing A Sound 
-	}
-	public void NeutralAAir()
+//	public override void NeutralStandingA()
+//	{
+//		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+//			return;
+//		if (hasItem)
+//		{
+//			if (GetComponentInChildren<ItemBaseScript>())
+//				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+//		}
+//		else
+//		{
+//			float attackLegnth = 0.1f;
+//			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
+//			Vector3 position = new Vector3(1f, 0f, 0f);
+//			Vector3 lerpVelocity = Vector3.zero;
+//			float lerpSpeed = 0f;
+//			bool pivot = false;
+//			Vector3 rotationDirection = Vector3.zero;
+//			float rotationSpeed = 0.0f;
+//			
+//			int damage = 3;
+//			float knockBack = 1.0f;
+//			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+//			float stateDuration = 0.5f;
+//			
+//			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+//			                              knockBack, state, stateDuration));
+//			
+//			// Neutral Standing A Sound 
+//			animControl.playTime("Ground-Forward", 0.1f);
+//			
+//		}
+//		// Neutral Standing A Animation
+//		// Neutral Standing A Sound 
+//	}
+	public override void NeutralAAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -202,7 +202,7 @@ public class SamusCharacter : BaseCharacter
 			float rotationSpeed = 400.0f;
 			
 			int damage = 10;
-			float knockBack = 10.0f;
+			float knockBack = 1.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -210,13 +210,13 @@ public class SamusCharacter : BaseCharacter
 			                              knockBack, state, stateDuration));
 			
 			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
+			animControl.playTime("Ground-Forward", 2f);
 			
 		}
 		// Neutral A Air Animation
 		// Neutral A Air Sound 
 	}
-	public void UpAir()
+	public override void UpAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -237,7 +237,7 @@ public class SamusCharacter : BaseCharacter
 			float rotationSpeed = 300.0f;
 			
 			int damage = 8;
-			float knockBack = 8.0f;
+			float knockBack = 1.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -245,13 +245,13 @@ public class SamusCharacter : BaseCharacter
 			                              knockBack, state, stateDuration));
 			
 			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
+			animControl.playTime("Ground-Forward", 1f);
 			
 		}
 		// Up Air Animation
 		// Up Air Sound
 	}
-	public void DownAir()
+	public override void DownAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -272,7 +272,7 @@ public class SamusCharacter : BaseCharacter
 			float rotationSpeed = 300.0f;
 			
 			int damage = 11;
-			float knockBack = 11.0f;
+			float knockBack = 1.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -280,13 +280,13 @@ public class SamusCharacter : BaseCharacter
 			                              knockBack, state, stateDuration));
 			
 			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
+			animControl.playTime("Ground-Forward", 0.5f);
 			
 		}
 		// Down Air Animation
 		// Down Air Sound
 	}
-	public void LeftRightAir()
+	public override void LeftRightAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -321,42 +321,42 @@ public class SamusCharacter : BaseCharacter
 		// Left Air Animation
 		// Left Air Sound
 	}
-	public void RightAir()
-	{
-		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
-			return;
-		if (hasItem)
-		{
-			if (GetComponentInChildren<ItemBaseScript>())
-				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
-		}
-		else
-		{
-			float attackLegnth = 1f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(.5f, 0f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.back;
-			float rotationSpeed = 300.0f;
-			
-			int damage = 12;
-			float knockBack = 12.0f;
-			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-			float stateDuration = 0.5f;
-			
-			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-			                              knockBack, state, stateDuration));
-			
-			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
-			
-		}
-		// Right Air Animation
-		// Right Air Sound
-	}
-	public void UpSmashA()
+//	public override void RightAir()
+//	{
+//		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+//			return;
+//		if (hasItem)
+//		{
+//			if (GetComponentInChildren<ItemBaseScript>())
+//				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+//		}
+//		else
+//		{
+//			float attackLegnth = 1f;
+//			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
+//			Vector3 position = new Vector3(.5f, 0f, 0f);
+//			Vector3 lerpVelocity = Vector3.zero;
+//			float lerpSpeed = 0f;
+//			bool pivot = false;
+//			Vector3 rotationDirection = Vector3.back;
+//			float rotationSpeed = 300.0f;
+//			
+//			int damage = 12;
+//			float knockBack = 12.0f;
+//			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+//			float stateDuration = 0.5f;
+//			
+//			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+//			                              knockBack, state, stateDuration));
+//			
+//			// Neutral Standing A Sound 
+//			//animControl.playTime("Ground-Forward", 0.1f);
+//			
+//		}
+//		// Right Air Animation
+//		// Right Air Sound
+//	}
+	public override void UpSmashA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -392,7 +392,7 @@ public class SamusCharacter : BaseCharacter
 		// Up A Smash Animarion 
 		// Up A Smash Sound 
 	}
-	public void DownSmashA()
+	public override void DownSmashA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -413,7 +413,7 @@ public class SamusCharacter : BaseCharacter
 			float rotationSpeed = 0.0f;
 			
 			int damage = 8;
-			float knockBack = 5.0f;
+			float knockBack = 1.0f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			
@@ -427,7 +427,7 @@ public class SamusCharacter : BaseCharacter
 		// Down A Smash Animarion 
 		// Down A Smash Sound 
 	}
-	public void LeftRightSmashA()
+	public override void LeftRightSmashA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -448,7 +448,7 @@ public class SamusCharacter : BaseCharacter
 			float rotationSpeed = 500.0f;
 			
 			int damage = 22;
-			float knockBack = 22f;
+			float knockBack = 1f;
 			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
 			float stateDuration = 0.5f;
 			

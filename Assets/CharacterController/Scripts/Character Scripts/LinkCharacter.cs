@@ -52,7 +52,7 @@ public class LinkCharacter : BaseCharacter
 			                              knockBack, state, stateDuration));
 
 			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
+			animControl.playTime("Ground-Forward", 0.3f);
 			
 		}
 	}
@@ -108,7 +108,7 @@ public class LinkCharacter : BaseCharacter
 		StartCoroutine (AttackMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
 		                                knockBack, state, stateDuration));
 	}
-	public void DashingA()
+	public override void SprintA()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -143,42 +143,42 @@ public class LinkCharacter : BaseCharacter
 		// Dashing A Animation
 		// Dashing A Sound
 	}
-	public void NeutralStandingA()
-	{
-		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
-			return;
-		if (hasItem)
-		{
-			if (GetComponentInChildren<ItemBaseScript>())
-				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
-		}
-		else
-		{
-			float attackLegnth = 0.1f;
-			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
-			Vector3 position = new Vector3(1f, 0f, 0f);
-			Vector3 lerpVelocity = Vector3.zero;
-			float lerpSpeed = 0f;
-			bool pivot = false;
-			Vector3 rotationDirection = Vector3.zero;
-			float rotationSpeed = 0.0f;
-			
-			int damage = 3;
-			float knockBack = 1.0f;
-			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
-			float stateDuration = 0.5f;
-			
-			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
-			                              knockBack, state, stateDuration));
-			
-			// Neutral Standing A Sound 
-			animControl.playTime("Ground-Forward", 0.1f);
-			
-		}
-		// Neutral Standing A Animation
-		// Neutral Standing A Sound 
-	}
-	public void NeutralAAir()
+//	public override void StandingA()
+//	{
+//		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+//			return;
+//		if (hasItem)
+//		{
+//			if (GetComponentInChildren<ItemBaseScript>())
+//				GetComponentInChildren<ItemBaseScript>().FunctionAlpha(Vector3.up);
+//		}
+//		else
+//		{
+//			float attackLegnth = 0.1f;
+//			Vector3 boxCollider = new Vector3(0.5f, 0.5f, 0.5f);
+//			Vector3 position = new Vector3(1f, 0f, 0f);
+//			Vector3 lerpVelocity = Vector3.zero;
+//			float lerpSpeed = 0f;
+//			bool pivot = false;
+//			Vector3 rotationDirection = Vector3.zero;
+//			float rotationSpeed = 0.0f;
+//			
+//			int damage = 3;
+//			float knockBack = 1.0f;
+//			PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
+//			float stateDuration = 0.5f;
+//			
+//			StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
+//			                              knockBack, state, stateDuration));
+//			
+//			// Neutral Standing A Sound 
+//			animControl.playTime("Ground-Forward", 0.1f);
+//			
+//		}
+//		// Neutral Standing A Animation
+//		// Neutral Standing A Sound 
+//	}
+	public override void NeutralAAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -213,7 +213,7 @@ public class LinkCharacter : BaseCharacter
 		// Neutral A Air Animation
 		// Neutral A Air Sound 
 	}
-	public void UpAir()
+	public override void UpAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -248,7 +248,7 @@ public class LinkCharacter : BaseCharacter
 		// Up Air Animation
 		// Up Air Sound
 	}
-	public void DownAir()
+	public override void DownAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
@@ -283,7 +283,7 @@ public class LinkCharacter : BaseCharacter
 		// Down Air Animation
 		// Down Air Sound
 	}
-	public void LeftRightAir()
+	public override void LeftRightAir()
 	{
 		if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
 			return;
