@@ -35,6 +35,7 @@ public class TeleportBox : MonoBehaviour
                 Debug.Log("respawn");
                 other.transform.position = deathSpawnPoint.transform.position;
                 other.GetComponent<BaseCharacter>().Respawn(true);
+                
                 sceneCam.GetComponent<SceneCamera>().players.Add(other.gameObject);
             }
             else

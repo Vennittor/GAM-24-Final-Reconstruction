@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
 	void AddToCharacters()
 	{
 		character.Add (DataHolder.CharacterSelection.kirby, typeof(KirbyCharacter));
-//		character.Add (DataHolder.CharacterSelection.link, typeof(LinkCharacter));
-//		character.Add (DataHolder.CharacterSelection.donkeyKong, typeof(DonkeyKongCharacter));
-//		character.Add (DataHolder.CharacterSelection.mario, typeof(MarioCharacter));
+		character.Add (DataHolder.CharacterSelection.link, typeof(LinkCharacter));
+		character.Add (DataHolder.CharacterSelection.zeroSuitSamus, typeof(SamusCharacter));
+		character.Add (DataHolder.CharacterSelection.mario, typeof(MarioCharacter));
 	}
 
 	void InitialSpawn ()

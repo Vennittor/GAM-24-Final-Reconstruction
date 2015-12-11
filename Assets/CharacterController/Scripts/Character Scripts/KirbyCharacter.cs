@@ -9,11 +9,10 @@ public class KirbyCharacter : BaseCharacter
 	public bool rock;
 	public override void Awake () 
 	{
-		
 		weight = 1f;
 		speed = 15.0f;
 		health = 0;
-		jumpHeight = 8f;
+		jumpHeight = 9f;
 		jumpMax = 5;
 		attackCount = 0;
 		hasEaten = false;
@@ -238,7 +237,7 @@ public class KirbyCharacter : BaseCharacter
                 inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
                 inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
 
-                int damage = 3;
+                int damage = 5;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -274,9 +273,9 @@ public class KirbyCharacter : BaseCharacter
             {
                 float temp = 0;
                 if (transform.rotation == Quaternion.Euler(new Vector3(0f, 180f, 0f)))
-                    temp = -100f;
+                    temp = -50f;
                 else if (transform.rotation == Quaternion.identity)
-                    temp = 100f;
+                    temp = 50f;
 
                 float attackLegnth = 0.7f;
                 Vector3 boxCollider = new Vector3(3f, 1f, 0.2f);
@@ -287,7 +286,7 @@ public class KirbyCharacter : BaseCharacter
                 Vector3 rotationDirection = Vector3.up;
                 float rotationSpeed = 1500.0f;
 
-                int damage = 2;
+                int damage = 3;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -378,7 +377,7 @@ public class KirbyCharacter : BaseCharacter
                 Vector3 rotationDirection = Vector3.forward;
                 float rotationSpeed = 1200.0f;
 
-                int damage = 3;
+                int damage = 10;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -423,7 +422,7 @@ public class KirbyCharacter : BaseCharacter
                 Vector3 rotationDirection = Vector3.up;
                 float rotationSpeed = 1200.0f;
 
-                int damage = 3;
+                int damage = 6;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -468,7 +467,7 @@ public class KirbyCharacter : BaseCharacter
                 Vector3 rotationDirection = Vector3.up;
                 float rotationSpeed = 1200.0f;
 
-                int damage = 3;
+                int damage = 9;
                 float knockBack = 1.0f;
                 PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
                 float stateDuration = 0.5f;
@@ -632,53 +631,53 @@ public class KirbyCharacter : BaseCharacter
 	}
 	public override void NeutralB()
 	{
-        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
-            return;
-        if (eatenPlayer == null)
-		{
-			if (!rock)
-			{
-				float attackLegnth = 100f;
-				Vector3 boxCollider = new Vector3 (5f, 5f, 0.5f);
-				Vector3 position = new Vector3 (1f, 0f, 0f);
-				Vector3 lerpVelocity = Vector3.zero;
-				float lerpSpeed = 0f;
-				bool pivot = false;
-				Vector3 rotationDirection = Vector3.zero;
-				float rotationSpeed = 0.0f;
-				bool buttonHold = true;
-				bool neutralB = true;
-
-				StartCoroutine (SpecialMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, buttonHold, ()=> {}, neutralB));
-			}
-			else
-			{
-				rigidBody.AddForce(new Vector3 (0f, 1500f, 0f));
-				playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK);
-				playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
-				playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.NODAMAGE);
-				rock = false;
-			}
-		}
-		else if (!hasEaten)
-		{
-			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
-			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
-			eatenPlayer.transform.parent = null;
-			hasEaten = true;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
-			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (0, 2100f, 0f));
-		}
-		else
-		{
-			if (eatenPlayer.GetComponent<BaseCharacter>().name != "KirbyCharacter")
-				eatenPlayer.GetComponent<BaseCharacter>().NeutralB();
-			else
-			{
-				eatenPlayer = null;
-				hasEaten = false;
-			}
-		}
+//        if (playerStates.disabledStates.Contains(PlayerStates.disabledAndProtectiveStates.FROZEN))
+//            return;
+//        if (eatenPlayer == null)
+//		{
+//			if (!rock)
+//			{
+//				float attackLegnth = 100f;
+//				Vector3 boxCollider = new Vector3 (5f, 5f, 0.5f);
+//				Vector3 position = new Vector3 (1f, 0f, 0f);
+//				Vector3 lerpVelocity = Vector3.zero;
+//				float lerpSpeed = 0f;
+//				bool pivot = false;
+//				Vector3 rotationDirection = Vector3.zero;
+//				float rotationSpeed = 0.0f;
+//				bool buttonHold = true;
+//				bool neutralB = true;
+//
+//				StartCoroutine (SpecialMovement (attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, buttonHold, ()=> {}, neutralB));
+//			}
+//			else
+//			{
+//				rigidBody.AddForce(new Vector3 (0f, 1500f, 0f));
+//				playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.NOKNOCKBACK);
+//				playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.FLINCHIMMUNE);
+//				playerStates.disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.NODAMAGE);
+//				rock = false;
+//			}
+//		}
+//		else if (!hasEaten)
+//		{
+//			eatenPlayer.GetComponent<PlayerStates>().disabledStates.Remove(PlayerStates.disabledAndProtectiveStates.ABILITYLOCK);
+//			eatenPlayer.transform.localScale = new Vector3 (1f, 1f, 1f);
+//			eatenPlayer.transform.parent = null;
+//			hasEaten = true;
+//			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.isKinematic = false;
+//			eatenPlayer.GetComponent<BaseCharacter>().rigidBody.AddForce(new Vector3 (0, 2100f, 0f));
+//		}
+//		else
+//		{
+//			if (eatenPlayer.GetComponent<BaseCharacter>().name != "KirbyCharacter")
+//				eatenPlayer.GetComponent<BaseCharacter>().NeutralB();
+//			else
+//			{
+//				eatenPlayer = null;
+//				hasEaten = false;
+//			}
+//		}
 
 		// Neutral B Animation
 		// Neutral B Sound
@@ -694,7 +693,7 @@ public class KirbyCharacter : BaseCharacter
 			float attackLegnth = 0.3f;
 			Vector3 boxCollider = new Vector3 (3f, 1f, 0.5f);
 			Vector3 position = new Vector3 (1f, 0f, 0f);
-			Vector3 lerpVelocity = new Vector3(0f, 50f, 0f);
+			Vector3 lerpVelocity = new Vector3(0f, 25f, 0f);
 			float lerpSpeed = 100f;
 			bool pivot = false;
 			Vector3 rotationDirection = Vector3.zero;
