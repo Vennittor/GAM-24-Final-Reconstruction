@@ -61,6 +61,7 @@ public class CombatGUIController : MonoBehaviour
 
 	public Text pFourName;
 	public Text pFourPercentText;
+	public Text pFourHeadTag;
 	
 	public float pFourCurrentPercent;
 	

@@ -61,6 +61,8 @@ public class DataHolder : MonoBehaviour
 	public StageSelect stageSelection;
 
 	public AudioSource menuMusic;
+	public AudioSource finalDestination;
+	public AudioSource pokemonStadium;
 
 	//mouse pointer
 	public Texture2D handTexture;
@@ -81,14 +83,32 @@ public class DataHolder : MonoBehaviour
 	void Update () 
 	{
 		PlayerInfo ();
+		Audio ();
 //		ItemSpawner ();
+	}
+
+	void Audio ()
+	{
+		if (Application.loadedLevel == 5)
+		{
+			menuMusic.Stop ();
+			if (stageSelection == StageSelect.finalDestination)
+			{
+				finalDestination.enabled = true;
+				finalDestination.Play ();
+			}
+			else if (stageSelection == StageSelect.pokemonStadium)
+			{
+				pokemonStadium.enabled = true;
+				pokemonStadium.Play();
+			}
+		}
 	}
 
 	void ItemSpawner ()
 	{
 		if (Application.loadedLevel == 5)
 		{
-			menuMusic.Stop ();
 			GameObject itemSpawn;
 			itemSpawn = GameObject.Find ("ItemSpawn");
 			itemSpawn.GetComponent<ItemSelector>().veryRare = veryRare;
