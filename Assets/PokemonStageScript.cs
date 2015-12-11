@@ -38,11 +38,11 @@ public class PokemonStageScript : MonoBehaviour
     }
     IEnumerator ScalingStages(GameObject lastStage, GameObject nextStage = null)
     {
-        while (lastStage.transform.localScale.y > .01f)
+        while (lastStage.transform.localScale.y > .05f)
         {
-            lastStage.transform.localScale -= new Vector3(0, .01f, 0) * 5 * Time.deltaTime;
+            lastStage.transform.localScale -= new Vector3(0, .01f, 0) * 25 * Time.deltaTime;
             yield return new WaitForSeconds(.01f);
-            if (lastStage.transform.localScale.y < .05f)
+            if (lastStage.transform.localScale.y < .08f)
             {
                 BoxCollider[] childColliders = lastStage.GetComponentsInChildren<BoxCollider>();
                 foreach (BoxCollider childCollider in childColliders)
@@ -50,14 +50,14 @@ public class PokemonStageScript : MonoBehaviour
                     childCollider.enabled = false;
                 }
             }
-            if (lastStage.transform.localScale.y < .01f)
+            if (lastStage.transform.localScale.y < .06f)
             {
                 nextStage.SetActive(true);
             }
         }
-        while (nextStage.transform.localScale.y < .2f)
+        while (nextStage.transform.localScale.y < 1f)
         {
-           nextStage.transform.localScale += new Vector3(0, .01f, 0) * 5 * Time.deltaTime;
+           nextStage.transform.localScale += new Vector3(0, .01f, 0) * 25 * Time.deltaTime;
             yield return new WaitForSeconds(.01f);
                 lastStage.SetActive(false);
                 BoxCollider[] childColliders = nextStage.GetComponentsInChildren<BoxCollider>();
