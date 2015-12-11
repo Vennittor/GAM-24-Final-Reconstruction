@@ -330,7 +330,7 @@ public class BaseCharacter : MonoBehaviour
 			direction = Vector3.Normalize (direction);
 			direction = new Vector3 (direction.x, direction.y + 0.6f, 0f);
 
-			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 100f);
+			rigidBody.AddForce (direction * ((((health / 10 + health * damage / 20) * 200 / (weight + 100) * 1.4f) + 18) * knockBack) * 50f);
 		}
 
 	}
