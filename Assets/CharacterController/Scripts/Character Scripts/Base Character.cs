@@ -19,13 +19,13 @@ public class BaseCharacter : MonoBehaviour
 	public Timer comboTime, smashTime, cantMove, invincTime;
 	public float weight; 
 	public float speed;
-	public float damageModifier; 
+	public int damageModifier; 
 	public float defence; 
 	public float jumpHeight;
 	public int health; 
 	public int jumpMax;
 	public int attackCount;
-	public bool started;
+	public bool started, mmActive;
 	public float time;
 	public int lives = 2;
 
@@ -54,6 +54,8 @@ public class BaseCharacter : MonoBehaviour
         hitCollider.SetActive(false);
         hitCollider.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         smashBar = transform.FindChild("SmashBar").gameObject;
+        smashBar.transform.position = new Vector3(500, 500, 500);
+        damageModifier = 1;
     }
 	public virtual void Update()
 	{
@@ -216,8 +218,8 @@ public class BaseCharacter : MonoBehaviour
             else
                 hitCollider.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
 
-            hitCollider.GetComponent<HitCollider>().damage = damage;
-            hitCollider.GetComponent<HitCollider>().knockBack = knockBack;
+            hitCollider.GetComponent<HitCollider>().damage = damage * damageModifier;
+            hitCollider.GetComponent<HitCollider>().knockBack = knockBack * damageModifier;
             hitCollider.GetComponent<HitCollider>().state = state;
             hitCollider.GetComponent<HitCollider>().stateDuration = stateDuration;
 
@@ -249,33 +251,6 @@ public class BaseCharacter : MonoBehaviour
         }
     }
 
-	public virtual IEnumerator ComboAttack(float attackLength, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed, 
-	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
-	{
-        hitCollider.SetActive(true);
-        while (Input.GetButton(inputManager.playerName + "_Attack"))
-        {
-            inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
-            inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = false;
-
-            disabledStates.vAttackLength = attackLength;
-
-            hitCollider.transform.localPosition = new Vector3(1f, Random.Range(-1f, 1f), 0f);
-            hitCollider.transform.localScale = boxCollider;
-
-            rigidBody.velocity = Vector3.Lerp(this.rigidBody.velocity, lerpVelocity, lerpSpeed * Time.deltaTime);
-
-            if (pivot)
-                parent.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
-            else
-                hitCollider.transform.Rotate(rotationDirection, rotationSpeed * Time.deltaTime);
-
-            yield return null;
-        }
-        ResetAttack();
-        comboTime.Kill();
-    }
-
 	public virtual IEnumerator SmashAttack(float attackLegnth, Vector3 boxCollider, Vector3 position, Vector3 lerpVelocity, float lerpSpeed,
 	                                       bool pivot, Vector3 rotationDirection, float rotationSpeed)
 	{
@@ -284,20 +259,20 @@ public class BaseCharacter : MonoBehaviour
         {
             inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
             inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
-
             yield return null;
         }
 
         inputManager.leftInput = inputManager.rightInput = inputManager.downInput = inputManager.upInput = 0f;
         inputManager.attackButton = inputManager.grabButton = inputManager.jumpButton = inputManager.shieldButton = inputManager.specialButton = inputManager.spamButton = false;
 
-        int damage = 3;
-        float knockBack = 1.0f;
+        int damage = 10;
+        float knockBack = 2.0f;
         PlayerStates.disabledAndProtectiveStates state = PlayerStates.disabledAndProtectiveStates.FLINCHED;
         float stateDuration = 0.5f;
 
         StartCoroutine(AttackMovement(attackLegnth, boxCollider, position, lerpVelocity, lerpSpeed, pivot, rotationDirection, rotationSpeed, damage,
                                         knockBack, state, stateDuration));
+
         smashTime.Kill();
     }
    
@@ -549,7 +524,43 @@ public class BaseCharacter : MonoBehaviour
         }
        
     }
-
+    public virtual void MetalXMushroom(string pick)
+    {
+        mmActive = true;
+        MetalXMushEffect(pick);
+    }
+    public IEnumerator MetalXMushEffect(string pick)
+    {
+        Timer effectLength = new Timer(5);
+        effectLength.timerComplete += () => mmActive = false; ;
+        while (mmActive)
+        {
+            if(pick == "Metal")
+            {
+                weight = weight * 1.2f;
+                speed = speed / 1.2f;
+            }
+            else if (pick == "Mushroom")
+            {
+                damageModifier = 2;
+                gameObject.transform.localScale = gameObject.transform.localScale * 2;
+            }
+        }
+        if (!mmActive)
+        {
+            if (pick == "Metal")
+            {
+                weight = weight / 1.2f;
+                speed = speed * 1.2f;
+            }
+            else if (pick == "Mushroom")
+            {
+                damageModifier = 1;
+                gameObject.transform.localScale = gameObject.transform.localScale / 2;
+            }
+        }
+        yield return null;
+    }
 }
 
 

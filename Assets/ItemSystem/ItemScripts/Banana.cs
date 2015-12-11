@@ -21,9 +21,10 @@ public class Banana : ItemBaseScript
         Released(throwDirection);
         base.FunctionAlpha(throwDirection);
     }
-    public override void FunctionBeta ()
+    public void FunctionBeta (GameObject player)
 	{
-        owner.gameObject.GetComponent<DisabledStates>().AbilityLock(1.0f);
+        player.gameObject.GetComponent<DisabledStates>().AbilityLock(1.0f);
+
 		durability--;
 		base.FunctionBeta ();
 	}
@@ -38,7 +39,7 @@ public class Banana : ItemBaseScript
 			if (canSlip)
 			{
 				if (other.gameObject.GetComponent<BaseCharacter>())
-				FunctionBeta();
+				FunctionBeta(other.gameObject);
 			}
 
 		}
